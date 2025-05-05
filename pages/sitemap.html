@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/sitemap.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Header content (abbreviated for brevity) -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Sitemap</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Sitemap</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sitemap Search Section -->
+    <section class="sitemap-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>Find Your Way Around ShopVerse</h2>
+                <p>Quickly locate any page on our website</p>
+                <div class="search-box">
+                    <input type="text" id="sitemap-search" placeholder="Search for pages...">
+                    <button type="button" id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sitemap Content Section -->
+    <section class="sitemap-content">
+        <div class="container">
+            <div class="sitemap-container">
+                <div class="sitemap-options">
+                    <div class="view-switcher">
+                        <button class="view-btn active" data-view="visual">
+                            <i class="fas fa-sitemap"></i> Visual Sitemap
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i> List View
+                        </button>
+                        <button class="view-btn" data-view="xml">
+                            <i class="fas fa-file-code"></i> XML Sitemap
+                        </button>
+                    </div>
+
+                    <div class="sitemap-filters">
+                        <div class="filter-group">
+                            <label>Filter by:</label>
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-filter="all">All Pages</button>
+                                <button class="filter-btn" data-filter="main">Main Pages</button>
+                                <button class="filter-btn" data-filter="product">Product Pages</button>
+                                <button class="filter-btn" data-filter="account">Account Pages</button>
+                                <button class="filter-btn" data-filter="help">Help Pages</button>
+                                <button class="filter-btn" data-filter="legal">Legal Pages</button>
+                            </div>
+                        </div>
+
+                        <div class="expand-collapse">
+                            <button class="expand-all-btn">Expand All</button>
+                            <button class="collapse-all-btn">Collapse All</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Sitemap View -->
+                <div class="sitemap-view active" id="visual-view">
+                    <div class="visual-sitemap">
+                        <div class="site-root">
+                            <div class="root-node">
+                                <a href="../index.html" class="node-link">
+                                    <span class="node-icon"><i class="fas fa-home"></i></span>
+                                    <span class="node-label">Home</span>
+                                </a>
+                            </div>
+
+                            <div class="site-branches">
+                                <!-- Main Pages Branch -->
+                                <div class="branch" data-category="main">
+                                    <div class="branch-header">
+                                        <button class="collapse-btn"><i class="fas fa-minus"></i></button>
+                                        <h3>Main Pages</h3>
+                                    </div>
+                                    <ul class="branch-items">
+                                        <li class="branch-item">
+                                            <a href="../index.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-home"></i></span>
+                                                <span class="node-label">Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="about.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-info-circle"></i></span>
+                                                <span class="node-label">About Us</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="contact.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-envelope"></i></span>
+                                                <span class="node-label">Contact Us</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="blog.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-newspaper"></i></span>
+                                                <span class="node-label">Blog</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="faq.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-question-circle"></i></span>
+                                                <span class="node-label">FAQ</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Product Pages Branch -->
+                                <div class="branch" data-category="product">
+                                    <div class="branch-header">
+                                        <button class="collapse-btn"><i class="fas fa-minus"></i></button>
+                                        <h3>Product Pages</h3>
+                                    </div>
+                                    <ul class="branch-items">
+                                        <li class="branch-item">
+                                            <a href="shop.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-store"></i></span>
+                                                <span class="node-label">Shop</span>
+                                            </a>
+                                            <ul class="sub-branch">
+                                                <li class="branch-item">
+                                                    <a href="category-electronics.html" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-laptop"></i></span>
+                                                        <span class="node-label">Electronics</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="category-clothing.html" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-tshirt"></i></span>
+                                                        <span class="node-label">Clothing</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="category-home.html" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-couch"></i></span>
+                                                        <span class="node-label">Home & Kitchen</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="category-beauty.html" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-spa"></i></span>
+                                                        <span class="node-label">Beauty</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="new-arrivals.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-tag"></i></span>
+                                                <span class="node-label">New Arrivals</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="deals.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-percentage"></i></span>
+                                                <span class="node-label">Deals & Discounts</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="products-comparison.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-exchange-alt"></i></span>
+                                                <span class="node-label">Compare Products</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="product-detail.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-search-plus"></i></span>
+                                                <span class="node-label">Product Detail</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Account Pages Branch -->
+                                <div class="branch" data-category="account">
+                                    <div class="branch-header">
+                                        <button class="collapse-btn"><i class="fas fa-minus"></i></button>
+                                        <h3>Account Pages</h3>
+                                    </div>
+                                    <ul class="branch-items">
+                                        <li class="branch-item">
+                                            <a href="login.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-sign-in-alt"></i></span>
+                                                <span class="node-label">Login</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="register.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-user-plus"></i></span>
+                                                <span class="node-label">Register</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="forgot-password.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-key"></i></span>
+                                                <span class="node-label">Forgot Password</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="my-account.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-user"></i></span>
+                                                <span class="node-label">My Account</span>
+                                            </a>
+                                            <ul class="sub-branch">
+                                                <li class="branch-item">
+                                                    <a href="my-account.html#orders" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-shopping-bag"></i></span>
+                                                        <span class="node-label">My Orders</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="my-account.html#wishlist" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-heart"></i></span>
+                                                        <span class="node-label">Wishlist</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="my-account.html#addresses" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span class="node-label">My Addresses</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="my-account.html#payment-methods" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-credit-card"></i></span>
+                                                        <span class="node-label">Payment Methods</span>
+                                                    </a>
+                                                </li>
+                                                <li class="branch-item">
+                                                    <a href="my-account.html#profile" class="node-link">
+                                                        <span class="node-icon"><i class="fas fa-user-edit"></i></span>
+                                                        <span class="node-label">Profile Settings</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="cart.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-shopping-cart"></i></span>
+                                                <span class="node-label">Shopping Cart</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="checkout.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-credit-card"></i></span>
+                                                <span class="node-label">Checkout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Help Pages Branch -->
+                                <div class="branch" data-category="help">
+                                    <div class="branch-header">
+                                        <button class="collapse-btn"><i class="fas fa-minus"></i></button>
+                                        <h3>Help Pages</h3>
+                                    </div>
+                                    <ul class="branch-items">
+                                        <li class="branch-item">
+                                            <a href="help-center.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-question-circle"></i></span>
+                                                <span class="node-label">Help Center</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="faq.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-question"></i></span>
+                                                <span class="node-label">FAQs</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="support-ticket.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-ticket-alt"></i></span>
+                                                <span class="node-label">Submit a Ticket</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="track-order.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-truck"></i></span>
+                                                <span class="node-label">Track Order</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="shipping-info.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-shipping-fast"></i></span>
+                                                <span class="node-label">Shipping Information</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Legal Pages Branch -->
+                                <div class="branch" data-category="legal">
+                                    <div class="branch-header">
+                                        <button class="collapse-btn"><i class="fas fa-minus"></i></button>
+                                        <h3>Legal Pages</h3>
+                                    </div>
+                                    <ul class="branch-items">
+                                        <li class="branch-item">
+                                            <a href="terms-conditions.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-file-contract"></i></span>
+                                                <span class="node-label">Terms & Conditions</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="privacy-policy.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-user-shield"></i></span>
+                                                <span class="node-label">Privacy Policy</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="terms-of-use.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-file-alt"></i></span>
+                                                <span class="node-label">Terms of Use</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="return-policy.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-undo-alt"></i></span>
+                                                <span class="node-label">Return Policy</span>
+                                            </a>
+                                        </li>
+                                        <li class="branch-item">
+                                            <a href="cookies-policy.html" class="node-link">
+                                                <span class="node-icon"><i class="fas fa-cookie-bite"></i></span>
+                                                <span class="node-label">Cookies Policy</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- List Sitemap View -->
+                <div class="sitemap-view" id="list-view">
+                    <div class="list-sitemap">
+                        <!-- Main Pages Section -->
+                        <div class="list-section" data-category="main">
+                            <h3>Main Pages</h3>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="../index.html">
+                                        <i class="fas fa-home"></i> Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html">
+                                        <i class="fas fa-info-circle"></i> About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <i class="fas fa-envelope"></i> Contact Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blog.html">
+                                        <i class="fas fa-newspaper"></i> Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">
+                                        <i class="fas fa-question-circle"></i> FAQ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Product Pages Section -->
+                        <div class="list-section" data-category="product">
+                            <h3>Product Pages</h3>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="shop.html">
+                                        <i class="fas fa-store"></i> Shop
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="category-electronics.html">
+                                                <i class="fas fa-laptop"></i> Electronics
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category-clothing.html">
+                                                <i class="fas fa-tshirt"></i> Clothing
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category-home.html">
+                                                <i class="fas fa-couch"></i> Home & Kitchen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category-beauty.html">
+                                                <i class="fas fa-spa"></i> Beauty
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="new-arrivals.html">
+                                        <i class="fas fa-tag"></i> New Arrivals
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="deals.html">
+                                        <i class="fas fa-percentage"></i> Deals & Discounts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-comparison.html">
+                                        <i class="fas fa-exchange-alt"></i> Compare Products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product-detail.html">
+                                        <i class="fas fa-search-plus"></i> Product Detail
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Account Pages Section -->
+                        <div class="list-section" data-category="account">
+                            <h3>Account Pages</h3>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="login.html">
+                                        <i class="fas fa-sign-in-alt"></i> Login
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="register.html">
+                                        <i class="fas fa-user-plus"></i> Register
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forgot-password.html">
+                                        <i class="fas fa-key"></i> Forgot Password
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="my-account.html">
+                                        <i class="fas fa-user"></i> My Account
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="my-account.html#orders">
+                                                <i class="fas fa-shopping-bag"></i> My Orders
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="my-account.html#wishlist">
+                                                <i class="fas fa-heart"></i> Wishlist
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="my-account.html#addresses">
+                                                <i class="fas fa-map-marker-alt"></i> My Addresses
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="my-account.html#payment-methods">
+                                                <i class="fas fa-credit-card"></i> Payment Methods
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="my-account.html#profile">
+                                                <i class="fas fa-user-edit"></i> Profile Settings
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="cart.html">
+                                        <i class="fas fa-shopping-cart"></i> Shopping Cart
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="checkout.html">
+                                        <i class="fas fa-credit-card"></i> Checkout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Help Pages Section -->
+                        <div class="list-section" data-category="help">
+                            <h3>Help Pages</h3>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="help-center.html">
+                                        <i class="fas fa-question-circle"></i> Help Center
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">
+                                        <i class="fas fa-question"></i> FAQs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html">
+                                        <i class="fas fa-ticket-alt"></i> Submit a Ticket
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="track-order.html">
+                                        <i class="fas fa-truck"></i> Track Order
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="shipping-info.html">
+                                        <i class="fas fa-shipping-fast"></i> Shipping Information
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Legal Pages Section -->
+                        <div class="list-section" data-category="legal">
+                            <h3>Legal Pages</h3>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="terms-conditions.html">
+                                        <i class="fas fa-file-contract"></i> Terms & Conditions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">
+                                        <i class="fas fa-user-shield"></i> Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="terms-of-use.html">
+                                        <i class="fas fa-file-alt"></i> Terms of Use
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="return-policy.html">
+                                        <i class="fas fa-undo-alt"></i> Return Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="cookies-policy.html">
+                                        <i class="fas fa-cookie-bite"></i> Cookies Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XML Sitemap View -->
+                <div class="sitemap-view" id="xml-view">
+                    <div class="xml-sitemap">
+                        <div class="xml-header">
+                            <div class="xml-info">
+                                <h3>XML Sitemap</h3>
+                                <p>This XML sitemap is used by search engines to better index our website.</p>
+                            </div>
+                            <div class="xml-actions">
+                                <a href="../sitemap.xml" class="btn btn-outline" download>
+                                    <i class="fas fa-download"></i> Download XML
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="xml-content">
+                            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-05&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;1.0&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/about.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-04-15&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.8&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/shop.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-05&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;0.9&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/category-electronics.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-04&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;0.8&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/category-clothing.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-04&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;0.8&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/category-home.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-04&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;0.8&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/category-beauty.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-04&lt;/lastmod&gt;
+    &lt;changefreq&gt;daily&lt;/changefreq&gt;
+    &lt;priority&gt;0.8&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/login.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-04-10&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.7&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/register.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-04-10&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.7&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/help-center.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-01&lt;/lastmod&gt;
+    &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+    &lt;priority&gt;0.7&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/faq.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-01&lt;/lastmod&gt;
+    &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+    &lt;priority&gt;0.7&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/terms-conditions.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-05&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/privacy-policy.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-05&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://www.shopverse.com/pages/terms-of-use.html&lt;/loc&gt;
+    &lt;lastmod&gt;2025-05-05&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;0.5&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;!-- Additional URLs truncated for brevity --&gt;
+&lt;/urlset&gt;</code></pre>
+                        </div>
+
+                        <div class="xml-footer">
+                            <p>Last generated: May 5, 2025 | Total URLs: 42</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Results View -->
+                <div class="sitemap-view" id="search-results-view">
+                    <div class="search-results">
+                        <div class="results-header">
+                            <h3>Search Results for: <span class="search-term"></span></h3>
+                            <button class="clear-search-btn"><i class="fas fa-times"></i> Clear Search</button>
+                        </div>
+                        <div class="results-count">
+                            <span class="count">0</span> pages found
+                        </div>
+                        <div class="results-list">
+                            <!-- Search results will be populated here via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legend Section -->
+    <section class="sitemap-legend">
+        <div class="container">
+            <div class="legend-container">
+                <h3>Sitemap Legend</h3>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-icon main"><i class="fas fa-circle"></i></span>
+                        <span class="legend-text">Main Pages</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon product"><i class="fas fa-circle"></i></span>
+                        <span class="legend-text">Product Pages</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon account"><i class="fas fa-circle"></i></span>
+                        <span class="legend-text">Account Pages</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon help"><i class="fas fa-circle"></i></span>
+                        <span class="legend-text">Help Pages</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon legal"><i class="fas fa-circle"></i></span>
+                        <span class="legend-text">Legal Pages</span>
+                    </div>
+                </div>
+                <div class="legend-note">
+                    <p><i class="fas fa-info-circle"></i> Click on any page link to navigate directly to that page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="pages/help-center.html">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="pages/terms-of-use.html">Terms of Use</a>
+                        <a href="pages/privacy-policy.html">Privacy Policy</a>
+                        <a href="pages/sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/sitemap.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

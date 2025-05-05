@@ -1,0 +1,38 @@
+/**
+ * ShopVerse E-commerce Platform
+ * Terms of Use Page Specific Styles
+ * 
+ * This file contains additional styles specific to the Terms of Use page
+ * (Most styling is inherited from legal-pages.css)
+ */
+
+
+/* Highlighted text for emphasis */
+
+.legal-section strong {
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.dark-mode .legal-section strong {
+    color: var(--dark-heading);
+}
+
+
+/* Address formatting */
+
+.legal-section address {
+    margin: 15px 0;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius-md);
+    display: inline-block;
+}
+
+.dark-mode .legal-section address {
+    background-color: var(--dark-secondary-bg);
+    color: var(--dark-text);
+}
