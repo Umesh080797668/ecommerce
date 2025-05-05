@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/track-order.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="#" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">New Arrivals</a></li>
+                                    <li><a href="#">Best Sellers</a></li>
+                                    <li><a href="#">Special Offers</a></li>
+                                    <li><a href="#">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="#">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order active">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Track Your Order</h1>
+            <ul class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li class="active">Track Order</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Track Order Section -->
+    <section class="track-order-section">
+        <div class="container">
+            <div class="track-order-wrapper">
+                <div class="track-order-form-container">
+                    <h2>Enter Your Order Details</h2>
+                    <p>To track your order, please enter your Order ID and the email address used for the order.</p>
+
+                    <form id="track-order-form" class="track-order-form">
+                        <div class="form-group">
+                            <label for="order-id">Order ID</label>
+                            <input type="text" id="order-id" name="order-id" placeholder="e.g., SV12345678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-email">Email Address</label>
+                            <input type="email" id="order-email" name="order-email" placeholder="Email used for your order" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Track Order</button>
+                    </form>
+                </div>
+
+                <!-- This section will be displayed after form submission -->
+                <div class="track-result-container" id="track-result" style="display: none;">
+                    <div class="order-info">
+                        <div class="order-info-header">
+                            <h3>Order #SV12345678</h3>
+                            <span class="order-date">Placed on: May 1, 2025</span>
+                            <span class="order-status in-transit">In Transit</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="detail-group">
+                                <span class="detail-label">Estimated Delivery:</span>
+                                <span class="detail-value">May 7, 2025</span>
+                            </div>
+                            <div class="detail-group">
+                                <span class="detail-label">Shipping Method:</span>
+                                <span class="detail-value">Express Delivery</span>
+                            </div>
+                            <div class="detail-group">
+                                <span class="detail-label">Shipping Address:</span>
+                                <address class="detail-value">
+                                    John Doe<br>
+                                    123 Main Street<br>
+                                    Apt 4B<br>
+                                    New York, NY 10001<br>
+                                    United States
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-progress">
+                        <h3>Order Status</h3>
+                        <div class="progress-tracker">
+                            <div class="progress-step completed">
+                                <div class="step-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Order Confirmed</h4>
+                                    <p>May 1, 2025 <span class="step-time">10:30 AM</span></p>
+                                </div>
+                            </div>
+                            <div class="progress-step completed">
+                                <div class="step-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Order Processed</h4>
+                                    <p>May 2, 2025 <span class="step-time">2:15 PM</span></p>
+                                </div>
+                            </div>
+                            <div class="progress-step completed">
+                                <div class="step-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Shipped</h4>
+                                    <p>May 3, 2025 <span class="step-time">9:45 AM</span></p>
+                                </div>
+                            </div>
+                            <div class="progress-step active">
+                                <div class="step-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>In Transit</h4>
+                                    <p>May 4, 2025 <span class="step-time">11:20 AM</span></p>
+                                </div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Out for Delivery</h4>
+                                    <p>Pending</p>
+                                </div>
+                            </div>
+                            <div class="progress-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-flag-checkered"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Delivered</h4>
+                                    <p>Pending</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-items">
+                        <h3>Order Items</h3>
+                        <div class="item-list">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="../assets/images/1.jpg" alt="Wireless Headphones">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Wireless Noise Cancelling Headphones</h4>
+                                    <p class="item-variant">Color: Black | Size: Standard</p>
+                                    <div class="item-price-qty">
+                                        <span class="item-price">$249.99</span>
+                                        <span class="item-qty">Qty: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="../assets/images/1.jpg" alt="Smart Watch">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Smart Watch Series 5</h4>
+                                    <p class="item-variant">Color: Silver | Size: 44mm</p>
+                                    <div class="item-price-qty">
+                                        <span class="item-price">$319.99</span>
+                                        <span class="item-qty">Qty: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shipping-updates">
+                        <h3>Shipping Updates</h3>
+                        <div class="updates-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="date">May 4</span>
+                                    <span class="time">11:20 AM</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Package in transit</h4>
+                                    <p>Your package is on its way to the destination.</p>
+                                    <p class="location">Location: Distribution Center, Chicago, IL</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="date">May 3</span>
+                                    <span class="time">9:45 AM</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Package shipped</h4>
+                                    <p>Your order has been picked up by the carrier.</p>
+                                    <p class="location">Location: Warehouse, Dallas, TX</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="date">May 2</span>
+                                    <span class="time">2:15 PM</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Order processed</h4>
+                                    <p>Your order has been prepared and packed.</p>
+                                    <p class="location">Location: Warehouse, Dallas, TX</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="date">May 1</span>
+                                    <span class="time">10:30 AM</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Order confirmed</h4>
+                                    <p>Thank you for your order! We've received your payment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span>$569.98</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping</span>
+                                <span>$15.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax</span>
+                                <span>$46.40</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span>$631.38</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-actions">
+                        <a href="#" class="btn btn-outline">Print Shipping Label</a>
+                        <a href="#" class="btn btn-primary">Contact Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Need Help Section -->
+    <section class="help-section">
+        <div class="container">
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="help-content">
+                    <h3>Need Help with Your Order?</h3>
+                    <p>Our customer support team is available 24/7 to assist you with any questions or concerns.</p>
+                    <div class="help-actions">
+                        <a href="tel:+1234567890" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us</a>
+                        <a href="mailto:support@shopverse.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Support</a>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-comment"></i> Live Chat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I track my order?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can track your order by entering your Order ID and the email address associated with your order in the form above. Your Order ID can be found in your order confirmation email.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Why can't I find my order?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you're unable to find your order, please ensure you're using the correct Order ID and email address. If you still can't locate your order, please contact our customer support team for assistance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does shipping take?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Shipping times vary depending on your location and the shipping method selected at checkout. Standard shipping typically takes 3-5 business days, while express shipping can take 1-2 business days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I change my shipping address after placing an order?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We can only change the shipping address if the order hasn't been processed yet. Please contact our customer support team immediately if you need to change your shipping address.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Flash Deals</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                        <div class="business-hours">
+                            <p><strong>Working Hours:</strong></p>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/track-order.js"></script>
+    <script>
+        // Demo functionality for tracking form
+        document.addEventListener('DOMContentLoaded', function() {
+            const trackOrderForm = document.getElementById('track-order-form');
+            const trackResult = document.getElementById('track-result');
+
+            trackOrderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // In a real application, you would make an AJAX request to fetch order details
+                // For demo purposes, we'll just show the pre-filled tracking result
+                trackOrderForm.style.display = 'none';
+                trackResult.style.display = 'block';
+            });
+
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
