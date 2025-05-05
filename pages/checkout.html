@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <style>
+        /* Checkout Page Specific Styles */
+        
+        .checkout-section {
+            padding: 3rem 0;
+        }
+        
+        .checkout-content {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .checkout-details {
+            flex: 2;
+        }
+        
+        .checkout-summary {
+            flex: 1;
+            min-width: 320px;
+        }
+        
+        .checkout-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkout-card h3 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1.25rem;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            flex: 1;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .payment-method {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+        }
+        
+        .payment-method.active {
+            border-color: var(--primary-color);
+            background-color: rgba(74, 108, 247, 0.05);
+        }
+        
+        .payment-method-radio {
+            margin-right: 1rem;
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .payment-method.active .payment-method-radio {
+            border-color: var(--primary-color);
+        }
+        
+        .payment-method-radio:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .payment-method-icon {
+            margin-right: 0.75rem;
+            font-size: 1.5rem;
+        }
+        
+        .payment-method-details {
+            flex: 1;
+        }
+        
+        .payment-method-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .payment-method-description {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        .summary-card h3 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .order-items {
+            margin-bottom: 1.5rem;
+        }
+        
+        .order-item {
+            display: flex;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .order-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .order-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .order-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .order-item-details {
+            flex: 1;
+        }
+        
+        .order-item-title {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        
+        .order-item-info {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            color: var(--text-color);
+        }
+        
+        .summary-row.total {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            border-top: 1px solid var(--border-color);
+            margin-top: 0.5rem;
+            padding-top: 1.25rem;
+        }
+        
+        .place-order-btn {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 1rem;
+            font-weight: 600;
+        }
+        
+        .back-to-cart {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .back-to-cart i {
+            transition: transform 0.3s ease;
+        }
+        
+        .back-to-cart:hover i {
+            transform: translateX(-5px);
+        }
+        
+        .step-indicator {
+            display: flex;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            font-size: 0.875rem;
+        }
+        
+        .step {
+            flex: 1;
+            position: relative;
+            text-align: center;
+            padding: 1rem 0.5rem;
+        }
+        
+        .step::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+        
+        .step:first-child::before {
+            left: 50%;
+        }
+        
+        .step:last-child::before {
+            right: 50%;
+        }
+        
+        .step.active::before,
+        .step.completed::before {
+            background-color: var(--primary-color);
+        }
+        
+        .step-icon {
+            position: relative;
+            width: 45px;
+            height: 45px;
+            margin: 0 auto 0.5rem;
+            background-color: var(--white);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            z-index: 1;
+        }
+        
+        .step.active .step-icon,
+        .step.completed .step-icon {
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .step-title {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .step.active .step-title,
+        .step.completed .step-title {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .card-form {
+            margin-top: 1rem;
+        }
+        
+        .card-icons {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+        
+        .card-icons i {
+            color: var(--text-light);
+        }
+        
+        .security-code-help {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .security-code-help i {
+            color: var(--primary-color);
+            cursor: help;
+        }
+        
+        .security-code-tooltip {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--box-shadow);
+            padding: 1rem;
+            max-width: 300px;
+            z-index: 10;
+        }
+        
+        .security-code-help:hover .security-code-tooltip {
+            display: block;
+        }
+        
+        @media screen and (max-width: 991px) {
+            .checkout-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .form-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .step-indicator {
+                font-size: 0.75rem;
+            }
+            .step-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            .step::before {
+                top: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="#" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">New Arrivals</a></li>
+                                    <li><a href="#">Best Sellers</a></li>
+                                    <li><a href="#">Special Offers</a></li>
+                                    <li><a href="#">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="#">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="#" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html">Shopping Cart</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <!-- Checkout Steps Indicator -->
+            <div class="step-indicator">
+                <div class="step completed">
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="step-title">Shopping Cart</div>
+                </div>
+                <div class="step active">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="step-title">Checkout</div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="step-title">Order Complete</div>
+                </div>
+            </div>
+
+            <!-- Checkout Content -->
+            <div class="checkout-content">
+                <div class="checkout-details">
+                    <!-- Billing Details -->
+                    <div class="checkout-card">
+                        <h3>Billing Details</h3>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" id="firstName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" id="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company Name (Optional)</label>
+                                <input type="text" id="company" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="form-label">Country / Region *</label>
+                                <select id="country" class="form-control" required>
+                                    <option value="">Select a country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="address1" class="form-label">Street Address *</label>
+                                <input type="text" id="address1" class="form-control" placeholder="House number and street name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="address2" class="form-control" placeholder="Apartment, suite, unit, etc. (optional)">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city" class="form-label">Town / City *</label>
+                                    <input type="text" id="city" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state" class="form-label">State / Province *</label>
+                                    <select id="state" class="form-control" required>
+                                        <option value="">Select a state</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <!-- More states would be added here -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipcode" class="form-label">ZIP / Postal Code *</label>
+                                    <input type="text" id="zipcode" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone *</label>
+                                    <input type="tel" id="phone" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="createAccount" class="form-check-input">
+                                <label for="createAccount">Create an account?</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="shipDifferent" class="form-check-input">
+                                <label for="shipDifferent">Ship to a different address?</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="orderNotes" class="form-label">Order Notes (Optional)</label>
+                                <textarea id="orderNotes" class="form-control" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-card">
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method active">
+                                <input type="radio" name="payment-method" id="creditCard" class="payment-method-radio" checked>
+                                <div class="payment-method-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="payment-method-details">
+                                    <div class="payment-method-title">Credit / Debit Card</div>
+                                    <div class="payment-method-description">Pay with your credit or debit card</div>
+                                </div>
+                            </div>
+
+                            <div class="payment-method">
+                                <input type="radio" name="payment-method" id="paypal" class="payment-method-radio">
+                                <div class="payment-method-icon">
+                                    <i class="fab fa-paypal"></i>
+                                </div>
+                                <div class="payment-method-details">
+                                    <div class="payment-method-title">PayPal</div>
+                                    <div class="payment-method-description">Pay with your PayPal account</div>
+                                </div>
+                            </div>
+
+                            <div class="payment-method">
+                                <input type="radio" name="payment-method" id="applePay" class="payment-method-radio">
+                                <div class="payment-method-icon">
+                                    <i class="fab fa-apple-pay"></i>
+                                </div>
+                                <div class="payment-method-details">
+                                    <div class="payment-method-title">Apple Pay</div>
+                                    <div class="payment-method-description">Pay with Apple Pay</div>
+                                </div>
+                            </div>
+
+                            <div class="payment-method">
+                                <input type="radio" name="payment-method" id="bankTransfer" class="payment-method-radio">
+                                <div class="payment-method-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-method-details">
+                                    <div class="payment-method-title">Direct Bank Transfer</div>
+                                    <div class="payment-method-description">Make your payment directly into our bank account</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Credit Card Form -->
+                        <div class="card-form">
+                            <div class="card-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-cc-discover"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardName" class="form-label">Name on Card *</label>
+                                <input type="text" id="cardName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber" class="form-label">Card Number *</label>
+                                <input type="text" id="cardNumber" class="form-control" placeholder="XXXX XXXX XXXX XXXX" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expDate" class="form-label">Expiration Date *</label>
+                                    <input type="text" id="expDate" class="form-control" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv" class="form-label">Security Code (CVV) *</label>
+                                    <div class="security-code-help">
+                                        <input type="text" id="cvv" class="form-control" placeholder="CVV" required>
+                                        <i class="fas fa-question-circle"></i>
+                                        <div class="security-code-tooltip">
+                                            <p>The security code (CVV) is a 3 or 4 digit number located on the back of your card.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-summary">
+                    <div class="checkout-card summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    <img src="https://via.placeholder.com/60" alt="Wireless Headphones">
+                                </div>
+                                <div class="order-item-details">
+                                    <div class="order-item-title">Wireless Noise Cancelling Headphones</div>
+                                    <div class="order-item-info">
+                                        <span>Qty: 1</span>
+                                        <span>$249.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    <img src="https://via.placeholder.com/60" alt="Smart Watch">
+                                </div>
+                                <div class="order-item-details">
+                                    <div class="order-item-title">Smart Watch Series 5</div>
+                                    <div class="order-item-info">
+                                        <span>Qty: 1</span>
+                                        <span>$319.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    <img src="https://via.placeholder.com/60" alt="Premium Leather Handbag">
+                                </div>
+                                <div class="order-item-details">
+                                    <div class="order-item-title">Premium Leather Handbag</div>
+                                    <div class="order-item-info">
+                                        <span>Qty: 1</span>
+                                        <span>$189.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$759.97</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>$60.80</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>$820.77</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary place-order-btn">Place Order</button>
+                        <a href="cart.html" class="back-to-cart"><i class="fas fa-arrow-left"></i> Back to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Flash Deals</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                        <div class="business-hours">
+                            <p><strong>Working Hours:</strong></p>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            const cardForm = document.querySelector('.card-form');
+
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    // Update radio button
+                    const radio = this.querySelector('.payment-method-radio');
+                    radio.checked = true;
+
+                    // Update active class
+                    paymentMethods.forEach(m => m.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show/hide card form based on selected payment method
+                    if (radio.id === 'creditCard') {
+                        cardForm.style.display = 'block';
+                    } else {
+                        cardForm.style.display = 'none';
+                    }
+                });
+            });
+
+            // Credit Card Form Validation
+            const cardNumberInput = document.getElementById('cardNumber');
+            const expirationInput = document.getElementById('expDate');
+            const cvvInput = document.getElementById('cvv');
+
+            // Format card number as user types
+            if (cardNumberInput) {
+                cardNumberInput.addEventListener('input', function(e) {
+                    // Remove non-digit characters
+                    let value = e.target.value.replace(/\D/g, '');
+
+                    // Add space every 4 digits
+                    if (value.length > 0) {
+                        value = value.match(new RegExp('.{1,4}', 'g')).join(' ');
+                    }
+
+                    // Update input value
+                    e.target.value = value;
+
+                    // Limit to 19 characters (16 digits + 3 spaces)
+                    if (e.target.value.length > 19) {
+                        e.target.value = e.target.value.slice(0, 19);
+                    }
+                });
+            }
+
+            // Format expiration date as MM/YY
+            if (expirationInput) {
+                expirationInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+
+                    if (value.length > 0) {
+                        if (value.length <= 2) {
+                            e.target.value = value;
+                        } else {
+                            e.target.value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                        }
+                    }
+
+                    if (e.target.value.length > 5) {
+                        e.target.value = e.target.value.slice(0, 5);
+                    }
+                });
+            }
+
+            // Limit CVV to 3-4 digits
+            if (cvvInput) {
+                cvvInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    e.target.value = value;
+
+                    if (e.target.value.length > 4) {
+                        e.target.value = e.target.value.slice(0, 4);
+                    }
+                });
+            }
+
+            // Form submission
+            const checkoutForm = document.querySelector('.place-order-btn');
+
+            if (checkoutForm) {
+                checkoutForm.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // In a real application, form validation would be performed here
+                    // For this demo, we'll simulate a successful order
+
+                    // Show loading state
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                    this.disabled = true;
+
+                    // Simulate API call delay
+                    setTimeout(() => {
+                        // Clear cart from localStorage
+                        localStorage.setItem('shopverse-cart', JSON.stringify([]));
+
+                        // Redirect to order confirmation page
+                        // In a real application, this would be a proper order confirmation page
+                        window.location.href = '../index.html?orderComplete=true';
+                    }, 2000);
+                });
+            }
+
+            // Update order summary from localStorage
+            updateOrderSummary();
+
+            function updateOrderSummary() {
+                const cart = JSON.parse(localStorage.getItem('shopverse-cart')) || [];
+
+                // If cart is empty, redirect to cart page
+                if (cart.length === 0) {
+                    // In a real application, this would redirect to the cart page
+                    // window.location.href = 'cart.html';
+                }
+
+                // Otherwise, the order summary is already populated with demo data
+            }
+        });
+    </script>
+</body>
+
+</html>

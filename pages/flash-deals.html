@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Deals | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/flash-deals.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <header class="header">
+        <!-- Header content -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="pages/login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="pages/register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="all-brands.html">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item active"><a href="flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <h1>Flash Deals</h1>
+                <ul class="breadcrumb">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>Flash Deals</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Deals Banner -->
+    <section class="flash-banner">
+        <div class="container">
+            <div class="flash-banner__content">
+                <div class="flash-banner__text">
+                    <h2>Lightning Deals</h2>
+                    <p>Amazing discounts for a limited time only!</p>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-value days">02</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value hours">18</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value minutes">45</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value seconds">30</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Deals Section -->
+    <section class="flash-deals-section section-padding">
+        <div class="container">
+            <div class="flash-deals-tabs">
+                <button class="tab-button active" data-category="all">All Deals</button>
+                <button class="tab-button" data-category="electronics">Electronics</button>
+                <button class="tab-button" data-category="fashion">Fashion</button>
+                <button class="tab-button" data-category="home">Home & Furniture</button>
+                <button class="tab-button" data-category="beauty">Beauty & Health</button>
+            </div>
+
+            <div class="flash-deals-grid">
+                <!-- Deal 1 -->
+                <div class="deal-card" data-category="electronics">
+                    <div class="deal-badge">-50%</div>
+                    <div class="deal-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="sold">75</span> Sold / <span class="available">25</span> Available
+                        </div>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../assets/images/1.jpg" alt="Wireless Headphones">
+                        <div class="deal-actions">
+                            <button class="action-btn wishlist" data-product-id="1"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn quick-view" data-product-id="1"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-category">Electronics</div>
+                        <h3 class="deal-title"><a href="product-detail.html">Wireless Noise Cancelling Headphones</a></h3>
+                        <div class="deal-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(42)</span>
+                        </div>
+                        <div class="deal-price">
+                            <span class="old-price">$299.99</span>
+                            <span class="current-price">$149.99</span>
+                        </div>
+                        <div class="deal-countdown" data-end="2025-05-07T23:59:59">
+                            <div class="countdown-mini">
+                                <span>02</span>:<span>18</span>:<span>45</span>:<span>30</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="1">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="deal-card" data-category="fashion">
+                    <div class="deal-badge">-40%</div>
+                    <div class="deal-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="sold">60</span> Sold / <span class="available">40</span> Available
+                        </div>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../assets/images/1.jpg" alt="Designer Sunglasses">
+                        <div class="deal-actions">
+                            <button class="action-btn wishlist" data-product-id="2"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn quick-view" data-product-id="2"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-category">Fashion</div>
+                        <h3 class="deal-title"><a href="product-detail.html">Designer Polarized Sunglasses</a></h3>
+                        <div class="deal-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(28)</span>
+                        </div>
+                        <div class="deal-price">
+                            <span class="old-price">$159.99</span>
+                            <span class="current-price">$95.99</span>
+                        </div>
+                        <div class="deal-countdown" data-end="2025-05-06T23:59:59">
+                            <div class="countdown-mini">
+                                <span>01</span>:<span>12</span>:<span>34</span>:<span>19</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="2">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Deal 3 -->
+                <div class="deal-card" data-category="home">
+                    <div class="deal-badge">-60%</div>
+                    <div class="deal-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="sold">85</span> Sold / <span class="available">15</span> Available
+                        </div>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../assets/images/1.jpg" alt="Smart Coffee Maker">
+                        <div class="deal-actions">
+                            <button class="action-btn wishlist" data-product-id="3"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn quick-view" data-product-id="3"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-category">Home & Furniture</div>
+                        <h3 class="deal-title"><a href="product-detail.html">Smart Coffee Maker</a></h3>
+                        <div class="deal-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(56)</span>
+                        </div>
+                        <div class="deal-price">
+                            <span class="old-price">$249.99</span>
+                            <span class="current-price">$99.99</span>
+                        </div>
+                        <div class="deal-countdown" data-end="2025-05-08T23:59:59">
+                            <div class="countdown-mini">
+                                <span>03</span>:<span>04</span>:<span>22</span>:<span>15</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="3">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Deal 4 -->
+                <div class="deal-card" data-category="beauty">
+                    <div class="deal-badge">-45%</div>
+                    <div class="deal-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="sold">70</span> Sold / <span class="available">30</span> Available
+                        </div>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../assets/images/1.jpg" alt="Skincare Set">
+                        <div class="deal-actions">
+                            <button class="action-btn wishlist" data-product-id="4"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn quick-view" data-product-id="4"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-category">Beauty & Health</div>
+                        <h3 class="deal-title"><a href="product-detail.html">Luxury Skincare Set</a></h3>
+                        <div class="deal-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(37)</span>
+                        </div>
+                        <div class="deal-price">
+                            <span class="old-price">$179.99</span>
+                            <span class="current-price">$98.99</span>
+                        </div>
+                        <div class="deal-countdown" data-end="2025-05-10T23:59:59">
+                            <div class="countdown-mini">
+                                <span>05</span>:<span>11</span>:<span>08</span>:<span>43</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="4">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Deal 5 -->
+                <div class="deal-card" data-category="electronics">
+                    <div class="deal-badge">-30%</div>
+                    <div class="deal-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 50%;"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="sold">50</span> Sold / <span class="available">50</span> Available
+                        </div>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../assets/images/1.jpg" alt="Smart Watch">
+                        <div class="deal-actions">
+                            <button class="action-btn wishlist" data-product-id="5"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn quick-view" data-product-id="5"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-category">Electronics</div>
+                        <h3 class="deal-title"><a href="product-detail.html">Smart Watch Series 5</a></h3>
+                        <div class="deal-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(78)</span>
+                        </div>
+                        <div class="deal-price">
+                            <span class="old-price">$399.99</span>
+                            <span class="current-price">$279.99</span>
+                        </div>
+                        <div class="deal-countdown" data-end="2025-05-06T23:59:59">
+                            <div class="countdown-mini">
+                                <span>01</span>:<span>22</span>:<span>15</span>:<span>33</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="5">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Deal 6 -->
+                <div class="deal-card" data-category="fashion">
+                    <div class="deal-badge">-35%</div>
+                    <div class="deal-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="sold">65</span> Sold / <span class="available">35</span> Available
+                        </div>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../assets/images/1.jpg" alt="Leather Handbag">
+                        <div class="deal-actions">
+                            <button class="action-btn wishlist" data-product-id="6"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn quick-view" data-product-id="6"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-category">Fashion</div>
+                        <h3 class="deal-title"><a href="product-detail.html">Premium Leather Handbag</a></h3>
+                        <div class="deal-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(35)</span>
+                        </div>
+                        <div class="deal-price">
+                            <span class="old-price">$189.99</span>
+                            <span class="current-price">$123.49</span>
+                        </div>
+                        <div class="deal-countdown" data-end="2025-05-09T23:59:59">
+                            <div class="countdown-mini">
+                                <span>04</span>:<span>09</span>:<span>54</span>:<span>12</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product-id="6">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-outline btn-lg">Load More Deals</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-info">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates on new products, special offers, and exclusive deals directly to your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter-terms" required>
+                        <label for="newsletter-terms">I agree to receive marketing emails from ShopVerse.</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Flash Deals</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <!-- Quick view modal content from shop.js -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/flash-deals.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
