@@ -2076,6 +2076,10 @@
         padding: var(--spacing-xl) 0;
     }
     
+    .footer .logo h2 {
+        color: var(--white);
+    }
+    
     .footer-widgets {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 2fr;

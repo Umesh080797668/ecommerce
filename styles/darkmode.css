@@ -28,6 +28,37 @@
 
 .dark-mode .header__top {
     background-color: #111827;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .header__contact a,
+.dark-mode .header__user a {
+    color: var(--text-color);
+}
+
+.dark-mode .header__contact a:hover,
+.dark-mode .header__user a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode .header__top .divider {
+    color: var(--text-light);
+}
+
+.dark-mode .header__currency select,
+.dark-mode .header__language select {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.dark-mode .header__currency select:focus,
+.dark-mode .header__language select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.dark-mode .header__top-content {
+    padding: 8px 0;
 }
 
 .dark-mode .header__bottom {
@@ -36,10 +67,17 @@
 
 .dark-mode .search-form {
     border-color: var(--border-color);
+    background-color: var(--white);
+}
+
+.dark-mode .search-form input[type="text"] {
+    background-color: transparent;
+    color: var(--text-color);
 }
 
 .dark-mode .search-category select {
     background-color: var(--light-bg);
+    color: var(--text-color);
     border-right-color: var(--border-color);
 }
 
@@ -63,6 +101,22 @@
 
 .dark-mode .category-menu__list li a:hover {
     background-color: var(--light-bg);
+}
+
+.dark-mode .category-content h3 {
+    color: var(--dark-color);
+}
+
+.dark-mode .category-content p {
+    color: var(--text-light);
+}
+
+.dark-mode .category-link {
+    color: var(--text-color);
+}
+
+.dark-mode .category-link:hover {
+    color: var(--primary-hover);
 }
 
 .dark-mode .dropdown {
@@ -172,6 +226,11 @@
     color: var(--white);
 }
 
+.dark-mode .carousel-prev i,
+.dark-mode .carousel-next i {
+    color: var(--dark-color);
+}
+
 
 /* Special Offer Banner */
 
@@ -200,6 +259,10 @@
     background-color: var(--border-color);
 }
 
+.dark-mode .testimonial-dot.active {
+    background-color: var(--primary-color);
+}
+
 
 /* Call to Action */
 
@@ -214,6 +277,14 @@
 
 .dark-mode .app-button {
     background-color: var(--light-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.dark-mode .app-button:hover {
+    background-color: var(--primary-color);
+    color: var(--black);
+    border-color: var(--primary-color);
 }
 
 
@@ -226,6 +297,11 @@
 .dark-mode .newsletter-content {
     background-color: var(--white);
     box-shadow: var(--box-shadow);
+}
+
+.dark-mode .newsletter-form input[type="email"] {
+    background-color: var(--light-bg);
+    color: var(--text-color);
 }
 
 
@@ -246,4 +322,66 @@
     background-color: var(--primary-color);
     color: var(--black);
     box-shadow: var(--box-shadow);
+}
+
+.dark-mode .footer {
+    /* Use light mode variables for the footer even in dark mode */
+    background-color: var(--white);
+    /* or whatever your light footer background is */
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.dark-mode .footer .logo h2 {
+    color: var(--text-color);
+}
+
+.dark-mode .social-links i {
+    color: var(--text-color);
+}
+
+.dark-mode .footer-title {
+    color: var(--heading-color);
+}
+
+.dark-mode .payment-methods h4,
+.dark-mode .shipping-partners h4 {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dark-mode .footer-links a {
+    color: var(--text-color);
+}
+
+.dark-mode .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode .footer__contact-info p {
+    color: var(--text-color);
+}
+
+.dark-mode .widget-title {
+    color: var(--heading-color);
+}
+
+.dark-mode .footer__social a {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+.dark-mode .footer__social a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.dark-mode .footer-bottom {
+    background-color: var(--light-bg);
+    border-color: var(--border-color);
+}
+
+.dark-mode .copyright {
+    color: var(--text-light);
 }
