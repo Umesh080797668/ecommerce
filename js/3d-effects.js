@@ -305,16 +305,16 @@ function initHeroScene() {
         }
         
         /* Fix: Add hero section text specific style to ensure visibility */
-        .bestseller-hero .hero-content h1,
-        .bestseller-hero .hero-content h2,
-        .bestseller-hero .hero-content p,
-        .bestseller-hero .hero-content .btn {
-            position: relative;
-            opacity: 1 !important;
-            visibility: visible !important;
-            z-index: 5;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
+        .bestseller-hero__text,
+.bestseller-hero__title,
+.bestseller-hero__subtitle,
+.bestseller-hero__stats,
+.bestseller-hero__stats .stat {
+    position: relative !important;
+    z-index: 5 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
         
         /* Fix: Ensure parallax backgrounds don't interfere with text */
         .parallax-background {

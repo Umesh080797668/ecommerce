@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     initBestSellersHero();
 });
 
+function isEffectsEnabled() {
+    // Check if user has reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return false;
+    }
+    // Default to enabled
+    return true;
+}
+
 function initBestSellersHero() {
     const heroSection = document.querySelector('.bestseller-hero');
     if (!heroSection) return;
@@ -50,7 +59,7 @@ function initBestSellersHero() {
         const mouseY = e.clientY / window.innerHeight - 0.5;
 
         // Get hero content for subtle movement
-        const heroContent = heroSection.querySelector('.hero-content');
+        const heroContent = heroSection.querySelector('.bestseller-hero__text');
         if (heroContent) {
             heroContent.style.transform = `translate3d(${mouseX * -20}px, ${mouseY * -20}px, 0)`;
         }
@@ -65,8 +74,16 @@ function initBestSellersHero() {
         });
     });
 
+    const heroTextContainer = heroSection.querySelector('.bestseller-hero__text');
+    if (heroTextContainer) {
+        heroTextContainer.style.position = 'relative';
+        heroTextContainer.style.zIndex = '10'; // Higher z-index to ensure visibility
+        heroTextContainer.style.opacity = '1';
+        heroTextContainer.style.visibility = 'visible';
+    }
+
     // Fix for hero text visibility
-    const heroText = heroSection.querySelectorAll('.hero-content h1, .hero-content h2, .hero-content p, .hero-content .btn');
+    const heroText = heroSection.querySelectorAll('.bestseller-hero__title, .bestseller-hero__subtitle, .bestseller-hero__stats .stat');
     heroText.forEach(element => {
         element.style.position = 'relative';
         element.style.zIndex = '5';
