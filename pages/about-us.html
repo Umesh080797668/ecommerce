@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/about-us.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown active">
+                                <a href="about-us.html">Company <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="about-us.html" class="active">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="careers.html">Careers</a></li>
+                                    <li><a href="press.html">Press</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="gift-cards.html">Gift Cards <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="gift-cards.html">Personal Gift Cards</a></li>
+                                    <li><a href="corporate-gift-cards.html">Corporate Gift Cards</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Help <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                                    <li><a href="return-policy.html">Return Policy</a></li>
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="shop.html">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item active has-dropdown">
+                        <a href="about-us.html">Company</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="about-us.html" class="active">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="gift-cards.html">Gift Cards</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="gift-cards.html">Personal Gift Cards</a></li>
+                            <li><a href="corporate-gift-cards.html">Corporate Gift Cards</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Help</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="return-policy.html">Return Policy</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header about-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>About Us</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">About Us</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero__content">
+                <div class="about-hero__text">
+                    <h2>Your trusted online shopping destination since 2015</h2>
+                    <p>ShopVerse is more than just an e-commerce platform; we're a community that connects consumers with quality products and passionate vendors from around the world. Our mission is to make online shopping accessible, enjoyable, and reliable
+                        for everyone.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-text">Million+ <br>Happy Customers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="120">0</div>
+                            <div class="stat-text">Countries <br>Served</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="15000">0</div>
+                            <div class="stat-text">Trusted <br>Vendors</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="98">0</div>
+                            <div class="stat-text">Customer <br>Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-hero__image">
+                    <img src="../assets/images/1.jpg" alt="ShopVerse Team" class="main-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">How ShopVerse became a global e-commerce leader</p>
+            </div>
+
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="../assets/images/1.jpg" alt="ShopVerse Founding">
+                </div>
+                <div class="story-text">
+                    <h3>From Startup to Global Platform</h3>
+                    <p>ShopVerse was founded in 2015 by a small team of e-commerce enthusiasts who believed online shopping could be more personal, accessible, and trustworthy. What started as a small operation with just 50 vendors and a few hundred products
+                        has grown into a global marketplace with over 15,000 verified vendors offering millions of products.</p>
+                    <p>Our journey wasn't always smooth—we faced challenges common to many startups. But our unwavering commitment to creating a platform that benefits both shoppers and sellers equally helped us overcome these hurdles and steadily grow our
+                        presence around the world.</p>
+                    <p>Today, ShopVerse connects millions of shoppers with trusted vendors across 120 countries, but we still maintain the customer-first philosophy that guided us from day one.</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h4>ShopVerse Founded</h4>
+                        <p>ShopVerse launches with 50 vendors and a vision to create a more personalized online shopping experience.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2017</div>
+                    <div class="timeline-content">
+                        <h4>International Expansion</h4>
+                        <p>ShopVerse expands shipping to 35 countries and introduces multi-currency support.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h4>1 Million Customer Milestone</h4>
+                        <p>ShopVerse celebrates serving over 1 million customers and launches the vendor verification program.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h4>Mobile App Launch</h4>
+                        <p>ShopVerse releases its mobile app, making shopping on-the-go easier and more convenient.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h4>Sustainable Shopping Initiative</h4>
+                        <p>Introduction of eco-friendly shipping options and carbon offset program for all deliveries.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h4>Global Reach</h4>
+                        <p>ShopVerse now serves customers in 120 countries with 15,000+ trusted vendors and counting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="our-values">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trust & Transparency</h3>
+                    <p>We believe in honest business practices, clear communication, and building lasting relationships based on mutual trust.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Customer First</h3>
+                    <p>Every decision we make—from feature development to policy changes—is guided by what's best for our customers.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Community</h3>
+                    <p>We celebrate diversity and strive to create a global marketplace that's accessible and welcoming to everyone.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Continuous Improvement</h3>
+                    <p>We constantly seek ways to enhance our platform, our processes, and ourselves to deliver better experiences.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to minimizing our environmental impact and promoting sustainable business practices.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Equality & Support</h3>
+                    <p>We strive to create equal opportunities for vendors of all sizes and provide the support needed for their success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Leadership Team</h2>
+                <p class="section-subtitle">The passionate individuals behind ShopVerse</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="../assets/images/1.jpg" alt="Sarah Johnson">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Sarah Johnson</h3>
+                        <p class="member-position">CEO & Co-Founder</p>
+                        <p class="member-bio">With 15+ years in e-commerce and a background in consumer psychology, Sarah leads ShopVerse's strategic vision and growth initiatives.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="../assets/images/1.jpg" alt="Michael Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Michael Chen</h3>
+                        <p class="member-position">CTO & Co-Founder</p>
+                        <p class="member-bio">A tech innovator with multiple patents to his name, Michael oversees ShopVerse's technical infrastructure and product development.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="../assets/images/1.jpg" alt="Olivia Martinez">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Olivia Martinez</h3>
+                        <p class="member-position">Chief Operations Officer</p>
+                        <p class="member-bio">Olivia's expertise in supply chain and global operations ensures that ShopVerse delivers exceptional service to customers worldwide.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="../assets/images/1.jpg" alt="Daniel Kim">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Daniel Kim</h3>
+                        <p class="member-position">Chief Marketing Officer</p>
+                        <p class="member-bio">Former marketing executive at global brands, Daniel leads ShopVerse's marketing strategy and brand partnerships.</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-cta">
+                <p>Interested in joining our team?</p>
+                <a href="careers.html" class="btn btn-primary">View Open Positions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offices Section -->
+    <section class="offices-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Global Offices</h2>
+                <p class="section-subtitle">Visit ShopVerse around the world</p>
+            </div>
+
+            <div class="offices-map">
+                <img src="../assets/images/1.jpg" alt="ShopVerse Global Offices Map" class="map-image">
+                <div class="map-marker" data-location="new-york" style="top: 40%; left: 25%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-pulse"></div>
+                </div>
+                <div class="map-marker" data-location="london" style="top: 35%; left: 45%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-pulse"></div>
+                </div>
+                <div class="map-marker" data-location="singapore" style="top: 55%; left: 75%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-pulse"></div>
+                </div>
+                <div class="map-marker" data-location="sydney" style="top: 75%; left: 85%;">
+                    <div class="marker-dot"></div>
+                    <div class="marker-pulse"></div>
+                </div>
+            </div>
+
+            <div class="offices-grid">
+                <div class="office-card" data-location="new-york">
+                    <div class="office-image">
+                        <img src="../assets/images/1.jpg" alt="New York Office">
+                    </div>
+                    <div class="office-details">
+                        <h3>New York <span class="hq-badge">HQ</span></h3>
+                        <p class="office-address">123 Broadway, 25th Floor<br>New York, NY 10001<br>United States</p>
+                        <p class="office-phone">+1 (212) 555-7890</p>
+                        <p class="office-email">newyork@shopverse.com</p>
+                    </div>
+                </div>
+
+                <div class="office-card" data-location="london">
+                    <div class="office-image">
+                        <img src="../assets/images/1.jpg" alt="London Office">
+                    </div>
+                    <div class="office-details">
+                        <h3>London</h3>
+                        <p class="office-address">45 Oxford Street<br>London, W1D 2DZ<br>United Kingdom</p>
+                        <p class="office-phone">+44 20 7123 4567</p>
+                        <p class="office-email">london@shopverse.com</p>
+                    </div>
+                </div>
+
+                <div class="office-card" data-location="singapore">
+                    <div class="office-image">
+                        <img src="../assets/images/1.jpg" alt="Singapore Office">
+                    </div>
+                    <div class="office-details">
+                        <h3>Singapore</h3>
+                        <p class="office-address">80 Raffles Place<br>Singapore 048624</p>
+                        <p class="office-phone">+65 6123 4567</p>
+                        <p class="office-email">singapore@shopverse.com</p>
+                    </div>
+                </div>
+
+                <div class="office-card" data-location="sydney">
+                    <div class="office-image">
+                        <img src="../assets/images/1.jpg" alt="Sydney Office">
+                    </div>
+                    <div class="office-details">
+                        <h3>Sydney</h3>
+                        <p class="office-address">85 Castlereagh Street<br>Sydney, NSW 2000<br>Australia</p>
+                        <p class="office-phone">+61 2 9876 5432</p>
+                        <p class="office-email">sydney@shopverse.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability-section">
+        <div class="container">
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h2>Our Commitment to Sustainability</h2>
+                    <p>At ShopVerse, we believe that commerce and environmental responsibility can go hand in hand. We're committed to reducing our carbon footprint and promoting sustainable business practices across our entire platform.</p>
+
+                    <div class="sustainability-initiatives">
+                        <div class="initiative">
+                            <div class="initiative-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="initiative-details">
+                                <h3>Eco-Friendly Packaging</h3>
+                                <p>We're transitioning to 100% recyclable or biodegradable packaging materials by 2026.</p>
+                            </div>
+                        </div>
+
+                        <div class="initiative">
+                            <div class="initiative-icon">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <div class="initiative-details">
+                                <h3>Renewable Energy</h3>
+                                <p>Our offices and data centers are powered by 80% renewable energy, with a goal of 100% by 2027.</p>
+                            </div>
+                        </div>
+
+                        <div class="initiative">
+                            <div class="initiative-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="initiative-details">
+                                <h3>Carbon Offset Program</h3>
+                                <p>For every order shipped, we contribute to reforestation projects around the world.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="sustainability.html" class="btn btn-outline">Learn More About Our Initiatives</a>
+                </div>
+                <div class="sustainability-image">
+                    <img src="../assets/images/1.jpg" alt="ShopVerse Sustainability">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What People Say About Us</h2>
+                <p class="section-subtitle">Hear from our customers and vendors</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"ShopVerse has transformed my online shopping experience. The variety of products, reliable vendors, and exceptional customer service make it my go-to platform for all my purchases."</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="Customer">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Emma Wilson</h4>
+                                <p class="author-title">Loyal Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"As a small business owner, ShopVerse has opened doors to customers I never would have reached otherwise. Their seller tools and support team have been invaluable to my growth."</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="Vendor">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Robert Thompson</h4>
+                                <p class="author-title">Vendor since 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"The transparency and attention to detail at ShopVerse is unmatched. I appreciate their commitment to verifying vendors and their prompt resolution of any issues that arise."</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="Customer">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Jamal Williams</h4>
+                                <p class="author-title">Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-navigation">
+                <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="nav-dots">
+                    <button class="nav-dot active"></button>
+                    <button class="nav-dot"></button>
+                    <button class="nav-dot"></button>
+                </div>
+                <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Recognition Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Partners & Recognition</h2>
+                <p class="section-subtitle">Trusted by industry leaders and recognized for excellence</p>
+            </div>
+
+            <div class="partners-logos">
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Partner Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Partner Logo">
+                </div>
+            </div>
+
+            <div class="awards">
+                <div class="award">
+                    <div class="award-medal">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="award-info">
+                        <h4>Best E-commerce Platform</h4>
+                        <p>E-Commerce Excellence Awards, 2024</p>
+                    </div>
+                </div>
+
+                <div class="award">
+                    <div class="award-medal">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h4>Customer Service Excellence</h4>
+                        <p>Global Retail Awards, 2023</p>
+                    </div>
+                </div>
+
+                <div class="award">
+                    <div class="award-medal">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="award-info">
+                        <h4>Most Innovative Marketplace</h4>
+                        <p>Tech Innovation Summit, 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA Section -->
+    <section class="join-us-section">
+        <div class="container">
+            <div class="join-us-content">
+                <h2>Join the ShopVerse Community</h2>
+                <p>Whether you're a shopper looking for great products, a vendor wanting to expand your reach, or a potential team member—we'd love to have you!</p>
+                <div class="join-us-buttons">
+                    <a href="shop.html" class="btn btn-primary btn-lg">Shop Now</a>
+                    <a href="vendor-dashboard.html" class="btn btn-outline btn-lg">Become a Vendor</a>
+                    <a href="careers.html" class="btn btn-outline btn-lg">View Careers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/about-us.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/3d-effects.js"></script>
+</body>
+
+</html>

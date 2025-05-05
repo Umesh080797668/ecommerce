@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/help-center.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Header content (same as previous pages) -->
+        <!-- For brevity, header content is abbreviated -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header help-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Help Center</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Help Center</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Search Section -->
+    <section class="help-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>How can we help you?</h2>
+                <div class="search-box">
+                    <input type="text" id="help-search" placeholder="Search for help...">
+                    <select id="search-category">
+                        <option value="all">All Categories</option>
+                        <option value="account">Account</option>
+                        <option value="orders">Orders</option>
+                        <option value="shipping">Shipping</option>
+                        <option value="returns">Returns</option>
+                        <option value="payments">Payments</option>
+                        <option value="technical">Technical Support</option>
+                    </select>
+                    <button type="button" id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Categories Section -->
+    <section class="help-categories">
+        <div class="container">
+            <h2>Browse Help Topics</h2>
+
+            <div class="categories-grid">
+                <a href="#" class="category-card" data-category="account">
+                    <div class="category-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Account & Profile</h3>
+                    <p>Managing your account, security, and personal information</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="orders">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Orders & Purchases</h3>
+                    <p>Order status, tracking, cancellation, and history</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="shipping">
+                    <div class="category-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Shipping & Delivery</h3>
+                    <p>Delivery options, shipping rates, and tracking information</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="returns">
+                    <div class="category-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h3>Returns & Refunds</h3>
+                    <p>Return policy, process, and refund information</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="payments">
+                    <div class="category-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Payment & Pricing</h3>
+                    <p>Payment methods, billing issues, and pricing questions</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="products">
+                    <div class="category-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Products & Services</h3>
+                    <p>Product information, availability, and specifications</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="technical">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Website and app issues, login problems, and errors</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="#" class="category-card" data-category="premium">
+                    <div class="category-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Premium Membership</h3>
+                    <p>Benefits, subscription management, and features</p>
+                    <span class="category-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self-Help Tools Section -->
+    <section class="self-help">
+        <div class="container">
+            <h2>Self-Help Tools</h2>
+            <p class="section-subtitle">Quick tools to solve common issues</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Order Tracker</h3>
+                    <p>Check the status of your order</p>
+                    <div class="tool-form">
+                        <form id="order-tracker-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter order number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email address" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Track Order</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Return Center</h3>
+                    <p>Start or check a return</p>
+                    <div class="tool-actions">
+                        <a href="#" class="btn btn-outline">Start a Return</a>
+                        <a href="#" class="btn btn-outline">Check Return Status</a>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Password Reset</h3>
+                    <p>Reset your account password</p>
+                    <div class="tool-form">
+                        <form id="password-reset-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email address" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Reset Password</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Invoice Generator</h3>
+                    <p>Download invoices for your orders</p>
+                    <div class="tool-form">
+                        <form id="invoice-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter order number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email address" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Get Invoice</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Help Articles Section -->
+    <section class="popular-articles">
+        <div class="container">
+            <h2>Popular Help Articles</h2>
+            <p class="section-subtitle">Find answers to commonly asked questions</p>
+
+            <div class="articles-grid">
+                <a href="faq.html" class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>How to Return an Item</h3>
+                        <p>Step-by-step guide to our return process</p>
+                    </div>
+                    <div class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="faq.html" class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Shipping & Delivery Times</h3>
+                        <p>Shipping methods and estimated delivery timeframes</p>
+                    </div>
+                    <div class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="faq.html" class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Payment Methods</h3>
+                        <p>Accepted payment options and billing information</p>
+                    </div>
+                    <div class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="faq.html" class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Order Tracking Guide</h3>
+                        <p>How to track your orders and delivery status</p>
+                    </div>
+                    <div class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="faq.html" class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Premium Membership Benefits</h3>
+                        <p>Everything about our premium membership program</p>
+                    </div>
+                    <div class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="faq.html" class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="article-content">
+                        <h3>Account Security</h3>
+                        <p>How to keep your account secure and manage settings</p>
+                    </div>
+                    <div class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="view-all-container">
+                <a href="faq.html" class="btn btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="help-contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Still Need Help?</h2>
+                    <p>Our customer service team is available to assist you with any questions or concerns you may have.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Live Chat</h3>
+                                <p>Chat with our support team in real-time</p>
+                                <span class="availability available">Available Now</span>
+                                <a href="#" class="btn btn-sm btn-primary" id="start-chat">Start Chat</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Phone Support</h3>
+                                <p>Speak directly with our support team</p>
+                                <span class="availability available">Available: 8AM-9PM ET</span>
+                                <a href="tel:+1234567890" class="btn btn-sm btn-primary">Call Us</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Email Support</h3>
+                                <p>Get assistance via email</p>
+                                <span class="availability">24-48hr Response Time</span>
+                                <a href="#contact-form" class="btn btn-sm btn-primary scroll-to">Email Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-support">
+                        <h3>Connect With Us</h3>
+                        <p>Follow us on social media for updates and support</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" id="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                    <form id="help-contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name*</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address*</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-order">Order Number (if applicable)</label>
+                                <input type="text" id="contact-order" name="order">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-topic">Topic*</label>
+                                <select id="contact-topic" name="topic" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="account">Account Issue</option>
+                                    <option value="order">Order Status</option>
+                                    <option value="shipping">Shipping & Delivery</option>
+                                    <option value="return">Returns & Refunds</option>
+                                    <option value="payment">Payment Issue</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message*</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group file-upload">
+                            <label for="contact-attachment">Attachments (optional)</label>
+                            <div class="file-input-container">
+                                <input type="file" id="contact-attachment" name="attachment">
+                                <label for="contact-attachment" class="file-label">
+                                    <i class="fas fa-paperclip"></i>
+                                    <span>Choose files</span>
+                                </label>
+                                <span class="file-info">Maximum size: 5MB</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="contact-terms" name="terms" required>
+                            <label for="contact-terms">I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and understand that my information will be processed as described.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Hours Section -->
+    <section class="business-hours">
+        <div class="container">
+            <div class="hours-container">
+                <div class="hours-info">
+                    <h2>Business Hours</h2>
+                    <p>Our customer service team is available during the following hours:</p>
+                </div>
+
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <h3>Chat Support</h3>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday:</span> <span>24 Hours</span></li>
+                            <li><span>Saturday - Sunday:</span> <span>8:00 AM - 10:00 PM ET</span></li>
+                            <li><span>Holidays:</span> <span>9:00 AM - 6:00 PM ET</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="hours-card">
+                        <h3>Phone Support</h3>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday:</span> <span>8:00 AM - 9:00 PM ET</span></li>
+                            <li><span>Saturday:</span> <span>9:00 AM - 6:00 PM ET</span></li>
+                            <li><span>Sunday:</span> <span>10:00 AM - 5:00 PM ET</span></li>
+                            <li><span>Holidays:</span> <span>Limited Hours</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="hours-card">
+                        <h3>Email Support</h3>
+                        <ul class="hours-list">
+                            <li><span>Response Time:</span> <span>24-48 Hours</span></li>
+                            <li colspan="2" class="note">Email support is available 24/7, with responses processed during business hours.</li>
+                        </ul>
+                    </div>
+
+                    <div class="hours-card premium">
+                        <div class="premium-badge">
+                            <i class="fas fa-crown"></i> Premium
+                        </div>
+                        <h3>Premium Support</h3>
+                        <ul class="hours-list">
+                            <li><span>Premium Members:</span> <span>24/7 Priority Support</span></li>
+                            <li><span>Dedicated Line:</span> <span>1-888-PREMIUM</span></li>
+                            <li><span>Response Time:</span> <span>Guaranteed < 4 Hours</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget (simulated) -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <img src="../assets/images/1.jpg" alt="Support Agent">
+            </div>
+            <div class="chat-title">
+                <h3>ShopVerse Support</h3>
+                <span class="status">Online</span>
+            </div>
+            <button class="chat-close" id="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+                <div class="message agent">
+                    <div class="message-content">
+                        <p>👋 Hi there! Welcome to ShopVerse support. How can I help you today?</p>
+                    </div>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <textarea placeholder="Type your message here..." id="chat-input"></textarea>
+            <button class="btn-send" id="send-message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div class="chat-button" id="chat-button">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/help-center.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

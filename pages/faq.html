@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/faq.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Header content (same as previous pages) -->
+        <!-- For brevity, header content is abbreviated -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Frequently Asked Questions</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">FAQs</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Search Section -->
+    <section class="faq-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>How can we help you today?</h2>
+                <p>Find answers to your questions with our comprehensive FAQs</p>
+                <div class="search-box">
+                    <input type="text" id="faq-search" placeholder="Search for answers...">
+                    <button type="button" id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="popular-searches">
+                    <span>Popular searches:</span>
+                    <a href="#" data-search="orders">Orders</a>
+                    <a href="#" data-search="returns">Returns</a>
+                    <a href="#" data-search="shipping">Shipping</a>
+                    <a href="#" data-search="payment">Payment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content Section -->
+    <section class="faq-content">
+        <div class="container">
+            <div class="faq-container">
+                <div class="faq-sidebar">
+                    <div class="faq-categories">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li class="category-item active"><a href="#general" data-category="general">General</a></li>
+                            <li class="category-item"><a href="#account" data-category="account">Account & Profile</a></li>
+                            <li class="category-item"><a href="#orders" data-category="orders">Orders & Tracking</a></li>
+                            <li class="category-item"><a href="#shipping" data-category="shipping">Shipping & Delivery</a></li>
+                            <li class="category-item"><a href="#returns" data-category="returns">Returns & Refunds</a></li>
+                            <li class="category-item"><a href="#payment" data-category="payment">Payment & Pricing</a></li>
+                            <li class="category-item"><a href="#products" data-category="products">Products & Stock</a></li>
+                            <li class="category-item"><a href="#technical" data-category="technical">Technical Issues</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-support">
+                        <div class="support-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Need More Help?</h3>
+                        <p>Can't find what you're looking for? Our support team is ready to assist you.</p>
+                        <a href="help-center.html" class="btn btn-primary">Contact Support</a>
+                    </div>
+                </div>
+
+                <div class="faq-main">
+                    <div class="search-results" style="display: none;">
+                        <div class="results-header">
+                            <h2>Search Results: <span class="search-term"></span></h2>
+                            <button class="btn-clear-search">Clear Search</button>
+                        </div>
+                        <div class="results-count">
+                            <span class="count">0</span> results found
+                        </div>
+                        <div class="results-list">
+                            <!-- Search results will be populated here via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="faq-categories-content">
+                        <!-- General Category -->
+                        <div class="faq-category active" id="general-content">
+                            <div class="category-header">
+                                <h2>General FAQs</h2>
+                                <p>Common questions about our platform and services</p>
+                            </div>
+
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>What is ShopVerse?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>ShopVerse is a premium e-commerce platform where you can shop from thousands of products across various categories including electronics, fashion, home goods, beauty products, and more. We offer a curated shopping
+                                            experience with verified sellers, competitive pricing, and exceptional customer service.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>Is ShopVerse available in my country?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>ShopVerse is currently available in over 30 countries worldwide. We're rapidly expanding our services to new regions. To check if we deliver to your location, you can enter your country or postal code on our shipping
+                                            information page or during checkout. If we don't currently serve your area, you can join our waitlist to be notified when we expand to your region.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>What are the benefits of shopping on ShopVerse?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Shopping with ShopVerse offers numerous advantages:</p>
+                                        <ul>
+                                            <li>Quality assurance with verified sellers and products</li>
+                                            <li>Fast shipping with real-time order tracking</li>
+                                            <li>Secure payment options and buyer protection</li>
+                                            <li>Hassle-free returns and refunds</li>
+                                            <li>Premium membership benefits with ShopVerse Premium</li>
+                                            <li>24/7 customer support</li>
+                                            <li>Regular sales, discounts, and exclusive offers</li>
+                                            <li>Eco-friendly shipping options</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>What is ShopVerse Premium?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>ShopVerse Premium is our membership program that offers enhanced shopping benefits for a small monthly or annual fee. Premium members enjoy:</p>
+                                        <ul>
+                                            <li>Free expedited shipping on all eligible orders with no minimum purchase</li>
+                                            <li>Early access to sales and exclusive Premium-only offers</li>
+                                            <li>Premium customer service with dedicated support agents</li>
+                                            <li>Extended 45-day return window (vs standard 30 days)</li>
+                                            <li>Free return shipping</li>
+                                            <li>Special birthday rewards and anniversary perks</li>
+                                            <li>Premium rewards points (earn at 1.5x the standard rate)</li>
+                                        </ul>
+                                        <p>You can learn more about Premium membership on our <a href="premium-membership.html">Premium information page</a>.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>How do I contact customer support?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>You can reach our customer support team through several channels:</p>
+                                        <ul>
+                                            <li><strong>Live Chat:</strong> Available 24/7 on our website and mobile app</li>
+                                            <li><strong>Email:</strong> support@shopverse.com (response within 24 hours)</li>
+                                            <li><strong>Phone:</strong> 1-888-SHOPVERSE (1-888-746-7837), available Monday to Friday, 8 AM to 8 PM EST</li>
+                                            <li><strong>Help Center:</strong> Visit our comprehensive <a href="help-center.html">Help Center</a> for self-service options</li>
+                                            <li><strong>Social Media:</strong> Message us on our official Facebook or Twitter accounts</li>
+                                        </ul>
+                                        <p>Premium members have access to dedicated support channels with priority response times.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account & Profile Category -->
+                        <div class="faq-category" id="account-content">
+                            <div class="category-header">
+                                <h2>Account & Profile FAQs</h2>
+                                <p>Questions about your ShopVerse account</p>
+                            </div>
+
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>How do I create a ShopVerse account?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Creating a ShopVerse account is quick and easy:</p>
+                                        <ol>
+                                            <li>Click on "Register" at the top of any page</li>
+                                            <li>Enter your email address and create a secure password</li>
+                                            <li>Verify your email address by clicking the link we send you</li>
+                                            <li>Complete your profile information</li>
+                                        </ol>
+                                        <p>You can also sign up using your Google, Facebook, or Apple account for faster registration.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>I forgot my password. How do I reset it?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>To reset your password:</p>
+                                        <ol>
+                                            <li>Click on "Login" at the top of the page</li>
+                                            <li>Select "Forgot Password"</li>
+                                            <li>Enter the email address associated with your account</li>
+                                            <li>Check your email for a password reset link</li>
+                                            <li>Follow the link to create a new password</li>
+                                        </ol>
+                                        <p>For security reasons, password reset links expire after 24 hours. If you don't receive the email, check your spam folder or request a new reset link.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>How do I update my personal information?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>You can update your personal information by:</p>
+                                        <ol>
+                                            <li>Log in to your ShopVerse account</li>
+                                            <li>Go to "My Account"</li>
+                                            <li>Select "Profile Settings"</li>
+                                            <li>Update your information as needed</li>
+                                            <li>Click "Save Changes" to confirm</li>
+                                        </ol>
+                                        <p>Note: Some information, such as your name, may require additional verification if changed frequently for security purposes.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>Can I have multiple shipping addresses in my account?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Yes, you can save multiple shipping addresses in your account for convenient checkout:</p>
+                                        <ol>
+                                            <li>Log in to your ShopVerse account</li>
+                                            <li>Go to "My Account"</li>
+                                            <li>Select "My Addresses"</li>
+                                            <li>Click "Add New Address"</li>
+                                            <li>Enter the address details</li>
+                                            <li>Optionally, set it as your default shipping address</li>
+                                        </ol>
+                                        <p>You can save up to 20 different shipping addresses and manage, edit, or delete them at any time.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>How do I close my ShopVerse account?</h3>
+                                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>We're sorry to see you go! To close your account:</p>
+                                        <ol>
+                                            <li>Log in to your ShopVerse account</li>
+                                            <li>Go to "My Account"</li>
+                                            <li>Select "Profile Settings"</li>
+                                            <li>Scroll down to the bottom and click "Close My Account"</li>
+                                            <li>Follow the verification steps</li>
+                                        </ol>
+                                        <p>Important notes:</p>
+                                        <ul>
+                                            <li>Account closure cannot be undone after the 30-day recovery period</li>
+                                            <li>Any active orders must be completed before closing your account</li>
+                                            <li>Any remaining rewards points or store credit will be lost</li>
+                                            <li>Premium membership fees are non-refundable</li>
+                                        </ul>
+                                        <p>If you're experiencing any issues with our service, we'd appreciate the opportunity to help resolve them before you decide to leave.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional categories would be implemented similarly -->
+                        <div class="faq-category" id="orders-content">
+                            <div class="category-header">
+                                <h2>Orders & Tracking FAQs</h2>
+                                <p>Questions about placing and tracking orders</p>
+                            </div>
+                            <div class="faq-list">
+                                <!-- Order FAQs would go here -->
+                                <p class="placeholder">Orders & Tracking FAQs would be displayed here.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-category" id="shipping-content">
+                            <div class="category-header">
+                                <h2>Shipping & Delivery FAQs</h2>
+                                <p>Questions about shipping methods and delivery times</p>
+                            </div>
+                            <div class="faq-list">
+                                <!-- Shipping FAQs would go here -->
+                                <p class="placeholder">Shipping & Delivery FAQs would be displayed here.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-category" id="returns-content">
+                            <div class="category-header">
+                                <h2>Returns & Refunds FAQs</h2>
+                                <p>Questions about returning items and getting refunds</p>
+                            </div>
+                            <div class="faq-list">
+                                <!-- Return FAQs would go here -->
+                                <p class="placeholder">Returns & Refunds FAQs would be displayed here.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-category" id="payment-content">
+                            <div class="category-header">
+                                <h2>Payment & Pricing FAQs</h2>
+                                <p>Questions about payment methods and pricing</p>
+                            </div>
+                            <div class="faq-list">
+                                <!-- Payment FAQs would go here -->
+                                <p class="placeholder">Payment & Pricing FAQs would be displayed here.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-category" id="products-content">
+                            <div class="category-header">
+                                <h2>Products & Stock FAQs</h2>
+                                <p>Questions about our products and availability</p>
+                            </div>
+                            <div class="faq-list">
+                                <!-- Products FAQs would go here -->
+                                <p class="placeholder">Products & Stock FAQs would be displayed here.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-category" id="technical-content">
+                            <div class="category-header">
+                                <h2>Technical Issues FAQs</h2>
+                                <p>Questions about website and app functionality</p>
+                            </div>
+                            <div class="faq-list">
+                                <!-- Technical FAQs would go here -->
+                                <p class="placeholder">Technical Issues FAQs would be displayed here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Support Section -->
+    <section class="faq-support">
+        <div class="container">
+            <div class="support-card">
+                <div class="support-card-content">
+                    <h2>Still Have Questions?</h2>
+                    <p>Our dedicated support team is here to help you with any questions or concerns you might have.</p>
+                    <div class="support-options">
+                        <a href="help-center.html" class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-life-ring"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Help Center</h3>
+                                <p>Browse comprehensive guides and tutorials</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="support-option" id="open-chat">
+                            <div class="option-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Live Chat</h3>
+                                <p>Chat with our customer support team</p>
+                            </div>
+                        </a>
+
+                        <a href="contact.html" class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Email Support</h3>
+                                <p>Send us an email and we'll get back to you</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget (simulated) -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <img src="../assets/images/1.jpg" alt="Support Agent">
+            </div>
+            <div class="chat-title">
+                <h3>ShopVerse Support</h3>
+                <span class="status">Online</span>
+            </div>
+            <button class="chat-close" id="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+                <div class="message agent">
+                    <div class="message-content">
+                        <p>👋 Hi there! Welcome to ShopVerse support. How can I help you today?</p>
+                    </div>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <textarea placeholder="Type your message here..." id="chat-input"></textarea>
+            <button class="btn-send" id="send-message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div class="chat-button" id="chat-button">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/gift-cards.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item active"><a href="gift-cards.html">Gift Cards</a></li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="shop.html">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item active"><a href="gift-cards.html">Gift Cards</a></li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header gift-cards-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Gift Cards</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Gift Cards</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Cards Intro -->
+    <section class="gift-cards-intro">
+        <div class="container">
+            <div class="gift-cards-intro__content">
+                <div class="gift-cards-intro__text">
+                    <h2>The Perfect Gift for Any Occasion</h2>
+                    <p>Give the gift of choice with ShopVerse Gift Cards. Available in digital or physical formats, our gift cards can be used across millions of products on our platform.</p>
+                    <div class="gift-cards-intro__features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Personalize</h3>
+                                <p>Add a personal message and customize the look of your gift card</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Instant Delivery</h3>
+                                <p>Send digital gift cards instantly via email</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Schedule Delivery</h3>
+                                <p>Choose when your gift card arrives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-cards-intro__image">
+                    <img src="../assets/images/1.jpg" alt="ShopVerse Gift Card">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Card Builder Section -->
+    <section class="gift-card-builder">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Create Your Gift Card</h2>
+                <p class="section-subtitle">Customize your perfect gift in three easy steps</p>
+            </div>
+
+            <div class="gift-card-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Choose Design</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Set Amount</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Personalize</div>
+                </div>
+            </div>
+
+            <div class="gift-card-builder__content">
+                <!-- Step 1: Choose Design -->
+                <div class="builder-step active" id="step-1">
+                    <h3 class="step-heading">Choose a Gift Card Design</h3>
+                    <p class="step-description">Select a design that best fits the occasion</p>
+
+                    <div class="theme-category-tabs">
+                        <button class="theme-category active" data-category="all">All Designs</button>
+                        <button class="theme-category" data-category="birthday">Birthday</button>
+                        <button class="theme-category" data-category="holiday">Holiday</button>
+                        <button class="theme-category" data-category="congratulations">Congratulations</button>
+                        <button class="theme-category" data-category="thank-you">Thank You</button>
+                    </div>
+
+                    <div class="gift-card-themes">
+                        <div class="gift-card-theme active" data-theme="classic" data-category="all">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Classic Design">
+                                <div class="theme-name">Classic</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="birthday-balloons" data-category="birthday">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Birthday Balloons">
+                                <div class="theme-name">Birthday Balloons</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="celebration" data-category="congratulations">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Celebration">
+                                <div class="theme-name">Celebration</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="holiday-cheer" data-category="holiday">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Holiday Cheer">
+                                <div class="theme-name">Holiday Cheer</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="thank-you-flowers" data-category="thank-you">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Thank You Flowers">
+                                <div class="theme-name">Thank You Flowers</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="minimalist" data-category="all">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Minimalist">
+                                <div class="theme-name">Minimalist</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="birthday-cake" data-category="birthday">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Birthday Cake">
+                                <div class="theme-name">Birthday Cake</div>
+                            </div>
+                        </div>
+                        <div class="gift-card-theme" data-theme="congratulations-stars" data-category="congratulations">
+                            <div class="gift-card-theme__preview">
+                                <img src="../assets/images/1.jpg" alt="Congratulations Stars">
+                                <div class="theme-name">Congratulations Stars</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="builder-navigation">
+                        <button class="btn btn-primary btn-next" data-next="2">Next: Set Amount</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Set Amount -->
+                <div class="builder-step" id="step-2">
+                    <h3 class="step-heading">Choose a Gift Card Amount</h3>
+                    <p class="step-description">Select a predefined amount or enter a custom value</p>
+
+                    <div class="gift-card-amounts">
+                        <div class="amount-option">
+                            <input type="radio" name="gift-card-amount" id="amount-25" value="25" checked>
+                            <label for="amount-25">$25</label>
+                        </div>
+                        <div class="amount-option">
+                            <input type="radio" name="gift-card-amount" id="amount-50" value="50">
+                            <label for="amount-50">$50</label>
+                        </div>
+                        <div class="amount-option">
+                            <input type="radio" name="gift-card-amount" id="amount-100" value="100">
+                            <label for="amount-100">$100</label>
+                        </div>
+                        <div class="amount-option">
+                            <input type="radio" name="gift-card-amount" id="amount-250" value="250">
+                            <label for="amount-250">$250</label>
+                        </div>
+                        <div class="amount-option">
+                            <input type="radio" name="gift-card-amount" id="amount-custom" value="custom">
+                            <label for="amount-custom">Custom</label>
+                        </div>
+                    </div>
+
+                    <div class="custom-amount-container" style="display: none;">
+                        <label for="custom-amount">Enter amount ($10 - $500):</label>
+                        <div class="custom-amount-input">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="custom-amount" min="10" max="500" value="75">
+                        </div>
+                    </div>
+
+                    <div class="builder-navigation">
+                        <button class="btn btn-outline btn-back" data-back="1">Back</button>
+                        <button class="btn btn-primary btn-next" data-next="3">Next: Personalize</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Personalize -->
+                <div class="builder-step" id="step-3">
+                    <h3 class="step-heading">Personalize Your Gift Card</h3>
+                    <p class="step-description">Add a personal touch to your gift card</p>
+
+                    <div class="gift-card-personalization">
+                        <div class="delivery-options">
+                            <h4>Delivery Method</h4>
+                            <div class="delivery-option">
+                                <input type="radio" name="delivery-method" id="delivery-email" value="email" checked>
+                                <label for="delivery-email">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email Delivery</span>
+                                    <span class="delivery-note">Send instantly or schedule for later</span>
+                                </label>
+                            </div>
+                            <div class="delivery-option">
+                                <input type="radio" name="delivery-method" id="delivery-print" value="print">
+                                <label for="delivery-print">
+                                    <i class="fas fa-print"></i>
+                                    <span>Print at Home</span>
+                                    <span class="delivery-note">PDF download for printing</span>
+                                </label>
+                            </div>
+                            <div class="delivery-option">
+                                <input type="radio" name="delivery-method" id="delivery-mail" value="mail">
+                                <label for="delivery-mail">
+                                    <i class="fas fa-mail-bulk"></i>
+                                    <span>Mail Delivery</span>
+                                    <span class="delivery-note">Physical gift card sent by mail (+$4.95)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="recipient-info">
+                            <h4>Recipient Information</h4>
+                            <div class="form-group">
+                                <label for="recipient-name">Recipient's Name</label>
+                                <input type="text" id="recipient-name" placeholder="Enter recipient's name">
+                            </div>
+
+                            <div id="email-delivery-fields">
+                                <div class="form-group">
+                                    <label for="recipient-email">Recipient's Email</label>
+                                    <input type="email" id="recipient-email" placeholder="Enter recipient's email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="delivery-date">Delivery Date</label>
+                                    <input type="date" id="delivery-date" min="2025-05-05">
+                                </div>
+                            </div>
+
+                            <div id="mail-delivery-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="recipient-address">Recipient's Address</label>
+                                    <textarea id="recipient-address" placeholder="Enter recipient's full address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-message">
+                            <h4>Personal Message</h4>
+                            <div class="form-group">
+                                <label for="sender-name">From</label>
+                                <input type="text" id="sender-name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text">Message (Optional, max 200 characters)</label>
+                                <textarea id="message-text" placeholder="Write a personal message..." maxlength="200"></textarea>
+                                <div class="char-counter"><span id="char-count">0</span>/200</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="builder-navigation">
+                        <button class="btn btn-outline btn-back" data-back="2">Back</button>
+                        <button class="btn btn-primary btn-preview">Preview Gift Card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Card Preview Modal -->
+    <div class="modal" id="giftCardPreview">
+        <div class="modal-content">
+            <span class="modal-close"><i class="fas fa-times"></i></span>
+            <div class="gift-card-preview-content">
+                <h2>Gift Card Preview</h2>
+
+                <div class="gift-card-preview">
+                    <div class="gift-card-design">
+                        <div class="gift-card-design__front">
+                            <img src="../assets/images/1.jpg" alt="Gift Card Design" class="design-background">
+                            <div class="gift-card-logo">ShopVerse</div>
+                            <div class="gift-card-amount">$25</div>
+                            <div class="gift-card-recipient">For: <span id="preview-recipient">Recipient Name</span></div>
+                            <div class="gift-card-message" id="preview-message">Your personal message will appear here.</div>
+                            <div class="gift-card-from">From: <span id="preview-sender">Your Name</span></div>
+                        </div>
+                    </div>
+
+                    <div class="gift-card-details">
+                        <div class="gift-card-detail">
+                            <span class="detail-label">Design:</span>
+                            <span class="detail-value" id="preview-design">Classic</span>
+                        </div>
+                        <div class="gift-card-detail">
+                            <span class="detail-label">Amount:</span>
+                            <span class="detail-value" id="preview-amount">$25.00</span>
+                        </div>
+                        <div class="gift-card-detail">
+                            <span class="detail-label">Delivery:</span>
+                            <span class="detail-value" id="preview-delivery">Email</span>
+                        </div>
+                        <div class="gift-card-detail" id="preview-date-container">
+                            <span class="detail-label">Delivery Date:</span>
+                            <span class="detail-value" id="preview-date">May 5, 2025</span>
+                        </div>
+                        <div class="gift-card-detail" id="preview-address-container" style="display: none;">
+                            <span class="detail-label">Delivery Address:</span>
+                            <span class="detail-value" id="preview-address">Recipient's address</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gift-card-actions">
+                    <button class="btn btn-outline btn-edit">Edit Gift Card</button>
+                    <button class="btn btn-primary btn-add-to-cart">Add to Cart - <span id="final-price">$25.00</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Gift Cards Work</h2>
+                <p class="section-subtitle">Simple steps for gift givers and recipients</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="step-number">1</div>
+                    </div>
+                    <h3>Purchase</h3>
+                    <p>Choose a design, set the amount, and personalize your gift card.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-gift"></i>
+                        <div class="step-number">2</div>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>Send immediately by email, schedule for a future date, or print at home.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-tag"></i>
+                        <div class="step-number">3</div>
+                    </div>
+                    <h3>Redemption</h3>
+                    <p>Recipients enter the gift card code during checkout to apply the balance.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fas fa-store"></i>
+                        <div class="step-number">4</div>
+                    </div>
+                    <h3>Shopping</h3>
+                    <p>Gift cards can be used on millions of products across ShopVerse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about ShopVerse Gift Cards</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do ShopVerse gift cards expire?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, ShopVerse gift cards never expire. Once purchased, the gift card balance is available for the recipient to use at any time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use a gift card for partial payment?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, gift cards can be used for partial payment. Any remaining balance on the gift card will be stored in the recipient's account for future purchases.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly will digital gift cards be delivered?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Digital gift cards are delivered instantly unless you schedule them for future delivery. The recipient will receive an email with their gift card code and redemption instructions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can gift cards be returned or refunded?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Gift cards cannot be returned or refunded once purchased. However, if there's an issue with your gift card order, please contact our customer service within 48 hours of purchase.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I check the balance of a gift card?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can check your gift card balance by visiting the "Gift Card Balance" page under your account settings or by contacting customer support with your gift card number.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use gift cards internationally?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ShopVerse gift cards can be used internationally, but they are denominated in the currency they were purchased in. Currency conversion rates may apply if shopping in a different currency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <p>Don't see your question here?</p>
+                <a href="contact.html" class="btn btn-outline">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Gift Cards -->
+    <section class="corporate-gift-cards">
+        <div class="container">
+            <div class="corporate-gift-content">
+                <div class="corporate-gift-text">
+                    <h2>Corporate Gift Cards</h2>
+                    <p>Looking for bulk gift cards for your business? ShopVerse offers special corporate programs with volume discounts, customized designs, and dedicated support.</p>
+                    <ul class="corporate-benefits">
+                        <li><i class="fas fa-check"></i> Bulk discounts starting at 10+ gift cards</li>
+                        <li><i class="fas fa-check"></i> Custom branding with your company logo</li>
+                        <li><i class="fas fa-check"></i> Streamlined ordering process</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                    </ul>
+                    <a href="corporate-gift-cards.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="corporate-gift-image">
+                    <img src="../assets/images/1.jpg" alt="Corporate Gift Cards">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-info">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates on new products, special offers, and exclusive deals directly to your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter-terms" required>
+                        <label for="newsletter-terms">I agree to receive marketing emails from ShopVerse.</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/gift-cards.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

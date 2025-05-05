@@ -1,0 +1,653 @@
+/**
+ * ShopVerse E-commerce Platform
+ * Legal Pages Styles (Terms & Conditions, Privacy Policy, etc.)
+ * 
+ * This file contains styles for all legal document pages
+ */
+
+
+/* Page Header */
+
+.legal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.legal-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.legal-header .page-header__content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Legal Content Section */
+
+.legal-content {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+
+.legal-container {
+    display: flex;
+    gap: 30px;
+}
+
+
+/* Legal Sidebar */
+
+.legal-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.legal-nav {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 25px;
+    box-shadow: var(--box-shadow-light);
+    margin-bottom: 30px;
+}
+
+.legal-nav h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.legal-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.legal-nav-list li {
+    margin-bottom: 8px;
+}
+
+.legal-nav-list li a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-md);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.legal-nav-list li a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+.legal-nav-list li a.active {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+/* Legal Tools */
+
+.legal-tools {
+    margin-bottom: 30px;
+}
+
+.tool-box {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 25px;
+    box-shadow: var(--box-shadow-light);
+    margin-bottom: 30px;
+}
+
+.tool-box:last-child {
+    margin-bottom: 0;
+}
+
+.tool-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+}
+
+.tool-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tool-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border: none;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius-md);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool-button:hover {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+}
+
+.tool-button i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.text-size-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-size-btn {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-size-btn:first-child {
+    border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
+    font-size: 0.8rem;
+}
+
+.text-size-btn:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    font-size: 1rem;
+}
+
+.text-size-btn:last-child {
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    font-size: 1.2rem;
+}
+
+.text-size-btn.active {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+/* Legal Contact */
+
+.legal-contact {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 25px;
+    box-shadow: var(--box-shadow-light);
+    text-align: center;
+}
+
+.legal-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.legal-contact p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+/* Legal Main Content */
+
+.legal-main {
+    flex: 1;
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.legal-content-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.legal-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.last-updated,
+.effective-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.last-updated i,
+.effective-date i {
+    margin-right: 8px;
+}
+
+
+/* Legal Introduction */
+
+.legal-introduction {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+
+/* Legal Sections */
+
+.legal-section {
+    margin-bottom: 50px;
+    scroll-margin-top: 80px;
+    /* For anchor links */
+}
+
+.legal-section:last-child {
+    margin-bottom: 30px;
+}
+
+.legal-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    position: relative;
+}
+
+.legal-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.legal-section ul,
+.legal-section ol {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.legal-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* Legal Alerts */
+
+.legal-alert {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+    margin: 25px 0;
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.legal-alert .alert-icon {
+    font-size: 1.5rem;
+    color: #2196F3;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.legal-alert .alert-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.legal-alert.warning {
+    background-color: rgba(255, 152, 0, 0.1);
+}
+
+.legal-alert.warning .alert-icon {
+    color: #FF9800;
+}
+
+.legal-alert.danger {
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.legal-alert.danger .alert-icon {
+    color: #F44336;
+}
+
+
+/* Definition List */
+
+.definition-list {
+    margin: 20px 0;
+}
+
+.definition-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.definition-item:last-child {
+    border-bottom: none;
+}
+
+.definition-term {
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+}
+
+.definition-description {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+
+/* Legal Conclusion */
+
+.legal-conclusion {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.legal-conclusion p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.legal-signature {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+
+/* Text Size Feature */
+
+.text-size-small .legal-section p,
+.text-size-small .legal-section li,
+.text-size-small .definition-description {
+    font-size: 0.9rem;
+}
+
+.text-size-large .legal-section p,
+.text-size-large .legal-section li,
+.text-size-large .definition-description {
+    font-size: 1.15rem;
+}
+
+
+/* FAQ Section */
+
+.faq-section {
+    padding: 70px 0;
+    background-color: var(--light-bg);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--heading-color);
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--light-bg);
+    border-top: 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 300px;
+    border-top: 1px solid var(--border-color);
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.faq-more {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.faq-more p {
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+
+/* Dark Mode Styles */
+
+.dark-mode .legal-nav,
+.dark-mode .tool-box,
+.dark-mode .legal-contact,
+.dark-mode .legal-main,
+.dark-mode .faq-item,
+.dark-mode .faq-question {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+}
+
+.dark-mode .legal-content {
+    background-color: var(--dark-bg);
+}
+
+.dark-mode .faq-section {
+    background-color: var(--dark-bg);
+}
+
+.dark-mode .faq-answer {
+    background-color: var(--dark-secondary-bg);
+}
+
+.dark-mode .legal-nav-list li a:hover {
+    background-color: var(--dark-secondary-bg);
+}
+
+.dark-mode .legal-nav-list li a.active {
+    background-color: rgba(74, 108, 247, 0.2);
+}
+
+.dark-mode .tool-button {
+    background-color: var(--dark-secondary-bg);
+}
+
+.dark-mode .tool-button:hover {
+    background-color: rgba(74, 108, 247, 0.2);
+}
+
+.dark-mode .text-size-btn {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border-color);
+    color: var(--dark-text);
+}
+
+.dark-mode .text-size-btn.active {
+    background-color: rgba(74, 108, 247, 0.2);
+    color: var(--primary-color);
+}
+
+.dark-mode .legal-content-header,
+.dark-mode .legal-conclusion {
+    border-color: var(--dark-border-color);
+}
+
+.dark-mode .legal-section h2,
+.dark-mode .legal-nav h3,
+.dark-mode .tool-box h3,
+.dark-mode .legal-contact h3,
+.dark-mode .definition-term,
+.dark-mode .faq-question h3 {
+    color: var(--dark-heading);
+}
+
+.dark-mode .legal-introduction p,
+.dark-mode .legal-section p,
+.dark-mode .legal-section li,
+.dark-mode .definition-description,
+.dark-mode .legal-contact p,
+.dark-mode .legal-conclusion p,
+.dark-mode .faq-answer p {
+    color: var(--dark-text);
+}
+
+.dark-mode .legal-alert {
+    background-color: rgba(33, 150, 243, 0.15);
+}
+
+.dark-mode .legal-alert.warning {
+    background-color: rgba(255, 152, 0, 0.15);
+}
+
+.dark-mode .legal-alert.danger {
+    background-color: rgba(244, 67, 54, 0.15);
+}
+
+.dark-mode .definition-item {
+    border-color: var(--dark-border-color);
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 1199px) {
+    .legal-nav-list {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 991px) {
+    .legal-container {
+        flex-direction: column;
+    }
+    .legal-sidebar {
+        width: 100%;
+        order: 2;
+    }
+    .legal-main {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    .tool-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .tool-button {
+        width: calc(33.333% - 10px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .legal-content {
+        padding: 40px 0;
+    }
+    .legal-main {
+        padding: 30px 20px;
+    }
+    .legal-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .legal-section h2 {
+        font-size: 1.4rem;
+    }
+    .legal-introduction {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .legal-main {
+        padding: 20px 15px;
+    }
+    .text-size-controls {
+        margin-top: 10px;
+    }
+}

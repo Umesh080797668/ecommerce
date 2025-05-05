@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Policy | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/shipping-policy.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="about-us.html">Company <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="careers.html">Careers</a></li>
+                                    <li><a href="press.html">Press</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown active">
+                                <a href="#">Help <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="shipping-policy.html" class="active">Shipping Policy</a></li>
+                                    <li><a href="return-policy.html">Return Policy</a></li>
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="shop.html">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="about-us.html">Company</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="press.html">Press</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item active has-dropdown">
+                        <a href="#">Help</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="shipping-policy.html" class="active">Shipping Policy</a></li>
+                            <li><a href="return-policy.html">Return Policy</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header policy-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Shipping Policy</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Shipping Policy</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container">
+            <div class="policy-container">
+                <aside class="policy-sidebar">
+                    <div class="policy-nav">
+                        <h3>Shipping Information</h3>
+                        <ul class="policy-nav-list">
+                            <li><a href="#overview" class="active">Overview</a></li>
+                            <li><a href="#shipping-options">Shipping Options</a></li>
+                            <li><a href="#processing-times">Processing Times</a></li>
+                            <li><a href="#delivery-timeframes">Delivery Timeframes</a></li>
+                            <li><a href="#international">International Shipping</a></li>
+                            <li><a href="#tracking">Order Tracking</a></li>
+                            <li><a href="#shipping-restrictions">Shipping Restrictions</a></li>
+                            <li><a href="#fees">Shipping Fees</a></li>
+                            <li><a href="#sustainability">Sustainability</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="shipping-calculator">
+                        <h3>Shipping Calculator</h3>
+                        <p>Estimate shipping costs and delivery times</p>
+                        <form id="shipping-calculator-form">
+                            <div class="form-group">
+                                <label for="destination-country">Country</label>
+                                <select id="destination-country" name="country">
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-zip">Zip/Postal Code</label>
+                                <input type="text" id="destination-zip" name="zipcode" placeholder="Enter zip/postal code">
+                            </div>
+                            <div class="form-group">
+                                <label for="order-weight">Order Weight (kg)</label>
+                                <input type="number" id="order-weight" name="weight" placeholder="Enter package weight" min="0.1" step="0.1" value="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="order-value">Order Value ($)</label>
+                                <input type="number" id="order-value" name="value" placeholder="Enter order value" min="1" value="100">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate</button>
+                        </form>
+
+                        <div class="shipping-results" style="display: none;">
+                            <h4>Shipping Options</h4>
+                            <div class="shipping-options-results">
+                                <!-- Results will be populated via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-box">
+                        <h3>Need Help?</h3>
+                        <p>Our customer service team is available to assist with any shipping inquiries.</p>
+                        <a href="contact.html" class="btn btn-outline">Contact Support</a>
+                    </div>
+                </aside>
+
+                <div class="policy-main">
+                    <div class="policy-content-header">
+                        <div class="last-updated">
+                            <i class="fas fa-calendar-alt"></i> Last Updated: May 5, 2025
+                        </div>
+                        <div class="policy-actions">
+                            <button class="btn-text btn-print"><i class="fas fa-print"></i> Print</button>
+                            <button class="btn-text btn-download"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                            <button class="btn-text btn-share"><i class="fas fa-share-alt"></i> Share</button>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="overview">
+                        <h2>Shipping Policy Overview</h2>
+                        <p>At ShopVerse, we strive to provide reliable, timely, and affordable shipping options for all our customers. This policy outlines our shipping procedures, options, and timelines to ensure a smooth shopping experience.</p>
+                        <p>ShopVerse partners with trusted carriers worldwide to ensure your orders arrive safely and on time. Depending on your location and preferences, you can choose from standard, expedited, or express shipping options.</p>
+                        <div class="notice-box info">
+                            <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="notice-content">
+                                <p>Please note that shipping times may vary based on product availability, customs clearance for international orders, and other external factors. During peak seasons (such as holidays), delivery times may be extended slightly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="shipping-options">
+                        <h2>Shipping Options</h2>
+                        <p>ShopVerse offers multiple shipping options to accommodate your needs and budget. Available options may vary based on your location and the items in your order.</p>
+
+                        <div class="shipping-options">
+                            <div class="shipping-option">
+                                <div class="shipping-option-header">
+                                    <div class="shipping-icon"><i class="fas fa-truck"></i></div>
+                                    <div class="shipping-title">
+                                        <h3>Standard Shipping</h3>
+                                        <span class="shipping-time">5-7 Business Days</span>
+                                    </div>
+                                    <div class="shipping-price">From $5.99</div>
+                                </div>
+                                <div class="shipping-option-content">
+                                    <p>Our most economical shipping option for non-urgent deliveries. Available for most products and locations.</p>
+                                    <ul>
+                                        <li>Tracking included</li>
+                                        <li>Delivery Monday to Friday</li>
+                                        <li>Free for orders over $75 (domestic)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shipping-option">
+                                <div class="shipping-option-header">
+                                    <div class="shipping-icon"><i class="fas fa-shipping-fast"></i></div>
+                                    <div class="shipping-title">
+                                        <h3>Expedited Shipping</h3>
+                                        <span class="shipping-time">2-3 Business Days</span>
+                                    </div>
+                                    <div class="shipping-price">From $12.99</div>
+                                </div>
+                                <div class="shipping-option-content">
+                                    <p>Get your order faster with our expedited shipping option. Ideal for when you need your items quickly but not overnight.</p>
+                                    <ul>
+                                        <li>Priority handling</li>
+                                        <li>Full tracking capabilities</li>
+                                        <li>Delivery Monday to Saturday</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shipping-option">
+                                <div class="shipping-option-header">
+                                    <div class="shipping-icon"><i class="fas fa-plane"></i></div>
+                                    <div class="shipping-title">
+                                        <h3>Express Shipping</h3>
+                                        <span class="shipping-time">1-2 Business Days</span>
+                                    </div>
+                                    <div class="shipping-price">From $19.99</div>
+                                </div>
+                                <div class="shipping-option-content">
+                                    <p>Our fastest shipping option for when you need your items right away. Available for most domestic locations.</p>
+                                    <ul>
+                                        <li>Same-day processing for orders before 12pm</li>
+                                        <li>Real-time tracking</li>
+                                        <li>Delivery 7 days a week</li>
+                                        <li>Signature confirmation included</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shipping-option">
+                                <div class="shipping-option-header">
+                                    <div class="shipping-icon"><i class="fas fa-globe-americas"></i></div>
+                                    <div class="shipping-title">
+                                        <h3>International Shipping</h3>
+                                        <span class="shipping-time">7-14+ Business Days</span>
+                                    </div>
+                                    <div class="shipping-price">From $24.99</div>
+                                </div>
+                                <div class="shipping-option-content">
+                                    <p>We ship to over 120 countries worldwide with competitive rates and reliable service.</p>
+                                    <ul>
+                                        <li>Customs forms handled by us</li>
+                                        <li>International tracking</li>
+                                        <li>Optional insurance</li>
+                                        <li>May be subject to import duties and taxes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box success">
+                            <div class="notice-icon"><i class="fas fa-tag"></i></div>
+                            <div class="notice-content">
+                                <p><strong>Free Shipping Offer:</strong> Orders over $75 qualify for FREE Standard Shipping to domestic addresses. Some restrictions apply for oversized items or remote locations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="processing-times">
+                        <h2>Order Processing Times</h2>
+                        <p>Order processing times vary depending on product availability, order volume, and payment verification. In general, you can expect the following processing times:</p>
+
+                        <div class="info-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Order Type</th>
+                                        <th>Processing Time</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>In-Stock Items</td>
+                                        <td>1-2 Business Days</td>
+                                        <td>Most orders placed before 2 PM ET are processed same day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pre-Order Items</td>
+                                        <td>Varies by Product</td>
+                                        <td>Estimated release date will be shown on product page</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Custom Products</td>
+                                        <td>5-7 Business Days</td>
+                                        <td>Additional time needed for personalization or customization</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vendor-Fulfilled Items</td>
+                                        <td>2-3 Business Days</td>
+                                        <td>Items shipped directly from our verified vendors</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p>Processing time is separate from shipping time. The total delivery time will be the sum of processing time plus the shipping time based on your selected shipping method.</p>
+
+                        <div class="notice-box warning">
+                            <div class="notice-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="notice-content">
+                                <p>During peak seasons (holidays, special sale events), processing times may be extended by 1-2 business days. We'll notify you of any unusual delays via email.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="delivery-timeframes">
+                        <h2>Delivery Timeframes</h2>
+                        <p>After your order has been processed and shipped, the delivery timeframe depends on your shipping method and destination. Below are the estimated delivery timeframes for various regions:</p>
+
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>United States Delivery Estimates</h3>
+                                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="info-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Region</th>
+                                                    <th>Standard</th>
+                                                    <th>Expedited</th>
+                                                    <th>Express</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Continental U.S.</td>
+                                                    <td>3-5 days</td>
+                                                    <td>2 days</td>
+                                                    <td>1 day</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alaska & Hawaii</td>
+                                                    <td>5-7 days</td>
+                                                    <td>2-3 days</td>
+                                                    <td>1-2 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Territories</td>
+                                                    <td>7-10 days</td>
+                                                    <td>3-5 days</td>
+                                                    <td>2-3 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Military (APO/FPO)</td>
+                                                    <td>10-14 days</td>
+                                                    <td>Not Available</td>
+                                                    <td>Not Available</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Canada Delivery Estimates</h3>
+                                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="info-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Region</th>
+                                                    <th>Standard</th>
+                                                    <th>Expedited</th>
+                                                    <th>Express</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Major Urban Areas</td>
+                                                    <td>4-7 days</td>
+                                                    <td>2-3 days</td>
+                                                    <td>1-2 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rural Areas</td>
+                                                    <td>7-10 days</td>
+                                                    <td>3-5 days</td>
+                                                    <td>2-3 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Remote Areas</td>
+                                                    <td>10-14 days</td>
+                                                    <td>5-7 days</td>
+                                                    <td>3-4 days</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>All shipments to Canada may be subject to customs duties and taxes, which are the responsibility of the recipient.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>International Delivery Estimates</h3>
+                                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="info-table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Region</th>
+                                                    <th>Standard</th>
+                                                    <th>Expedited</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>United Kingdom</td>
+                                                    <td>7-10 days</td>
+                                                    <td>3-5 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>European Union</td>
+                                                    <td>7-14 days</td>
+                                                    <td>4-7 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Australia/New Zealand</td>
+                                                    <td>10-14 days</td>
+                                                    <td>5-7 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Asia</td>
+                                                    <td>10-14 days</td>
+                                                    <td>5-7 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Middle East</td>
+                                                    <td>14-21 days</td>
+                                                    <td>7-10 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>South America</td>
+                                                    <td>14-21 days</td>
+                                                    <td>7-10 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Africa</td>
+                                                    <td>14-28 days</td>
+                                                    <td>10-14 days</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Other Regions</td>
+                                                    <td>14-28 days</td>
+                                                    <td>Contact Us</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>International delivery times can vary significantly based on customs processing in the destination country.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="important-note">
+                            <p>All delivery timeframes are estimates and are counted in business days (Monday through Friday, excluding holidays). Actual delivery times may vary based on carrier delays, weather conditions, or other unforeseen circumstances.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="international">
+                        <h2>International Shipping</h2>
+                        <p>ShopVerse ships to over 120 countries worldwide. International customers may be subject to import duties, taxes, and customs clearance fees, which are not included in the item price or shipping cost.</p>
+
+                        <div class="info-block">
+                            <h3>Important Information for International Orders</h3>
+                            <ul>
+                                <li><strong>Customs Duties and Taxes:</strong> These fees are determined by the customs authority of your destination country and are the responsibility of the recipient.</li>
+                                <li><strong>Customs Clearance:</strong> International shipments may take additional time to clear customs, which can delay delivery.</li>
+                                <li><strong>Address Accuracy:</strong> Please ensure your shipping address is complete and accurate, including postal codes and contact phone numbers to avoid delivery issues.</li>
+                                <li><strong>Restricted Items:</strong> Certain products cannot be shipped to specific countries due to local regulations. We'll notify you if any items in your order cannot be shipped to your destination.</li>
+                            </ul>
+                        </div>
+
+                        <h3>Countries We Ship To</h3>
+                        <p>We currently ship to most countries worldwide, with some exceptions where logistics or regulations prevent us from providing reliable service. For a full list of countries we ship to, or to check if we ship to your location, please
+                            use our <a href="#" class="text-link">Shipping Availability Checker</a>.</p>
+
+                        <div class="notice-box info">
+                            <div class="notice-icon"><i class="fas fa-globe"></i></div>
+                            <div class="notice-content">
+                                <p>For certain high-value or oversized items, international shipping options may be limited. Please check the product page for specific shipping restrictions or contact customer support for assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="tracking">
+                        <h2>Order Tracking</h2>
+                        <p>All shipments include tracking capabilities so you can monitor your order's progress from our warehouse to your doorstep.</p>
+
+                        <div class="tracking-info">
+                            <h3>How to Track Your Order</h3>
+                            <div class="tracking-methods">
+                                <div class="tracking-method">
+                                    <div class="tracking-icon"><i class="fas fa-envelope"></i></div>
+                                    <h4>Email Updates</h4>
+                                    <p>You'll receive automatic email updates with tracking information when your order ships.</p>
+                                </div>
+
+                                <div class="tracking-method">
+                                    <div class="tracking-icon"><i class="fas fa-user-circle"></i></div>
+                                    <h4>Account Dashboard</h4>
+                                    <p>Log in to your ShopVerse account to view real-time order status and tracking details.</p>
+                                </div>
+
+                                <div class="tracking-method">
+                                    <div class="tracking-icon"><i class="fas fa-search"></i></div>
+                                    <h4>Order Lookup</h4>
+                                    <p>Use our <a href="track-order.html" class="text-link">Order Lookup Tool</a> with your order number and email address.</p>
+                                </div>
+                            </div>
+
+                            <div class="tracking-app-promo">
+                                <div class="app-icon">
+                                    <img src="../assets/images/1.jpg" alt="ShopVerse App">
+                                </div>
+                                <div class="app-info">
+                                    <h4>Get Real-Time Updates with Our App</h4>
+                                    <p>Download the ShopVerse app to receive push notifications about your order status and delivery updates.</p>
+                                    <div class="app-buttons">
+                                        <a href="#" class="app-button"><i class="fab fa-apple"></i> App Store</a>
+                                        <a href="#" class="app-button"><i class="fab fa-google-play"></i> Google Play</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="shipping-restrictions">
+                        <h2>Shipping Restrictions</h2>
+                        <p>While we aim to ship all products to as many locations as possible, certain restrictions apply:</p>
+
+                        <div class="info-block">
+                            <h3>Product-Specific Restrictions</h3>
+                            <ul>
+                                <li><strong>Hazardous Materials:</strong> Products containing batteries, flammable substances, or aerosols may have shipping restrictions.</li>
+                                <li><strong>Oversized Items:</strong> Furniture, large appliances, and other bulky items may require special shipping arrangements and additional fees.</li>
+                                <li><strong>Regulated Products:</strong> Certain electronics, food items, or health products may be restricted in specific countries.</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>Location Restrictions</h3>
+                            <ul>
+                                <li><strong>Remote Areas:</strong> Extremely remote locations may incur additional shipping fees or have limited shipping options.</li>
+                                <li><strong>PO Boxes:</strong> Express and some expedited shipping services cannot deliver to PO boxes.</li>
+                                <li><strong>Sanctioned Countries:</strong> Due to international regulations, we cannot ship to certain countries under trade embargoes.</li>
+                            </ul>
+                        </div>
+
+                        <p>Product pages will indicate any specific shipping restrictions that apply to that item. If you have questions about shipping restrictions to your location, please <a href="contact.html" class="text-link">contact our customer support team</a>.</p>
+                    </div>
+
+                    <div class="policy-section" id="fees">
+                        <h2>Shipping Fees</h2>
+                        <p>Shipping fees are calculated based on several factors, including destination, shipping method, order weight, dimensions, and value.</p>
+
+                        <div class="fee-calculation">
+                            <h3>How We Calculate Shipping Fees</h3>
+                            <div class="fee-factors">
+                                <div class="fee-factor">
+                                    <div class="factor-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="factor-info">
+                                        <h4>Destination</h4>
+                                        <p>Distance and zone from our fulfillment centers</p>
+                                    </div>
+                                </div>
+
+                                <div class="fee-factor">
+                                    <div class="factor-icon"><i class="fas fa-weight-hanging"></i></div>
+                                    <div class="factor-info">
+                                        <h4>Weight & Dimensions</h4>
+                                        <p>Physical or dimensional weight, whichever is greater</p>
+                                    </div>
+                                </div>
+
+                                <div class="fee-factor">
+                                    <div class="factor-icon"><i class="fas fa-shipping-fast"></i></div>
+                                    <div class="factor-info">
+                                        <h4>Shipping Method</h4>
+                                        <p>Standard, expedited, or express delivery</p>
+                                    </div>
+                                </div>
+
+                                <div class="fee-factor">
+                                    <div class="factor-icon"><i class="fas fa-box"></i></div>
+                                    <div class="factor-info">
+                                        <h4>Special Handling</h4>
+                                        <p>Fragile, oversized, or regulated items</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box success">
+                            <div class="notice-content">
+                                <p><strong>Free Shipping:</strong> Domestic orders over $75 qualify for free standard shipping. Some restrictions apply for oversized items or remote locations.</p>
+                            </div>
+                        </div>
+
+                        <h3>Additional Fees</h3>
+                        <p>Some circumstances may require additional shipping fees:</p>
+                        <ul>
+                            <li><strong>Remote Area Surcharge:</strong> Additional $5-$20 for locations that are outside standard delivery areas</li>
+                            <li><strong>Oversized Package Fee:</strong> Additional fees for items exceeding standard size or weight limits</li>
+                            <li><strong>Address Correction Fee:</strong> $15 fee if the provided shipping address is incorrect and requires adjustment</li>
+                            <li><strong>Signature Confirmation:</strong> $5 for standard deliveries (included with Express shipping)</li>
+                        </ul>
+
+                        <p>The final shipping cost will be calculated and displayed during checkout before payment is processed.</p>
+                    </div>
+
+                    <div class="policy-section" id="sustainability">
+                        <h2>Our Commitment to Sustainable Shipping</h2>
+                        <p>At ShopVerse, we're committed to reducing the environmental impact of our shipping operations. We are actively working to make our shipping practices more sustainable through several initiatives:</p>
+
+                        <div class="sustainability-initiatives">
+                            <div class="sustainability-initiative">
+                                <div class="initiative-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="initiative-info">
+                                    <h4>Eco-Friendly Packaging</h4>
+                                    <p>We use recycled and biodegradable packaging materials whenever possible, and we're working toward 100% sustainable packaging by 2027.</p>
+                                </div>
+                            </div>
+
+                            <div class="sustainability-initiative">
+                                <div class="initiative-icon"><i class="fas fa-tree"></i></div>
+                                <div class="initiative-info">
+                                    <h4>Carbon Offset Program</h4>
+                                    <p>For every shipment, we contribute to carbon offset projects to neutralize the environmental impact of transportation.</p>
+                                </div>
+                            </div>
+
+                            <div class="sustainability-initiative">
+                                <div class="initiative-icon"><i class="fas fa-box-open"></i></div>
+                                <div class="initiative-info">
+                                    <h4>Packaging Optimization</h4>
+                                    <p>We carefully select the right box size for your order to minimize waste and reduce the carbon footprint of shipping.</p>
+                                </div>
+                            </div>
+
+                            <div class="sustainability-initiative">
+                                <div class="initiative-icon"><i class="fas fa-sync-alt"></i></div>
+                                <div class="initiative-info">
+                                    <h4>Consolidated Shipping</h4>
+                                    <p>When possible, we consolidate multiple items into a single shipment to reduce packaging materials and delivery trips.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="eco-option">
+                            <h3>Choose Eco-Friendly Shipping</h3>
+                            <p>During checkout, you have the option to select "Eco-Friendly Shipping," which prioritizes the most environmentally responsible delivery method for your order. This option may extend delivery time by 1-2 days but reduces the
+                                carbon footprint of your shipment.</p>
+                        </div>
+
+                        <div class="impact-stats">
+                            <div class="impact-heading">
+                                <h3>Our Impact So Far</h3>
+                                <p>Through our sustainability initiatives, together with our customers, we have achieved:</p>
+                            </div>
+                            <div class="impact-numbers">
+                                <div class="impact-stat">
+                                    <div class="stat-number">75%</div>
+                                    <div class="stat-label">Recyclable Packaging</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="stat-number">15,000+</div>
+                                    <div class="stat-label">Trees Planted</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="stat-number">30%</div>
+                                    <div class="stat-label">Reduced Carbon Footprint</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="contact">
+                        <h2>Contact Us About Shipping</h2>
+                        <p>If you have questions about shipping, need help with a delivery issue, or require special shipping arrangements, our customer service team is here to help:</p>
+
+                        <div class="contact-options">
+                            <div class="contact-option">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-info">
+                                    <h4>Email</h4>
+                                    <p>shipping@shopverse.com</p>
+                                    <p class="contact-note">Response within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-option">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-info">
+                                    <h4>Phone</h4>
+                                    <p>1-888-SHIP-SVS (1-888-744-7787)</p>
+                                    <p class="contact-note">Mon-Fri, 8am-8pm ET</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-option">
+                                <div class="contact-icon"><i class="fas fa-comment-dots"></i></div>
+                                <div class="contact-info">
+                                    <h4>Live Chat</h4>
+                                    <p>Available on our website</p>
+                                    <p class="contact-note">24/7 Support</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="policy-feedback">
+                            <h3>Help Us Improve</h3>
+                            <p>We're always looking to improve our shipping services. If you have feedback or suggestions regarding our shipping policy or services, please share them with us:</p>
+                            <a href="feedback.html" class="btn btn-outline">Share Feedback</a>
+                        </div>
+                    </div>
+
+                    <div class="policy-footer">
+                        <div class="policy-last-updated">
+                            <p>This Shipping Policy was last updated on May 5, 2025 and is effective immediately for all shipments.</p>
+                        </div>
+                        <div class="policy-related-links">
+                            <h3>Related Policies</h3>
+                            <ul>
+                                <li><a href="return-policy.html">Return Policy</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common shipping questions and answers</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When will my order ship?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most orders are processed within 1-2 business days after payment confirmation. You will receive a shipping confirmation email with tracking information once your order has shipped.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I change my shipping address after placing an order?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Address changes may be possible if your order has not yet been processed for shipping. Please contact our customer service team as soon as possible with your order number. If the order has already been processed, we may not be
+                            able to change the delivery address.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you ship to PO boxes?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We can ship to PO boxes using standard shipping methods only. Express and expedited shipping services require a physical street address for delivery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if I'm not home to receive my package?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For most standard deliveries, the carrier will leave the package at your door if it's safe to do so. For shipments requiring signature, the carrier will leave a delivery attempt notice with instructions for rescheduling delivery
+                            or picking up from a local facility.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need to pay customs fees for international orders?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, international orders may be subject to import duties, taxes, and customs processing fees determined by your country's customs authority. These fees are not included in the purchase price or shipping cost and are the responsibility
+                            of the recipient.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>My tracking shows my package was delivered, but I didn't receive it. What should I do?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>First, check if the package was delivered to a nearby location, such as a neighbor's house, building office, or mail room. If you still cannot locate your package, please contact our customer service with your order number and
+                            tracking information, and we will help coordinate with the shipping carrier to resolve the issue.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I get expedited shipping for just part of my order?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, the shipping method you select applies to your entire order. If you need certain items more quickly, we recommend placing separate orders so you can choose different shipping methods.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer shipping insurance?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Express shipping automatically includes insurance up to $100. For other shipping methods or for higher value items, additional shipping insurance can be purchased during checkout for a small fee based on the order value.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <p>Don't see your question here?</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Trusted Shipping Partners</h2>
+                <p class="section-subtitle">We work with reliable carriers to deliver your orders safely and on time</p>
+            </div>
+
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Carrier Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Carrier Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Carrier Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Carrier Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Carrier Logo">
+                </div>
+                <div class="partner-logo">
+                    <img src="../assets/images/1.jpg" alt="Carrier Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <span class="modal-close"><i class="fas fa-times"></i></span>
+            <div class="modal-header">
+                <h3>Share this Policy</h3>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <a href="#" class="share-option" data-platform="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="share-option" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="share-option" data-platform="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="share-option" data-platform="email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <div class="share-link">
+                    <input type="text" value="https://shopverse.com/shipping-policy" readonly>
+                    <button class="btn-copy" data-tooltip="Copy to clipboard"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/shipping-policy.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

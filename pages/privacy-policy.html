@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/legal-pages.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header legal-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Privacy Policy</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Privacy Policy</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-container">
+                <aside class="legal-sidebar">
+                    <div class="legal-nav">
+                        <h3>Document Sections</h3>
+                        <ul class="legal-nav-list">
+                            <li><a href="#introduction" class="active">Introduction</a></li>
+                            <li><a href="#information-collection">Information Collection</a></li>
+                            <li><a href="#information-use">Use of Information</a></li>
+                            <li><a href="#information-sharing">Information Sharing</a></li>
+                            <li><a href="#data-security">Data Security</a></li>
+                            <li><a href="#cookies">Cookies & Tracking</a></li>
+                            <li><a href="#third-party">Third-Party Links</a></li>
+                            <li><a href="#marketing">Marketing Communications</a></li>
+                            <li><a href="#data-retention">Data Retention</a></li>
+                            <li><a href="#data-transfer">International Data Transfers</a></li>
+                            <li><a href="#your-rights">Your Rights</a></li>
+                            <li><a href="#childrens-privacy">Children's Privacy</a></li>
+                            <li><a href="#changes">Changes to Policy</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-tools">
+                        <div class="tool-box">
+                            <h3>Document Tools</h3>
+                            <div class="tool-buttons">
+                                <button class="tool-button btn-print">
+                                    <i class="fas fa-print"></i>
+                                    <span>Print</span>
+                                </button>
+                                <button class="tool-button btn-download">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Download PDF</span>
+                                </button>
+                                <button class="tool-button btn-share">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tool-box">
+                            <h3>Text Size</h3>
+                            <div class="text-size-controls">
+                                <button class="text-size-btn" data-size="small">
+                                    <i class="fas fa-font"></i>
+                                </button>
+                                <button class="text-size-btn active" data-size="medium">
+                                    <i class="fas fa-font"></i>
+                                </button>
+                                <button class="text-size-btn" data-size="large">
+                                    <i class="fas fa-font"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-contact">
+                        <h3>Data Privacy Questions?</h3>
+                        <p>For data protection inquiries or to exercise your privacy rights, please contact our privacy team.</p>
+                        <a href="mailto:privacy@shopverse.com" class="btn btn-outline">Email Privacy Team</a>
+                    </div>
+                </aside>
+
+                <div class="legal-main">
+                    <div class="legal-content-header">
+                        <div class="legal-meta">
+                            <div class="last-updated">
+                                <i class="fas fa-calendar-alt"></i> Last Updated: May 5, 2025
+                            </div>
+                            <div class="effective-date">
+                                <i class="fas fa-clock"></i> Effective: June 1, 2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-introduction">
+                        <p>At ShopVerse ("we," "us," or "our"), we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website,
+                            mobile application, or use any of our services (collectively, the "Services").</p>
+                        <p>Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access our Services. By accessing and using our Services, you consent to the collection, use, and disclosure of
+                            information in accordance with this Privacy Policy.</p>
+                    </div>
+
+                    <div class="legal-section" id="introduction">
+                        <h2>1. Introduction</h2>
+                        <p>1.1. <strong>Purpose.</strong> This Privacy Policy describes our practices regarding the collection, use, and disclosure of your information through our Services, both online and offline.</p>
+
+                        <p>1.2. <strong>Scope.</strong> This Privacy Policy applies to all users of our Services worldwide. If you are accessing our Services from the European Union (EU), European Economic Area (EEA), United Kingdom (UK), or other regions
+                            with laws governing data collection and use, please see the section on "International Data Transfers" below.</p>
+
+                        <p>1.3. <strong>Personal Data.</strong> In this Privacy Policy, "personal data" or "personal information" means information that identifies, relates to, describes, or can be reasonably linked to a particular individual or household.</p>
+
+                        <p>1.4. <strong>Controllers and Data Protection Officer.</strong> ShopVerse Inc. is the data controller responsible for your personal data. For questions about this Privacy Policy or our privacy practices, you can contact our Data
+                            Protection Officer at <a href="mailto:dpo@shopverse.com">dpo@shopverse.com</a>.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>This Privacy Policy should be read alongside our <a href="terms-conditions.html">Terms & Conditions</a>, which provide additional information about how we use your data in connection with our Services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="information-collection">
+                        <h2>2. Information Collection</h2>
+                        <p>We collect several types of information from and about users of our Services:</p>
+
+                        <p>2.1. <strong>Information You Provide to Us</strong></p>
+                        <ul>
+                            <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, phone number, date of birth, and password.</li>
+                            <li><strong>Profile Information:</strong> Information you add to your profile, such as profile picture, bio, and preferences.</li>
+                            <li><strong>Transaction Information:</strong> Details about purchases or transactions made on our platform, including payment information, billing and shipping address, and purchase history.</li>
+                            <li><strong>Communication Information:</strong> Records and copies of your correspondence with us, including emails, chat messages, and support inquiries.</li>
+                            <li><strong>Feedback and Reviews:</strong> Product reviews, ratings, survey responses, and other feedback you provide.</li>
+                            <li><strong>Marketing Preferences:</strong> Your preferences for receiving marketing communications from us.</li>
+                        </ul>
+
+                        <p>2.2. <strong>Information We Collect Automatically</strong></p>
+                        <ul>
+                            <li><strong>Usage Data:</strong> Information about your interactions with our Services, including pages visited, time spent, and features used.</li>
+                            <li><strong>Device Information:</strong> Information about your device, such as IP address, device type, operating system, browser type, and mobile network information.</li>
+                            <li><strong>Location Data:</strong> Approximate location derived from your IP address or, with your consent, precise location data from GPS or other location-tracking technologies.</li>
+                            <li><strong>Cookies and Tracking Technologies:</strong> Data collected through cookies, web beacons, and similar technologies. See our "Cookies & Tracking" section for more details.</li>
+                            <li><strong>Log Data:</strong> Server logs, including your IP address, browser type, referring/exit pages, operating system, date/time stamps, and clickstream data.</li>
+                        </ul>
+
+                        <p>2.3. <strong>Information from Third Parties</strong></p>
+                        <ul>
+                            <li><strong>Social Media:</strong> If you log in or connect to our Services through a third-party service (like Google or Facebook), we receive information from that service based on your account settings and the privacy policy
+                                of that service.</li>
+                            <li><strong>Business Partners:</strong> We may receive information about you from our business partners, such as advertising and marketing partners, analytics providers, and payment processors.</li>
+                            <li><strong>Public Sources:</strong> We may collect information about you from publicly available sources, such as public social media profiles, news sources, and public records.</li>
+                        </ul>
+
+                        <div class="legal-alert warning">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <p>You are not required to provide the personal information that we request, but if you choose not to do so, we may not be able to provide you with certain Services or features, or respond to your inquiries.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="information-use">
+                        <h2>3. Use of Information</h2>
+                        <p>We use the information we collect for various purposes, including:</p>
+
+                        <p>3.1. <strong>Providing and Improving our Services</strong></p>
+                        <ul>
+                            <li>To provide, maintain, and improve our Services, including processing transactions, managing accounts, and delivering customer support</li>
+                            <li>To personalize your experience and deliver content and product offerings relevant to your interests</li>
+                            <li>To develop new products, services, features, and functionality</li>
+                            <li>To process and deliver orders, including sending confirmations, invoices, technical notices, updates, security alerts, and support messages</li>
+                        </ul>
+
+                        <p>3.2. <strong>Communication</strong></p>
+                        <ul>
+                            <li>To communicate with you about products, services, offers, promotions, and events, and provide other news or information about us and our partners</li>
+                            <li>To respond to your comments, questions, and requests and provide customer service</li>
+                            <li>To notify you about changes to our Services or any products or services we offer</li>
+                        </ul>
+
+                        <p>3.3. <strong>Research and Analytics</strong></p>
+                        <ul>
+                            <li>To conduct research and analysis to better understand how users access and use our Services</li>
+                            <li>To monitor and analyze trends, usage, and activities in connection with our Services</li>
+                            <li>To measure the effectiveness of advertisements and content</li>
+                        </ul>
+
+                        <p>3.4. <strong>Security and Protection</strong></p>
+                        <ul>
+                            <li>To detect, investigate, and prevent fraudulent transactions, abuse, security incidents, and other harmful activities</li>
+                            <li>To protect the safety, rights, property, or security of ShopVerse, the Services, our users, or any third party</li>
+                            <li>To verify identity and prevent fraud or illegal activity</li>
+                        </ul>
+
+                        <p>3.5. <strong>Legal Compliance</strong></p>
+                        <ul>
+                            <li>To comply with legal obligations</li>
+                            <li>To enforce our Terms & Conditions and other legal terms</li>
+                            <li>To establish, exercise, or defend legal claims</li>
+                        </ul>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>We process your personal data based on various legal grounds, including: your consent, our legitimate interests, the performance of a contract with you, and compliance with legal obligations. Where we rely on your consent,
+                                    you have the right to withdraw consent at any time.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="information-sharing">
+                        <h2>4. Information Sharing</h2>
+                        <p>We may share your information in the following circumstances:</p>
+
+                        <p>4.1. <strong>With Your Consent</strong>: We may share your information when you direct us to do so or give us your consent to do so.</p>
+
+                        <p>4.2. <strong>Service Providers</strong>: We share information with third-party vendors, consultants, and other service providers who perform services on our behalf, including:</p>
+                        <ul>
+                            <li>Payment processors and financial institutions</li>
+                            <li>Customer support and help desk providers</li>
+                            <li>Marketing and advertising partners</li>
+                            <li>Analytics providers</li>
+                            <li>Email and communication service providers</li>
+                            <li>Cloud storage and hosting providers</li>
+                            <li>Fraud prevention and security services</li>
+                        </ul>
+
+                        <p>4.3. <strong>Marketplace Sellers</strong>: If you purchase from a third-party seller on our marketplace, we share information necessary to facilitate the transaction, such as contact and shipping details.</p>
+
+                        <p>4.4. <strong>Corporate Affiliates</strong>: We may share information with our subsidiaries, affiliates, and related companies for purposes consistent with this Privacy Policy.</p>
+
+                        <p>4.5. <strong>Business Transfers</strong>: If ShopVerse is involved in a merger, acquisition, reorganization, bankruptcy, or sale of all or a portion of its assets, your information may be transferred as part of that transaction.</p>
+
+                        <p>4.6. <strong>Legal Requirements</strong>: We may disclose information if we believe in good faith that such disclosure is necessary to:</p>
+                        <ul>
+                            <li>Comply with relevant laws or regulations or in response to a valid subpoena, court order, or legal process</li>
+                            <li>Protect the safety, rights, or property of ShopVerse, our users, or the public</li>
+                            <li>Detect, investigate, prevent, or address fraud, security, or technical issues</li>
+                        </ul>
+
+                        <p>4.7. <strong>Aggregated or De-identified Information</strong>: We may share aggregated or de-identified information (information that cannot reasonably be used to identify you) with third parties for research, marketing, analytics,
+                            or other purposes.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>We require third parties that process personal data on our behalf to protect the confidentiality and security of that data.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="data-security">
+                        <h2>5. Data Security</h2>
+                        <p>5.1. <strong>Security Measures</strong>: We implement appropriate technical and organizational measures to protect your personal data against unauthorized or unlawful processing, accidental loss, destruction, or damage. These measures
+                            include:
+                        </p>
+                        <ul>
+                            <li>Encryption of sensitive data in transit and at rest</li>
+                            <li>Regular security assessments and vulnerability testing</li>
+                            <li>Access controls and authentication requirements</li>
+                            <li>Monitoring for suspicious activities</li>
+                            <li>Regular data backups</li>
+                            <li>Employee training on data protection and security</li>
+                        </ul>
+
+                        <p>5.2. <strong>Data Incident Response</strong>: In the event of a security breach affecting your personal data, we will take appropriate measures to address the breach, including notifying affected users and relevant regulatory authorities
+                            as required by applicable law.</p>
+
+                        <p>5.3. <strong>User Responsibilities</strong>: The security of your account also depends on your actions. You are responsible for:</p>
+                        <ul>
+                            <li>Keeping your password confidential and not sharing it with others</li>
+                            <li>Logging out of your account after using shared computers</li>
+                            <li>Promptly notifying us of any unauthorized use of your account or other security breaches</li>
+                        </ul>
+
+                        <div class="legal-alert warning">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <p>While we strive to protect your personal information, no security system is impenetrable. The transmission of information via the internet is not completely secure, and we cannot guarantee the security of information transmitted
+                                    through our Services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="cookies">
+                        <h2>6. Cookies & Tracking</h2>
+                        <p>6.1. <strong>What Are Cookies</strong>: Cookies are small data files stored on your device that allow websites to remember your actions and preferences. We and our third-party partners use cookies and similar technologies (like
+                            web beacons, pixel tags, and clear GIFs) to:</p>
+                        <ul>
+                            <li>Keep you logged in to our Services</li>
+                            <li>Remember your preferences and settings</li>
+                            <li>Understand how users interact with our Services</li>
+                            <li>Analyze and improve our Services</li>
+                            <li>Measure the effectiveness of advertisements and content</li>
+                            <li>Provide targeted advertising based on your interests</li>
+                        </ul>
+
+                        <p>6.2. <strong>Types of Cookies We Use</strong>:</p>
+                        <ul>
+                            <li><strong>Essential Cookies</strong>: Necessary for the operation of our Services. They enable basic functions like page navigation, secure areas access, and e-commerce functionality.</li>
+                            <li><strong>Preference Cookies</strong>: Allow our Services to remember information that changes how the website behaves or looks, such as your preferred language or region.</li>
+                            <li><strong>Analytics Cookies</strong>: Help us understand how visitors interact with our Services by collecting and reporting information anonymously.</li>
+                            <li><strong>Marketing Cookies</strong>: Used to track visitors across websites to display relevant advertisements based on what interests them.</li>
+                        </ul>
+
+                        <p>6.3. <strong>Your Cookie Choices</strong>: Most web browsers automatically accept cookies, but you can usually modify your browser settings to decline cookies if you prefer. You can also delete cookies that are already stored on
+                            your device. If you choose to decline cookies, some features of our Services may not function properly.</p>
+
+                        <p>6.4. <strong>Do Not Track</strong>: Some browsers have a "Do Not Track" feature that signals to websites that you do not want to have your online activities tracked. Given the lack of a standard for interpreting these signals,
+                            our Services currently do not respond to "Do Not Track" signals.</p>
+
+                        <p>6.5. <strong>Analytics and Advertising Partners</strong>: We work with third-party analytics providers (such as Google Analytics) and advertising partners that use cookies and similar technologies to collect information. For more
+                            information about how Google Analytics collects and processes data, please visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a>.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>You can learn more about cookies, including how to see what cookies have been set and how to manage or delete them, by visiting <a href="http://www.allaboutcookies.org" target="_blank">www.allaboutcookies.org</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="third-party">
+                        <h2>7. Third-Party Links</h2>
+                        <p>7.1. <strong>External Links</strong>: Our Services may contain links to third-party websites, products, or services. These third-party sites have separate and independent privacy policies. We have no control over and assume no
+                            responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+                        <p>7.2. <strong>Social Media Features</strong>: Our Services may include social media features, such as the Facebook Like button or widgets like the Share button. These features may collect your IP address and which page you are visiting
+                            on our Services, and may set a cookie to enable the feature to function properly. These features are either hosted by a third party or directly on our Services. Your interactions with these features are governed by the privacy
+                            policy of the company providing them.</p>
+
+                        <p>7.3. <strong>Payment Processors</strong>: We use third-party payment processors to handle financial transactions on our Services. When you make a purchase, your payment information is collected directly by these processors and
+                            is subject to their privacy policies.</p>
+
+                        <div class="legal-alert warning">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <p>We encourage you to review the privacy policies of any third-party sites or services before providing any personal information or using such sites or services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="marketing">
+                        <h2>8. Marketing Communications</h2>
+                        <p>8.1. <strong>Marketing Emails</strong>: With your consent or where permitted by law, we may use your personal data to send you marketing communications about our products and services, as well as those of our partners that may
+                            be of interest to you.</p>
+
+                        <p>8.2. <strong>Opting Out</strong>: You can opt out of receiving marketing communications from us at any time by:</p>
+                        <ul>
+                            <li>Clicking on the "unsubscribe" or "opt-out" link in any marketing email we send</li>
+                            <li>Adjusting your communication preferences in your account settings</li>
+                            <li>Contacting us at <a href="mailto:unsubscribe@shopverse.com">unsubscribe@shopverse.com</a></li>
+                        </ul>
+
+                        <p>8.3. <strong>Service Communications</strong>: Please note that even if you opt out of marketing communications, we may still send you service-related communications, such as transaction confirmations, receipts, technical notices,
+                            updates, security alerts, and support messages.</p>
+                    </div>
+
+                    <div class="legal-section" id="data-retention">
+                        <h2>9. Data Retention</h2>
+                        <p>9.1. <strong>Retention Periods</strong>: We retain your personal data for as long as necessary to fulfill the purposes for which we collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+                            The specific retention period depends on the nature of the information and the purposes for which it is used.</p>
+
+                        <p>9.2. <strong>Retention Criteria</strong>: We consider the following factors when determining how long to retain data:</p>
+                        <ul>
+                            <li>The amount, nature, and sensitivity of the personal data</li>
+                            <li>The potential risk of harm from unauthorized use or disclosure</li>
+                            <li>The purposes for which we process the data and whether we can achieve those purposes through other means</li>
+                            <li>Legal, regulatory, and contractual requirements</li>
+                            <li>Whether ongoing access to the data is necessary for our legitimate business operations</li>
+                        </ul>
+
+                        <p>9.3. <strong>Account Closure</strong>: When you close your account, we typically retain certain information for a period of time to:</p>
+                        <ul>
+                            <li>Complete any transactions you initiated before closing your account</li>
+                            <li>Comply with legal obligations, such as tax, accounting, and financial reporting requirements</li>
+                            <li>Resolve disputes and enforce our agreements</li>
+                            <li>Protect against fraudulent activity and abuse</li>
+                        </ul>
+
+                        <p>9.4. <strong>Anonymization</strong>: When personal data is no longer needed for the purposes for which it was collected, we will either delete it or anonymize it so that it can no longer be associated with you.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>You can request deletion of your personal data at any time. See the "Your Rights" section for more information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="data-transfer">
+                        <h2>10. International Data Transfers</h2>
+                        <p>10.1. <strong>Global Operations</strong>: ShopVerse operates globally with servers and operations in multiple countries. Your personal data may be transferred to, stored, and processed in countries other than the country where
+                            you reside.</p>
+
+                        <p>10.2. <strong>Data Transfer Mechanisms</strong>: When we transfer personal data from the European Economic Area (EEA), United Kingdom, or Switzerland to countries that have not been deemed to provide an adequate level of protection,
+                            we use specific legal mechanisms to protect your data, such as:</p>
+                        <ul>
+                            <li>Standard Contractual Clauses approved by the European Commission</li>
+                            <li>Binding Corporate Rules</li>
+                            <li>Other legally approved transfer mechanisms</li>
+                        </ul>
+
+                        <p>10.3. <strong>Safeguards</strong>: Regardless of where your data is processed, we apply the same protections described in this Privacy Policy. We have implemented appropriate technical and organizational measures to ensure your
+                            personal data remains protected according to this policy.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>You can request more information about the specific safeguards applied to the export of your personal data by contacting our Data Protection Officer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="your-rights">
+                        <h2>11. Your Rights</h2>
+                        <p>Depending on your location, you may have certain rights regarding your personal data. These may include:</p>
+
+                        <p>11.1. <strong>Access</strong>: You may request information about whether we hold personal data about you and, if so, what that information is and why we are holding or using it.</p>
+
+                        <p>11.2. <strong>Correction</strong>: You may request that we correct any personal data that is inaccurate or incomplete.</p>
+
+                        <p>11.3. <strong>Deletion</strong>: You may request that we delete your personal data in certain circumstances, such as when it is no longer necessary for the purposes for which it was collected.</p>
+
+                        <p>11.4. <strong>Restriction</strong>: You may request that we restrict the processing of your personal data in certain circumstances, such as when you are contesting the accuracy of your data.</p>
+
+                        <p>11.5. <strong>Data Portability</strong>: You may request a copy of the personal data you provided to us in a structured, commonly used, and machine-readable format, and in certain circumstances, to transmit that data to another
+                            entity.
+                        </p>
+
+                        <p>11.6. <strong>Objection</strong>: You may object to the processing of your personal data in certain circumstances, such as for direct marketing purposes.</p>
+
+                        <p>11.7. <strong>Consent Withdrawal</strong>: If we are processing your personal data based on your consent, you have the right to withdraw that consent at any time.</p>
+
+                        <p>11.8. <strong>Automated Decision-Making</strong>: You have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning you or similarly significantly
+                            affects you.</p>
+
+                        <p>11.9. <strong>How to Exercise Your Rights</strong>: You can exercise your rights by:</p>
+                        <ul>
+                            <li>Adjusting your account settings</li>
+                            <li>Contacting us at <a href="mailto:privacy@shopverse.com">privacy@shopverse.com</a></li>
+                            <li>Using our data request form at <a href="https://www.shopverse.com/privacy/request" target="_blank">www.shopverse.com/privacy/request</a></li>
+                        </ul>
+
+                        <p>11.10. <strong>Response Timeline</strong>: We will respond to your request within the timeframe required by applicable law (typically within 30 days). We may need to request specific information from you to help us confirm your
+                            identity and ensure your right to access the information or exercise other rights.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>While these rights are available to all users, some rights may apply differently depending on your location and applicable laws.</p>
+                            </div>
+                        </div>
+
+                        <p>11.11. <strong>Complaints</strong>: If you are concerned about how we are handling your personal data, you have the right to file a complaint with the data protection authority in your country of residence, place of work, or where
+                            the alleged infringement occurred. However, we encourage you to contact us first so we can try to resolve your concern directly.</p>
+                    </div>
+
+                    <div class="legal-section" id="childrens-privacy">
+                        <h2>12. Children's Privacy</h2>
+                        <p>12.1. <strong>Age Restrictions</strong>: Our Services are not directed to individuals under the age of 16 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal data from children
+                            under 16.</p>
+
+                        <p>12.2. <strong>Parental Consent</strong>: If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us. If we become aware that we have collected personal data from a child
+                            without verification of parental consent, we will take steps to remove that information from our servers.</p>
+
+                        <div class="legal-alert warning">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <p>If you believe we might have any information from or about a child under the age of 16, please contact us immediately at <a href="mailto:privacy@shopverse.com">privacy@shopverse.com</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="changes">
+                        <h2>13. Changes to Policy</h2>
+                        <p>13.1. <strong>Updates</strong>: We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. The updated version will be indicated by an updated
+                            "Last Updated" date at the top of this Privacy Policy.</p>
+
+                        <p>13.2. <strong>Notification of Changes</strong>: For significant changes, we will take reasonable steps to notify you, such as posting a notice on our website or sending you an email. We encourage you to review this Privacy Policy
+                            periodically to stay informed about how we are protecting your information.</p>
+
+                        <p>13.3. <strong>Continued Use</strong>: Your continued use of our Services after changes to the Privacy Policy constitutes your acceptance of the updated terms. If you do not agree to the changes, you should discontinue your use
+                            of our Services.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>We will always provide clear notice before making material changes to this Privacy Policy and give you an opportunity to review the revised policy before deciding whether to continue using our Services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="contact">
+                        <h2>14. Contact Us</h2>
+                        <p>14.1. <strong>Questions or Concerns</strong>: If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                        <address>
+                            ShopVerse Inc.<br>
+                            Attn: Privacy Team<br>
+                            123 Commerce Street<br>
+                            New York, NY 10001<br>
+                            United States<br><br>
+                            Email: <a href="mailto:privacy@shopverse.com">privacy@shopverse.com</a><br>
+                            Phone: +1-234-567-890
+                        </address>
+
+                        <p>14.2. <strong>Data Protection Officer</strong>: You can contact our Data Protection Officer directly at <a href="mailto:dpo@shopverse.com">dpo@shopverse.com</a>.</p>
+
+                        <p>14.3. <strong>EU Representative</strong>: For individuals in the EU, our EU Representative can be contacted at:</p>
+                        <address>
+                            ShopVerse EU Representative<br>
+                            45 Dublin Street<br>
+                            Dublin, D01 F9P8<br>
+                            Ireland<br><br>
+                            Email: <a href="mailto:eu-rep@shopverse.com">eu-rep@shopverse.com</a>
+                        </address>
+
+                        <p>14.4. <strong>UK Representative</strong>: For individuals in the UK, our UK Representative can be contacted at:</p>
+                        <address>
+                            ShopVerse UK Representative<br>
+                            30 London Road<br>
+                            London, SW1A 1AA<br>
+                            United Kingdom<br><br>
+                            Email: <a href="mailto:uk-rep@shopverse.com">uk-rep@shopverse.com</a>
+                        </address>
+                    </div>
+
+                    <div class="legal-conclusion">
+                        <p>By using ShopVerse's Services, you acknowledge that you have read and understood this Privacy Policy.</p>
+                        <p>Thank you for trusting us with your personal information.</p>
+
+                        <div class="legal-signature">
+                            <p>ShopVerse Inc.<br> Last Updated: May 5, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our Privacy Policy</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I access or update my personal information?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can access and update most of your personal information directly through your account settings. For information that cannot be changed through your account, or if you don't have an account, please contact our privacy team at
+                            privacy@shopverse.com with your request.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I delete my account and personal data?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can request account deletion by going to your account settings and selecting "Delete Account." Alternatively, you can email privacy@shopverse.com with your deletion request. Please note that some information may be retained
+                            for legal, security, or business purposes even after account deletion.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you protect my payment information?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We do not store your full credit card details on our servers. Payment information is processed securely by our payment service providers, who comply with the Payment Card Industry Data Security Standard (PCI DSS). We only retain
+                            limited payment information as necessary for order processing and fraud prevention.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I opt out of targeted advertising?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can opt out of personalized advertising by adjusting your cookie preferences on our website, changing your device settings, or using industry opt-out tools provided by initiatives like the Digital Advertising Alliance
+                            or Network Advertising Initiative. You can also manage your marketing preferences in your account settings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <p>Have more questions about our Privacy Policy?</p>
+                <a href="mailto:privacy@shopverse.com" class="btn btn-primary">Contact Privacy Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/legal-pages.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

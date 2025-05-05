@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/my-account.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="my-account.html" class="active"><i class="fas fa-user"></i> My Account</a>
+                            <span class="divider">|</span>
+                            <a href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>My Account</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">My Account</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Content -->
+    <section class="account-section">
+        <div class="container">
+            <div class="account-container">
+                <aside class="account-sidebar">
+                    <div class="account-user">
+                        <div class="user-avatar">
+                            <img src="../assets/images/1.jpg" alt="User Avatar">
+                            <div class="avatar-change">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <h3>Umesh Kumar</h3>
+                            <p>Premium Member</p>
+                            <span class="user-since">Member since May 2023</span>
+                        </div>
+                    </div>
+
+                    <nav class="account-nav">
+                        <ul class="account-menu">
+                            <li class="account-menu-item active">
+                                <a href="#dashboard" data-section="dashboard">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#orders" data-section="orders">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>My Orders</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#wishlist" data-section="wishlist">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#addresses" data-section="addresses">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>My Addresses</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#payment-methods" data-section="payment-methods">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Payment Methods</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#reviews" data-section="reviews">
+                                    <i class="fas fa-star"></i>
+                                    <span>My Reviews</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#profile" data-section="profile">
+                                    <i class="fas fa-user-edit"></i>
+                                    <span>Profile Settings</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#security" data-section="security">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Security</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#notifications" data-section="notifications">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Notifications</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-divider"></li>
+                            <li class="account-menu-item">
+                                <a href="help-center.html">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Help Center</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#logout" class="logout-link">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="account-support">
+                        <h3>Need Help?</h3>
+                        <p>Our support team is available 24/7</p>
+                        <a href="help-center.html" class="btn btn-outline btn-sm">Contact Support</a>
+                    </div>
+                </aside>
+
+                <div class="account-content">
+                    <!-- Dashboard Section -->
+                    <div class="account-section-content active" id="dashboard-section">
+                        <div class="dashboard-header">
+                            <h2>My Dashboard</h2>
+                            <p class="last-login">Last login: May 5, 2025, 10:30 AM</p>
+                        </div>
+
+                        <div class="account-alert">
+                            <div class="alert-icon"><i class="fas fa-gift"></i></div>
+                            <div class="alert-content">
+                                <h4>Premium Anniversary Coming Up!</h4>
+                                <p>Your 2-year Premium membership anniversary is on June 15th. Check your email for a special gift!</p>
+                            </div>
+                            <button class="alert-close"><i class="fas fa-times"></i></button>
+                        </div>
+
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon orders">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="stat-details">
+                                    <h3>17</h3>
+                                    <p>Total Orders</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="stat-details">
+                                    <h3>9</h3>
+                                    <p>Wishlist Items</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon reviews">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-details">
+                                    <h3>12</h3>
+                                    <p>Reviews Written</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon rewards">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="stat-details">
+                                    <h3>1,250</h3>
+                                    <p>Reward Points</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-sections">
+                            <div class="dash-section">
+                                <div class="dash-section-header">
+                                    <h3>Recent Orders</h3>
+                                    <a href="#orders" class="view-all" data-section="orders">View All</a>
+                                </div>
+                                <div class="dash-section-content">
+                                    <div class="order-item">
+                                        <div class="order-icon">
+                                            <i class="fas fa-box"></i>
+                                        </div>
+                                        <div class="order-details">
+                                            <h4>Order #SV789023</h4>
+                                            <p>3 Items • $157.49</p>
+                                            <span class="order-date">May 3, 2025</span>
+                                        </div>
+                                        <div class="order-status">
+                                            <span class="status shipped">Shipped</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-item">
+                                        <div class="order-icon">
+                                            <i class="fas fa-box-open"></i>
+                                        </div>
+                                        <div class="order-details">
+                                            <h4>Order #SV788654</h4>
+                                            <p>1 Item • $49.99</p>
+                                            <span class="order-date">April 28, 2025</span>
+                                        </div>
+                                        <div class="order-status">
+                                            <span class="status delivered">Delivered</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-item">
+                                        <div class="order-icon">
+                                            <i class="fas fa-box-open"></i>
+                                        </div>
+                                        <div class="order-details">
+                                            <h4>Order #SV785432</h4>
+                                            <p>2 Items • $123.75</p>
+                                            <span class="order-date">April 15, 2025</span>
+                                        </div>
+                                        <div class="order-status">
+                                            <span class="status delivered">Delivered</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dash-section">
+                                <div class="dash-section-header">
+                                    <h3>Recently Viewed</h3>
+                                </div>
+                                <div class="dash-section-content">
+                                    <div class="product-grid">
+                                        <div class="product-card">
+                                            <div class="product-image">
+                                                <img src="../assets/images/1.jpg" alt="Product Image">
+                                                <button class="wishlist-btn"><i class="fas fa-heart"></i></button>
+                                            </div>
+                                            <div class="product-info">
+                                                <h4>Wireless Noise-Canceling Headphones</h4>
+                                                <div class="product-price">$149.99</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-card">
+                                            <div class="product-image">
+                                                <img src="../assets/images/1.jpg" alt="Product Image">
+                                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                            </div>
+                                            <div class="product-info">
+                                                <h4>Smartwatch Series 5</h4>
+                                                <div class="product-price">$229.99</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-card">
+                                            <div class="product-image">
+                                                <img src="../assets/images/1.jpg" alt="Product Image">
+                                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                            </div>
+                                            <div class="product-info">
+                                                <h4>Portable Bluetooth Speaker</h4>
+                                                <div class="product-price">$79.99</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="account-section-content" id="orders-section">
+                        <div class="section-header">
+                            <h2>My Orders</h2>
+                        </div>
+
+                        <div class="orders-filter">
+                            <div class="search-filter">
+                                <input type="text" placeholder="Search orders...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="filter-dropdown">
+                                <select>
+                                    <option value="all">All Orders</option>
+                                    <option value="processing">Processing</option>
+                                    <option value="shipped">Shipped</option>
+                                    <option value="delivered">Delivered</option>
+                                    <option value="cancelled">Cancelled</option>
+                                </select>
+                                <select>
+                                    <option value="newest">Newest First</option>
+                                    <option value="oldest">Oldest First</option>
+                                    <option value="highest">Highest Amount</option>
+                                    <option value="lowest">Lowest Amount</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <h3>Order #SV789023</h3>
+                                        <span class="status shipped">Shipped</span>
+                                    </div>
+                                    <div class="order-date">
+                                        <span>Placed on May 3, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="order-products">
+                                    <div class="order-product">
+                                        <div class="product-image">
+                                            <img src="../assets/images/1.jpg" alt="Product">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Wireless Noise-Canceling Headphones</h4>
+                                            <p>Color: Black | Qty: 1</p>
+                                            <span class="price">$149.99</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-product">
+                                        <div class="product-image">
+                                            <img src="../assets/images/1.jpg" alt="Product">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>USB-C Fast Charging Cable</h4>
+                                            <p>Length: 6ft | Qty: 2</p>
+                                            <span class="price">$7.50 × 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total:</span>
+                                        <span class="total-amount">$157.49</span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-sm">Track Order</button>
+                                        <button class="btn btn-outline btn-sm">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <h3>Order #SV788654</h3>
+                                        <span class="status delivered">Delivered</span>
+                                    </div>
+                                    <div class="order-date">
+                                        <span>Placed on April 28, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="order-products">
+                                    <div class="order-product">
+                                        <div class="product-image">
+                                            <img src="../assets/images/1.jpg" alt="Product">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Smart Home Security Camera</h4>
+                                            <p>Model: Indoor | Qty: 1</p>
+                                            <span class="price">$49.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total:</span>
+                                        <span class="total-amount">$49.99</span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-sm">Write Review</button>
+                                        <button class="btn btn-outline btn-sm">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <h3>Order #SV785432</h3>
+                                        <span class="status delivered">Delivered</span>
+                                    </div>
+                                    <div class="order-date">
+                                        <span>Placed on April 15, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="order-products">
+                                    <div class="order-product">
+                                        <div class="product-image">
+                                            <img src="../assets/images/1.jpg" alt="Product">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Portable Bluetooth Speaker</h4>
+                                            <p>Color: Blue | Qty: 1</p>
+                                            <span class="price">$79.99</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-product">
+                                        <div class="product-image">
+                                            <img src="../assets/images/1.jpg" alt="Product">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Wireless Phone Charger</h4>
+                                            <p>Type: 15W Fast | Qty: 1</p>
+                                            <span class="price">$43.76</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total:</span>
+                                        <span class="total-amount">$123.75</span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-sm">Write Review</button>
+                                        <button class="btn btn-outline btn-sm">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <h3>Order #SV782109</h3>
+                                        <span class="status cancelled">Cancelled</span>
+                                    </div>
+                                    <div class="order-date">
+                                        <span>Placed on March 29, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="order-products">
+                                    <div class="order-product">
+                                        <div class="product-image">
+                                            <img src="../assets/images/1.jpg" alt="Product">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Smartwatch Series 5</h4>
+                                            <p>Color: Silver | Qty: 1</p>
+                                            <span class="price">$229.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span>Total:</span>
+                                        <span class="total-amount">$229.99</span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-primary btn-sm">Buy Again</button>
+                                        <button class="btn btn-outline btn-sm">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="pagination-item prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="pagination-item active">1</button>
+                            <button class="pagination-item">2</button>
+                            <button class="pagination-item">3</button>
+                            <button class="pagination-item next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Additional sections (wishlist, addresses, etc.) would be implemented similarly -->
+                    <div class="account-section-content" id="wishlist-section">
+                        <div class="section-header">
+                            <h2>My Wishlist</h2>
+                        </div>
+                        <div class="wishlist-grid">
+                            <!-- Wishlist items would go here -->
+                            <p class="placeholder">Wishlist content would be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="account-section-content" id="addresses-section">
+                        <div class="section-header">
+                            <h2>My Addresses</h2>
+                        </div>
+                        <div class="address-list">
+                            <!-- Address cards would go here -->
+                            <p class="placeholder">Address content would be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="account-section-content" id="payment-methods-section">
+                        <div class="section-header">
+                            <h2>Payment Methods</h2>
+                        </div>
+                        <div class="payment-methods-list">
+                            <!-- Payment methods would go here -->
+                            <p class="placeholder">Payment methods content would be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="account-section-content" id="reviews-section">
+                        <div class="section-header">
+                            <h2>My Reviews</h2>
+                        </div>
+                        <div class="reviews-list">
+                            <!-- Reviews would go here -->
+                            <p class="placeholder">Reviews content would be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="account-section-content" id="profile-section">
+                        <div class="section-header">
+                            <h2>Profile Settings</h2>
+                        </div>
+                        <div class="profile-settings">
+                            <!-- Profile form would go here -->
+                            <p class="placeholder">Profile settings content would be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="account-section-content" id="security-section">
+                        <div class="section-header">
+                            <h2>Security</h2>
+                        </div>
+                        <div class="security-settings">
+                            <!-- Security settings would go here -->
+                            <p class="placeholder">Security settings content would be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="account-section-content" id="notifications-section">
+                        <div class="section-header">
+                            <h2>Notification Preferences</h2>
+                        </div>
+                        <div class="notification-settings">
+                            <!-- Notification settings would go here -->
+                            <p class="placeholder">Notification settings content would be displayed here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal" id="logout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirm Logout</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to logout from your account?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-cancel">Cancel</button>
+                <button class="btn btn-primary modal-confirm">Yes, Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/my-account.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/3d-effects.js"></script>
+</body>
+
+</html>

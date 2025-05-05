@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return & Refund Policy | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/return-policy.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header policy-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Return & Refund Policy</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Return & Refund Policy</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container">
+            <div class="policy-container">
+                <aside class="policy-sidebar">
+                    <div class="policy-nav">
+                        <h3>Return & Refund</h3>
+                        <ul class="policy-nav-list">
+                            <li><a href="#overview" class="active">Overview</a></li>
+                            <li><a href="#eligibility">Return Eligibility</a></li>
+                            <li><a href="#timeframes">Return Timeframes</a></li>
+                            <li><a href="#return-process">Return Process</a></li>
+                            <li><a href="#refunds">Refund Process</a></li>
+                            <li><a href="#exceptions">Non-Returnable Items</a></li>
+                            <li><a href="#damaged-items">Damaged Items</a></li>
+                            <li><a href="#international">International Returns</a></li>
+                            <li><a href="#gift-returns">Gift Returns</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="return-estimator">
+                        <h3>Return Eligibility Checker</h3>
+                        <p>Check if your item is eligible for return</p>
+                        <form id="return-estimator-form">
+                            <div class="form-group">
+                                <label for="order-date">Purchase Date</label>
+                                <input type="date" id="order-date" name="orderDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="product-category">Product Category</label>
+                                <select id="product-category" name="productCategory">
+                                    <option value="">Select Category</option>
+                                    <option value="clothing">Clothing & Apparel</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="home">Home & Kitchen</option>
+                                    <option value="beauty">Beauty & Personal Care</option>
+                                    <option value="food">Food & Grocery</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-condition">Product Condition</label>
+                                <select id="product-condition" name="productCondition">
+                                    <option value="">Select Condition</option>
+                                    <option value="unopened">Unopened/Unused</option>
+                                    <option value="opened">Opened but Unused</option>
+                                    <option value="used">Used/Worn</option>
+                                    <option value="damaged">Damaged/Defective</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Check Eligibility</button>
+                        </form>
+
+                        <div class="eligibility-results" style="display: none;">
+                            <div class="eligibility-result">
+                                <!-- Results will be populated via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-box">
+                        <h3>Need Help?</h3>
+                        <p>Our customer service team is available to assist with any return or refund inquiries.</p>
+                        <a href="contact.html" class="btn btn-outline">Contact Support</a>
+                    </div>
+                </aside>
+
+                <div class="policy-main">
+                    <div class="policy-content-header">
+                        <div class="last-updated">
+                            <i class="fas fa-calendar-alt"></i> Last Updated: May 5, 2025
+                        </div>
+                        <div class="policy-actions">
+                            <button class="btn-text btn-print"><i class="fas fa-print"></i> Print</button>
+                            <button class="btn-text btn-download"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                            <button class="btn-text btn-share"><i class="fas fa-share-alt"></i> Share</button>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="overview">
+                        <h2>Return & Refund Policy Overview</h2>
+                        <p>At ShopVerse, we want you to be completely satisfied with your purchase. If you're not entirely happy, we're here to help. This policy outlines our return and refund procedures to ensure a smooth and hassle-free experience.</p>
+                        <p>We have designed our return policy to be fair and transparent, giving you peace of mind when shopping with us. Please read this policy carefully to understand your rights and obligations when returning products purchased from ShopVerse.</p>
+
+                        <div class="notice-box info">
+                            <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="notice-content">
+                                <p>This Return & Refund Policy applies to all products purchased directly from ShopVerse website, mobile applications, and physical retail locations (if applicable). Different policies may apply for items purchased from third-party
+                                    sellers on our marketplace.</p>
+                            </div>
+                        </div>
+
+                        <div class="policy-summary">
+                            <h3>Quick Summary</h3>
+                            <div class="summary-grid">
+                                <div class="summary-item">
+                                    <div class="summary-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <div class="summary-text">
+                                        <h4>Return Window</h4>
+                                        <p>30 days for most items</p>
+                                    </div>
+                                </div>
+
+                                <div class="summary-item">
+                                    <div class="summary-icon"><i class="fas fa-box"></i></div>
+                                    <div class="summary-text">
+                                        <h4>Condition</h4>
+                                        <p>Unused with original packaging</p>
+                                    </div>
+                                </div>
+
+                                <div class="summary-item">
+                                    <div class="summary-icon"><i class="fas fa-truck-loading"></i></div>
+                                    <div class="summary-text">
+                                        <h4>Return Shipping</h4>
+                                        <p>Free for defective items</p>
+                                    </div>
+                                </div>
+
+                                <div class="summary-item">
+                                    <div class="summary-icon"><i class="fas fa-credit-card"></i></div>
+                                    <div class="summary-text">
+                                        <h4>Refund Method</h4>
+                                        <p>Original payment method</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="eligibility">
+                        <h2>Return Eligibility</h2>
+                        <p>To be eligible for a return, please make sure the following conditions are met:</p>
+
+                        <div class="eligibility-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="standard">Standard Returns</button>
+                                <button class="tab-button" data-tab="damaged">Defective/Damaged</button>
+                                <button class="tab-button" data-tab="digital">Digital Products</button>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="standard-returns">
+                                    <ul class="checkmark-list">
+                                        <li>Item must be returned within 30 days of delivery</li>
+                                        <li>Item must be unused and in the same condition that you received it</li>
+                                        <li>Item must be in the original packaging</li>
+                                        <li>Item must include all accessories, tags, and documentation</li>
+                                        <li>You must have the receipt or proof of purchase</li>
+                                    </ul>
+
+                                    <div class="notice-box warning">
+                                        <div class="notice-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                        <div class="notice-content">
+                                            <p>Items that have been used, worn, altered, or damaged by customer handling may not be eligible for return.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="damaged-returns">
+                                    <p>For defective or damaged items received:</p>
+                                    <ul class="checkmark-list">
+                                        <li>Report damaged or defective items within 48 hours of receipt</li>
+                                        <li>Provide photos of the damaged item and packaging</li>
+                                        <li>Extended return window of 90 days for manufacturing defects</li>
+                                        <li>No return shipping costs for damaged or defective items</li>
+                                        <li>Option for replacement or refund</li>
+                                    </ul>
+
+                                    <div class="notice-box info">
+                                        <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                                        <div class="notice-content">
+                                            <p>For certain electronics and appliances, manufacturer warranty may apply instead of our standard return policy. Please check the product documentation for specific warranty information.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="digital-returns">
+                                    <p>For digital products and subscriptions:</p>
+                                    <ul class="checkmark-list warning">
+                                        <li class="not-eligible">Digital downloads are generally non-refundable once accessed or downloaded</li>
+                                        <li class="not-eligible">E-books, digital codes, and software are non-returnable after the code is revealed or redeemed</li>
+                                        <li>Subscription services may be cancelled within 14 days if not used</li>
+                                        <li>Streaming content may be eligible for refund if technical issues prevented access</li>
+                                        <li>Digital gift cards are non-refundable</li>
+                                    </ul>
+
+                                    <div class="notice-box info">
+                                        <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                                        <div class="notice-content">
+                                            <p>Please contact our customer service team for issues with digital products, as special handling may be required.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="policy-callout">
+                            <div class="callout-icon"><i class="fas fa-heart"></i></div>
+                            <div class="callout-content">
+                                <h3>ShopVerse Premium Members</h3>
+                                <p>Premium members enjoy extended 45-day return periods and free return shipping on all eligible items.</p>
+                                <a href="premium-membership.html" class="text-link">Learn more about Premium Membership <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="timeframes">
+                        <h2>Return Timeframes</h2>
+                        <p>Different product categories may have different return periods. Please review the timeframes below:</p>
+
+                        <div class="timeframes-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product Category</th>
+                                        <th>Return Window</th>
+                                        <th>Special Conditions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Clothing & Accessories</td>
+                                        <td>30 days</td>
+                                        <td>Unworn with tags attached</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electronics</td>
+                                        <td>30 days</td>
+                                        <td>Unopened; 15 days if opened</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Home & Kitchen</td>
+                                        <td>30 days</td>
+                                        <td>Unused in original packaging</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Beauty & Personal Care</td>
+                                        <td>14 days</td>
+                                        <td>Unopened only</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grocery & Gourmet Food</td>
+                                        <td>7 days</td>
+                                        <td>Unopened non-perishable items only</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digital Products</td>
+                                        <td>14 days</td>
+                                        <td>If not downloaded/accessed</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sale/Clearance Items</td>
+                                        <td>14 days</td>
+                                        <td>Final sale items non-returnable</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Defective Items</td>
+                                        <td>90 days</td>
+                                        <td>Manufacturing defects only</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="notice-box warning">
+                            <div class="notice-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="notice-content">
+                                <p>Return timeframes are calculated from the date you receive the item, not from the purchase date. Please keep your delivery confirmation as proof of the delivery date.</p>
+                            </div>
+                        </div>
+
+                        <h3>Holiday Extended Returns</h3>
+                        <p>For purchases made between November 1st and December 31st, the return period is extended until January 31st of the following year to accommodate holiday gifting.</p>
+                    </div>
+
+                    <div class="policy-section" id="return-process">
+                        <h2>Return Process</h2>
+                        <p>We've simplified our return process to make it as convenient as possible. Please follow these steps to return an item:</p>
+
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Initiate Your Return</h3>
+                                    <p>Log in to your ShopVerse account, navigate to your orders, and select "Return Item" next to the product you wish to return. Alternatively, you can contact our customer service team.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Fill Out Return Form</h3>
+                                    <p>Complete the return form, indicating your reason for return and your preferred resolution (refund or exchange). You'll receive a Return Merchandise Authorization (RMA) number.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Package Your Return</h3>
+                                    <p>Carefully pack the item in its original packaging with all included accessories and documentation. Include the RMA number or return form in the package.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Ship Your Return</h3>
+                                    <p>Use the provided return shipping label (if applicable) or send the package to our returns center. We recommend using a traceable shipping method.</p>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h3>Return Processing</h3>
+                                    <p>Once we receive your return, we'll inspect the item and notify you of the status. Processing typically takes 3-5 business days from receipt.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="return-options">
+                            <h3>Return Shipping Options</h3>
+                            <div class="options-grid">
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-home"></i></div>
+                                        <h4>Doorstep Pickup</h4>
+                                    </div>
+                                    <p>Available in select locations for orders over $50. Schedule a pickup and our carrier will collect the package from your doorstep.</p>
+                                    <div class="option-fee">Fee: $5.99 (Free for Premium)</div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-store"></i></div>
+                                        <h4>Drop-Off Points</h4>
+                                    </div>
+                                    <p>Print your return label and drop off your package at any of our authorized return locations nationwide.</p>
+                                    <div class="option-fee">Fee: $3.99 (Free for defective items)</div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-shipping-fast"></i></div>
+                                        <h4>Self-Ship</h4>
+                                    </div>
+                                    <p>Ship the item back using your preferred carrier. Remember to include your RMA number on the package.</p>
+                                    <div class="option-fee">Fee: Varies by carrier</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box info">
+                            <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="notice-content">
+                                <p>Return shipping fees will be deducted from your refund unless the item was damaged, defective, or incorrectly shipped. Premium members enjoy free return shipping on all eligible items.</p>
+                            </div>
+                        </div>
+
+                        <div class="return-demo">
+                            <h3>Return Process Demo</h3>
+                            <div class="demo-video">
+                                <img src="../assets/images/1.jpg" alt="Return Process Video Placeholder">
+                                <div class="demo-play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <p class="demo-caption">Watch our step-by-step guide to process your return quickly and easily.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="refunds">
+                        <h2>Refund Process</h2>
+                        <p>Once your return is received and inspected, we will process your refund according to the following guidelines:</p>
+
+                        <div class="refund-timeline">
+                            <div class="timeline-marker processing">
+                                <div class="marker-icon"><i class="fas fa-box"></i></div>
+                                <div class="marker-label">Return Received</div>
+                                <div class="marker-time">Day 0</div>
+                            </div>
+                            <div class="timeline-connector"></div>
+                            <div class="timeline-marker inspection">
+                                <div class="marker-icon"><i class="fas fa-search"></i></div>
+                                <div class="marker-label">Inspection Complete</div>
+                                <div class="marker-time">1-2 Days</div>
+                            </div>
+                            <div class="timeline-connector"></div>
+                            <div class="timeline-marker approval">
+                                <div class="marker-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="marker-label">Refund Approved</div>
+                                <div class="marker-time">2-3 Days</div>
+                            </div>
+                            <div class="timeline-connector"></div>
+                            <div class="timeline-marker processed">
+                                <div class="marker-icon"><i class="fas fa-credit-card"></i></div>
+                                <div class="marker-label">Refund Processed</div>
+                                <div class="marker-time">3-5 Days</div>
+                            </div>
+                            <div class="timeline-connector"></div>
+                            <div class="timeline-marker received">
+                                <div class="marker-icon"><i class="fas fa-check-double"></i></div>
+                                <div class="marker-label">Funds Received</div>
+                                <div class="marker-time">5-10 Days</div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box info">
+                            <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="notice-content">
+                                <p>The time it takes for the refunded amount to appear in your account depends on your payment provider and can take up to 10 business days after processing.</p>
+                            </div>
+                        </div>
+
+                        <h3>Refund Methods</h3>
+                        <div class="info-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Payment Method</th>
+                                        <th>Refund Method</th>
+                                        <th>Processing Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Credit/Debit Card</td>
+                                        <td>Credit to original card</td>
+                                        <td>5-10 business days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PayPal</td>
+                                        <td>PayPal account credit</td>
+                                        <td>3-5 business days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Store Credit/Gift Card</td>
+                                        <td>Store credit or new gift card</td>
+                                        <td>1-2 business days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Transfer</td>
+                                        <td>Credit to original account</td>
+                                        <td>5-7 business days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cash on Delivery</td>
+                                        <td>Store credit or bank transfer</td>
+                                        <td>7-10 business days</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="refund-options">
+                            <h3>Available Refund Options</h3>
+                            <div class="options-grid">
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-exchange-alt"></i></div>
+                                        <h4>Straight Exchange</h4>
+                                    </div>
+                                    <p>Exchange for the same item in a different size, color, or to replace a defective product.</p>
+                                    <div class="option-benefit">Benefit: No waiting for refund</div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-wallet"></i></div>
+                                        <h4>Store Credit</h4>
+                                    </div>
+                                    <p>Receive store credit to use on future purchases. No expiration date and fully transferable.</p>
+                                    <div class="option-benefit">Benefit: +5% bonus value</div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                        <h4>Original Payment</h4>
+                                    </div>
+                                    <p>Refund to the original payment method used for the purchase.</p>
+                                    <div class="option-benefit">Benefit: Standard option</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box warning">
+                            <div class="notice-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="notice-content">
+                                <p>Refunds do not include shipping charges unless the return is due to our error (damaged/defective product or incorrect shipment). Return shipping costs are deducted from standard refunds.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="exceptions">
+                        <h2>Non-Returnable Items</h2>
+                        <p>For hygiene, safety, and other reasons, the following items cannot be returned:</p>
+
+                        <div class="exceptions-grid">
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-shower"></i></div>
+                                <div class="exception-text">
+                                    <h4>Personal Care Items</h4>
+                                    <p>Opened cosmetics, toiletries, grooming products, and hygiene products</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-underwear"></i></div>
+                                <div class="exception-text">
+                                    <h4>Intimate Apparel</h4>
+                                    <p>Underwear, swimwear, and intimate clothing items (if opened/worn)</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-headphones"></i></div>
+                                <div class="exception-text">
+                                    <h4>Earphones & Headphones</h4>
+                                    <p>In-ear headphones/earbuds if opened or with broken seal</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-compact-disc"></i></div>
+                                <div class="exception-text">
+                                    <h4>Digital Media</h4>
+                                    <p>Opened DVDs, CDs, software, digital downloads, and subscription codes</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-gifts"></i></div>
+                                <div class="exception-text">
+                                    <h4>Gift Cards</h4>
+                                    <p>Physical and digital gift cards (except where required by law)</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-utensils"></i></div>
+                                <div class="exception-text">
+                                    <h4>Food Items</h4>
+                                    <p>Perishable goods, food items, and consumables (unless spoiled upon receipt)</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-box-open"></i></div>
+                                <div class="exception-text">
+                                    <h4>Customized Products</h4>
+                                    <p>Made-to-order and personalized items (except for defects)</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-item">
+                                <div class="exception-icon"><i class="fas fa-tags"></i></div>
+                                <div class="exception-text">
+                                    <h4>Final Sale Items</h4>
+                                    <p>Items clearly marked as "Final Sale," "Non-Returnable," or "As-Is"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box warning">
+                            <div class="notice-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="notice-content">
+                                <p>If you're unsure whether an item is returnable, please check the product description page or contact our customer service before making your purchase.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="damaged-items">
+                        <h2>Damaged or Defective Items</h2>
+                        <p>We take quality seriously at ShopVerse. If you receive a damaged or defective item, please follow these steps:</p>
+
+                        <div class="damage-report-steps">
+                            <div class="damage-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Document the Damage</h3>
+                                    <p>Take clear photos of the damaged item and packaging before opening completely. This includes the outer packaging, inner packaging, and the item itself.</p>
+                                </div>
+                            </div>
+
+                            <div class="damage-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Report Within 48 Hours</h3>
+                                    <p>Contact our customer service team within 48 hours of receiving the damaged item. Provide your order number, description of the damage, and the photos you've taken.</p>
+                                </div>
+                            </div>
+
+                            <div class="damage-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Choose Resolution</h3>
+                                    <p>Select whether you'd prefer a replacement item or a full refund. For defective items, we may request additional information to help identify the issue.</p>
+                                </div>
+                            </div>
+
+                            <div class="damage-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Return Shipping</h3>
+                                    <p>We'll provide a prepaid return label for the damaged item. For large or heavy items, we may arrange doorstep pickup at no cost to you.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="damage-classifications">
+                            <h3>Types of Product Issues</h3>
+                            <div class="classification-tabs">
+                                <div class="tab-buttons">
+                                    <button class="tab-button active" data-tab="shipping-damage">Shipping Damage</button>
+                                    <button class="tab-button" data-tab="manufacturing-defect">Manufacturing Defect</button>
+                                    <button class="tab-button" data-tab="incorrect-item">Incorrect Item</button>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="shipping-damage">
+                                        <div class="damage-info">
+                                            <h4>Shipping Damage</h4>
+                                            <p>Damage that occurred during transportation of the item:</p>
+                                            <ul>
+                                                <li>Crushed, dented, or broken packaging</li>
+                                                <li>Water damage or exposure to elements</li>
+                                                <li>Product broken or damaged inside intact packaging</li>
+                                                <li>Missing components due to package tampering</li>
+                                            </ul>
+                                            <div class="damage-resolution">
+                                                <p><strong>Resolution:</strong> Immediate replacement or full refund, including shipping costs. Report within 48 hours of delivery.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="manufacturing-defect">
+                                        <div class="damage-info">
+                                            <h4>Manufacturing Defect</h4>
+                                            <p>Issues with the product quality or function:</p>
+                                            <ul>
+                                                <li>Product doesn't function as described</li>
+                                                <li>Missing parts or components</li>
+                                                <li>Structural defects or flaws</li>
+                                                <li>Electrical or mechanical failure</li>
+                                            </ul>
+                                            <div class="damage-resolution">
+                                                <p><strong>Resolution:</strong> Replacement, repair, or full refund. Extended 90-day window for reporting manufacturing defects.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="incorrect-item">
+                                        <div class="damage-info">
+                                            <h4>Incorrect Item</h4>
+                                            <p>When you receive an item different from what you ordered:</p>
+                                            <ul>
+                                                <li>Different product than what was purchased</li>
+                                                <li>Wrong size, color, or variation</li>
+                                                <li>Wrong quantity delivered</li>
+                                                <li>Missing components specific to your order</li>
+                                            </ul>
+                                            <div class="damage-resolution">
+                                                <p><strong>Resolution:</strong> Immediate correct replacement shipped with expedited delivery or full refund with free return shipping.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice-box success">
+                            <div class="notice-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="notice-content">
+                                <p><strong>ShopVerse Guarantee:</strong> We stand behind every product we sell. If you receive a damaged or defective item, we promise to make it right with minimal hassle and maximum speed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="international">
+                        <h2>International Returns</h2>
+                        <p>For customers returning items from outside the country of purchase, please note the following special instructions:</p>
+
+                        <div class="international-instructions">
+                            <h3>International Return Process</h3>
+                            <ul class="checkmark-list">
+                                <li>Contact customer service before sending any international return</li>
+                                <li>Obtain pre-approval and a special international return authorization</li>
+                                <li>Clearly mark the package as "RETURNED GOODS" or "MERCHANDISE RETURN"</li>
+                                <li>Include all customs documentation provided by our customer service team</li>
+                                <li>Keep proof of shipping and tracking information</li>
+                            </ul>
+
+                            <div class="notice-box warning">
+                                <div class="notice-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                <div class="notice-content">
+                                    <p>International returns may be subject to customs duties, taxes, and processing fees in the destination country. These fees are the responsibility of the customer and are not refundable by ShopVerse.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="international-options">
+                            <h3>International Return Options</h3>
+                            <div class="option-cards">
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-globe-americas"></i></div>
+                                        <h4>Standard International Return</h4>
+                                    </div>
+                                    <p>Ship the item back using your preferred international carrier. Refund processed after receipt and inspection.</p>
+                                    <div class="option-fee">Customer pays return shipping</div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-undo-alt"></i></div>
+                                        <h4>Keep & Refund (Small Items)</h4>
+                                    </div>
+                                    <p>For small, low-value items, we may issue a refund without requiring return shipment.</p>
+                                    <div class="option-fee">Available case-by-case</div>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-building"></i></div>
+                                        <h4>Local Return Centers</h4>
+                                    </div>
+                                    <p>Return to our local partner centers in select countries for expedited processing.</p>
+                                    <div class="option-fee">Available in UK, EU, Australia & Canada</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="refund-info">
+                            <h3>International Refund Processing</h3>
+                            <p>International returns typically take longer to process than domestic returns:</p>
+                            <ul>
+                                <li>International shipping time: 5-21 business days</li>
+                                <li>Customs clearance: 1-5 business days</li>
+                                <li>Return processing: 3-5 business days</li>
+                                <li>Refund processing: 3-5 business days</li>
+                                <li>International banking processing: 3-10 business days</li>
+                            </ul>
+                            <p>Total time from shipping to refund may take 15-45 business days depending on your location and local banking systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="gift-returns">
+                        <h2>Gift Returns</h2>
+                        <p>If you received an item as a gift and wish to return it, we have special procedures to maintain privacy and provide you with options:</p>
+
+                        <div class="gift-return-options">
+                            <h3>Gift Return Options</h3>
+                            <div class="options-grid">
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-gift"></i></div>
+                                        <h4>Gift Receipt Return</h4>
+                                    </div>
+                                    <p>If you have a gift receipt, you can return the item without notifying the purchaser. You'll receive store credit for the item's purchase price.</p>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-exchange-alt"></i></div>
+                                        <h4>Gift Exchange</h4>
+                                    </div>
+                                    <p>Exchange the gift for another item of equal value. We won't notify the gift giver, and you can choose a different size, color, or model.</p>
+                                </div>
+
+                                <div class="option-card">
+                                    <div class="option-header">
+                                        <div class="option-icon"><i class="fas fa-wallet"></i></div>
+                                        <h4>Gift Card Refund</h4>
+                                    </div>
+                                    <p>Return the gift and receive a ShopVerse gift card for the purchase amount. The gift giver will not be notified of the return.</p>
+                                </div>
+                            </div>
+
+                            <div class="notice-box info">
+                                <div class="notice-icon"><i class="fas fa-info-circle"></i></div>
+                                <div class="notice-content">
+                                    <p>Without a gift receipt, you'll need the order number or the email address of the purchaser to process your return. The refund will be issued as store credit only, not to the original payment method.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gift-return-process">
+                            <h3>How to Return a Gift</h3>
+                            <ol>
+                                <li>Visit our <a href="returns.html" class="text-link">online returns center</a> and select "Return a Gift"</li>
+                                <li>Enter the order number from your gift receipt or packing slip</li>
+                                <li>If you don't have the order number, you'll need the purchaser's email address</li>
+                                <li>Select the item(s) you wish to return and your preferred refund method</li>
+                                <li>Print the provided return shipping label and return instructions</li>
+                                <li>Package the item(s) securely and drop off at the designated shipping location</li>
+                            </ol>
+
+                            <div class="gift-return-privacy">
+                                <div class="privacy-icon"><i class="fas fa-user-shield"></i></div>
+                                <div class="privacy-content">
+                                    <h4>Privacy Guarantee</h4>
+                                    <p>We respect your privacy during gift returns. The gift giver will not receive any notification about the return unless you specifically request it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" id="contact">
+                        <h2>Contact Us About Returns & Refunds</h2>
+                        <p>If you have questions or need assistance with returns or refunds, our customer service team is here to help:</p>
+
+                        <div class="contact-options">
+                            <div class="contact-option">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-info">
+                                    <h4>Email</h4>
+                                    <p>returns@shopverse.com</p>
+                                    <p class="contact-note">Response within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-option">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-info">
+                                    <h4>Phone</h4>
+                                    <p>1-888-RETURNS (1-888-738-8767)</p>
+                                    <p class="contact-note">Mon-Fri, 8am-9pm ET; Sat-Sun, 10am-6pm ET</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-option">
+                                <div class="contact-icon"><i class="fas fa-comment-dots"></i></div>
+                                <div class="contact-info">
+                                    <h4>Live Chat</h4>
+                                    <p>Available on our website</p>
+                                    <p class="contact-note">24/7 Support</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-container">
+                            <h3>Have a Question?</h3>
+                            <form id="returns-contact-form" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-name">Your Name</label>
+                                        <input type="text" id="contact-name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-email">Email Address</label>
+                                        <input type="email" id="contact-email" name="email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="order-number">Order Number (optional)</label>
+                                        <input type="text" id="order-number" name="orderNumber">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inquiry-type">Inquiry Type</label>
+                                        <select id="inquiry-type" name="inquiryType" required>
+                                            <option value="">Select an option</option>
+                                            <option value="start-return">Start a Return</option>
+                                            <option value="check-status">Check Return Status</option>
+                                            <option value="refund-question">Refund Question</option>
+                                            <option value="damaged-item">Report Damaged Item</option>
+                                            <option value="other">Other Inquiry</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="policy-footer">
+                        <div class="policy-last-updated">
+                            <p>This Return & Refund Policy was last updated on May 5, 2025 and is effective immediately. ShopVerse reserves the right to modify or update this policy at any time.</p>
+                        </div>
+                        <div class="policy-related-links">
+                            <h3>Related Policies</h3>
+                            <ul>
+                                <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about returns and refunds</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I start a return?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To initiate a return, log in to your ShopVerse account and go to your order history. Select the order containing the item you wish to return, then click "Return Item." Follow the prompts to complete the return request. Alternatively,
+                            you can contact our customer service team at returns@shopverse.com or call 1-888-RETURNS with your order number ready.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long do I have to return an item?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most items can be returned within 30 days of delivery. However, the return window varies by product category: clothing and accessories (30 days), electronics (30 days unopened, 15 days if opened), beauty products (14 days, unopened
+                            only), and food items (7 days, unopened non-perishable only). For holiday purchases made between November 1st and December 31st, the return period is extended until January 31st.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will I have to pay for return shipping?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Return shipping fees vary depending on the reason for return. If you're returning an item because it was damaged, defective, or incorrectly shipped, we'll cover the return shipping costs. For returns due to change of mind or other
+                            non-product issues, a return shipping fee will be deducted from your refund. ShopVerse Premium members enjoy free return shipping on all eligible items.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long will it take to receive my refund?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After we receive your return, it typically takes 1-2 days for inspection, then 2-3 days for the refund to be processed. The time for funds to appear in your account depends on your payment method: credit/debit cards (5-10 business
+                            days), PayPal (3-5 business days), store credit (1-2 business days), or bank transfers (5-7 business days). During high volume periods, processing may take slightly longer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I exchange an item instead of returning it?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can exchange eligible items for a different size, color, or model. During the return process, select "Exchange" rather than "Return for Refund" and specify the details of the item you'd like instead. If the exchange item
+                            costs more than your original purchase, you'll need to pay the difference. If it costs less, we'll refund the difference to your original payment method.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What items cannot be returned?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For hygiene and safety reasons, the following items cannot be returned: opened cosmetics and toiletries, underwear and swimwear (if opened/worn), opened in-ear headphones or earbuds, opened DVDs/software, digital downloads, gift
+                            cards, perishable goods, and personalized or custom-made items. Items marked as "Final Sale" or "Non-Returnable" are also not eligible for return unless defective.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I return a gift?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To return a gift, visit our online returns center and select "Return a Gift." Enter the order number from your gift receipt or the gift giver's email address. You can choose to receive store credit for the purchase amount or exchange
+                            for a different item. The gift giver will not be notified of the return unless you specifically request it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if my item arrives damaged or defective?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If your item arrives damaged or defective, please contact us within 48 hours of delivery. Take photos of the damaged item and packaging before opening completely. Contact our customer service team with your order number and the
+                            photos. We'll arrange a free return shipping method or replacement shipment. For large or heavy items, we may arrange doorstep pickup at no cost to you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <p>Don't see your question here?</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/return-policy.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/legal-pages.js"></script>
+</body>
+
+</html>

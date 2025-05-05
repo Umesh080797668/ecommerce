@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Gift Cards | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/corporate-gift-cards.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown active">
+                                <a href="gift-cards.html">Gift Cards <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="gift-cards.html">Personal Gift Cards</a></li>
+                                    <li><a href="corporate-gift-cards.html" class="active">Corporate Gift Cards</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="shop.html">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item active has-dropdown">
+                        <a href="gift-cards.html">Gift Cards</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="gift-cards.html">Personal Gift Cards</a></li>
+                            <li><a href="corporate-gift-cards.html" class="active">Corporate Gift Cards</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header corporate-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Corporate Gift Cards</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <a href="gift-cards.html">Gift Cards</a>
+                    <span class="divider">/</span>
+                    <span class="active">Corporate Program</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="corporate-hero-section">
+        <div class="container">
+            <div class="corporate-hero-content">
+                <div class="corporate-hero-text">
+                    <span class="solution-label">Business Solutions</span>
+                    <h1>Streamlined Gifting for Every Business Need</h1>
+                    <p>Simplify your corporate gifting with ShopVerse's customizable gift card program. Perfect for employee rewards, client appreciation, incentive programs, and promotional campaigns.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">5,000+</div>
+                            <div class="stat-label">Business Partners</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">$25M+</div>
+                            <div class="stat-label">Gift Cards Issued</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Satisfaction Rate</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#request-form" class="btn btn-primary btn-lg">Contact a Specialist</a>
+                        <a href="#pricing" class="btn btn-outline btn-lg">View Pricing</a>
+                    </div>
+                </div>
+                <div class="corporate-hero-image">
+                    <img src="../assets/images/1.jpg" alt="Corporate Gift Cards" class="main-image">
+                    <div class="floating-card card1">
+                        <img src="../assets/images/1.jpg" alt="Custom Gift Card">
+                    </div>
+                    <div class="floating-card card2">
+                        <img src="../assets/images/1.jpg" alt="Custom Gift Card">
+                    </div>
+                    <div class="company-logos">
+                        <span>Trusted by:</span>
+                        <div class="logo-row">
+                            <img src="../assets/images/1.jpg" alt="Company Logo">
+                            <img src="../assets/images/1.jpg" alt="Company Logo">
+                            <img src="../assets/images/1.jpg" alt="Company Logo">
+                            <img src="../assets/images/1.jpg" alt="Company Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose ShopVerse Corporate Gift Cards?</h2>
+                <p class="section-subtitle">Stand out with our versatile and customizable gift card solutions</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Volume Discounts</h3>
+                    <p>Save up to 15% on bulk orders, with tiered pricing based on quantity and total value.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Custom Branding</h3>
+                    <p>Add your company logo, brand colors, and personalized messaging to create a unique gift card experience.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Detailed Reporting</h3>
+                    <p>Access comprehensive reports on gift card usage, redemption rates, and spending patterns.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Easy Management</h3>
+                    <p>Manage all your gift cards through our dedicated corporate portal with multi-user access.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Flexible Delivery</h3>
+                    <p>Choose between digital delivery, custom physical cards, or printable PDFs with scheduled sending.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>Get personalized assistance from our corporate support team for all your gifting needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Options Tabs -->
+    <section class="program-options">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Program Options</h2>
+                <p class="section-subtitle">Tailored solutions for every business need and budget</p>
+            </div>
+
+            <div class="program-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="rewards">Employee Rewards</button>
+                    <button class="tab-button" data-tab="client">Client Gifts</button>
+                    <button class="tab-button" data-tab="incentives">Sales Incentives</button>
+                    <button class="tab-button" data-tab="promotional">Promotional</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="rewards">
+                        <div class="tab-pane-content">
+                            <div class="tab-pane-info">
+                                <h3>Employee Recognition & Rewards</h3>
+                                <p>Recognize and reward your employees for their hard work and achievements. Our employee reward program offers flexible options for work anniversaries, performance bonuses, holiday gifts, and more.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Customizable employee reward tiers</li>
+                                    <li><i class="fas fa-check-circle"></i> Automated birthday and anniversary sending</li>
+                                    <li><i class="fas fa-check-circle"></i> Integration with HR systems</li>
+                                    <li><i class="fas fa-check-circle"></i> Personal messages from management</li>
+                                </ul>
+                                <div class="tab-cta">
+                                    <a href="#request-form" class="btn btn-primary">Get Started</a>
+                                    <a href="#case-studies" class="btn btn-link">See Success Stories</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane-image">
+                                <img src="../assets/images/1.jpg" alt="Employee Rewards">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="client">
+                        <div class="tab-pane-content">
+                            <div class="tab-pane-info">
+                                <h3>Client Appreciation Gifts</h3>
+                                <p>Show your appreciation to clients and strengthen business relationships with thoughtful gift cards. Perfect for holidays, deal closings, anniversaries, and thank-you gifts.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Premium packaging options</li>
+                                    <li><i class="fas fa-check-circle"></i> Co-branded gift cards</li>
+                                    <li><i class="fas fa-check-circle"></i> Personalized digital greetings</li>
+                                    <li><i class="fas fa-check-circle"></i> CRM integration for contact management</li>
+                                </ul>
+                                <div class="tab-cta">
+                                    <a href="#request-form" class="btn btn-primary">Get Started</a>
+                                    <a href="#case-studies" class="btn btn-link">See Success Stories</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane-image">
+                                <img src="../assets/images/1.jpg" alt="Client Appreciation Gifts">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="incentives">
+                        <div class="tab-pane-content">
+                            <div class="tab-pane-info">
+                                <h3>Sales & Performance Incentives</h3>
+                                <p>Motivate your sales team and drive performance with instant reward gift cards. Our platform makes it easy to set up tiered incentive structures and distribute rewards quickly.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Real-time reward distribution</li>
+                                    <li><i class="fas fa-check-circle"></i> Goal-based incentive tracking</li>
+                                    <li><i class="fas fa-check-circle"></i> Leaderboard and achievement displays</li>
+                                    <li><i class="fas fa-check-circle"></i> API integration with sales platforms</li>
+                                </ul>
+                                <div class="tab-cta">
+                                    <a href="#request-form" class="btn btn-primary">Get Started</a>
+                                    <a href="#case-studies" class="btn btn-link">See Success Stories</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane-image">
+                                <img src="../assets/images/1.jpg" alt="Sales Incentives">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="promotional">
+                        <div class="tab-pane-content">
+                            <div class="tab-pane-info">
+                                <h3>Promotional Campaigns</h3>
+                                <p>Boost your marketing efforts with promotional gift cards that drive customer acquisition and loyalty. Perfect for referral programs, social media contests, and special promotions.</p>
+                                <ul class="tab-features">
+                                    <li><i class="fas fa-check-circle"></i> Unique promo codes & tracking</li>
+                                    <li><i class="fas fa-check-circle"></i> Expiration date options</li>
+                                    <li><i class="fas fa-check-circle"></i> Partial balance promotional cards</li>
+                                    <li><i class="fas fa-check-circle"></i> Usage analytics dashboard</li>
+                                </ul>
+                                <div class="tab-cta">
+                                    <a href="#request-form" class="btn btn-primary">Get Started</a>
+                                    <a href="#case-studies" class="btn btn-link">See Success Stories</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane-image">
+                                <img src="../assets/images/1.jpg" alt="Promotional Campaigns">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bulk Pricing & Discounts</h2>
+                <p class="section-subtitle">Volume discounts automatically applied based on quantity</p>
+            </div>
+
+            <div class="pricing-calculator">
+                <div class="calculator-form">
+                    <h3>Calculate Your Total</h3>
+                    <div class="calculator-row">
+                        <div class="calculator-field">
+                            <label for="card-quantity">Quantity</label>
+                            <input type="number" id="card-quantity" min="10" value="50">
+                        </div>
+                        <div class="calculator-field">
+                            <label for="card-value">Value Per Card</label>
+                            <div class="input-with-prefix">
+                                <span class="prefix">$</span>
+                                <input type="number" id="card-value" min="10" max="1000" value="50">
+                            </div>
+                        </div>
+                        <div class="calculator-field">
+                            <label for="card-type">Card Type</label>
+                            <select id="card-type">
+                                <option value="digital">Digital</option>
+                                <option value="physical">Physical</option>
+                                <option value="custom">Custom Branded</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="additional-options">
+                        <h4>Additional Options</h4>
+                        <div class="option-row">
+                            <div class="option-toggle">
+                                <input type="checkbox" id="custom-branding" class="toggle-input">
+                                <label for="custom-branding" class="toggle-label"></label>
+                                <span class="toggle-text">Custom Branding</span>
+                            </div>
+                            <span class="option-price">$50 setup fee</span>
+                        </div>
+                        <div class="option-row">
+                            <div class="option-toggle">
+                                <input type="checkbox" id="customization" class="toggle-input">
+                                <label for="customization" class="toggle-label"></label>
+                                <span class="toggle-text">Message Customization</span>
+                            </div>
+                            <span class="option-price">$0.25 per card</span>
+                        </div>
+                        <div class="option-row custom-packaging-row" style="display: none;">
+                            <div class="option-toggle">
+                                <input type="checkbox" id="custom-packaging" class="toggle-input">
+                                <label for="custom-packaging" class="toggle-label"></label>
+                                <span class="toggle-text">Premium Packaging</span>
+                            </div>
+                            <span class="option-price">$1.50 per card</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-result">
+                    <div class="result-header">
+                        <h3>Your Estimated Cost</h3>
+                    </div>
+                    <div class="result-summary">
+                        <div class="result-row">
+                            <span>Card Value Subtotal:</span>
+                            <span id="card-subtotal">$2,500.00</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Bulk Discount:</span>
+                            <span id="bulk-discount">-$125.00</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Additional Options:</span>
+                            <span id="additional-cost">$0.00</span>
+                        </div>
+                        <div class="result-total">
+                            <span>Estimated Total:</span>
+                            <span id="estimated-total">$2,375.00</span>
+                        </div>
+                        <div class="discount-badge">
+                            <span id="discount-percentage">5%</span> Discount Applied
+                        </div>
+                    </div>
+                    <div class="result-note">
+                        <p>This is an estimate only. For a detailed quote, please contact our corporate team.</p>
+                    </div>
+                    <div class="result-cta">
+                        <a href="#request-form" class="btn btn-primary btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discount-tiers">
+                <h3>Discount Tiers</h3>
+                <div class="tier-container">
+                    <div class="tier">
+                        <div class="tier-header">
+                            <span class="tier-label">Tier 1</span>
+                            <span class="tier-discount">2%</span>
+                        </div>
+                        <div class="tier-body">
+                            <div class="tier-quantity">10-49 Cards</div>
+                            <div class="tier-total">$500-$2,499</div>
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <div class="tier-header">
+                            <span class="tier-label">Tier 2</span>
+                            <span class="tier-discount">5%</span>
+                        </div>
+                        <div class="tier-body">
+                            <div class="tier-quantity">50-99 Cards</div>
+                            <div class="tier-total">$2,500-$4,999</div>
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <div class="tier-header">
+                            <span class="tier-label">Tier 3</span>
+                            <span class="tier-discount">8%</span>
+                        </div>
+                        <div class="tier-body">
+                            <div class="tier-quantity">100-249 Cards</div>
+                            <div class="tier-total">$5,000-$12,499</div>
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <div class="tier-header">
+                            <span class="tier-label">Tier 4</span>
+                            <span class="tier-discount">10%</span>
+                        </div>
+                        <div class="tier-body">
+                            <div class="tier-quantity">250-499 Cards</div>
+                            <div class="tier-total">$12,500-$24,999</div>
+                        </div>
+                    </div>
+
+                    <div class="tier featured">
+                        <div class="tier-header">
+                            <span class="tier-label">Tier 5</span>
+                            <span class="tier-discount">15%</span>
+                        </div>
+                        <div class="tier-body">
+                            <div class="tier-quantity">500+ Cards</div>
+                            <div class="tier-total">$25,000+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies-section" id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">How leading companies use ShopVerse gift cards to achieve their goals</p>
+            </div>
+
+            <div class="case-studies-slider">
+                <div class="case-study">
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Employee Recognition</div>
+                        <div class="case-study-logo">
+                            <img src="../assets/images/1.jpg" alt="TechNova">
+                        </div>
+                        <h3 class="case-study-title">TechNova Boosts Employee Satisfaction</h3>
+                        <p class="case-study-text">"By implementing ShopVerse gift cards in our employee recognition program, we've seen a 32% increase in employee satisfaction scores. The ease of sending personalized cards for birthdays, work anniversaries, and performance achievements
+                            has transformed our recognition process."</p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <div class="result-value">32%</div>
+                                <div class="result-label">Increase in Employee Satisfaction</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">400+</div>
+                                <div class="result-label">Employees Recognized Monthly</div>
+                            </div>
+                        </div>
+                        <div class="case-study-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="HR Director">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Sarah Johnson</div>
+                                <div class="author-position">HR Director, TechNova</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Client Appreciation</div>
+                        <div class="case-study-logo">
+                            <img src="../assets/images/1.jpg" alt="Global Consulting Partners">
+                        </div>
+                        <h3 class="case-study-title">Global Consulting Partners Enhances Client Relationships</h3>
+                        <p class="case-study-text">"Our custom-branded gift cards have become a signature part of our client appreciation strategy. The ability to schedule automated gift cards for client anniversaries has helped us maintain strong relationships even during busy
+                            periods."
+                        </p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <div class="result-value">27%</div>
+                                <div class="result-label">Increase in Client Retention</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">$2M+</div>
+                                <div class="result-label">Additional Revenue from Referrals</div>
+                            </div>
+                        </div>
+                        <div class="case-study-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="Director of Client Relations">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Michael Chen</div>
+                                <div class="author-position">Director of Client Relations, Global Consulting Partners</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <div class="case-study-content">
+                        <div class="case-study-badge">Sales Incentives</div>
+                        <div class="case-study-logo">
+                            <img src="../assets/images/1.jpg" alt="RetailPro">
+                        </div>
+                        <h3 class="case-study-title">RetailPro Drives Sales Performance</h3>
+                        <p class="case-study-text">"Since implementing ShopVerse gift cards as our primary sales incentive, we've witnessed a remarkable boost in team performance. The instant delivery of digital rewards provides immediate gratification for our sales team after
+                            closing deals."</p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <div class="result-value">43%</div>
+                                <div class="result-label">Increase in Sales Performance</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">92%</div>
+                                <div class="result-label">Sales Team Participation Rate</div>
+                            </div>
+                        </div>
+                        <div class="case-study-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="VP of Sales">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Jennifer Martinez</div>
+                                <div class="author-position">VP of Sales, RetailPro</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-navigation">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <button class="slider-dot active"></button>
+                    <button class="slider-dot"></button>
+                    <button class="slider-dot"></button>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section class="request-form-section" id="request-form">
+        <div class="container">
+            <div class="request-form-container">
+                <div class="request-form-content">
+                    <div class="form-header">
+                        <h2>Connect with a Corporate Gift Card Specialist</h2>
+                        <p>Fill out the form below and one of our specialists will contact you within 24 hours to discuss your corporate gift card needs.</p>
+                    </div>
+
+                    <form id="corporate-request-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company-name">Company Name*</label>
+                                <input type="text" id="company-name" name="company-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry">
+                                    <option value="">Select your industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="education">Education</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Contact Name*</label>
+                                <input type="text" id="contact-name" name="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="job-title">Job Title*</label>
+                                <input type="text" id="job-title" name="job-title" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-email">Email Address*</label>
+                                <input type="email" id="contact-email" name="contact-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number*</label>
+                                <input type="tel" id="phone-number" name="phone-number" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="program-interest">What type of program are you interested in?</label>
+                                <select id="program-interest" name="program-interest">
+                                    <option value="employee-rewards">Employee Rewards</option>
+                                    <option value="client-appreciation">Client Appreciation</option>
+                                    <option value="sales-incentives">Sales Incentives</option>
+                                    <option value="promotional">Promotional Campaigns</option>
+                                    <option value="multiple">Multiple Programs</option>
+                                    <option value="not-sure">Not Sure Yet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="estimated-quantity">Estimated Quantity</label>
+                                <select id="estimated-quantity" name="estimated-quantity">
+                                    <option value="10-49">10-49 cards</option>
+                                    <option value="50-99">50-99 cards</option>
+                                    <option value="100-249">100-249 cards</option>
+                                    <option value="250-499">250-499 cards</option>
+                                    <option value="500+">500+ cards</option>
+                                    <option value="not-sure">Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="additional-details">Additional Details</label>
+                                <textarea id="additional-details" name="additional-details" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width consent-group">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                                    <label for="privacy-consent">I agree to the collection and processing of my personal information in accordance with ShopVerse's Privacy Policy*</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="request-form-sidebar">
+                    <div class="sidebar-section contact-info">
+                        <h3>Speak with us directly</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p>Call our corporate team</p>
+                                <a href="tel:+18005551234">1-800-555-1234</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>Email us</p>
+                                <a href="mailto:corporate@shopverse.com">corporate@shopverse.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section hours">
+                        <h3>Business Hours</h3>
+                        <div class="hours-item">
+                            <span class="day">Monday - Friday:</span>
+                            <span class="time">9:00 AM - 6:00 PM ET</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section testimonial">
+                        <div class="quote-mark">"</div>
+                        <p>ShopVerse's corporate gift card program completely transformed our employee recognition approach. The dedicated account manager made the entire process seamless.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="../assets/images/1.jpg" alt="Testimonial">
+                            </div>
+                            <div class="author-details">
+                                <div class="author-name">Robert Williams</div>
+                                <div class="author-position">COO, MarketEdge Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Have questions about our corporate program? Find your answers here</p>
+            </div>
+
+            <div class="faq-columns">
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the minimum order quantity for corporate gift cards?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our corporate gift card program starts at a minimum of 10 gift cards per order. Volume discounts begin at this level and increase with larger quantities.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can we customize the gift cards with our company logo?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our custom branding option allows you to add your company logo, brand colors, and personalized messaging to both digital and physical gift cards. There is a one-time setup fee of $50 for this service.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does it take to receive physical gift cards?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Standard physical gift cards typically arrive within 5-7 business days after order approval. Custom-branded physical cards may require 7-10 business days. Rush shipping options are available for an additional fee.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can we send gift cards to multiple recipients at once?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our bulk delivery system allows you to send gift cards to multiple recipients simultaneously. Simply upload a CSV file with recipient details through our corporate portal, and we'll handle the delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is there an expiration date on corporate gift cards?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, ShopVerse gift cards never expire. Once purchased, the gift card balance remains available for the recipient to use at any time.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can we set spending controls or restrictions?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our corporate program allows you to set certain restrictions such as category limitations (e.g., excluding alcohol or gift card purchases) and expiration dates for promotional cards if required by your program.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer international corporate gift cards?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer international gift card options for global teams and clients. Gift cards can be denominated in USD, EUR, GBP, CAD, and other major currencies. Please note that availability may vary by region.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What reporting and analytics are available?</h3>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our corporate portal provides comprehensive reporting including delivery status, redemption rates, spending patterns, and remaining balances. Reports can be exported in CSV or PDF formats for your records.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <p>Still have questions?</p>
+                <a href="#request-form" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to transform your corporate gifting?</h2>
+                <p>Join thousands of businesses that trust ShopVerse for their corporate gift card needs.</p>
+                <div class="cta-buttons">
+                    <a href="#request-form" class="btn btn-white btn-lg">Get Started Today</a>
+                    <a href="tel:+18005551234" class="btn btn-outline-white btn-lg">Call 1-800-555-1234</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Confirmation Modal -->
+    <div class="modal" id="formConfirmationModal">
+        <div class="modal-content">
+            <span class="modal-close"><i class="fas fa-times"></i></span>
+            <div class="modal-body">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Thank You!</h2>
+                <p>Your request has been submitted successfully. One of our corporate gift card specialists will contact you within 24 hours.</p>
+                <div class="reference-number">
+                    <span>Reference Number:</span>
+                    <span id="reference-number">COR-12345678</span>
+                </div>
+                <button class="btn btn-primary modal-confirm-btn">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/corporate-gift-cards.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

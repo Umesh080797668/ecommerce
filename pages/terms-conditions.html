@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/legal-pages.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header legal-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Terms & Conditions</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Terms & Conditions</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-container">
+                <aside class="legal-sidebar">
+                    <div class="legal-nav">
+                        <h3>Document Sections</h3>
+                        <ul class="legal-nav-list">
+                            <li><a href="#introduction" class="active">Introduction</a></li>
+                            <li><a href="#definitions">Definitions</a></li>
+                            <li><a href="#account">User Accounts</a></li>
+                            <li><a href="#purchases">Purchases & Payments</a></li>
+                            <li><a href="#marketplace">Marketplace Rules</a></li>
+                            <li><a href="#prohibited">Prohibited Activities</a></li>
+                            <li><a href="#intellectual-property">Intellectual Property</a></li>
+                            <li><a href="#user-content">User Content</a></li>
+                            <li><a href="#disclaimer">Disclaimers</a></li>
+                            <li><a href="#liability">Limitation of Liability</a></li>
+                            <li><a href="#indemnity">Indemnification</a></li>
+                            <li><a href="#termination">Termination</a></li>
+                            <li><a href="#governing-law">Governing Law</a></li>
+                            <li><a href="#changes">Changes to Terms</a></li>
+                            <li><a href="#contact">Contact Information</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-tools">
+                        <div class="tool-box">
+                            <h3>Document Tools</h3>
+                            <div class="tool-buttons">
+                                <button class="tool-button btn-print">
+                                    <i class="fas fa-print"></i>
+                                    <span>Print</span>
+                                </button>
+                                <button class="tool-button btn-download">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Download PDF</span>
+                                </button>
+                                <button class="tool-button btn-share">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tool-box">
+                            <h3>Text Size</h3>
+                            <div class="text-size-controls">
+                                <button class="text-size-btn" data-size="small">
+                                    <i class="fas fa-font"></i>
+                                </button>
+                                <button class="text-size-btn active" data-size="medium">
+                                    <i class="fas fa-font"></i>
+                                </button>
+                                <button class="text-size-btn" data-size="large">
+                                    <i class="fas fa-font"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-contact">
+                        <h3>Questions?</h3>
+                        <p>If you have any questions about these Terms & Conditions, please contact our legal team.</p>
+                        <a href="mailto:legal@shopverse.com" class="btn btn-outline">Email Legal Team</a>
+                    </div>
+                </aside>
+
+                <div class="legal-main">
+                    <div class="legal-content-header">
+                        <div class="legal-meta">
+                            <div class="last-updated">
+                                <i class="fas fa-calendar-alt"></i> Last Updated: May 5, 2025
+                            </div>
+                            <div class="effective-date">
+                                <i class="fas fa-clock"></i> Effective: June 1, 2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-introduction">
+                        <p>These Terms and Conditions ("Terms") govern your use of the ShopVerse website, mobile applications, and services (collectively, the "Services") operated by ShopVerse Inc. ("ShopVerse," "we," "us," or "our"). By accessing or using
+                            our Services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our Services.</p>
+                        <p>Please read these Terms carefully, as they contain important information about your legal rights, remedies, and obligations. These Terms include a binding arbitration clause and class action waiver that affect your rights about
+                            how to resolve any dispute with ShopVerse.</p>
+                    </div>
+
+                    <div class="legal-section" id="introduction">
+                        <h2>1. Introduction</h2>
+                        <p>1.1. <strong>Acceptance of Terms.</strong> By accessing or using the Services, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our <a href="privacy-policy.html">Privacy Policy</a>,
+                            which is incorporated by reference.</p>
+
+                        <p>1.2. <strong>Eligibility.</strong> You must be at least 18 years old or the age of legal majority in your jurisdiction, whichever is greater, to use our Services. By using our Services, you represent and warrant that you meet this
+                            eligibility requirement.</p>
+
+                        <p>1.3. <strong>Changes to Services.</strong> We reserve the right to modify, suspend, or discontinue any part of the Services at any time, with or without notice to you. We will not be liable to you or any third party for any modification,
+                            suspension, or discontinuation of the Services.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>ShopVerse may operate across multiple jurisdictions. Users are responsible for complying with all applicable local, state, national, and international laws and regulations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="definitions">
+                        <h2>2. Definitions</h2>
+                        <p>For clarity throughout these Terms, the following definitions shall apply:</p>
+
+                        <div class="definition-list">
+                            <div class="definition-item">
+                                <div class="definition-term">"Account"</div>
+                                <div class="definition-description">means a registered user profile created on our Services.</div>
+                            </div>
+
+                            <div class="definition-item">
+                                <div class="definition-term">"Content"</div>
+                                <div class="definition-description">means text, graphics, images, music, software, audio, video, works of authorship of any kind, and information or materials that you or other users submit or make available through the Services.</div>
+                            </div>
+
+                            <div class="definition-item">
+                                <div class="definition-term">"Marketplace"</div>
+                                <div class="definition-description">means the platform provided by ShopVerse that enables users to offer, sell, and buy products.</div>
+                            </div>
+
+                            <div class="definition-item">
+                                <div class="definition-term">"Seller"</div>
+                                <div class="definition-description">means a user who offers or sells products through our Marketplace.</div>
+                            </div>
+
+                            <div class="definition-item">
+                                <div class="definition-term">"User"</div>
+                                <div class="definition-description">means any person who uses any aspect of our Services, whether registered or not.</div>
+                            </div>
+
+                            <div class="definition-item">
+                                <div class="definition-term">"User Content"</div>
+                                <div class="definition-description">means any Content that a user submits, posts, or otherwise makes available on our Services, including product listings, reviews, comments, and forum posts.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="account">
+                        <h2>3. User Accounts</h2>
+                        <p>3.1. <strong>Account Creation.</strong> To access certain features of the Services, you must register for an account. When you register, you agree to provide accurate, current, and complete information about yourself.</p>
+
+                        <p>3.2. <strong>Account Security.</strong> You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized
+                            use of your account or any other breach of security.</p>
+
+                        <p>3.3. <strong>One Person, One Account.</strong> You may not create multiple accounts or transfer your account to someone else. We reserve the right to remove or reclaim inactive usernames.</p>
+
+                        <p>3.4. <strong>Account Termination.</strong> We reserve the right to suspend or terminate your account and access to the Services at our sole discretion, without notice, for conduct that we determine violates these Terms or is harmful
+                            to other users, us, or third parties, or for any other reason.</p>
+
+                        <div class="legal-alert warning">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <p>Providing false or misleading information during account registration may result in immediate termination of your account and may expose you to civil and/or criminal liability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="purchases">
+                        <h2>4. Purchases & Payments</h2>
+                        <p>4.1. <strong>Pricing and Availability.</strong> All prices are shown in the currency applicable to your location and do not include taxes or shipping costs unless otherwise stated. Product availability is not guaranteed and is
+                            subject to change without notice.</p>
+
+                        <p>4.2. <strong>Payment Methods.</strong> We accept various payment methods as indicated during checkout. By providing a payment method, you represent that you are authorized to use the method and authorize us to charge your payment
+                            method for any orders you place.</p>
+
+                        <p>4.3. <strong>Order Acceptance.</strong> Your receipt of an order confirmation does not constitute our acceptance of your order. We reserve the right to limit or cancel quantities purchased or to refuse any order at any time.</p>
+
+                        <p>4.4. <strong>Taxes.</strong> You are responsible for paying all taxes associated with your purchases. For certain transactions, we may collect and remit taxes on your behalf as required by law.</p>
+
+                        <p>4.5. <strong>Subscriptions.</strong> If you purchase a subscription, it will automatically renew at the end of each subscription period unless you cancel before the renewal date. You authorize us to charge your payment method for
+                            each renewal period until canceled.</p>
+
+                        <p>4.6. <strong>Refunds and Returns.</strong> Our refund and return policies are outlined in our <a href="return-policy.html">Return & Refund Policy</a>, which is incorporated by reference.</p>
+                    </div>
+
+                    <div class="legal-section" id="marketplace">
+                        <h2>5. Marketplace Rules</h2>
+                        <p>5.1. <strong>Role of ShopVerse.</strong> ShopVerse provides a platform that enables users to offer, sell, and buy products directly from each other. ShopVerse is not directly involved in transactions between users, and we do not
+                            transfer legal ownership of products from Sellers to buyers.</p>
+
+                        <p>5.2. <strong>Seller Obligations.</strong> If you are a Seller, you are responsible for:</p>
+                        <ul>
+                            <li>Accurately describing your products and their condition</li>
+                            <li>Setting reasonable prices for your products</li>
+                            <li>Fulfilling orders in a timely manner</li>
+                            <li>Communicating promptly with buyers</li>
+                            <li>Complying with all applicable laws and regulations, including those related to consumer protection, product safety, and intellectual property</li>
+                        </ul>
+
+                        <p>5.3. <strong>Buyer Obligations.</strong> If you are a buyer, you are responsible for:</p>
+                        <ul>
+                            <li>Reading product descriptions carefully before making a purchase</li>
+                            <li>Paying for products you have agreed to purchase</li>
+                            <li>Communicating promptly with Sellers</li>
+                        </ul>
+
+                        <p>5.4. <strong>Prohibited Products.</strong> Sellers may not offer illegal, dangerous, or prohibited items. ShopVerse reserves the right to remove any listing at its sole discretion. Prohibited items include but are not limited to:</p>
+                        <ul>
+                            <li>Illegal goods, stolen items, or items that infringe upon others' rights</li>
+                            <li>Firearms, weapons, ammunition, and certain weapon accessories</li>
+                            <li>Drugs, controlled substances, and drug paraphernalia</li>
+                            <li>Counterfeit or unauthorized replica items</li>
+                            <li>Hazardous, dangerous, or harmful materials</li>
+                            <li>Adult content or sexually explicit materials</li>
+                            <li>Personal information or private data</li>
+                        </ul>
+
+                        <p>5.5. <strong>Fees and Commissions.</strong> ShopVerse may charge fees or commissions for the use of certain aspects of the Marketplace. All applicable fees will be clearly disclosed before you complete a transaction.</p>
+
+                        <p>5.6. <strong>Disputes Between Users.</strong> Users are solely responsible for resolving disputes with other users. ShopVerse may, but is not obligated to, provide tools or assistance to help resolve disputes. We reserve the right
+                            to take action against users who engage in patterns of harmful behavior.</p>
+                    </div>
+
+                    <div class="legal-section" id="prohibited">
+                        <h2>6. Prohibited Activities</h2>
+                        <p>6.1. <strong>General Prohibitions.</strong> You agree not to engage in any of the following prohibited activities:</p>
+                        <ul>
+                            <li>Violating any laws, regulations, or third-party rights</li>
+                            <li>Circumventing, disabling, or interfering with security-related features of our Services</li>
+                            <li>Using our Services for any illegal or unauthorized purpose</li>
+                            <li>Harassing, threatening, or intimidating other users</li>
+                            <li>Impersonating another person or entity</li>
+                            <li>Using automated means (bots, scripts, crawlers) to access our Services without our express permission</li>
+                            <li>Attempting to manipulate our review or rating systems</li>
+                            <li>Engaging in price fixing, collusion, or other anti-competitive practices</li>
+                            <li>Submitting false reports of user misconduct</li>
+                            <li>Engaging in any activity that interferes with or disrupts our Services</li>
+                        </ul>
+
+                        <p>6.2. <strong>System Integrity.</strong> You may not use any device, software, or routine that interferes with the proper working of our Services or attempt to probe, scan, test the vulnerability of, or breach any security or authentication
+                            measures.
+                        </p>
+
+                        <p>6.3. <strong>Spam and Commercial Communications.</strong> You may not send unsolicited commercial messages ("spam") to users or use our Services to collect users' information for sending messages to them from outside our Services.</p>
+
+                        <div class="legal-alert danger">
+                            <div class="alert-icon"><i class="fas fa-ban"></i></div>
+                            <div class="alert-content">
+                                <p>Violation of these prohibitions may result in termination of your account, legal action, and/or reporting to law enforcement authorities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="intellectual-property">
+                        <h2>7. Intellectual Property</h2>
+                        <p>7.1. <strong>ShopVerse Content.</strong> All Content displayed on our Services that is not User Content, including but not limited to text, graphics, logos, icons, images, and software, is the property of ShopVerse or our licensors
+                            and is protected by copyright, trademark, patent, trade secret, and other laws.</p>
+
+                        <p>7.2. <strong>License to Use Services.</strong> Subject to these Terms, ShopVerse grants you a limited, non-exclusive, non-transferable, and revocable license to access and use our Services for their intended purposes.</p>
+
+                        <p>7.3. <strong>Restrictions.</strong> You may not:</p>
+                        <ul>
+                            <li>Copy, modify, or create derivative works based on our Services or Content</li>
+                            <li>Distribute, publicly display, publicly perform, or otherwise exploit our Services or Content in any way not expressly authorized by these Terms</li>
+                            <li>Use any data mining, robots, or similar data gathering and extraction methods on our Services</li>
+                            <li>Frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information</li>
+                            <li>Remove any copyright, trademark, or other proprietary notices from our Content</li>
+                        </ul>
+
+                        <p>7.4. <strong>Trademark Notice.</strong> ShopVerse and the ShopVerse logo are trademarks or registered trademarks of ShopVerse Inc. Other product and company names mentioned in our Services may be trademarks of their respective
+                            owners.
+                        </p>
+
+                        <p>7.5. <strong>Copyright Infringement.</strong> If you believe that Content on our Services infringes your copyright, please contact our designated agent by email at <a href="mailto:copyright@shopverse.com">copyright@shopverse.com</a>                            with the following information:</p>
+                        <ul>
+                            <li>Identification of the copyrighted work claimed to have been infringed</li>
+                            <li>Identification of the allegedly infringing material</li>
+                            <li>Your contact information (name, address, phone number, and email address)</li>
+                            <li>A statement that you have a good faith belief that the use is not authorized</li>
+                            <li>A statement, made under penalty of perjury, that the information provided is accurate and that you are the copyright owner or authorized to act on their behalf</li>
+                            <li>A physical or electronic signature of the copyright owner or authorized representative</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section" id="user-content">
+                        <h2>8. User Content</h2>
+                        <p>8.1. <strong>Content Responsibility.</strong> You are solely responsible for all User Content that you make available through our Services. You represent and warrant that:</p>
+                        <ul>
+                            <li>You own or have the necessary rights to use and authorize ShopVerse to use all intellectual property rights in and to any User Content</li>
+                            <li>Your User Content does not violate these Terms, applicable law, or the intellectual property or other rights of any third party</li>
+                        </ul>
+
+                        <p>8.2. <strong>License to ShopVerse.</strong> By making any User Content available through the Services, you grant to ShopVerse a non-exclusive, transferable, worldwide, royalty-free license, with the right to sublicense, to use,
+                            copy, modify, create derivative works based upon, distribute, publicly display, and publicly perform your User Content in connection with operating and providing our Services.</p>
+
+                        <p>8.3. <strong>Monitoring and Enforcement.</strong> We have the right, but not the obligation, to monitor User Content for compliance with these Terms. We may remove or refuse to display User Content that violates these Terms or
+                            applicable law, or for any other reason at our sole discretion.</p>
+
+                        <p>8.4. <strong>Feedback.</strong> If you provide us with any feedback or suggestions regarding our Services, you grant us an unlimited, irrevocable, perpetual, sublicensable, transferable, royalty-free license to use such feedback
+                            for any purpose without compensation to you.</p>
+                    </div>
+
+                    <div class="legal-section" id="disclaimer">
+                        <h2>9. Disclaimers</h2>
+                        <p>9.1. <strong>AS IS.</strong> THE SERVICES AND ALL CONTENT ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. SHOPVERSE EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                            IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+
+                        <p>9.2. <strong>No Guarantees.</strong> SHOPVERSE DOES NOT WARRANT THAT (A) THE SERVICES WILL MEET YOUR REQUIREMENTS; (B) THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE; (C) THE RESULTS THAT MAY BE OBTAINED FROM
+                            THE USE OF THE SERVICES WILL BE ACCURATE OR RELIABLE; OR (D) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SERVICES WILL MEET YOUR EXPECTATIONS.</p>
+
+                        <p>9.3. <strong>Third-Party Content.</strong> OUR SERVICES MAY CONTAIN CONTENT PROVIDED BY THIRD PARTIES. WE ARE NOT RESPONSIBLE FOR THE ACCURACY, RELIABILITY, OR LEGALITY OF SUCH CONTENT. YOU ACCESS SUCH CONTENT AT YOUR OWN RISK.</p>
+
+                        <p>9.4. <strong>Marketplace Transactions.</strong> SHOPVERSE IS NOT A PARTY TO TRANSACTIONS BETWEEN USERS OF THE MARKETPLACE. WE DO NOT GUARANTEE THE QUALITY, SAFETY, OR LEGALITY OF ITEMS ADVERTISED, THE TRUTH OR ACCURACY OF LISTINGS,
+                            THE ABILITY OF SELLERS TO SELL ITEMS, THE ABILITY OF BUYERS TO PAY FOR ITEMS, OR THAT BUYERS AND SELLERS WILL ACTUALLY COMPLETE A TRANSACTION.</p>
+
+                        <p>9.5. <strong>User Actions.</strong> SHOPVERSE IS NOT LIABLE FOR THE ACTIONS, CONTENT, INFORMATION, OR DATA OF THIRD PARTIES, AND YOU RELEASE US FROM ANY CLAIMS AND DAMAGES, KNOWN AND UNKNOWN, ARISING OUT OF OR IN ANY WAY CONNECTED
+                            WITH ANY CLAIM YOU HAVE AGAINST ANY SUCH THIRD PARTIES.</p>
+                    </div>
+
+                    <div class="legal-section" id="liability">
+                        <h2>10. Limitation of Liability</h2>
+                        <p>10.1. <strong>Exclusion of Damages.</strong> IN NO EVENT WILL SHOPVERSE OR ITS DIRECTORS, EMPLOYEES, AGENTS, PARTNERS, SUPPLIERS, OR CONTENT PROVIDERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+                            DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+                        <ul>
+                            <li>YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES</li>
+                            <li>ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES</li>
+                            <li>ANY CONTENT OBTAINED FROM THE SERVICES</li>
+                            <li>UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT</li>
+                        </ul>
+
+                        <p>10.2. <strong>Limitation of Liability.</strong> TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SHOPVERSE'S TOTAL LIABILITY TO YOU FOR ANY DAMAGES SHALL NOT EXCEED THE LESSER OF (A) THE TOTAL AMOUNT PAID BY YOU TO SHOPVERSE
+                            DURING THE SIX (6) MONTHS PRIOR TO THE EVENT GIVING RISE TO THE CLAIM, OR (B) ONE HUNDRED DOLLARS ($100.00).</p>
+
+                        <p>10.3. <strong>Basis of Bargain.</strong> THE LIMITATIONS OF DAMAGES SET FORTH ABOVE ARE FUNDAMENTAL ELEMENTS OF THE BASIS OF THE BARGAIN BETWEEN SHOPVERSE AND YOU.</p>
+
+                        <p>10.4. <strong>Application.</strong> SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-balance-scale"></i></div>
+                            <div class="alert-content">
+                                <p>The limitations of liability in this section are a fundamental part of our agreement with you. If you disagree with these limitations, please do not use our Services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="indemnity">
+                        <h2>11. Indemnification</h2>
+                        <p>11.1. <strong>Your Indemnification.</strong> You agree to defend, indemnify, and hold harmless ShopVerse, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors,
+                            agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating
+                            to:
+                        </p>
+                        <ul>
+                            <li>Your violation of these Terms</li>
+                            <li>Your User Content</li>
+                            <li>Your use of the Services, including, but not limited to, any use of the Content, services, or products other than as expressly authorized</li>
+                            <li>Your interaction with any other user of the Services</li>
+                        </ul>
+
+                        <p>11.2. <strong>Defense Cooperation.</strong> You agree to cooperate as reasonably required in the defense of any claim. ShopVerse reserves the right to assume the exclusive defense and control of any matter subject to indemnification
+                            by you and, in such case, you agree to cooperate with our defense of such claim.</p>
+                    </div>
+
+                    <div class="legal-section" id="termination">
+                        <h2>12. Termination</h2>
+                        <p>12.1. <strong>Termination by You.</strong> You may terminate these Terms at any time by closing your account, discontinuing your use of the Services, and providing ShopVerse with a notice of termination.</p>
+
+                        <p>12.2. <strong>Termination by ShopVerse.</strong> We may terminate or suspend your access to and use of the Services at our sole discretion, without notice, for any reason, including for conduct that we believe violates these Terms
+                            or is harmful to other users, ShopVerse, or third parties, or for any other reason.</p>
+
+                        <p>12.3. <strong>Effect of Termination.</strong> Upon termination of these Terms for any reason:</p>
+                        <ul>
+                            <li>Your access to the Services will be terminated</li>
+                            <li>Your account may be deleted</li>
+                            <li>Any pending transactions may be canceled</li>
+                            <li>ShopVerse may retain and continue to use and disclose your information according to our Privacy Policy</li>
+                        </ul>
+
+                        <p>12.4. <strong>Survival.</strong> All provisions of these Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and
+                            limitations of liability.</p>
+                    </div>
+
+                    <div class="legal-section" id="governing-law">
+                        <h2>13. Governing Law</h2>
+                        <p>13.1. <strong>Governing Law.</strong> These Terms and your access to and use of the Services shall be governed by and construed in accordance with the laws of the State of Delaware, without giving effect to any choice or conflict
+                            of law provision or rule.</p>
+
+                        <p>13.2. <strong>Dispute Resolution.</strong> Any dispute arising from or relating to the subject matter of these Terms shall be finally settled by arbitration in [City, State], using the English language in accordance with the Arbitration
+                            Rules and Procedures of the Judicial Arbitration and Mediation Services, Inc. (JAMS) then in effect, by one commercial arbitrator with substantial experience in resolving intellectual property and commercial contract disputes.</p>
+
+                        <p>13.3. <strong>Class Action Waiver.</strong> ANY DISPUTE RESOLUTION PROCEEDINGS WILL BE CONDUCTED ONLY ON AN INDIVIDUAL BASIS AND NOT IN A CLASS OR REPRESENTATIVE ACTION OR AS A NAMED OR UNNAMED MEMBER IN A CLASS, CONSOLIDATED,
+                            REPRESENTATIVE OR PRIVATE ATTORNEY GENERAL LEGAL ACTION.</p>
+
+                        <p>13.4. <strong>Injunctive Relief.</strong> Notwithstanding the foregoing, ShopVerse may seek and obtain injunctive relief in any jurisdiction in any court of competent jurisdiction, and you agree that these Terms are specifically
+                            enforceable by ShopVerse through injunctive relief without the necessity of posting a bond.</p>
+                    </div>
+
+                    <div class="legal-section" id="changes">
+                        <h2>14. Changes to Terms</h2>
+                        <p>14.1. <strong>Modifications.</strong> We reserve the right to modify these Terms at any time. If we make material changes to these Terms, we will notify you by email or through a notice on our Services before the changes become
+                            effective.
+                        </p>
+
+                        <p>14.2. <strong>Continued Use.</strong> Your continued use of our Services following the posting of revised Terms means that you accept and agree to the changes. You are expected to check this page frequently so you are aware of
+                            any changes.</p>
+
+                        <div class="legal-alert">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <p>We recommend periodically reviewing these Terms for updates. The date of the last revision appears at the top of this document.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legal-section" id="contact">
+                        <h2>15. Contact Information</h2>
+                        <p>15.1. <strong>General Inquiries.</strong> For general inquiries about these Terms, please contact us at <a href="mailto:legal@shopverse.com">legal@shopverse.com</a>.</p>
+
+                        <p>15.2. <strong>Legal Notices.</strong> Any legal notices to ShopVerse must be in writing and sent to:</p>
+                        <address>
+                            ShopVerse Inc.<br>
+                            Attn: Legal Department<br>
+                            123 Commerce Street<br>
+                            New York, NY 10001<br>
+                            United States
+                        </address>
+
+                        <p>15.3. <strong>Customer Support.</strong> For customer support inquiries, please contact <a href="mailto:support@shopverse.com">support@shopverse.com</a> or call us at +1-234-567-890.</p>
+                    </div>
+
+                    <div class="legal-conclusion">
+                        <p>By using ShopVerse's Services, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions.</p>
+                        <p>Thank you for using ShopVerse.</p>
+
+                        <div class="legal-signature">
+                            <p>ShopVerse Inc.<br> Last Updated: May 5, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our Terms & Conditions</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if I violate these Terms?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you violate these Terms, ShopVerse may take various actions depending on the severity of the violation. These actions may include warning you, temporarily suspending your account, permanently terminating your account, removing
+                            your content, and/or taking legal action if necessary.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use ShopVerse for my business?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, businesses can use ShopVerse. However, business users must comply with additional requirements, such as providing accurate business information, complying with applicable business laws and regulations, and ensuring that their
+                            activities on the platform are legal and ethical.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I report content that violates these Terms?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you find content that violates our Terms, you can report it by clicking the "Report" button near the content, contacting our support team at support@shopverse.com, or sending a detailed description of the violation to legal@shopverse.com.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I do if I receive a legal notice from ShopVerse?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you receive a legal notice from ShopVerse, you should read it carefully, comply with any instructions provided, and consider consulting with a legal professional for advice. If you have questions about the notice, you should
+                            contact legal@shopverse.com promptly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <p>Have more questions about our Terms & Conditions?</p>
+                <a href="mailto:legal@shopverse.com" class="btn btn-primary">Contact Legal Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/legal-pages.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>
