@@ -10,7 +10,70 @@ document.addEventListener('DOMContentLoaded', function() {
     initReviewsSlider();
     initSellerCardAnimations();
     initReviewHelpful();
+    initBestSellersHero();
 });
+
+function initBestSellersHero() {
+    const heroSection = document.querySelector('.bestseller-hero');
+    if (!heroSection) return;
+
+    // Create scene container if not exists
+    let scene = heroSection.querySelector('.scene');
+    if (!scene) {
+        scene = document.createElement('div');
+        scene.className = 'scene';
+        heroSection.insertBefore(scene, heroSection.firstChild);
+    }
+
+    // Create scene elements if needed
+    const elementsCount = scene.querySelectorAll('.scene-element').length;
+    if (elementsCount < 3) {
+        // Add scene elements for 3D effect
+        for (let i = 0; i < 3; i++) {
+            const element = document.createElement('div');
+            element.className = 'scene-element';
+            element.style.zIndex = i + 1;
+            element.style.width = `${Math.random() * 40 + 20}px`;
+            element.style.height = `${Math.random() * 40 + 20}px`;
+            element.style.borderRadius = '50%';
+            element.style.left = `${Math.random() * 80 + 10}%`;
+            element.style.top = `${Math.random() * 80 + 10}%`;
+            scene.appendChild(element);
+        }
+    }
+
+    // Add 3D movement effect
+    window.addEventListener('mousemove', e => {
+        if (window.innerWidth <= 768 || !isEffectsEnabled()) return;
+
+        const mouseX = e.clientX / window.innerWidth - 0.5;
+        const mouseY = e.clientY / window.innerHeight - 0.5;
+
+        // Get hero content for subtle movement
+        const heroContent = heroSection.querySelector('.hero-content');
+        if (heroContent) {
+            heroContent.style.transform = `translate3d(${mouseX * -20}px, ${mouseY * -20}px, 0)`;
+        }
+
+        // Move scene elements for depth effect
+        const elements = scene.querySelectorAll('.scene-element');
+        elements.forEach(element => {
+            const depth = parseInt(window.getComputedStyle(element).zIndex) || 1;
+            const moveX = mouseX * depth * 15;
+            const moveY = mouseY * depth * 15;
+            element.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+        });
+    });
+
+    // Fix for hero text visibility
+    const heroText = heroSection.querySelectorAll('.hero-content h1, .hero-content h2, .hero-content p, .hero-content .btn');
+    heroText.forEach(element => {
+        element.style.position = 'relative';
+        element.style.zIndex = '5';
+        element.style.opacity = '1';
+        element.style.visibility = 'visible';
+    });
+}
 
 /**
  * Initialize Best Sellers Tabs

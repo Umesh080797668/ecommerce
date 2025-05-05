@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParallaxEffects();
     initSmoothScrolling();
     initImageHoverEffects();
+    initHeroScene();
 });
 
 /**
@@ -190,6 +191,65 @@ function isEffectsEnabled() {
 
     return !prefersReducedMotion;
 }
+
+function initHeroScene() {
+    // Get all potential hero scenes
+    const scenes = document.querySelectorAll('.scene');
+
+    scenes.forEach(scene => {
+        // Only proceed if this scene has not been initialized yet
+        if (scene.dataset.initialized) return;
+
+        // Mark as initialized
+        scene.dataset.initialized = 'true';
+
+        window.addEventListener('mousemove', e => {
+            if (!isEffectsEnabled()) return;
+
+            const mouseX = e.clientX / window.innerWidth - 0.5;
+            const mouseY = e.clientY / window.innerHeight - 0.5;
+
+            // Get all scene elements
+            const elements = scene.querySelectorAll('.scene-element');
+
+            elements.forEach(element => {
+                // Get element's z-index for depth calculation
+                const depth = parseInt(window.getComputedStyle(element).zIndex) || 1;
+                const moveX = mouseX * depth * 10;
+                const moveY = mouseY * depth * 10;
+
+                // Apply transform
+                element.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+            });
+        });
+    });
+
+    // Look for hero sections that might need a scene
+    const heroSections = document.querySelectorAll('.hero-section, .bestseller-hero');
+    heroSections.forEach(heroSection => {
+        if (!heroSection.querySelector('.scene')) {
+            // Create a scene if one doesn't exist
+            const newScene = document.createElement('div');
+            newScene.className = 'scene';
+            newScene.dataset.initialized = 'true';
+            heroSection.insertBefore(newScene, heroSection.firstChild);
+
+            // Add some scene elements
+            for (let i = 0; i < 5; i++) {
+                const element = document.createElement('div');
+                element.className = 'scene-element';
+                element.style.zIndex = i + 1;
+                element.style.width = `${Math.random() * 40 + 20}px`;
+                element.style.height = `${Math.random() * 40 + 20}px`;
+                element.style.borderRadius = '50%';
+                element.style.left = `${Math.random() * 80 + 10}%`;
+                element.style.top = `${Math.random() * 80 + 10}%`;
+                newScene.appendChild(element);
+            }
+        }
+    });
+}
+
 
 /**
  * Apply CSS Styles for 3D Effects
