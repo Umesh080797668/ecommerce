@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/coming-soon.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html" class="active">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html" class="active">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="flash-deals.html">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header coming-soon-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Coming Soon</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Coming Soon</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Countdown Section -->
+    <section class="main-countdown-section">
+        <div class="container">
+            <div class="main-countdown-wrapper">
+                <div class="main-countdown-content">
+                    <h2 class="headline">New Features & Platform Updates Coming Soon</h2>
+                    <p class="subheadline">We're working on enhancing your shopping experience with innovative features and tools. Stay tuned!</p>
+
+                    <div class="countdown-timer-large">
+                        <div class="countdown-item">
+                            <span class="countdown-value days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+
+                    <div class="launch-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Expected Launch: June 15, 2025</span>
+                    </div>
+
+                    <div class="notification-form">
+                        <h3>Get Notified When We Launch</h3>
+                        <form id="notification-signup">
+                            <div class="form-group">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-primary">Notify Me</button>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="notification-terms" required>
+                                <label for="notification-terms">I agree to receive notifications about new features</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="main-countdown-image">
+                    <img src="../assets/images/1.jpg" alt="Coming Soon" class="floating-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Features Section -->
+    <section class="upcoming-features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming Features</h2>
+                <p class="section-subtitle">Discover what we're working on to make your shopping experience better</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-tag">Coming June 2025</div>
+                        <h3 class="feature-title">Virtual Try-On Experience</h3>
+                        <p class="feature-description">Try clothes, accessories, and makeup virtually with our AI-powered AR technology. See how products look on you before you buy.</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span>85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card highlighted">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-tag">Coming June 2025</div>
+                        <h3 class="feature-title">AI Shopping Assistant</h3>
+                        <p class="feature-description">Meet ShopVerse's intelligent shopping assistant that helps you find products, compare options, and make informed purchasing decisions.</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                            <span>90% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-tag">Coming July 2025</div>
+                        <h3 class="feature-title">Instant Checkout</h3>
+                        <p class="feature-description">Complete your purchase in seconds with our streamlined one-click checkout process. Save payment methods securely for faster shopping.</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <span>65% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-tag">Coming August 2025</div>
+                        <h3 class="feature-title">Global Marketplace Integration</h3>
+                        <p class="feature-description">Shop from international sellers with automatic currency conversion, transparent shipping costs, and duty calculation.</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 45%"></div>
+                            </div>
+                            <span>45% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-tag">Coming August 2025</div>
+                        <h3 class="feature-title">Sustainable Shopping Programs</h3>
+                        <p class="feature-description">Filter products by environmental impact, carbon footprint, and ethical manufacturing. Support eco-friendly brands and offset your shipping emissions.</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 55%"></div>
+                            </div>
+                            <span>55% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-tag">Coming September 2025</div>
+                        <h3 class="feature-title">Simplified Returns</h3>
+                        <p class="feature-description">Hassle-free return process with printable labels, scheduled pickup, and instant refunds. Track return status in real-time.</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                            <span>40% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlight Section -->
+    <section class="feature-highlight-section">
+        <div class="container">
+            <div class="feature-highlight">
+                <div class="feature-highlight__content">
+                    <span class="highlight-label">Flagship Feature</span>
+                    <h2>AI Shopping Assistant</h2>
+                    <p>Our most ambitious feature yet, the AI Shopping Assistant will revolutionize how you shop online. It learns your preferences over time to provide personalized recommendations that truly match your style and needs.</p>
+
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Natural language product search</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized style recommendations</li>
+                        <li><i class="fas fa-check-circle"></i> Size and fit suggestions based on your previous purchases</li>
+                        <li><i class="fas fa-check-circle"></i> Price drop alerts for items you're interested in</li>
+                        <li><i class="fas fa-check-circle"></i> Gift recommendations for friends and family</li>
+                    </ul>
+
+                    <div class="notification-mini-form">
+                        <button class="btn btn-primary" id="highlight-notify-btn">Get Early Access</button>
+                    </div>
+                </div>
+                <div class="feature-highlight__image">
+                    <div class="image-wrapper">
+                        <img src="../assets/images/1.jpg" alt="AI Shopping Assistant Preview">
+                        <div class="chat-bubble">
+                            <div class="chat-header">
+                                <span class="chat-title">ShopVerse Assistant</span>
+                            </div>
+                            <div class="chat-message">
+                                <p>Hi there! I've found some items matching your summer style. Would you like to see them?</p>
+                            </div>
+                            <div class="chat-actions">
+                                <button>Yes, please!</button>
+                                <button>Maybe later</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Timeline Section -->
+    <section class="feature-timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Release Timeline</h2>
+                <p class="section-subtitle">Our roadmap for upcoming platform enhancements</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-date">
+                        <span class="month">Jun</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-point"></div>
+                        <h3 class="timeline-title">Major Platform Update</h3>
+                        <ul class="timeline-features">
+                            <li>Virtual Try-On Experience</li>
+                            <li>AI Shopping Assistant</li>
+                            <li>Personalized Product Discovery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="month">Jul</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-point"></div>
+                        <h3 class="timeline-title">Payment & Checkout Upgrade</h3>
+                        <ul class="timeline-features">
+                            <li>Instant Checkout</li>
+                            <li>Additional Payment Methods</li>
+                            <li>Improved Mobile Experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="month">Aug</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-point"></div>
+                        <h3 class="timeline-title">Global & Sustainable Shopping</h3>
+                        <ul class="timeline-features">
+                            <li>Global Marketplace Integration</li>
+                            <li>Sustainable Shopping Programs</li>
+                            <li>Carbon Footprint Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="month">Sep</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-point"></div>
+                        <h3 class="timeline-title">Customer Experience Enhancement</h3>
+                        <ul class="timeline-features">
+                            <li>Simplified Returns</li>
+                            <li>Advanced Product Comparison</li>
+                            <li>Enhanced Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="month">Oct</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-point"></div>
+                        <h3 class="timeline-title">Social Shopping Experience</h3>
+                        <ul class="timeline-features">
+                            <li>Shop with Friends Feature</li>
+                            <li>Social Recommendations</li>
+                            <li>Interactive Shopping Events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our upcoming features</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When exactly will these new features be available?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our first major update is scheduled for June 15, 2025, with the Virtual Try-On Experience and AI Shopping Assistant. Additional features will be rolled out according to our timeline, with updates every month through October 2025.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will I need to update my app to access these features?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, to ensure the best experience, you'll need to update to the latest version of the ShopVerse app when the features are released. Web users will automatically see the new features without any action required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the Virtual Try-On Experience work?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Virtual Try-On Experience uses augmented reality (AR) technology. You can use your device's camera to see how clothes, accessories, or makeup would look on you in real-time. The feature works on compatible smartphones and tablets
+                            with cameras.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is the AI Shopping Assistant available in all languages?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>At launch, the AI Shopping Assistant will support English, Spanish, French, German, and Japanese. We plan to add more languages in subsequent updates based on user demand and feedback.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I get early access to these features?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sign up for notifications using the form on this page. Selected users will be invited to our beta testing program before the official launch. Beta testers will receive exclusive access and be able to provide valuable feedback to
+                            help us refine the features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Sharing Section -->
+    <section class="social-sharing-section">
+        <div class="container">
+            <div class="social-sharing-content">
+                <h2>Excited About What's Coming?</h2>
+                <p>Share it with your friends and family!</p>
+
+                <div class="social-buttons">
+                    <a href="#" class="social-button facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-button twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="social-button linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="#" class="social-button whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-info">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates on new products, special offers, and exclusive deals directly to your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter-terms" required>
+                        <label for="newsletter-terms">I agree to receive marketing emails from ShopVerse.</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Flash Deals</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Notification Modal -->
+    <div class="modal" id="notificationModal">
+        <div class="modal-content">
+            <span class="modal-close"><i class="fas fa-times"></i></span>
+            <div class="notification-modal-content">
+                <div class="notification-icon">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <h2>Thanks for Your Interest!</h2>
+                <p>We'll notify you when our new features launch. Keep an eye on your inbox for updates and exclusive offers.</p>
+                <div class="notification-image">
+                    <img src="../assets/images/1.jpg" alt="Thank You">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/coming-soon.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

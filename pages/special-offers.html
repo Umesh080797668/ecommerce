@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/special-offers.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="#">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Premium Brands</a></li>
+                                    <li><a href="#">Trending Brands</a></li>
+                                    <li><a href="#">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item active"><a href="special-offers.html">Special Offers</a></li>
+                            <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item active"><a href="special-offers.html">Special Offers</a></li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header offers-page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Special Offers</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <span class="active">Special Offers</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Deals Section with Countdown -->
+    <section class="flash-deals-section">
+        <div class="container">
+            <div class="flash-deals-header">
+                <div class="section-header">
+                    <h2 class="section-title">Flash Deals</h2>
+                    <p class="section-subtitle">Hurry up! Limited time offers</p>
+                </div>
+                <div class="deals-countdown">
+                    <div class="countdown-label">Ends in:</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-value days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flash-deals-grid">
+                <div class="product-card flash-deal">
+                    <div class="product-badges">
+                        <span class="badge sale">-40%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Wireless Headphones">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="101"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="101"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="101"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="101"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Electronics</div>
+                        <h3 class="product-title"><a href="product-detail.html">Premium Wireless Headphones</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(78)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$299.99</span>
+                            <span class="price">$179.99</span>
+                        </div>
+                        <div class="stock-status in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                        <div class="product-progress">
+                            <div class="progress-label">
+                                <span>Already Sold: 15</span>
+                                <span>Available: 20</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 43%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card flash-deal">
+                    <div class="product-badges">
+                        <span class="badge sale">-25%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Smart Watch">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="102"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="102"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="102"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="102"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Electronics</div>
+                        <h3 class="product-title"><a href="product-detail.html">Smart Watch Ultra</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(125)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$399.99</span>
+                            <span class="price">$299.99</span>
+                        </div>
+                        <div class="stock-status in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                        <div class="product-progress">
+                            <div class="progress-label">
+                                <span>Already Sold: 42</span>
+                                <span>Available: 18</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card flash-deal">
+                    <div class="product-badges">
+                        <span class="badge sale">-30%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Bluetooth Speaker">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="103"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="103"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="103"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="103"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Electronics</div>
+                        <h3 class="product-title"><a href="product-detail.html">Waterproof Bluetooth Speaker</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(49)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$129.99</span>
+                            <span class="price">$90.99</span>
+                        </div>
+                        <div class="stock-status in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                        <div class="product-progress">
+                            <div class="progress-label">
+                                <span>Already Sold: 22</span>
+                                <span>Available: 28</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 44%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card flash-deal">
+                    <div class="product-badges">
+                        <span class="badge sale">-50%</span>
+                        <span class="badge hot">Hot</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Digital Camera">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="104"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="104"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="104"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="104"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Electronics</div>
+                        <h3 class="product-title"><a href="product-detail.html">4K Digital Camera</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(93)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$699.99</span>
+                            <span class="price">$349.99</span>
+                        </div>
+                        <div class="stock-status limited">
+                            <i class="fas fa-exclamation-circle"></i> Only 5 left
+                        </div>
+                        <div class="product-progress">
+                            <div class="progress-label">
+                                <span>Already Sold: 35</span>
+                                <span>Available: 5</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Filter -->
+    <section class="special-offers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">All Special Offers</h2>
+                <p class="section-subtitle">Exclusive deals for a limited time</p>
+            </div>
+
+            <div class="offers-filter">
+                <div class="filter-wrapper">
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select class="filter-select" id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="home">Home & Furniture</option>
+                            <option value="beauty">Beauty & Health</option>
+                            <option value="sports">Sports</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Discount:</label>
+                        <select class="filter-select" id="discount-filter">
+                            <option value="all">All Discounts</option>
+                            <option value="10">10% & Above</option>
+                            <option value="20">20% & Above</option>
+                            <option value="30">30% & Above</option>
+                            <option value="40">40% & Above</option>
+                            <option value="50">50% & Above</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort By:</label>
+                        <select class="filter-select" id="sort-filter">
+                            <option value="popular">Popularity</option>
+                            <option value="discount">Discount: High to Low</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="view-type">
+                    <button class="grid-view active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="list-view" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="offers-grid" id="offers-container">
+                <!-- Product 1 -->
+                <div class="product-card offer-item" data-category="electronics" data-discount="35" data-price="129.99" data-date="2025-04-28">
+                    <div class="product-badges">
+                        <span class="badge sale">-35%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Wireless Earbuds">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="201"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="201"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="201"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="201"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-15T23:59:59">6 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Electronics</div>
+                        <h3 class="product-title"><a href="product-detail.html">Pro Wireless Earbuds</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$199.99</span>
+                            <span class="price">$129.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Premium sound quality with active noise cancellation. Up to 24 hours of battery life with charging case. Water and sweat resistant.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="201"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="201"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card offer-item" data-category="fashion" data-discount="20" data-price="79.99" data-date="2025-05-01">
+                    <div class="product-badges">
+                        <span class="badge sale">-20%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Designer Backpack">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="202"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="202"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="202"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="202"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-20T23:59:59">11 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Fashion</div>
+                        <h3 class="product-title"><a href="product-detail.html">Designer Travel Backpack</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(37)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$99.99</span>
+                            <span class="price">$79.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Stylish and functional travel backpack with laptop compartment, water bottle holders, and multiple storage pockets. Made from durable, water-resistant materials.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="202"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="202"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card offer-item" data-category="home" data-discount="50" data-price="149.99" data-date="2025-04-15">
+                    <div class="product-badges">
+                        <span class="badge sale">-50%</span>
+                        <span class="badge hot">Hot</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Smart Blender">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="203"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="203"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="203"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="203"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-10T23:59:59">1 day</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Home & Furniture</div>
+                        <h3 class="product-title"><a href="product-detail.html">Smart Touchscreen Blender</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$299.99</span>
+                            <span class="price">$149.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Intelligent blender with touchscreen display and 15 preset programs. Self-cleaning function and quiet operation. Includes recipe book with 50+ recipes.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="203"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="203"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card offer-item" data-category="beauty" data-discount="15" data-price="84.99" data-date="2025-05-03">
+                    <div class="product-badges">
+                        <span class="badge sale">-15%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Skincare Set">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="204"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="204"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="204"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="204"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-30T23:59:59">21 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Beauty & Health</div>
+                        <h3 class="product-title"><a href="product-detail.html">Premium Skincare Set</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(52)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$99.99</span>
+                            <span class="price">$84.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Complete skincare routine with cleanser, toner, serum, moisturizer, and eye cream. Made with natural ingredients. Suitable for all skin types.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="204"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="204"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card offer-item" data-category="sports" data-discount="25" data-price="59.99" data-date="2025-05-02">
+                    <div class="product-badges">
+                        <span class="badge sale">-25%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Fitness Tracker">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="205"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="205"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="205"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="205"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-25T23:59:59">16 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Sports</div>
+                        <h3 class="product-title"><a href="product-detail.html">Fitness Activity Tracker</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(41)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$79.99</span>
+                            <span class="price">$59.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Waterproof fitness tracker with heart rate monitor, sleep tracking, and multiple sport modes. Up to 7 days battery life and smartphone notifications.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="205"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="205"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card offer-item" data-category="electronics" data-discount="45" data-price="329.99" data-date="2025-05-04">
+                    <div class="product-badges">
+                        <span class="badge sale">-45%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Gaming Console">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="206"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="206"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="206"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="206"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-12T23:59:59">3 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Electronics</div>
+                        <h3 class="product-title"><a href="product-detail.html">Pro Gaming Console</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(108)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$599.99</span>
+                            <span class="price">$329.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Next-generation gaming console with 1TB storage, 4K gaming at 120fps, and backward compatibility. Includes wireless controller and 3-month premium game subscription.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="206"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="206"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card offer-item" data-category="home" data-discount="30" data-price="69.99" data-date="2025-04-25">
+                    <div class="product-badges">
+                        <span class="badge sale">-30%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Smart Light Kit">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="207"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="207"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="207"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="207"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-18T23:59:59">9 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Home & Furniture</div>
+                        <h3 class="product-title"><a href="product-detail.html">Smart Light Starter Kit</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(64)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$99.99</span>
+                            <span class="price">$69.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Transform your home with this smart lighting kit. Includes hub and 4 color-changing bulbs. Compatible with voice assistants and smartphone control.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="207"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="207"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card offer-item" data-category="fashion" data-discount="40" data-price="119.99" data-date="2025-05-04">
+                    <div class="product-badges">
+                        <span class="badge sale">-40%</span>
+                    </div>
+                    <div class="product-thumb">
+                        <a href="product-detail.html">
+                            <img src="../assets/images/1.jpg" alt="Designer Watch">
+                        </a>
+                        <div class="product-quick-actions">
+                            <a href="#" class="quick-action-btn quick-view" data-product-id="208"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="quick-action-btn wishlist" data-product-id="208"><i class="fas fa-heart"></i></a>
+                            <a href="#" class="quick-action-btn compare" data-product-id="208"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                        <a href="#" class="add-to-cart-btn" data-product-id="208"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <div class="offer-timer">
+                            <i class="far fa-clock"></i> Ends in: <span class="offer-countdown" data-enddate="2025-05-22T23:59:59">13 days</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Fashion</div>
+                        <h3 class="product-title"><a href="product-detail.html">Luxury Chronograph Watch</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">$199.99</span>
+                            <span class="price">$119.99</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Elegant designer chronograph watch with stainless steel band and sapphire crystal glass. Water resistant up to 100m. Includes luxury gift box.</p>
+                        </div>
+                        <div class="list-view-actions">
+                            <a href="#" class="btn btn-primary add-to-cart" data-product-id="208"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="#" class="btn btn-outline quick-view" data-product-id="208"><i class="fas fa-eye"></i> Quick View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination-container">
+                <button class="btn-pagination prev" disabled><i class="fas fa-chevron-left"></i></button>
+                <div class="pagination-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="dots">...</span>
+                    <button class="page-number">8</button>
+                </div>
+                <button class="btn-pagination next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-info">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates on new products, special offers, and exclusive deals directly to your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter-terms" required>
+                        <label for="newsletter-terms">I agree to receive marketing emails from ShopVerse.</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="#">Flash Deals</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return & Refund</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <span class="modal-close"><i class="fas fa-times"></i></span>
+            <div class="quick-view-content">
+                <div class="quick-view-image">
+                    <img src="../assets/images/1.jpg" alt="Product Image">
+                </div>
+                <div class="quick-view-details">
+                    <span class="product-category">Category</span>
+                    <h2 class="product-title">Product Name</h2>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(42 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">$299.99</span>
+                        <span class="price">$249.99</span>
+                    </div>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="product-meta">
+                        <span class="meta-item"><strong>SKU:</strong> PROD-123456</span>
+                        <span class="meta-item"><strong>Availability:</strong> <span class="in-stock">In Stock</span></span>
+                    </div>
+                    <div class="product-quantity">
+                        <label>Quantity:</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" value="1" min="1" max="100">
+                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-outline wishlist"><i class="fas fa-heart"></i> Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/special-offers.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>
