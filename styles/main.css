@@ -26,6 +26,7 @@
      :root {
         /* Color Variables */
         --primary-color: #4a6cf7;
+        --primary-light-color: #8f94fb;
         --primary-hover: #2247d8;
         --secondary-color: #ff6b6b;
         --dark-color: #151a30;
