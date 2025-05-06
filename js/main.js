@@ -703,7 +703,6 @@ function initMobileMenu() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileMenuClose = document.querySelector('.mobile-menu__close');
-    const searchToggle = document.querySelector('.search-toggle');
     
     if (mobileMenuToggle && mobileMenu) {
         // Open mobile menu
@@ -752,19 +751,34 @@ function initMobileMenu() {
         });
     }
     
-    // Handle search toggle on mobile
-    if (searchToggle) {
-        searchToggle.addEventListener('click', () => {
-            const searchForm = document.querySelector('.header__search');
-            if (searchForm) {
-                searchForm.classList.toggle('active');
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchToggle = document.querySelector('.search-toggle');
+        const headerSearch = document.querySelector('.header__search');
+        
+        if (searchToggle && headerSearch) {
+            // Toggle search form visibility when search icon is clicked
+            searchToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                headerSearch.classList.toggle('active');
                 
-                if (searchForm.classList.contains('active')) {
-                    searchForm.querySelector('input').focus();
+                // Position the search form properly below the header
+                const headerMobile = document.querySelector('.header__mobile');
+                if (headerMobile) {
+                    const headerHeight = headerMobile.offsetHeight;
+                    headerSearch.style.top = headerHeight + 'px';
                 }
-            }
-        });
-    }
+            });
+            
+            // Close search form when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchToggle.contains(e.target) && 
+                    !headerSearch.contains(e.target) && 
+                    headerSearch.classList.contains('active')) {
+                    headerSearch.classList.remove('active');
+                }
+            });
+        }
+    });
 }
 
 /**

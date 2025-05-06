@@ -2,6 +2,31 @@
    Responsive CSS for ShopVerse E-commerce Platform
    =========================================================================== */
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Fix for elements that might cause overflow */
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Ensure all elements that commonly cause overflow are properly constrained */
+
+img,
+video,
+iframe,
+table,
+div {
+    max-width: 100%;
+}
+
 
 /* Extra Large Devices (≥1200px) */
 
@@ -97,6 +122,24 @@
 /* Small Devices (≥576px and <768px) */
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
+    /* Prevent horizontal overflow */
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    /* Fix any potential table overflow */
+    table {
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
     .container {
         max-width: 540px;
     }
@@ -128,6 +171,8 @@
     .hero-dots {
         justify-content: center;
         width: 100%;
+        margin-top: 3rem;
+        position: relative;
     }
     .hero-slide__image {
         display: none;
@@ -165,12 +210,35 @@
         flex-direction: column;
         gap: 1rem;
     }
+    .new-arrivals .products-grid,
+    .new-arrivals .products-grid.scrollable {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
 }
 
 
 /* Extra Small Devices (<576px) */
 
 @media screen and (max-width: 575px) {
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    /* Fix any potential table overflow */
+    table {
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
     .container {
         width: 100%;
         padding: 0 1rem;
@@ -216,6 +284,8 @@
     .hero-dots {
         justify-content: center;
         width: 100%;
+        margin-top: 3rem;
+        bottom: 0;
     }
     .hero-slide__image {
         display: none;
@@ -317,6 +387,18 @@
     .carousel-navigation {
         display: none;
     }
+    .new-arrivals-section .products-grid,
+    .new-arrivals-section .products-grid.scrollable {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin: 0 auto;
+    }
+    /* Make individual product cards wider */
+    .new-arrivals-section .product-card {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 
@@ -330,6 +412,35 @@
     .theme-toggle {
         top: auto;
         bottom: 20px;
+    }
+    .header__search {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--white);
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    /* Show search when active */
+    .header__search.active {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 1001;
+    }
+    /* Improve search form appearance on mobile */
+    .header__mobile .search-form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .header__mobile .search-form input[type="text"] {
+        flex: 1;
+        min-width: 0;
     }
 }
 
