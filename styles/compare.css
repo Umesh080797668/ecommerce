@@ -74,12 +74,16 @@
     top: 100%;
     right: 0;
     width: 300px;
-    background-color: var(--light);
+    background-color: white;
     border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow */
     margin-top: 10px;
     display: none;
     z-index: 10;
+    border: 1px solid #e2e8f0;
+    /* Add visible border */
+    opacity: 1;
 }
 
 .dark-mode .product-search-dropdown {
@@ -89,6 +93,7 @@
 
 .product-search-dropdown.active {
     display: block;
+    opacity: 1 !important;
 }
 
 .product-search-dropdown input {
@@ -230,6 +235,8 @@
     position: sticky;
     left: 0;
     z-index: 2;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .dark-mode .compare-table th.feature-name {
@@ -239,11 +246,19 @@
 
 .compare-table td {
     min-width: 250px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px 20px;
 }
 
 .product-info {
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
 }
 
 .product-remove {
@@ -272,6 +287,9 @@
 
 .product-image {
     margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .product-image img {
@@ -310,7 +328,6 @@
 .product-rating {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-bottom: 15px;
 }
 
@@ -448,4 +465,32 @@
     .add-to-cart {
         padding: 6px 12px;
     }
+}
+
+
+/* Page Header */
+
+.legal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.legal-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.legal-header .page-header__content {
+    position: relative;
+    z-index: 2;
 }

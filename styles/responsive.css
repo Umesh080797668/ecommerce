@@ -984,3 +984,145 @@ div {
         padding: 15px 0;
     }
 }
+
+
+/* Recently Viewed Products on Compare Page - Responsive Fixes */
+
+
+/* Medium devices (tablets) */
+
+@media screen and (max-width: 991px) {
+    .products-section .products-grid.scrollable {
+        grid-template-columns: repeat(3, 280px);
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+
+
+/* Small devices */
+
+@media screen and (max-width: 767px) {
+    .products-section .products-grid.scrollable {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        gap: 15px;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+
+/* Extra small devices */
+
+@media screen and (max-width: 575px) {
+    .products-section .products-grid.scrollable {
+        grid-template-columns: repeat(1, 85%);
+        margin: 0 auto;
+    }
+    /* Make product cards wider and centered */
+    .products-section .product-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+
+/* ...existing code... */
+
+
+/* Responsive styles for wishlist section */
+
+@media screen and (max-width: 768px) {
+    /* Hide the column headers on mobile */
+    .wishlist-header {
+        display: none;
+    }
+    /* Make each wishlist item display as a card */
+    #wishlist-items .row {
+        display: block;
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        max-width: 450px;
+    }
+    /* Style each column as a flex row with label */
+    #wishlist-items .col-price,
+    #wishlist-items .col-stock,
+    #wishlist-items .col-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-top: 1px solid var(--border-color);
+    }
+    /* Add labels for each column */
+    #wishlist-items .col-price::before {
+        content: "Price:";
+        font-weight: 500;
+    }
+    #wishlist-items .col-stock::before {
+        content: "Status:";
+        font-weight: 500;
+    }
+    #wishlist-items .col-actions::before {
+        content: "Actions:";
+        font-weight: 500;
+    }
+    /* Make product info take full width */
+    #wishlist-items .col-product {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    /* Style product image and details */
+    #wishlist-items .product-image {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    #wishlist-items .product-image img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+    #wishlist-items .product-info {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    /* Improve action buttons spacing */
+    #wishlist-items .action-buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    /* Adjust wishlist actions buttons */
+    .wishlist-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .wishlist-actions button {
+        width: 100%;
+    }
+}
+
+
+/* For extra small devices */
+
+@media screen and (max-width: 480px) {
+    .wishlist-section {
+        padding: 30px 0;
+    }
+    .empty-state i {
+        font-size: 3rem;
+    }
+    .empty-state h3 {
+        font-size: 1.2rem;
+    }
+}

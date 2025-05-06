@@ -94,16 +94,16 @@
                         </form>
                     </div>
                     <div class="header__action">
-                        <div class="action__item wishlist">
-                            <a href="wishlist.html" class="action__link">
-                                <i class="fas fa-heart"></i>
-                                <span class="count">0</span>
-                            </a>
-                        </div>
                         <div class="action__item compare">
                             <a href="compare.html" class="action__link active">
                                 <i class="fas fa-sync-alt"></i>
                                 <span class="count" id="compare-count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
                             </a>
                         </div>
                         <div class="action__item cart">
@@ -154,7 +154,7 @@
                     <nav class="main-nav">
                         <ul class="main-nav__list">
                             <li class="main-nav__item"><a href="../index.html">Home</a></li>
-                            <li class="main-nav__item has-dropdown">
+                            <li class="main-nav__item has-dropdown active">
                                 <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown">
                                     <li><a href="new-arrivals.html">New Arrivals</a></li>
@@ -186,20 +186,106 @@
             </div>
         </div>
         <div class="header__mobile">
-            <!-- Mobile header content would go here, similar to index.html -->
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="header__search">
+                            <form action="#" method="get" class="search-form">
+                                <div class="search-category">
+                                    <select name="category" id="search-category-mobile">
+                                        <option value="all">All Categories</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="home">Home & Furniture</option>
+                                        <option value="beauty">Beauty & Health</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Search for products..." name="search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Breadcrumb Section -->
-    <section class="breadcrumb-section">
-        <div class="container">
-            <div class="breadcrumb-content">
-                <h1>Compare Products</h1>
-                <ul class="breadcrumb">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li class="active">Compare Products</li>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item"><a href="wishlist.html">Wishlist</a></li>
+                    <li class="mobile-nav__item active"><a href="compare.html">Compare List</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="brands.html">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="premium-brands.html">Premium Brands</a></li>
+                            <li><a href="trending-brands.html">Trending Brands</a></li>
+                            <li><a href="brands.html">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="flash-deals.html">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
                 </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header legal-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1>Compare Products</h1>
+                <nav class="breadcrumb">
+                    <a href="shop.html">Shop</a>
+                    <span class="divider">/</span>
+                    <span class="active">Compare Products</span>
+                </nav>
             </div>
         </div>
     </section>
@@ -340,32 +426,32 @@
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Shop</h3>
                         <ul class="widget-links">
-                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
-                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
-                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
-                            <li><a href="pages/special-offers.html">Special Offers</a></li>
-                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="flash-deals.html">Flash Deals</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="gift-cards.html">Gift Cards</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Information</h3>
                         <ul class="widget-links">
-                            <li><a href="pages/about-us.html">About Us</a></li>
-                            <li><a href="pages/contact.html">Contact Us</a></li>
-                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
-                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
-                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
-                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="return-policy.html">Return & Refund</a></li>
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Customer Service</h3>
                         <ul class="widget-links">
-                            <li><a href="pages/my-account.html">My Account</a></li>
-                            <li><a href="pages/track-order.html">Track Your Order</a></li>
-                            <li><a href="pages/wishlist.html">Wishlist</a></li>
-                            <li><a href="pages/faq.html">FAQs</a></li>
-                            <li><a href="pages/help-center.html">Help Center</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="track-order.html">Track Your Order</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="help-center.html">Help Center</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget contact-widget">
@@ -418,9 +504,9 @@
                 <div class="footer-bottom-content">
                     <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
                     <div class="footer-bottom-links">
-                        <a href="pages/terms-of-use.html">Terms of Use</a>
-                        <a href="pages/privacy-policy.html">Privacy Policy</a>
-                        <a href="pages/sitemap.html">Sitemap</a>
+                        <a href="terms-of-use.html">Terms of Use</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
                     </div>
                 </div>
             </div>
@@ -430,11 +516,71 @@
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="quick-view-content">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/compare.js"></script>
     <script src="../js/3d-effects.js"></script>
     <script src="../js/darkmode.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/products.js"></script>
+    <!-- Replace the existing script at the bottom with this version -->
+    <script>
+        $(document).ready(function() {
+            // Delegate event handler for quick view buttons that works with dynamically added elements
+            $(document).on('click', '.quick-view, .quick-action-btn.quick-view', function(e) {
+                e.preventDefault();
+                console.log("Quick view button clicked");
+
+                // Get product ID from either data-id or data-product-id attribute
+                const productId = $(this).data('id') || $(this).data('product-id');
+                console.log("Product ID:", productId);
+
+                const modal = $('#quickViewModal');
+                const quickViewContent = modal.find('.quick-view-content');
+
+                // Clear previous content
+                quickViewContent.html('<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>');
+
+                // Show the modal - using active class from your CSS
+                modal.addClass('active');
+                document.body.style.overflow = 'hidden';
+
+                // Load product details
+                if (typeof loadProductDetails === 'function') {
+                    loadProductDetails(productId, quickViewContent);
+                } else {
+                    // Fallback if the function doesn't exist
+                    quickViewContent.html('<p>Product details loading functionality not available.</p>');
+                }
+            });
+
+            // Close modal when clicking the close button or outside the modal
+            $('.close-modal, .modal').on('click', function(e) {
+                if (e.target === this) {
+                    $('.modal').removeClass('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Prevent closing when clicking inside modal content
+            $('.modal-content').on('click', function(e) {
+                e.stopPropagation();
+            });
+
+            console.log("Quick view initialization complete - using 'active' class");
+        });
+    </script>
 </body>
 
 </html>
