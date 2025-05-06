@@ -746,6 +746,20 @@ function initMobileMenu() {
                     // Toggle the open class on the parent item
                     item.classList.toggle('open');
                     
+                    // Close other dropdowns when opening a new one
+                    mobileDropdownItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            otherItem.classList.remove('open');
+                            
+                            // Reset other dropdown icons
+                            const otherIcon = otherItem.querySelector('.dropdown-toggle i');
+                            if (otherIcon) {
+                                otherIcon.classList.remove('fa-chevron-up');
+                                otherIcon.classList.add('fa-chevron-down');
+                            }
+                        }
+                    });
+                    
                     // Update icon
                     const icon = this.querySelector('i');
                     if (icon) {
@@ -760,17 +774,8 @@ function initMobileMenu() {
                 });
             }
             
-            // Prevent main navigation link from toggling dropdown
-            const link = item.querySelector('a');
-            const dropdown = item.querySelector('.mobile-dropdown');
-            if (link && dropdown) {
-                link.addEventListener('click', function(e) {
-                    // Only prevent default if link is clicked directly (not child links)
-                    if (e.currentTarget === link) {
-                        e.preventDefault();
-                    }
-                });
-            }
+            // No event handler on the main link - let it behave normally
+            // This allows the link to navigate to the target page when clicked
         });
     }
     
