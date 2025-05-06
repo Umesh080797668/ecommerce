@@ -1126,3 +1126,24 @@ div {
         font-size: 1.2rem;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .security-code-tooltip {
+        top: -100px;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .security-code-tooltip {
+        top: -100px;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .security-code-tooltip {
+        top: -100px;
+        left: 0;
+    }
+}

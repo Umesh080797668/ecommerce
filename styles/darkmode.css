@@ -578,3 +578,31 @@
     color: var(--black);
     /* Ensure text is visible on hover */
 }
+
+body.dark-mode .cart-quantity-btn {
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+body.dark-mode .cart-coupon input {
+    background-color: var(--dark-bg);
+    color: var(--black);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .form-control,
+html.dark-mode .form-control,
+.dark-theme .form-control {
+    color: #fff !important;
+    border-color: var(--dark-border-color, #444) !important;
+}
+
+
+/* Ensure phone input specifically gets the same treatment */
+
+body.dark-mode input[type="tel"],
+html.dark-mode input[type="tel"],
+.dark-theme input[type="tel"] {
+    background-color: var(--dark-background) !important;
+    color: #fff !important;
+}

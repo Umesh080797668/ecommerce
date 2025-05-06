@@ -20,6 +20,32 @@
     <link rel="stylesheet" href="../styles/responsive.css">
     <style>
         /* Checkout Page Specific Styles */
+        /* Page Header */
+        
+        .legal-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .legal-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/images/1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+        
+        .legal-header .page-header__content {
+            position: relative;
+            z-index: 2;
+        }
         
         .checkout-section {
             padding: 3rem 0;
@@ -349,9 +375,15 @@
             padding: 1rem;
             max-width: 300px;
             z-index: 10;
+            right: -150px;
+            top: 75px;
         }
         
         .security-code-help:hover .security-code-tooltip {
+            display: none;
+        }
+        
+        .security-code-help i:hover+.security-code-tooltip {
             display: block;
         }
         
@@ -454,8 +486,14 @@
                         </form>
                     </div>
                     <div class="header__action">
+                        <div class="action__item compare">
+                            <a href="compare.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
                         <div class="action__item wishlist">
-                            <a href="#" class="action__link">
+                            <a href="wishlist.html" class="action__link">
                                 <i class="fas fa-heart"></i>
                                 <span class="count">0</span>
                             </a>
@@ -507,31 +545,31 @@
                     </div>
                     <nav class="main-nav">
                         <ul class="main-nav__list">
-                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item active"><a href="../index.html">Home</a></li>
                             <li class="main-nav__item has-dropdown">
-                                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                                <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="#">New Arrivals</a></li>
-                                    <li><a href="#">Best Sellers</a></li>
-                                    <li><a href="#">Special Offers</a></li>
-                                    <li><a href="#">Coming Soon</a></li>
+                                    <li><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="special-offers.html">Special Offers</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
                                 </ul>
                             </li>
                             <li class="main-nav__item has-dropdown">
-                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <a href="brands.html">Brands <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Premium Brands</a></li>
-                                    <li><a href="#">Trending Brands</a></li>
-                                    <li><a href="#">All Brands</a></li>
+                                    <li><a href="premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="brands.html">All Brands</a></li>
                                 </ul>
                             </li>
-                            <li class="main-nav__item"><a href="#">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="flash-deals.html">Flash Deals</a></li>
                             <li class="main-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
-                            <li class="main-nav__item"><a href="#">Contact</a></li>
+                            <li class="main-nav__item"><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="header__extra">
-                        <a href="#" class="track-order">
+                        <a href="track-order.html" class="track-order">
                             <i class="fas fa-truck"></i>
                             <span>Track Order</span>
                         </a>
@@ -553,6 +591,21 @@
                     <div class="header__mobile-action">
                         <div class="action__item search-toggle">
                             <i class="fas fa-search"></i>
+                        </div>
+                        <div class="header__search">
+                            <form action="#" method="get" class="search-form">
+                                <div class="search-category">
+                                    <select name="category" id="search-category-mobile">
+                                        <option value="all">All Categories</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="home">Home & Furniture</option>
+                                        <option value="beauty">Beauty & Health</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Search for products..." name="search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
                         </div>
                         <div class="action__item cart">
                             <a href="cart.html" class="action__link">
@@ -582,26 +635,30 @@
             <nav class="mobile-nav">
                 <ul class="mobile-nav__list">
                     <li class="mobile-nav__item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-nav__item"><a href="wishlist.html">Wishlist</a></li>
+                    <li class="mobile-nav__item"><a href="compare.html">Compare List</a></li>
                     <li class="mobile-nav__item has-dropdown">
-                        <a href="#">Shop</a>
+                        <a href="shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                         <ul class="mobile-dropdown">
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Best Sellers</a></li>
-                            <li><a href="#">Special Offers</a></li>
-                            <li><a href="#">Coming Soon</a></li>
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
                         </ul>
                     </li>
                     <li class="mobile-nav__item has-dropdown">
-                        <a href="#">Brands</a>
+                        <a href="brands.html">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                         <ul class="mobile-dropdown">
-                            <li><a href="#">Premium Brands</a></li>
-                            <li><a href="#">Trending Brands</a></li>
-                            <li><a href="#">All Brands</a></li>
+                            <li><a href="premium-brands.html">Premium Brands</a></li>
+                            <li><a href="trending-brands.html">Trending Brands</a></li>
+                            <li><a href="brands.html">All Brands</a></li>
                         </ul>
                     </li>
-                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="flash-deals.html">Flash Deals</a></li>
                     <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
-                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu__user">
@@ -611,18 +668,21 @@
         </div>
     </div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb-section">
+    <!-- Page Header -->
+    <section class="page-header legal-header">
         <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="cart.html">Shopping Cart</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Checkout</li>
-                </ol>
-            </nav>
+            <div class="page-header__content">
+                <h1>Checkout</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="divider">/</span>
+                    <a href="cart.html">Shopping Cart</a>
+                    <span class="divider">/</span>
+                    <span class="active">Checkout</span>
+                </nav>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Checkout Section -->
     <section class="checkout-section">
@@ -907,32 +967,32 @@
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Shop</h3>
                         <ul class="widget-links">
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Best Sellers</a></li>
-                            <li><a href="#">Flash Deals</a></li>
-                            <li><a href="#">Special Offers</a></li>
-                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="best-sellers.html">Best Sellers</a></li>
+                            <li><a href="flash-deals.html">Flash Deals</a></li>
+                            <li><a href="special-offers.html">Special Offers</a></li>
+                            <li><a href="gift-cards.html">Gift Cards</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Information</h3>
                         <ul class="widget-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Shipping Policy</a></li>
-                            <li><a href="#">Return & Refund</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="return-policy.html">Return & Refund</a></li>
+                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Customer Service</h3>
                         <ul class="widget-links">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Track Your Order</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Help Center</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="track-order.html">Track Your Order</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="help-center.html">Help Center</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget contact-widget">
@@ -990,9 +1050,9 @@
                 <div class="footer-bottom-content">
                     <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
                     <div class="footer-bottom-links">
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Sitemap</a>
+                        <a href="terms-of-use.html">Terms of Use</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="sitemap.html">Sitemap</a>
                     </div>
                 </div>
             </div>
@@ -1004,6 +1064,7 @@
 
     <!-- Scripts -->
     <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/darkmode.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/cart.js"></script>
