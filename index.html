@@ -18,6 +18,49 @@
     <link rel="stylesheet" href="styles/darkmode.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/responsive.css">
+    <style>
+        /* Mobile Menu Dropdown Styles */
+        
+        .mobile-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-nav__item.has-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        
+        .mobile-nav__item.has-dropdown.open>a {
+            color: var(--primary-color);
+        }
+        
+        .mobile-nav__item.has-dropdown>a {
+            padding-right: 40px;
+            /* Make room for the toggle button */
+        }
+        /* Ensure mobile menu is visible when active */
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Body class when menu is open to prevent scrolling */
+        
+        body.mobile-menu-open {
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -238,25 +281,27 @@
                 <ul class="mobile-nav__list">
                     <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
                     <li class="mobile-nav__item has-dropdown">
-                        <a href="#">Shop</a>
+                        <a href="pages/shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                         <ul class="mobile-dropdown">
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Best Sellers</a></li>
-                            <li><a href="#">Special Offers</a></li>
-                            <li><a href="#">Coming Soon</a></li>
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
                         </ul>
                     </li>
                     <li class="mobile-nav__item has-dropdown">
                         <a href="#">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                         <ul class="mobile-dropdown">
                             <li><a href="#">Premium Brands</a></li>
                             <li><a href="#">Trending Brands</a></li>
                             <li><a href="#">All Brands</a></li>
                         </ul>
                     </li>
-                    <li class="mobile-nav__item"><a href="#">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
                     <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
-                    <li class="mobile-nav__item"><a href="#">Contact</a></li>
+                    <li class="mobile-nav__item"><a href="pages/contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu__user">

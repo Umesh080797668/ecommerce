@@ -702,56 +702,57 @@ function initBackToTop() {
  * Mobile Menu functionality
  */
 function initMobileMenu() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileMenuClose = document.querySelector('.mobile-menu__close');
     
-    if (mobileMenuToggle && mobileMenu) {
-        // Open mobile menu
-        mobileMenuToggle.addEventListener('click', () => {
+    if (mobileToggle && mobileMenu && mobileMenuClose) {
+        mobileToggle.addEventListener('click', function() {
             mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            document.body.classList.add('mobile-menu-open');
         });
         
-        // Close mobile menu
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-        
-        // Close when clicking outside
-        document.addEventListener('click', (e) => {
-            if (mobileMenu.classList.contains('active') && 
-                !e.target.closest('.mobile-menu') && 
-                !e.target.closest('.mobile-menu-toggle')) {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Handle dropdown toggles in mobile menu
-        const mobileDropdownItems = document.querySelectorAll('.mobile-nav__item.has-dropdown');
-        
-        mobileDropdownItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                if (e.target === this || e.target === this.querySelector('a')) {
-                    e.preventDefault();
-                    this.classList.toggle('open');
-                    
-                    const dropdown = this.querySelector('.mobile-dropdown');
-                    if (dropdown) {
-                        if (this.classList.contains('open')) {
-                            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
-                        } else {
-                            dropdown.style.maxHeight = '0';
-                        }
-                    }
-                }
-            });
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('mobile-menu-open');
         });
     }
+    
+    // Mobile dropdown toggles
+    const dropdownToggles = document.querySelectorAll('.mobile-nav__item.has-dropdown .dropdown-toggle');
+    
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Toggle dropdown visibility
+            const parent = this.closest('.has-dropdown');
+            parent.classList.toggle('open');
+            
+            // Toggle dropdown item visibility
+            const dropdown = parent.querySelector('.mobile-dropdown');
+            if (parent.classList.contains('open')) {
+                dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+                this.querySelector('i').classList.remove('fa-chevron-down');
+                this.querySelector('i').classList.add('fa-chevron-up');
+            } else {
+                dropdown.style.maxHeight = '0';
+                this.querySelector('i').classList.remove('fa-chevron-up');
+                this.querySelector('i').classList.add('fa-chevron-down');
+            }
+        });
+    });
+    
+    // Prevent dropdown items from closing mobile menu when clicked
+    const mobileDropdownLinks = document.querySelectorAll('.mobile-dropdown a');
+    mobileDropdownLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Don't prevent default here to allow navigation
+            // Just stop propagation so the dropdown doesn't close
+            e.stopPropagation();
+        });
+    });
+
     initMobileSearch();
 }
 
