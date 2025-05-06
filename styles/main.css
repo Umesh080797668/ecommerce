@@ -684,7 +684,7 @@
         gap: 1.5rem;
     }
     
-    .action__item {
+    .action__item.cart {
         position: relative;
     }
     
@@ -713,10 +713,11 @@
     }
     
     .mini-cart {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 320px;
+        position: absolute !important;
+        top: 35px;
+        right: -10px;
+        width: 380px !important;
+        min-width: 380px !important;
         background-color: var(--white);
         border-radius: var(--border-radius-md);
         box-shadow: var(--box-shadow);
