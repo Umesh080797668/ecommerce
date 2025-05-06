@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Brands | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/brands.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="pages/login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="pages/register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/brands.html">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="pages/brands.html">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="header__search">
+                            <form action="#" method="get" class="search-form">
+                                <div class="search-category">
+                                    <select name="category" id="search-category-mobile">
+                                        <option value="all">All Categories</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="home">Home & Furniture</option>
+                                        <option value="beauty">Beauty & Health</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Search for products..." name="search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="pages/shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>All Brands</li>
+                </ul>
+                <h1>Shop By Brand</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Categories Section -->
+    <section class="brands-categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Browse Brand Categories</h2>
+                <p class="section-subtitle">Find your favorite brands by category</p>
+            </div>
+            <div class="brands-categories">
+                <a href="#electronics" class="brand-category">
+                    <i class="fas fa-laptop"></i>
+                    <span>Electronics</span>
+                </a>
+                <a href="#fashion" class="brand-category">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Fashion</span>
+                </a>
+                <a href="#home" class="brand-category">
+                    <i class="fas fa-couch"></i>
+                    <span>Home & Furniture</span>
+                </a>
+                <a href="#beauty" class="brand-category">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Health & Beauty</span>
+                </a>
+                <a href="#sports" class="brand-category">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Sports</span>
+                </a>
+                <a href="#kids" class="brand-category">
+                    <i class="fas fa-baby"></i>
+                    <span>Baby & Kids</span>
+                </a>
+                <a href="#groceries" class="brand-category">
+                    <i class="fas fa-utensils"></i>
+                    <span>Groceries</span>
+                </a>
+                <a href="#books" class="brand-category">
+                    <i class="fas fa-book"></i>
+                    <span>Books & Media</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Brands Feature -->
+    <section class="premium-brands-feature">
+        <div class="container">
+            <div class="premium-brands-banner">
+                <div class="banner-content">
+                    <h2>Premium Brands Collection</h2>
+                    <p>Discover luxury products from the world's leading brands</p>
+                    <a href="premium-brands.html" class="btn btn-primary">Explore Premium Brands</a>
+                </div>
+                <div class="banner-image">
+                    <img src="../assets/images/1.jpg" alt="Premium Brands">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Brands Section -->
+    <section class="featured-brands-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Brands</h2>
+                <p class="section-subtitle">Most popular brands on ShopVerse</p>
+            </div>
+            <div class="brand-filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="electronics">Electronics</button>
+                <button class="filter-tab" data-filter="fashion">Fashion</button>
+                <button class="filter-tab" data-filter="home">Home & Furniture</button>
+                <button class="filter-tab" data-filter="beauty">Health & Beauty</button>
+            </div>
+            <div class="brands-grid">
+                <!-- Brand cards -->
+                <div class="brand-card" data-category="electronics">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 1">
+                    </div>
+                    <h3 class="brand-name">TechMaster</h3>
+                    <p class="brand-products">142 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="fashion">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 2">
+                    </div>
+                    <h3 class="brand-name">Fashionista</h3>
+                    <p class="brand-products">98 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="beauty">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 3">
+                    </div>
+                    <h3 class="brand-name">NaturGlow</h3>
+                    <p class="brand-products">76 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="home">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 4">
+                    </div>
+                    <h3 class="brand-name">HomeEssentials</h3>
+                    <p class="brand-products">112 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="electronics">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 5">
+                    </div>
+                    <h3 class="brand-name">SoundWave</h3>
+                    <p class="brand-products">54 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="fashion">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 6">
+                    </div>
+                    <h3 class="brand-name">UrbanStyle</h3>
+                    <p class="brand-products">87 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="beauty">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 7">
+                    </div>
+                    <h3 class="brand-name">PureBeauty</h3>
+                    <p class="brand-products">63 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+                <div class="brand-card" data-category="home">
+                    <div class="brand-logo">
+                        <img src="../assets/images/1.jpg" alt="Brand 8">
+                    </div>
+                    <h3 class="brand-name">CozyLiving</h3>
+                    <p class="brand-products">91 Products</p>
+                    <a href="#" class="brand-link">View Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Brands Banner -->
+    <section class="trending-brands-banner">
+        <div class="container">
+            <div class="banner-split">
+                <div class="banner-image">
+                    <img src="../assets/images/1.jpg" alt="Trending Brands">
+                </div>
+                <div class="banner-content">
+                    <h2>Discover Trending Brands</h2>
+                    <p>The newest and most exciting brands making waves in the market</p>
+                    <a href="trending-brands.html" class="btn btn-outline">Explore Trending Brands</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alphabetical Brand Directory -->
+    <section class="brand-directory-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Brand Directory</h2>
+                <p class="section-subtitle">Find brands alphabetically</p>
+            </div>
+            <div class="alphabet-filter">
+                <button class="letter active" data-letter="all">All</button>
+                <button class="letter" data-letter="a">A</button>
+                <button class="letter" data-letter="b">B</button>
+                <button class="letter" data-letter="c">C</button>
+                <button class="letter" data-letter="d">D</button>
+                <button class="letter" data-letter="e">E</button>
+                <button class="letter" data-letter="f">F</button>
+                <button class="letter" data-letter="g">G</button>
+                <button class="letter" data-letter="h">H</button>
+                <button class="letter" data-letter="i">I</button>
+                <button class="letter" data-letter="j">J</button>
+                <button class="letter" data-letter="k">K</button>
+                <button class="letter" data-letter="l">L</button>
+                <button class="letter" data-letter="m">M</button>
+                <button class="letter" data-letter="n">N</button>
+                <button class="letter" data-letter="o">O</button>
+                <button class="letter" data-letter="p">P</button>
+                <button class="letter" data-letter="q">Q</button>
+                <button class="letter" data-letter="r">R</button>
+                <button class="letter" data-letter="s">S</button>
+                <button class="letter" data-letter="t">T</button>
+                <button class="letter" data-letter="u">U</button>
+                <button class="letter" data-letter="v">V</button>
+                <button class="letter" data-letter="w">W</button>
+                <button class="letter" data-letter="x">X</button>
+                <button class="letter" data-letter="y">Y</button>
+                <button class="letter" data-letter="z">Z</button>
+            </div>
+            <div class="brand-list">
+                <div class="brand-letter-group" id="a">
+                    <h3 class="letter-heading">A</h3>
+                    <ul>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">Amazon Basics</a></li>
+                        <li><a href="#">Armani</a></li>
+                        <li><a href="#">Asus</a></li>
+                    </ul>
+                </div>
+                <div class="brand-letter-group" id="b">
+                    <h3 class="letter-heading">B</h3>
+                    <ul>
+                        <li><a href="#">Balenciaga</a></li>
+                        <li><a href="#">Bose</a></li>
+                        <li><a href="#">Bosch</a></li>
+                        <li><a href="#">Burberry</a></li>
+                    </ul>
+                </div>
+                <div class="brand-letter-group" id="c">
+                    <h3 class="letter-heading">C</h3>
+                    <ul>
+                        <li><a href="#">Calvin Klein</a></li>
+                        <li><a href="#">Canon</a></li>
+                        <li><a href="#">Casio</a></li>
+                        <li><a href="#">Chanel</a></li>
+                    </ul>
+                </div>
+                <!-- More letter groups would be here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new brands and exclusive offers</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="pages/help-center.html">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="pages/terms-of-use.html">Terms of Use</a>
+                        <a href="pages/privacy-policy.html">Privacy Policy</a>
+                        <a href="pages/sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/brands.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

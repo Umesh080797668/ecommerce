@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Brands | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/brands.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="pages/login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="pages/register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/brands.html">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="pages/brands.html">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="header__search">
+                            <form action="#" method="get" class="search-form">
+                                <div class="search-category">
+                                    <select name="category" id="search-category-mobile">
+                                        <option value="all">All Categories</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="home">Home & Furniture</option>
+                                        <option value="beauty">Beauty & Health</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Search for products..." name="search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="pages/shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li>Premium Brands</li>
+                </ul>
+                <h1>Premium Brands</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section with 3D Background -->
+    <section class="premium-hero-section">
+        <div class="hero-3d-background">
+            <div class="scene"></div>
+        </div>
+        <div class="container">
+            <div class="premium-hero-content">
+                <div class="premium-hero-text">
+                    <h2 class="title animate-up">Luxury Shopping Experience</h2>
+                    <p class="description animate-up delay-1">Discover exquisite products from the world's most prestigious brands. Craftsmanship, heritage, and exclusivity define our premium collection.</p>
+                    <div class="hero-buttons animate-up delay-2">
+                        <a href="#premium-collection" class="btn btn-primary btn-lg">Explore Collection</a>
+                        <a href="#premium-brands-list" class="btn btn-outline btn-lg">View All Brands</a>
+                    </div>
+                </div>
+                <div class="premium-hero-image animate-right">
+                    <img src="../assets/images/1.jpg" alt="Premium Brands">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features -->
+    <section class="premium-features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Authentic Products</h3>
+                        <p>100% genuine products with certification</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Premium Quality</h3>
+                        <p>Exceptional craftsmanship & materials</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>White Glove Delivery</h3>
+                        <p>Premium packaging & handling</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Personal Shopper</h3>
+                        <p>Dedicated support for premium customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Collection -->
+    <section class="premium-collection" id="premium-collection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Collection</h2>
+                <p class="section-subtitle">Expertly curated luxury products</p>
+            </div>
+            <div class="premium-category-tabs">
+                <button class="premium-tab active" data-category="all">All Categories</button>
+                <button class="premium-tab" data-category="fashion">Fashion</button>
+                <button class="premium-tab" data-category="watches">Watches & Jewelry</button>
+                <button class="premium-tab" data-category="home">Home & Decor</button>
+                <button class="premium-tab" data-category="beauty">Beauty & Fragrance</button>
+            </div>
+            <div class="premium-products-grid">
+                <!-- Premium product cards -->
+                <div class="premium-product-card" data-category="watches">
+                    <div class="product-badge">
+                        <span>Exclusive</span>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="../assets/images/1.jpg" alt="Luxury Watch">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">Rolex</div>
+                        <h3 class="product-title">Submariner Date</h3>
+                        <div class="product-price">$12,500.00</div>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <div class="premium-product-card" data-category="fashion">
+                    <div class="product-badge">
+                        <span>Limited Edition</span>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="../assets/images/1.jpg" alt="Designer Handbag">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">Gucci</div>
+                        <h3 class="product-title">GG Marmont Leather Bag</h3>
+                        <div class="product-price">$2,980.00</div>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <div class="premium-product-card" data-category="beauty">
+                    <div class="product-thumb">
+                        <img src="../assets/images/1.jpg" alt="Luxury Perfume">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">Chanel</div>
+                        <h3 class="product-title">N°5 Eau de Parfum</h3>
+                        <div class="product-price">$146.00</div>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <div class="premium-product-card" data-category="home">
+                    <div class="product-thumb">
+                        <img src="../assets/images/1.jpg" alt="Crystal Glassware">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">Baccarat</div>
+                        <h3 class="product-title">Massena Crystal Glassware Set</h3>
+                        <div class="product-price">$860.00</div>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <div class="premium-product-card" data-category="fashion">
+                    <div class="product-thumb">
+                        <img src="../assets/images/1.jpg" alt="Designer Shoes">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">Christian Louboutin</div>
+                        <h3 class="product-title">Kate 85mm Leather Pumps</h3>
+                        <div class="product-price">$745.00</div>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <div class="premium-product-card" data-category="watches">
+                    <div class="product-thumb">
+                        <img src="../assets/images/1.jpg" alt="Luxury Watch">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">Omega</div>
+                        <h3 class="product-title">Seamaster Diver 300M</h3>
+                        <div class="product-price">$5,400.00</div>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-outline btn-lg">View All Premium Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Premium Brands -->
+    <section class="premium-brands-grid" id="premium-brands-list">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Premium Brands</h2>
+                <p class="section-subtitle">The epitome of luxury and excellence</p>
+            </div>
+            <div class="premium-brands-carousel">
+                <div class="premium-brands-wrapper scrollable">
+                    <div class="premium-brand">
+                        <div class="brand-image">
+                            <img src="../assets/images/1.jpg" alt="Rolex">
+                        </div>
+                        <h3 class="brand-name">Rolex</h3>
+                        <a href="#" class="brand-link">Browse Collection</a>
+                    </div>
+                    <div class="premium-brand">
+                        <div class="brand-image">
+                            <img src="../assets/images/1.jpg" alt="Louis Vuitton">
+                        </div>
+                        <h3 class="brand-name">Louis Vuitton</h3>
+                        <a href="#" class="brand-link">Browse Collection</a>
+                    </div>
+                    <div class="premium-brand">
+                        <div class="brand-image">
+                            <img src="../assets/images/1.jpg" alt="Chanel">
+                        </div>
+                        <h3 class="brand-name">Chanel</h3>
+                        <a href="#" class="brand-link">Browse Collection</a>
+                    </div>
+                    <div class="premium-brand">
+                        <div class="brand-image">
+                            <img src="../assets/images/1.jpg" alt="Gucci">
+                        </div>
+                        <h3 class="brand-name">Gucci</h3>
+                        <a href="#" class="brand-link">Browse Collection</a>
+                    </div>
+                    <div class="premium-brand">
+                        <div class="brand-image">
+                            <img src="../assets/images/1.jpg" alt="Dior">
+                        </div>
+                        <h3 class="brand-name">Dior</h3>
+                        <a href="#" class="brand-link">Browse Collection</a>
+                    </div>
+                    <div class="premium-brand">
+                        <div class="brand-image">
+                            <img src="../assets/images/1.jpg" alt="Hermes">
+                        </div>
+                        <h3 class="brand-name">Hermès</h3>
+                        <a href="#" class="brand-link">Browse Collection</a>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Magazine Section -->
+    <section class="luxury-magazine-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Luxury Insider</h2>
+                <p class="section-subtitle">Expert insights and premium brand stories</p>
+            </div>
+            <div class="magazine-grid">
+                <div class="magazine-article">
+                    <div class="article-image">
+                        <img src="../assets/images/1.jpg" alt="Luxury Article 1">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Fashion</span>
+                        <h3 class="article-title">The Art of Watchmaking: Inside the Rolex Manufacture</h3>
+                        <p class="article-excerpt">Discover the meticulous craftsmanship and precision behind every Rolex timepiece...</p>
+                        <a href="#" class="article-link">Read More</a>
+                    </div>
+                </div>
+                <div class="magazine-article">
+                    <div class="article-image">
+                        <img src="../assets/images/1.jpg" alt="Luxury Article 2">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Lifestyle</span>
+                        <h3 class="article-title">The Heritage of Hermès: From Saddles to Status Symbols</h3>
+                        <p class="article-excerpt">The fascinating journey of how a saddle-making workshop became a global luxury icon...</p>
+                        <a href="#" class="article-link">Read More</a>
+                    </div>
+                </div>
+                <div class="magazine-article">
+                    <div class="article-image">
+                        <img src="../assets/images/1.jpg" alt="Luxury Article 3">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Beauty</span>
+                        <h3 class="article-title">The Science of Luxury Skincare: What Makes La Mer Worth It</h3>
+                        <p class="article-excerpt">Analyzing the innovative ingredients and technologies behind premium skincare...</p>
+                        <a href="#" class="article-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Membership -->
+    <section class="premium-membership-section">
+        <div class="container">
+            <div class="membership-banner">
+                <div class="membership-content">
+                    <h2>Join Our Premium Membership</h2>
+                    <p>Enjoy exclusive benefits including early access to new collections, private shopping events, complimentary gift wrapping, and personal shopping assistance.</p>
+                    <ul class="membership-benefits">
+                        <li><i class="fas fa-check-circle"></i> VIP early access to new arrivals</li>
+                        <li><i class="fas fa-check-circle"></i> Invitation to exclusive events</li>
+                        <li><i class="fas fa-check-circle"></i> Complimentary gift wrapping</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated personal shopper</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Become a Member</a>
+                </div>
+                <div class="membership-image">
+                    <img src="../assets/images/1.jpg" alt="Premium Membership">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="pages/help-center.html">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="pages/terms-of-use.html">Terms of Use</a>
+                        <a href="pages/privacy-policy.html">Privacy Policy</a>
+                        <a href="pages/sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/brands.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

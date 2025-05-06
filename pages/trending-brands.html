@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Brands | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/brands.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="pages/login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="pages/register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item active"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/brands.html">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="pages/brands.html">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="header__search">
+                            <form action="#" method="get" class="search-form">
+                                <div class="search-category">
+                                    <select name="category" id="search-category-mobile">
+                                        <option value="all">All Categories</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="home">Home & Furniture</option>
+                                        <option value="beauty">Beauty & Health</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Search for products..." name="search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item active"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="pages/shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="#">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="#">Premium Brands</a></li>
+                            <li><a href="#">Trending Brands</a></li>
+                            <li><a href="#">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li>Trending Brands</li>
+                </ul>
+                <h1>Trending Brands</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Hero Section -->
+    <section class="trending-hero-section">
+        <div class="container">
+            <div class="trending-hero-content">
+                <div class="trending-hero-text">
+                    <span class="subtitle animate-up">What's Hot Right Now</span>
+                    <h2 class="title animate-up delay-1">Discover the Brands Everyone's Talking About</h2>
+                    <p class="description animate-up delay-2">Stay ahead of the curve with innovative brands that are redefining style, sustainability, and consumer experiences.</p>
+                </div>
+                <div class="trending-stats animate-up delay-3">
+                    <div class="stat">
+                        <span class="stat-number" data-count="78">0</span>
+                        <span class="stat-label">Trending Brands</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="1240">0</span>
+                        <span class="stat-label">New Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="32">0</span>
+                        <span class="stat-label">Exclusive Deals</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trending-hero-bg">
+            <img src="../assets/images/1.jpg" alt="Trending Brands">
+        </div>
+    </section>
+
+    <!-- Trending Categories Section -->
+    <section class="trending-categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Browse Trending Categories</h2>
+                <p class="section-subtitle">Discover what's popular in different sectors</p>
+            </div>
+            <div class="trending-categories">
+                <a href="#trending-fashion" class="trending-category">
+                    <div class="category-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3>Fashion</h3>
+                </a>
+                <a href="#trending-tech" class="trending-category">
+                    <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>Tech</h3>
+                </a>
+                <a href="#trending-beauty" class="trending-category">
+                    <div class="category-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Beauty</h3>
+                </a>
+                <a href="#trending-home" class="trending-category">
+                    <div class="category-icon"><i class="fas fa-home"></i></div>
+                    <h3>Home</h3>
+                </a>
+                <a href="#trending-fitness" class="trending-category">
+                    <div class="category-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Fitness</h3>
+                </a>
+                <a href="#trending-sustainable" class="trending-category">
+                    <div class="category-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Sustainable</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Brands This Month -->
+    <section class="hot-brands-section" id="trending-fashion">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hottest Brands This Month</h2>
+                <p class="section-subtitle">Brands gaining momentum and consumer attention</p>
+            </div>
+            <div class="trending-brands-grid">
+                <div class="trending-brand-card">
+                    <div class="brand-rank">1</div>
+                    <div class="brand-image">
+                        <img src="../assets/images/1.jpg" alt="Brand 1">
+                    </div>
+                    <div class="brand-info">
+                        <h3 class="brand-name">EcoWear</h3>
+                        <p class="brand-category">Sustainable Fashion</p>
+                        <div class="brand-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+127% this month</span>
+                        </div>
+                        <p class="brand-description">Pioneering eco-friendly fabrics and ethical manufacturing processes, revolutionizing sustainable fashion.</p>
+                        <a href="#" class="btn btn-outline">Shop Collection</a>
+                    </div>
+                </div>
+                <div class="trending-brand-card">
+                    <div class="brand-rank">2</div>
+                    <div class="brand-image">
+                        <img src="../assets/images/1.jpg" alt="Brand 2">
+                    </div>
+                    <div class="brand-info">
+                        <h3 class="brand-name">TechFit</h3>
+                        <p class="brand-category">Smart Fitness</p>
+                        <div class="brand-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+96% this month</span>
+                        </div>
+                        <p class="brand-description">Combining cutting-edge technology with fitness gear for optimal performance tracking and improvement.</p>
+                        <a href="#" class="btn btn-outline">Shop Collection</a>
+                    </div>
+                </div>
+                <div class="trending-brand-card">
+                    <div class="brand-rank">3</div>
+                    <div class="brand-image">
+                        <img src="../assets/images/1.jpg" alt="Brand 3">
+                    </div>
+                    <div class="brand-info">
+                        <h3 class="brand-name">NeoHome</h3>
+                        <p class="brand-category">Smart Home</p>
+                        <div class="brand-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+83% this month</span>
+                        </div>
+                        <p class="brand-description">Creating intuitive smart home solutions that seamlessly integrate with modern lifestyles.</p>
+                        <a href="#" class="btn btn-outline">Shop Collection</a>
+                    </div>
+                </div>
+                <div class="trending-brand-card">
+                    <div class="brand-rank">4</div>
+                    <div class="brand-image">
+                        <img src="../assets/images/1.jpg" alt="Brand 4">
+                    </div>
+                    <div class="brand-info">
+                        <h3 class="brand-name">PureGlow</h3>
+                        <p class="brand-category">Clean Beauty</p>
+                        <div class="brand-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+71% this month</span>
+                        </div>
+                        <p class="brand-description">Developing clean beauty products with transparent ingredient sourcing and sustainable packaging.</p>
+                        <a href="#" class="btn btn-outline">Shop Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Trending Collections -->
+    <section class="trending-collections-section" id="trending-tech">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Collections</h2>
+                <p class="section-subtitle">Curated selections from trending brands</p>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="../assets/images/1.jpg" alt="Tech Collection">
+                        <div class="collection-overlay"></div>
+                    </div>
+                    <div class="collection-content">
+                        <h3 class="collection-title">Next-Gen Tech</h3>
+                        <p class="collection-desc">Innovative gadgets reshaping how we live and work</p>
+                        <a href="#" class="btn btn-primary">Explore Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="../assets/images/1.jpg" alt="Eco Collection">
+                        <div class="collection-overlay"></div>
+                    </div>
+                    <div class="collection-content">
+                        <h3 class="collection-title">Eco Essentials</h3>
+                        <p class="collection-desc">Sustainable products for an environmentally conscious lifestyle</p>
+                        <a href="#" class="btn btn-primary">Explore Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="../assets/images/1.jpg" alt="Wellness Collection">
+                        <div class="collection-overlay"></div>
+                    </div>
+                    <div class="collection-content">
+                        <h3 class="collection-title">Modern Wellness</h3>
+                        <p class="collection-desc">Innovative approaches to health and self-care</p>
+                        <a href="#" class="btn btn-primary">Explore Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rising Star Brands -->
+    <section class="rising-stars-section" id="trending-beauty">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Rising Star Brands</h2>
+                <p class="section-subtitle">Emerging brands with remarkable innovation</p>
+            </div>
+            <div class="rising-stars-slider">
+                <div class="rising-stars-wrapper scrollable">
+                    <div class="rising-star-brand">
+                        <div class="star-image">
+                            <img src="../assets/images/1.jpg" alt="Rising Star 1">
+                        </div>
+                        <div class="star-content">
+                            <h3>LumiSkin</h3>
+                            <p class="star-category">Beauty</p>
+                            <p class="star-info">Launched in 2024</p>
+                            <p class="star-desc">Revolutionary LED-infused skincare with adaptive formulations.</p>
+                            <div class="star-stats">
+                                <span><i class="fas fa-heart"></i> 12.4k Favorites</span>
+                                <span><i class="fas fa-comment"></i> 9.6k Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rising-star-brand">
+                        <div class="star-image">
+                            <img src="../assets/images/1.jpg" alt="Rising Star 2">
+                        </div>
+                        <div class="star-content">
+                            <h3>AeroFit</h3>
+                            <p class="star-category">Fitness</p>
+                            <p class="star-info">Launched in 2024</p>
+                            <p class="star-desc">AI-powered fitness gear that adapts to your workout intensity.</p>
+                            <div class="star-stats">
+                                <span><i class="fas fa-heart"></i> 10.8k Favorites</span>
+                                <span><i class="fas fa-comment"></i> 7.3k Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rising-star-brand">
+                        <div class="star-image">
+                            <img src="../assets/images/1.jpg" alt="Rising Star 3">
+                        </div>
+                        <div class="star-content">
+                            <h3>GreenPack</h3>
+                            <p class="star-category">Accessories</p>
+                            <p class="star-info">Launched in 2024</p>
+                            <p class="star-desc">Biodegradable bags and accessories from ocean waste materials.</p>
+                            <div class="star-stats">
+                                <span><i class="fas fa-heart"></i> 8.7k Favorites</span>
+                                <span><i class="fas fa-comment"></i> 6.2k Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rising-star-brand">
+                        <div class="star-image">
+                            <img src="../assets/images/1.jpg" alt="Rising Star 4">
+                        </div>
+                        <div class="star-content">
+                            <h3>NomadDesk</h3>
+                            <p class="star-category">Home Office</p>
+                            <p class="star-info">Launched in 2023</p>
+                            <p class="star-desc">Portable, modular desk solutions for the modern remote worker.</p>
+                            <div class="star-stats">
+                                <span><i class="fas fa-heart"></i> 7.9k Favorites</span>
+                                <span><i class="fas fa-comment"></i> 5.5k Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trend Spotlight Feature -->
+    <section class="trend-spotlight-section" id="trending-sustainable">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trend Spotlight</h2>
+                <p class="section-subtitle">Deep dive into emerging consumer trends</p>
+            </div>
+            <div class="trend-spotlight">
+                <div class="spotlight-content">
+                    <div class="spotlight-badge">Trending Now</div>
+                    <h3 class="spotlight-title">Sustainable Innovation</h3>
+                    <p class="spotlight-description">Consumers are increasingly seeking brands that prioritize sustainability without compromising on quality or design. From biodegradable materials to zero-waste manufacturing processes, eco-conscious brands are redefining industry standards.</p>
+                    <div class="spotlight-stats">
+                        <div class="stat">
+                            <span class="stat-number">78%</span>
+                            <span class="stat-label">of consumers prefer eco-friendly products</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3.2x</span>
+                            <span class="stat-label">growth in sustainable brands this year</span>
+                        </div>
+                    </div>
+                    <div class="spotlight-brands">
+                        <h4>Leading this trend:</h4>
+                        <div class="brand-pills">
+                            <a href="#" class="brand-pill">EcoWear</a>
+                            <a href="#" class="brand-pill">GreenPack</a>
+                            <a href="#" class="brand-pill">TerraCycle</a>
+                            <a href="#" class="brand-pill">OceanicGoods</a>
+                            <a href="#" class="brand-pill">BioDwell</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="spotlight-image">
+                    <img src="../assets/images/1.jpg" alt="Sustainable Innovation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Stories -->
+    <section class="brand-stories-section" id="trending-fitness">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Brand Stories</h2>
+                <p class="section-subtitle">The journeys behind trending brands</p>
+            </div>
+            <div class="brand-stories-grid">
+                <div class="brand-story-card">
+                    <div class="story-image">
+                        <img src="../assets/images/1.jpg" alt="Brand Story 1">
+                    </div>
+                    <div class="story-content">
+                        <div class="story-date">May 2, 2025</div>
+                        <h3 class="story-title">How TechFit Disrupted the Fitness Industry</h3>
+                        <p class="story-excerpt">Founded by two former athletes, TechFit emerged from a simple idea: what if your workout gear could think?</p>
+                        <a href="#" class="story-link">Read Full Story</a>
+                    </div>
+                </div>
+                <div class="brand-story-card">
+                    <div class="story-image">
+                        <img src="../assets/images/1.jpg" alt="Brand Story 2">
+                    </div>
+                    <div class="story-content">
+                        <div class="story-date">April 28, 2025</div>
+                        <h3 class="story-title">EcoWear: From College Project to Global Movement</h3>
+                        <p class="story-excerpt">What started in a university lab has transformed into one of the fastest-growing sustainable fashion brands.</p>
+                        <a href="#" class="story-link">Read Full Story</a>
+                    </div>
+                </div>
+                <div class="brand-story-card">
+                    <div class="story-image">
+                        <img src="../assets/images/1.jpg" alt="Brand Story 3">
+                    </div>
+                    <div class="story-content">
+                        <div class="story-date">April 15, 2025</div>
+                        <h3 class="story-title">PureGlow: The Clean Beauty Revolution</h3>
+                        <p class="story-excerpt">How one woman's battle with skin sensitivities led to a clean beauty brand trusted by millions.</p>
+                        <a href="#" class="story-link">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-outline">Read All Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Updated Section -->
+    <section class="stay-updated-section">
+        <div class="container">
+            <div class="stay-updated-content">
+                <h2>Stay Updated On Trending Brands</h2>
+                <p>Subscribe to receive exclusive updates on emerging brands, limited collections, and special offers.</p>
+                <form class="subscribe-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+                <div class="social-follow">
+                    <p>Follow us for daily trend updates:</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="pages/help-center.html">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="pages/terms-of-use.html">Terms of Use</a>
+                        <a href="pages/privacy-policy.html">Privacy Policy</a>
+                        <a href="pages/sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/brands.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+
+</html>

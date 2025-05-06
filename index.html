@@ -19,78 +19,7 @@
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <style>
-        /* Mobile Menu Dropdown Styles */
-        
-        .mobile-nav__item.has-dropdown.open .mobile-dropdown {
-            max-height: 500px !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            display: block !important;
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-        
-        .mobile-dropdown {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-            padding-left: 15px;
-        }
-        
-        .mobile-nav__item.has-dropdown {
-            position: relative;
-        }
-        
-        .dropdown-toggle {
-            position: absolute;
-            right: 0;
-            top: 0;
-            padding: 10px 15px;
-            cursor: pointer;
-            z-index: 2;
-        }
-        
-        .mobile-nav__item.has-dropdown.open>a {
-            color: var(--primary-color);
-        }
-        
-        .mobile-nav__item.has-dropdown>a {
-            padding-right: 40px;
-            /* Make room for the toggle button */
-        }
-        /* THIS IS THE FIX: Show dropdown when parent has 'open' class */
-        
-        .mobile-nav__item.has-dropdown.open .mobile-dropdown {
-            max-height: 500px;
-            /* A value large enough to accommodate all dropdown items */
-        }
-        /* Ensure mobile menu is visible when active */
-        
-        .mobile-menu.active {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
-        }
-        /* Body class when menu is open to prevent scrolling */
-        
-        body.mobile-menu-open {
-            overflow: hidden;
-        }
-        /* Style the dropdown items */
-        
-        .mobile-dropdown li {
-            padding: 8px 0;
-        }
-        
-        .mobile-dropdown li a {
-            color: var(--text-color);
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .mobile-dropdown li a:hover {
-            color: var(--primary-color);
-        }
+
     </style>
 </head>
 
@@ -232,11 +161,11 @@
                                 </ul>
                             </li>
                             <li class="main-nav__item has-dropdown">
-                                <a href="#">Brands <i class="fas fa-chevron-down"></i></a>
+                                <a href="pages/brands.html">Brands <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Premium Brands</a></li>
-                                    <li><a href="#">Trending Brands</a></li>
-                                    <li><a href="#">All Brands</a></li>
+                                    <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="pages/brands.html">All Brands</a></li>
                                 </ul>
                             </li>
                             <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
@@ -322,12 +251,12 @@
                         </ul>
                     </li>
                     <li class="mobile-nav__item has-dropdown">
-                        <a href="#">Brands</a>
+                        <a href="pages/brands.html">Brands</a>
                         <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                         <ul class="mobile-dropdown">
-                            <li><a href="#">Premium Brands</a></li>
-                            <li><a href="#">Trending Brands</a></li>
-                            <li><a href="#">All Brands</a></li>
+                            <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                            <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                            <li><a href="pages/brands.html">All Brands</a></li>
                         </ul>
                     </li>
                     <li class="mobile-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
