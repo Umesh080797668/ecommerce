@@ -390,3 +390,46 @@
 .dark-mode .copyright {
     color: var(--text-light);
 }
+
+
+/* Auth Pages */
+
+.dark-mode .auth-container {
+    border: 1px solid var(--black);
+}
+
+.dark-mode .auth-card {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.dark-mode .auth-card__header p {
+    color: var(--text-color);
+}
+
+.dark-mode .auth-card__header h2 {
+    color: var(--dark-color) !important;
+}
+
+.dark-mode .auth-form label,
+.dark-mode .form-options label {
+    color: var(--text-color);
+}
+
+.dark-mode .input-group {
+    background-color: var(--light-bg);
+    border-color: var(--border-color);
+}
+
+.dark-mode .input-group input {
+    color: var(--text-color) !important;
+    background-color: transparent;
+}
+
+.dark-mode .forgot-password {
+    color: var(--primary-color);
+}
+
+.dark-mode .auth-card__footer p {
+    color: var(--text-color);
+}
