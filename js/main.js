@@ -589,7 +589,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initApp();
     initPreloader();
     initBackToTop();
-    initMobileMenu();
     updateCounters();
     initLocalStorageSync();
     setupAnalytics();
@@ -699,6 +698,9 @@ function initBackToTop() {
 /**
  * Initialize mobile menu
  */
+/**
+ * Mobile Menu functionality
+ */
 function initMobileMenu() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -750,35 +752,40 @@ function initMobileMenu() {
             });
         });
     }
+    initMobileSearch();
+}
+
+function initMobileSearch() {
+    const searchToggle = document.querySelector('.search-toggle');
+    const mobileSearch = document.querySelector('.header__mobile-action .header__search');
     
-    document.addEventListener("DOMContentLoaded", function() {
-        const searchToggle = document.querySelector('.search-toggle');
-        const headerSearch = document.querySelector('.header__search');
+    // Check if elements exist
+    if (!searchToggle || !mobileSearch) {
+        console.error('Mobile search elements not found');
+        return;
+    }
+    
+    // Add event listener for search toggle
+    searchToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // Prevent event bubbling
         
-        if (searchToggle && headerSearch) {
-            // Toggle search form visibility when search icon is clicked
-            searchToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                headerSearch.classList.toggle('active');
-                
-                // Position the search form properly below the header
-                const headerMobile = document.querySelector('.header__mobile');
-                if (headerMobile) {
-                    const headerHeight = headerMobile.offsetHeight;
-                    headerSearch.style.top = headerHeight + 'px';
-                }
-            });
-            
-            // Close search form when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!searchToggle.contains(e.target) && 
-                    !headerSearch.contains(e.target) && 
-                    headerSearch.classList.contains('active')) {
-                    headerSearch.classList.remove('active');
-                }
-            });
+        // Toggle search form visibility using the active class
+        mobileSearch.classList.toggle('active');
+        searchToggle.classList.toggle('active');
+    });
+    
+    // Close search when clicking outside
+    document.addEventListener('click', function(e) {
+        if (mobileSearch.classList.contains('active') && 
+            !mobileSearch.contains(e.target) && 
+            !searchToggle.contains(e.target)) {
+            mobileSearch.classList.remove('active');
+            searchToggle.classList.remove('active');
         }
     });
+    
+    console.log('Mobile search initialized');
 }
 
 /**

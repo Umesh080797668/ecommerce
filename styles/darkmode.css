@@ -141,6 +141,10 @@
     background-color: var(--light-bg);
 }
 
+.dark-mode .mobile-menu__header .logo span {
+    color: var(--light-bg);
+}
+
 
 /* Theme Toggle */
 

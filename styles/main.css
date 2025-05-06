@@ -998,6 +998,10 @@
         border-bottom: 1px solid var(--border-color);
     }
     
+    .mobile-menu__header .logo h1 span {
+        color: var(--white);
+    }
+    
     .mobile-nav__item>a {
         display: block;
         padding: 0.75rem 1.5rem;
