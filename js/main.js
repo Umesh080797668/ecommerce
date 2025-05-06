@@ -420,7 +420,7 @@ function initQuickView() {
                 rating: 4.5,
                 reviews: 42,
                 category: 'Electronics',
-                image: 'https://via.placeholder.com/500',
+                image: '../assets/images/1.jpg',
                 description: 'Experience premium audio with these wireless noise cancelling headphones. Featuring advanced noise cancellation technology, premium sound quality, and long-lasting battery life.',
                 features: [
                     'Active Noise Cancellation',
@@ -443,7 +443,7 @@ function initQuickView() {
             rating: 5,
             reviews: 10,
             category: 'Category',
-            image: 'https://via.placeholder.com/500',
+            image: '../assets/images/1.jpg',
             description: 'Product description goes here.',
             features: ['Feature 1', 'Feature 2', 'Feature 3'],
             availability: 'In Stock',

@@ -251,7 +251,7 @@ function initWishlist() {
                     </div>
                     
                     <div class="col-price" data-label="Price">
-                        <div class="product-price">$${item.price.toFixed(2)}</div>
+                        <div class="product-price">$${item.price ? item.price.toFixed(2) : '0.00'}</div>
                     </div>
                     
                     <div class="col-stock" data-label="Stock Status">
@@ -426,7 +426,7 @@ function initWishlist() {
             
             productCard.innerHTML = `
                 <div class="product-thumb">
-                    <a href="product-detail.html">
+                    <a href="product-detail.html?id=${product.id}">
                         <img src="${product.image}" alt="${product.name}">
                     </a>
                     <div class="product-quick-actions">
@@ -447,7 +447,7 @@ function initWishlist() {
                 <div class="product-content">
                     <div class="product-category">${product.category}</div>
                     <h3 class="product-title">
-                        <a href="product-detail.html">${product.name}</a>
+                        <a href="product-detail.html?id=${product.id}">${product.name}</a>
                     </h3>
                     <div class="product-rating">
                         <i class="fas fa-star"></i>

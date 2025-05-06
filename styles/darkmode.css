@@ -433,3 +433,25 @@
 .dark-mode .auth-card__footer p {
     color: var(--text-color);
 }
+
+.dark-mode .quantity {
+    border-color: var(--border-color);
+    background-color: var(--light-bg);
+}
+
+.dark-mode .quantity-btn {
+    background: var(--border-color);
+    color: var(--text-color);
+}
+
+.dark-mode .quantity-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.dark-mode .quantity input {
+    background: var(--light-bg);
+    color: var(--text-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}

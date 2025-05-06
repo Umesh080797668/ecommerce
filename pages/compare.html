@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wishlist | ShopVerse</title>
+    <title>Compare Products | ShopVerse</title>
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../styles/darkmode.css">
     <link rel="stylesheet" href="../styles/animations.css">
     <link rel="stylesheet" href="../styles/responsive.css">
-    <link rel="stylesheet" href="../styles/wishlist.css">
+    <link rel="stylesheet" href="../styles/compare.css">
 </head>
 
 <body>
@@ -94,16 +94,16 @@
                         </form>
                     </div>
                     <div class="header__action">
-                        <div class="action__item compare">
-                            <a href="pages/compare.html" class="action__link">
-                                <i class="fas fa-sync-alt"></i>
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
                                 <span class="count">0</span>
                             </a>
                         </div>
-                        <div class="action__item wishlist active">
-                            <a href="wishlist.html" class="action__link">
-                                <i class="fas fa-heart"></i>
-                                <span class="count wishlist-count">0</span>
+                        <div class="action__item compare">
+                            <a href="compare.html" class="action__link active">
+                                <i class="fas fa-sync-alt"></i>
+                                <span class="count" id="compare-count">0</span>
                             </a>
                         </div>
                         <div class="action__item cart">
@@ -116,7 +116,6 @@
                                     <i class="fas fa-shopping-bag"></i>
                                     <p>Your cart is empty</p>
                                 </div>
-                                <!-- Mini cart items will be dynamically added here -->
                                 <div class="mini-cart__footer">
                                     <div class="mini-cart__total">
                                         <span>Total:</span>
@@ -154,7 +153,7 @@
                     </div>
                     <nav class="main-nav">
                         <ul class="main-nav__list">
-                            <li class="main-nav__item active"><a href="../index.html">Home</a></li>
+                            <li class="main-nav__item"><a href="../index.html">Home</a></li>
                             <li class="main-nav__item has-dropdown">
                                 <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
                                 <ul class="dropdown">
@@ -187,149 +186,129 @@
             </div>
         </div>
         <div class="header__mobile">
-            <div class="container">
-                <div class="header__mobile-content">
-                    <div class="mobile-menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="logo">
-                        <a href="../index.html">
-                            <h1><span>Shop</span>Verse</h1>
-                        </a>
-                    </div>
-                    <div class="header__mobile-action">
-                        <div class="action__item search-toggle">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div class="header__search">
-                            <form action="#" method="get" class="search-form">
-                                <div class="search-category">
-                                    <select name="category" id="search-category-mobile">
-                                        <option value="all">All Categories</option>
-                                        <option value="electronics">Electronics</option>
-                                        <option value="fashion">Fashion</option>
-                                        <option value="home">Home & Furniture</option>
-                                        <option value="beauty">Beauty & Health</option>
-                                    </select>
-                                </div>
-                                <input type="text" placeholder="Search for products..." name="search">
-                                <button type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                        </div>
-                        <div class="action__item cart">
-                            <a href="cart.html" class="action__link">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span class="count">0</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Mobile header content would go here, similar to index.html -->
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <div class="mobile-menu__header">
-            <div class="logo">
-                <a href="../index.html">
-                    <h1><span>Shop</span>Verse</h1>
-                </a>
-            </div>
-            <div class="mobile-menu__close">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-        <div class="mobile-menu__body">
-            <nav class="mobile-nav">
-                <ul class="mobile-nav__list">
-                    <li class="mobile-nav__item active"><a href="../index.html">Home</a></li>
-                    <li class="mobile-nav__item has-dropdown">
-                        <a href="shop.html">Shop</a>
-                        <ul class="mobile-dropdown">
-                            <li><a href="new-arrivals.html">New Arrivals</a></li>
-                            <li><a href="best-sellers.html">Best Sellers</a></li>
-                            <li><a href="special-offers.html">Special Offers</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                    <li class="mobile-nav__item has-dropdown">
-                        <a href="brands.html">Brands</a>
-                        <ul class="mobile-dropdown">
-                            <li><a href="premium-brands.html">Premium Brands</a></li>
-                            <li><a href="trending-brands.html">Trending Brands</a></li>
-                            <li><a href="brands.html">All Brands</a></li>
-                        </ul>
-                    </li>
-                    <li class="mobile-nav__item"><a href="flash-deals.html">Flash Deals</a></li>
-                    <li class="mobile-nav__item"><a href="vendor-dashboard.html">Sell on ShopVerse</a></li>
-                    <li class="mobile-nav__item"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu__user">
-                <a href="login.html" class="btn btn-outline">Login</a>
-                <a href="register.html" class="btn btn-primary">Register</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page Header -->
-    <section class="page-header legal-header">
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
         <div class="container">
-            <div class="page-header__content">
-                <h1>My Wishlist</h1>
-                <nav class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <span class="divider">/</span>
-                    <span class="active">Wishlist</span>
-                </nav>
+            <div class="breadcrumb-content">
+                <h1>Compare Products</h1>
+                <ul class="breadcrumb">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li class="active">Compare Products</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Wishlist Section -->
-    <section class="wishlist-section section-padding">
+    <!-- Compare Section -->
+    <section class="compare-section">
         <div class="container">
-            <div class="wishlist-empty" style="display: none;">
-                <div class="empty-state">
-                    <i class="fas fa-heart-broken"></i>
-                    <h3>Your wishlist is empty</h3>
-                    <p>Add items that you like to your wishlist and they will show here</p>
-                    <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
-                </div>
-            </div>
-
-            <div class="wishlist-container">
-                <div class="wishlist-header">
-                    <div class="row">
-                        <div class="col-product">Product</div>
-                        <div class="col-price">Unit Price</div>
-                        <div class="col-stock">Stock Status</div>
-                        <div class="col-actions">Actions</div>
+            <div class="compare-wrapper">
+                <div class="compare-actions">
+                    <button id="clear-all" class="btn btn-outline"><i class="fas fa-trash-alt"></i> Clear All</button>
+                    <div class="add-product">
+                        <button id="add-product-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Add Product</button>
+                        <div class="product-search-dropdown">
+                            <input type="text" placeholder="Search for products..." id="product-search">
+                            <div class="search-results">
+                                <!-- Search results will be dynamically populated here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div id="wishlist-items">
-                    <!-- Wishlist items will be dynamically added here -->
+                <div id="empty-compare" class="empty-compare">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>No Products to Compare</h3>
+                    <p>Add products to start comparing</p>
+                    <a href="shop.html" class="btn btn-primary">Start Shopping</a>
                 </div>
 
-                <div class="wishlist-actions">
-                    <button id="clear-wishlist" class="btn btn-outline">Clear Wishlist</button>
-                    <button id="add-all-to-cart" class="btn btn-primary">Add All to Cart</button>
+                <div id="compare-table-container" class="compare-table-container">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th class="feature-name">Product</th>
+                                <td class="product-cell" id="product-template" style="display: none;">
+                                    <div class="product-info">
+                                        <div class="product-remove">
+                                            <button class="remove-product" data-id=""><i class="fas fa-times"></i></button>
+                                        </div>
+                                        <div class="product-image">
+                                            <img src="" alt="">
+                                        </div>
+                                        <h3 class="product-title">
+                                            <a href="product-detail.html"></a>
+                                        </h3>
+                                        <div class="product-price"></div>
+                                        <div class="product-rating">
+                                            <div class="stars"></div>
+                                            <span class="rating-count"></span>
+                                        </div>
+                                        <div class="product-availability"></div>
+                                        <button class="btn btn-primary add-to-cart" data-id=""><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                    </div>
+                                </td>
+                                <!-- Product columns will be dynamically added here -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="feature-name">Brand</th>
+                                <!-- Brand cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Category</th>
+                                <!-- Category cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Availability</th>
+                                <!-- Availability cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Color</th>
+                                <!-- Color cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Size</th>
+                                <!-- Size cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Weight</th>
+                                <!-- Weight cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Dimensions</th>
+                                <!-- Dimensions cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Material</th>
+                                <!-- Material cells will be dynamically added here -->
+                            </tr>
+                            <tr>
+                                <th class="feature-name">Features</th>
+                                <!-- Features cells will be dynamically added here -->
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Recently Viewed Section -->
-    <section class="products-section recently-viewed-section section-padding">
+    <section class="products-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Recently Viewed</h2>
-                <p class="section-subtitle">Products you've recently looked at</p>
+                <p class="section-subtitle">Products you've checked recently</p>
             </div>
             <div class="products-carousel">
-                <div class="products-grid scrollable">
+                <div class="products-grid scrollable" id="recently-viewed-products">
                     <!-- Recently viewed products will be dynamically added here -->
                 </div>
                 <div class="carousel-navigation">
@@ -361,32 +340,32 @@
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Shop</h3>
                         <ul class="widget-links">
-                            <li><a href="#">New Arrivals</a></li>
-                            <li><a href="#">Best Sellers</a></li>
-                            <li><a href="#">Flash Deals</a></li>
-                            <li><a href="#">Special Offers</a></li>
-                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Information</h3>
                         <ul class="widget-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Shipping Policy</a></li>
-                            <li><a href="#">Return & Refund</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget links-widget">
                         <h3 class="widget-title">Customer Service</h3>
                         <ul class="widget-links">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Track Your Order</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Help Center</a></li>
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="pages/help-center.html">Help Center</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget contact-widget">
@@ -405,11 +384,6 @@
                                 <a href="mailto:info@shopverse.com">info@shopverse.com</a>
                             </li>
                         </ul>
-                        <div class="business-hours">
-                            <p><strong>Working Hours:</strong></p>
-                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                            <p>Saturday: 9:00 AM - 4:00 PM</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -444,9 +418,9 @@
                 <div class="footer-bottom-content">
                     <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
                     <div class="footer-bottom-links">
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Sitemap</a>
+                        <a href="pages/terms-of-use.html">Terms of Use</a>
+                        <a href="pages/privacy-policy.html">Privacy Policy</a>
+                        <a href="pages/sitemap.html">Sitemap</a>
                     </div>
                 </div>
             </div>
@@ -457,10 +431,10 @@
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
     <!-- Scripts -->
-    <script src="../js/darkmode.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/wishlist.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/compare.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/darkmode.js"></script>
 </body>
 
 </html>

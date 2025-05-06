@@ -2858,3 +2858,183 @@
     .mobile-dropdown li a:hover {
         color: var(--primary-color);
     }
+    /* Quick View Modal Styles */
+    
+    .quick-view-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .quick-view-image {
+        overflow: hidden;
+        border-radius: var(--border-radius-md);
+        background-color: var(--light-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .quick-view-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 400px;
+    }
+    
+    .quick-view-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .quick-view-info .product-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .quick-view-info .product-rating {
+        margin-bottom: 1rem;
+    }
+    
+    .quick-view-info .product-price {
+        margin-bottom: 1.5rem;
+    }
+    
+    .quick-view-info .product-description {
+        margin-bottom: 1.5rem;
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+    
+    .product-features {
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-features h4 {
+        margin-bottom: 0.5rem;
+    }
+    
+    .product-features ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+    }
+    
+    .product-features li {
+        margin-bottom: 0.25rem;
+        color: var(--text-color);
+    }
+    
+    .product-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .meta-item {
+        display: flex;
+        align-items: center;
+    }
+    
+    .meta-label {
+        font-weight: 600;
+        min-width: 100px;
+    }
+    
+    .product-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: auto;
+    }
+    
+    .quantity {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-sm);
+        overflow: hidden;
+    }
+    
+    .quantity-btn {
+        background: var(--light-bg);
+        border: none;
+        width: 35px;
+        height: 40px;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+    }
+    
+    .quantity-btn:hover {
+        background: var(--primary-color);
+        color: var(--white);
+    }
+    
+    .quantity input {
+        width: 50px;
+        height: 40px;
+        border: none;
+        text-align: center;
+        background: var(--white);
+    }
+    
+    .product-actions .btn {
+        flex: 1;
+    }
+    /* Modal Content Adjustments */
+    
+    .modal-content {
+        max-width: 900px;
+        width: 90%;
+        overflow-y: auto;
+    }
+    
+    .quick-view-content {
+        padding: 2rem;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: var(--white);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+    
+    .close-modal:hover {
+        background: var(--light-bg);
+    }
+    /* Responsive styles for Quick View */
+    
+    @media (max-width: 767px) {
+        .quick-view-layout {
+            grid-template-columns: 1fr;
+        }
+        .quick-view-image {
+            height: 300px;
+        }
+        .product-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .quantity {
+            width: 100%;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+    }
