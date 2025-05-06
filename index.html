@@ -24,7 +24,8 @@
         .mobile-dropdown {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: max-height 0.5s ease;
+            padding-left: 15px;
         }
         
         .mobile-nav__item.has-dropdown {
@@ -48,6 +49,12 @@
             padding-right: 40px;
             /* Make room for the toggle button */
         }
+        /* THIS IS THE FIX: Show dropdown when parent has 'open' class */
+        
+        .mobile-nav__item.has-dropdown.open .mobile-dropdown {
+            max-height: 500px;
+            /* A value large enough to accommodate all dropdown items */
+        }
         /* Ensure mobile menu is visible when active */
         
         .mobile-menu.active {
@@ -59,6 +66,21 @@
         
         body.mobile-menu-open {
             overflow: hidden;
+        }
+        /* Style the dropdown items */
+        
+        .mobile-dropdown li {
+            padding: 8px 0;
+        }
+        
+        .mobile-dropdown li a {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-dropdown li a:hover {
+            color: var(--primary-color);
         }
     </style>
 </head>

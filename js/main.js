@@ -702,57 +702,78 @@ function initBackToTop() {
  * Mobile Menu functionality
  */
 function initMobileMenu() {
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenuClose = document.querySelector('.mobile-menu__close');
-    
-    if (mobileToggle && mobileMenu && mobileMenuClose) {
-        mobileToggle.addEventListener('click', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileDropdownItems = document.querySelectorAll('.mobile-nav__item.has-dropdown');
+
+    // Toggle mobile menu
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
             mobileMenu.classList.add('active');
             document.body.classList.add('mobile-menu-open');
         });
-        
+    }
+
+    // Close mobile menu
+    if (mobileMenuClose) {
         mobileMenuClose.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
             document.body.classList.remove('mobile-menu-open');
         });
     }
-    
-    // Mobile dropdown toggles
-    const dropdownToggles = document.querySelectorAll('.mobile-nav__item.has-dropdown .dropdown-toggle');
-    
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Toggle dropdown visibility
-            const parent = this.closest('.has-dropdown');
-            parent.classList.toggle('open');
-            
-            // Toggle dropdown item visibility
-            const dropdown = parent.querySelector('.mobile-dropdown');
-            if (parent.classList.contains('open')) {
-                dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
-                this.querySelector('i').classList.remove('fa-chevron-down');
-                this.querySelector('i').classList.add('fa-chevron-up');
-            } else {
-                dropdown.style.maxHeight = '0';
-                this.querySelector('i').classList.remove('fa-chevron-up');
-                this.querySelector('i').classList.add('fa-chevron-down');
+
+    // Close menu when clicking outside
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('mobile-menu-open');
             }
         });
-    });
-    
-    // Prevent dropdown items from closing mobile menu when clicked
-    const mobileDropdownLinks = document.querySelectorAll('.mobile-dropdown a');
-    mobileDropdownLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Don't prevent default here to allow navigation
-            // Just stop propagation so the dropdown doesn't close
-            e.stopPropagation();
-        });
-    });
+    }
 
+    // Toggle mobile dropdown
+    if (mobileDropdownItems.length) {
+        mobileDropdownItems.forEach(item => {
+            const dropdownToggle = item.querySelector('.dropdown-toggle');
+            
+            if (dropdownToggle) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Toggle the open class on the parent item
+                    item.classList.toggle('open');
+                    
+                    // Update icon
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (item.classList.contains('open')) {
+                            icon.classList.remove('fa-chevron-down');
+                            icon.classList.add('fa-chevron-up');
+                        } else {
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        }
+                    }
+                });
+            }
+            
+            // Prevent main navigation link from toggling dropdown
+            const link = item.querySelector('a');
+            const dropdown = item.querySelector('.mobile-dropdown');
+            if (link && dropdown) {
+                link.addEventListener('click', function(e) {
+                    // Only prevent default if link is clicked directly (not child links)
+                    if (e.currentTarget === link) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    }
+    
     initMobileSearch();
 }
 
