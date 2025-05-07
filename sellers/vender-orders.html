@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Orders | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/vendor.css">
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Vendor Header -->
+    <header class="vendor-header">
+        <div class="vendor-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="vendor-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search orders..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="vendor-user">
+            <div class="vendor-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">2</span>
+                </a>
+            </div>
+
+            <div class="vendor-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Vendor User">
+            </div>
+
+            <div class="vendor-user__info">
+                <div class="vendor-user__name">Sarah's Boutique</div>
+                <div class="vendor-user__role">Vendor</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vendor Layout -->
+    <div class="vendor-layout">
+        <!-- Sidebar -->
+        <aside class="vendor-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-orders.html" class="sidebar-menu__link active">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-analytics.html" class="sidebar-menu__link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-earnings.html" class="sidebar-menu__link">
+                            <i class="fas fa-wallet"></i>
+                            <span>Earnings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-promotions.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Promotions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-reviews.html" class="sidebar-menu__link">
+                            <i class="fas fa-comments"></i>
+                            <span>Reviews</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-message.html" class="sidebar-menu__link">
+                            <i class="fa-solid fa-message"></i>
+                            <span>Messages</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="vendor-main">
+            <h1>Orders Management</h1>
+            <p class="text-light mb-4">Track and manage all your customer orders in one place.</p>
+
+            <!-- Stats Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Pending</div>
+                        <div class="stat-card__value">14</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>3 less than yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Processing</div>
+                        <div class="stat-card__value">21</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>5 more than yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Shipped</div>
+                        <div class="stat-card__value">32</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8 more than yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Delivered</div>
+                        <div class="stat-card__value">148</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12 this month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Filters -->
+            <div class="filter-container mb-4">
+                <div class="row">
+                    <div class="filter-group">
+                        <label for="order-status">Filter by Status:</label>
+                        <select id="order-status" class="form-control">
+                            <option value="all">All Orders</option>
+                            <option value="pending">Pending</option>
+                            <option value="processing">Processing</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="canceled">Canceled</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-range">Date Range:</label>
+                        <select id="date-range" class="form-control">
+                            <option value="today">Today</option>
+                            <option value="yesterday">Yesterday</option>
+                            <option value="last7">Last 7 Days</option>
+                            <option value="last30" selected>Last 30 Days</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="search-orders">Search:</label>
+                        <input type="text" id="search-orders" class="form-control" placeholder="Order #, customer name...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders List -->
+            <div class="table-responsive">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-5782</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="rounded-circle">
+                                    </div>
+                                    <span>John Smith</span>
+                                </div>
+                            </td>
+                            <td>May 6, 2025</td>
+                            <td>3 items</td>
+                            <td>$245.99</td>
+                            <td><span class="product-status active">Shipped</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-print"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-5781</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="rounded-circle">
+                                    </div>
+                                    <span>Emma Johnson</span>
+                                </div>
+                            </td>
+                            <td>May 6, 2025</td>
+                            <td>1 item</td>
+                            <td>$189.99</td>
+                            <td><span class="product-status draft">Processing</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-print"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-5780</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="rounded-circle">
+                                    </div>
+                                    <span>Michael Brown</span>
+                                </div>
+                            </td>
+                            <td>May 5, 2025</td>
+                            <td>2 items</td>
+                            <td>$129.98</td>
+                            <td><span class="product-status inactive">Pending</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-print"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-5779</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="rounded-circle">
+                                    </div>
+                                    <span>Anna Williams</span>
+                                </div>
+                            </td>
+                            <td>May 5, 2025</td>
+                            <td>4 items</td>
+                            <td>$359.96</td>
+                            <td><span class="product-status active">Delivered</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-print"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-5778</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="rounded-circle">
+                                    </div>
+                                    <span>David Miller</span>
+                                </div>
+                            </td>
+                            <td>May 4, 2025</td>
+                            <td>1 item</td>
+                            <td>$49.99</td>
+                            <td><span class="product-status active">Delivered</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon"><i class="fas fa-print"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination-container mt-4">
+                <nav aria-label="Orders pagination">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/vendor.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle for mobile
+            const vendorToggle = document.querySelector('.vendor-toggle');
+            const vendorSidebar = document.querySelector('.vendor-sidebar');
+
+            if (vendorToggle && vendorSidebar) {
+                vendorToggle.addEventListener('click', function() {
+                    vendorSidebar.classList.toggle('active');
+                });
+
+                // Close sidebar when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.vendor-sidebar') &&
+                        !e.target.closest('.vendor-toggle') &&
+                        vendorSidebar.classList.contains('active')
+                    ) {
+                        vendorSidebar.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

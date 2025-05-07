@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Messages | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/vendor.css">
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Vendor Header -->
+    <header class="vendor-header">
+        <div class="vendor-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="vendor-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search messages..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="vendor-user">
+            <div class="vendor-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">2</span>
+                </a>
+            </div>
+
+            <div class="vendor-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Vendor User">
+            </div>
+
+            <div class="vendor-user__info">
+                <div class="vendor-user__name">Sarah's Boutique</div>
+                <div class="vendor-user__role">Vendor</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vendor Layout -->
+    <div class="vendor-layout">
+        <!-- Sidebar -->
+        <aside class="vendor-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-orders.html" class="sidebar-menu__link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-analytics.html" class="sidebar-menu__link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-earnings.html" class="sidebar-menu__link">
+                            <i class="fas fa-wallet"></i>
+                            <span>Earnings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-promotions.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Promotions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-reviews.html" class="sidebar-menu__link">
+                            <i class="fas fa-comments"></i>
+                            <span>Reviews</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-message.html" class="sidebar-menu__link active">
+                            <i class="fa-solid fa-message"></i>
+                            <span>Messages</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="vendor-main">
+            <h1>Messages</h1>
+            <p class="text-light mb-4">Communicate with your customers and the ShopVerse support team.</p>
+
+            <!-- Stats Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Total Conversations</div>
+                        <div class="stat-card__value">28</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>5 new this month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Unread Messages</div>
+                        <div class="stat-card__value">3</div>
+                        <div class="stat-card__change neutral">
+                            <span>Requires your attention</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Response Rate</div>
+                        <div class="stat-card__value">94%</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Avg. Response Time</div>
+                        <div class="stat-card__value">2.5 hrs</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>30 min faster than last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="messages-container">
+                <div class="messages-sidebar">
+                    <div class="messages-sidebar__header">
+                        <h3>Conversations</h3>
+                        <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> New Message</button>
+                    </div>
+
+                    <div class="messages-sidebar__search">
+                        <input type="text" class="form-control" placeholder="Search conversations...">
+                    </div>
+
+                    <div class="messages-tabs">
+                        <button class="messages-tab active">All</button>
+                        <button class="messages-tab">Customers</button>
+                        <button class="messages-tab">Support Team</button>
+                        <button class="messages-tab">Unread <span class="badge">3</span></button>
+                    </div>
+
+                    <div class="conversation-list">
+                        <div class="conversation-item active unread">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                                <span class="status-indicator online"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">John Smith</div>
+                                <div class="conversation-preview">I received my order but the wallet seems to have a small defect...</div>
+                                <div class="conversation-time">12:35 PM</div>
+                            </div>
+                            <div class="conversation-badge">2</div>
+                        </div>
+
+                        <div class="conversation-item unread">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="Support Team">
+                                <span class="status-indicator online"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">ShopVerse Support</div>
+                                <div class="conversation-preview">Your recent promotion has been approved and is now...</div>
+                                <div class="conversation-time">Yesterday</div>
+                            </div>
+                            <div class="conversation-badge">1</div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="Emma Johnson">
+                                <span class="status-indicator offline"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">Emma Johnson</div>
+                                <div class="conversation-preview">Thank you for the quick response! The handbag is perfect.</div>
+                                <div class="conversation-time">May 5</div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="Michael Brown">
+                                <span class="status-indicator offline"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">Michael Brown</div>
+                                <div class="conversation-preview">Do you have these sunglasses in tortoise shell color?</div>
+                                <div class="conversation-time">May 4</div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="Sarah Williams">
+                                <span class="status-indicator offline"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">Sarah Williams</div>
+                                <div class="conversation-preview">I'd like to return the dress and exchange for a size up.</div>
+                                <div class="conversation-time">May 3</div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="David Miller">
+                                <span class="status-indicator offline"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">David Miller</div>
+                                <div class="conversation-preview">The leather wallet is excellent quality. Thank you!</div>
+                                <div class="conversation-time">May 2</div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="conversation-avatar">
+                                <img src="https://via.placeholder.com/40" alt="ShopVerse Admin">
+                                <span class="status-indicator offline"></span>
+                            </div>
+                            <div class="conversation-info">
+                                <div class="conversation-name">ShopVerse Admin</div>
+                                <div class="conversation-preview">Your account has been verified successfully. You now have...</div>
+                                <div class="conversation-time">Apr 28</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="messages-content">
+                    <div class="messages-header">
+                        <div class="contact-info">
+                            <div class="contact-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                                <span class="status-indicator online"></span>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-name">John Smith</div>
+                                <div class="contact-status">Online</div>
+                            </div>
+                        </div>
+                        <div class="messages-actions">
+                            <button class="btn btn-icon"><i class="fas fa-phone"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-video"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-info-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="messages-body">
+                        <div class="message-date-divider">
+                            <span>Today - May 7, 2025</span>
+                        </div>
+
+                        <div class="message-item received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-sender">John Smith</div>
+                                <div class="message-text">
+                                    <p>Hello! I recently received my order #ORD-5782 with the Premium Leather Wallet, but there seems to be a small defect on one of the corners. The stitching is coming undone.</p>
+                                </div>
+                                <div class="message-time">10:05 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>Here's a photo of the issue:</p>
+                                    <div class="message-attachment">
+                                        <img src="https://via.placeholder.com/300x200" alt="Wallet defect">
+                                    </div>
+                                </div>
+                                <div class="message-time">10:06 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>I really like the wallet otherwise, but was wondering if I could get a replacement or have it repaired?</p>
+                                </div>
+                                <div class="message-time">10:07 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item sent">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>Hi John, I'm sorry to hear about the issue with your wallet. Thank you for sending the photo and bringing this to our attention.</p>
+                                </div>
+                                <div class="message-time">10:15 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item sent">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>I'd be happy to send you a replacement right away. Our products come with a quality guarantee, and this definitely doesn't meet our standards.</p>
+                                </div>
+                                <div class="message-time">10:16 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>That would be great, thank you! Do I need to return the defective one first?</p>
+                                </div>
+                                <div class="message-time">10:20 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item sent">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>No need to return it first. I'll send the replacement today, and we'll include a return label so you can send the defective one back at your convenience.</p>
+                                </div>
+                                <div class="message-time">10:25 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>Perfect! That's excellent customer service. Thank you so much for your help.</p>
+                                </div>
+                                <div class="message-time">10:30 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item sent">
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>You're welcome, John! Customer satisfaction is our top priority. I've just processed the replacement order (confirmation #RPL-1234). You should receive a shipping notification by end of day.</p>
+                                </div>
+                                <div class="message-time">10:35 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="message-item received">
+                            <div class="message-avatar">
+                                <img src="https://via.placeholder.com/40" alt="John Smith">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>That was fast! I appreciate the quick resolution. I'll keep an eye out for the shipping notification.</p>
+                                </div>
+                                <div class="message-time">12:35 PM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="messages-footer">
+                        <div class="message-attachments">
+                            <button class="btn btn-icon"><i class="fas fa-paperclip"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-image"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-smile"></i></button>
+                        </div>
+                        <div class="message-input">
+                            <textarea placeholder="Type your message here..."></textarea>
+                        </div>
+                        <div class="message-send">
+                            <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/vendor.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle for mobile
+            const vendorToggle = document.querySelector('.vendor-toggle');
+            const vendorSidebar = document.querySelector('.vendor-sidebar');
+
+            if (vendorToggle && vendorSidebar) {
+                vendorToggle.addEventListener('click', function() {
+                    vendorSidebar.classList.toggle('active');
+                });
+
+                // Close sidebar when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.vendor-sidebar') &&
+                        !e.target.closest('.vendor-toggle') &&
+                        vendorSidebar.classList.contains('active')
+                    ) {
+                        vendorSidebar.classList.remove('active');
+                    }
+                });
+            }
+
+            // Message conversation selection
+            const conversationItems = document.querySelectorAll('.conversation-item');
+            conversationItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    conversationItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    // Remove unread indicator when clicked
+                    this.classList.remove('unread');
+                    // Update badge count (would be handled by backend in real app)
+                    const badgeElement = this.querySelector('.conversation-badge');
+                    if (badgeElement) {
+                        badgeElement.style.display = 'none';
+                    }
+                });
+            });
+
+            // Message tabs
+            const messageTabs = document.querySelectorAll('.messages-tab');
+            messageTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    messageTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                });
+            });
+
+            // Auto-resize textarea
+            const textarea = document.querySelector('.message-input textarea');
+            if (textarea) {
+                textarea.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = (this.scrollHeight) + 'px';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

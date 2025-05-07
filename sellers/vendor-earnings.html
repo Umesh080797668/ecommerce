@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Earnings | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/vendor.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Vendor Header -->
+    <header class="vendor-header">
+        <div class="vendor-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="vendor-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search earnings..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="vendor-user">
+            <div class="vendor-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">2</span>
+                </a>
+            </div>
+
+            <div class="vendor-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Vendor User">
+            </div>
+
+            <div class="vendor-user__info">
+                <div class="vendor-user__name">Sarah's Boutique</div>
+                <div class="vendor-user__role">Vendor</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vendor Layout -->
+    <div class="vendor-layout">
+        <!-- Sidebar -->
+        <aside class="vendor-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-orders.html" class="sidebar-menu__link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-analytics.html" class="sidebar-menu__link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-earnings.html" class="sidebar-menu__link active">
+                            <i class="fas fa-wallet"></i>
+                            <span>Earnings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-promotions.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Promotions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-reviews.html" class="sidebar-menu__link">
+                            <i class="fas fa-comments"></i>
+                            <span>Reviews</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-message.html" class="sidebar-menu__link">
+                            <i class="fa-solid fa-message"></i>
+                            <span>Messages</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="vendor-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="vendor-main">
+            <h1>Earnings & Payouts</h1>
+            <p class="text-light mb-4">Track your earnings, payments, and financial performance.</p>
+
+            <!-- Date Range Filter -->
+            <div class="filter-container mb-4">
+                <div class="row">
+                    <div class="filter-group">
+                        <label for="date-range">Time Period:</label>
+                        <select id="date-range" class="form-control">
+                            <option value="last7">Last 7 Days</option>
+                            <option value="last30" selected>Last 30 Days</option>
+                            <option value="last90">Last 90 Days</option>
+                            <option value="year">This Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group ml-auto">
+                        <button class="btn btn-outline"><i class="fas fa-download"></i> Export Statement</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Total Revenue</div>
+                        <div class="stat-card__value">$8,459.25</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>15.2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Available Balance</div>
+                        <div class="stat-card__value">$4,285.50</div>
+                        <div class="stat-card__change neutral">
+                            <span>Ready for withdrawal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Pending</div>
+                        <div class="stat-card__value">$1,892.75</div>
+                        <div class="stat-card__change neutral">
+                            <span>Processing period: 3-5 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Last Payout</div>
+                        <div class="stat-card__value">$3,250.00</div>
+                        <div class="stat-card__change neutral">
+                            <span>April 30, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings Chart -->
+            <div class="chart-container mb-4">
+                <div class="chart-header">
+                    <h2>Earnings Overview</h2>
+                    <div class="chart-actions">
+                        <button class="btn btn-sm btn-outline active">Daily</button>
+                        <button class="btn btn-sm btn-outline">Weekly</button>
+                        <button class="btn btn-sm btn-outline">Monthly</button>
+                    </div>
+                </div>
+                <div class="chart-body">
+                    <canvas id="earningsChart" height="300"></canvas>
+                </div>
+            </div>
+
+            <!-- Payout Information -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Payment Information</h3>
+                </div>
+                <div class="card-body">
+                    <div class="payment-info">
+                        <div class="payment-method">
+                            <h4>Primary Payment Method</h4>
+                            <div class="payment-card">
+                                <div class="payment-card__icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-card__details">
+                                    <div class="payment-card__name">Bank Account</div>
+                                    <div class="payment-card__number">****6789</div>
+                                </div>
+                                <div class="payment-card__actions">
+                                    <a href="#" class="btn btn-sm btn-outline">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="withdrawal-actions">
+                            <h4>Withdrawal Options</h4>
+                            <div class="action-buttons">
+                                <button class="btn btn-primary"><i class="fas fa-money-bill-wave"></i> Withdraw Funds</button>
+                                <button class="btn btn-outline"><i class="fas fa-exchange-alt"></i> Set Automatic Payouts</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>Transaction History</h3>
+                    <div class="card-actions">
+                        <input type="text" class="form-control" placeholder="Search transactions...">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Order #</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#TXN-78952</td>
+                                <td>May 6, 2025</td>
+                                <td>Order Payment</td>
+                                <td>#ORD-5782</td>
+                                <td class="text-success">+$245.99</td>
+                                <td><span class="product-status active">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-78951</td>
+                                <td>May 6, 2025</td>
+                                <td>Order Payment</td>
+                                <td>#ORD-5781</td>
+                                <td class="text-success">+$189.99</td>
+                                <td><span class="product-status active">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-78950</td>
+                                <td>May 5, 2025</td>
+                                <td>Order Payment</td>
+                                <td>#ORD-5780</td>
+                                <td class="text-success">+$129.98</td>
+                                <td><span class="product-status draft">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-78949</td>
+                                <td>May 5, 2025</td>
+                                <td>Order Payment</td>
+                                <td>#ORD-5779</td>
+                                <td class="text-success">+$359.96</td>
+                                <td><span class="product-status active">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-78948</td>
+                                <td>May 5, 2025</td>
+                                <td>Platform Fee</td>
+                                <td>-</td>
+                                <td class="text-danger">-$45.60</td>
+                                <td><span class="product-status active">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#TXN-78947</td>
+                                <td>May 4, 2025</td>
+                                <td>Withdrawal to Bank Account</td>
+                                <td>-</td>
+                                <td class="text-danger">-$3,250.00</td>
+                                <td><span class="product-status active">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-container mt-4">
+                    <nav aria-label="Transactions pagination">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/vendor.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle for mobile
+            const vendorToggle = document.querySelector('.vendor-toggle');
+            const vendorSidebar = document.querySelector('.vendor-sidebar');
+
+            if (vendorToggle && vendorSidebar) {
+                vendorToggle.addEventListener('click', function() {
+                    vendorSidebar.classList.toggle('active');
+                });
+
+                // Close sidebar when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.vendor-sidebar') &&
+                        !e.target.closest('.vendor-toggle') &&
+                        vendorSidebar.classList.contains('active')
+                    ) {
+                        vendorSidebar.classList.remove('active');
+                    }
+                });
+            }
+
+            // Earnings Chart
+            const earningsCtx = document.getElementById('earningsChart').getContext('2d');
+            const earningsChart = new Chart(earningsCtx, {
+                type: 'line',
+                data: {
+                    labels: ['May 1', 'May 2', 'May 3', 'May 4', 'May 5', 'May 6', 'May 7'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: [320, 290, 420, 380, 560, 450, 490],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
