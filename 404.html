@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/darkmode.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <!-- 404 Specific CSS -->
+    <style>
+        /* Main error page container */
+        
+        main {
+            display: block;
+        }
+        
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Error code styling */
+        
+        .error-code {
+            font-size: 12rem;
+            font-weight: 800;
+            line-height: 1;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            animation: bounce 2s ease infinite;
+            margin-bottom: 1rem;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            color: var(--text-color);
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            color: var(--text-light);
+        }
+        /* Shopping cart animation */
+        
+        .error-animation {
+            width: 240px;
+            height: 240px;
+            position: relative;
+            margin: 0 auto 1.5rem auto;
+        }
+        
+        .cart-animation {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .search-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 1rem auto;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .search-container form {
+            display: flex;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            background: var(--background-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+        
+        .search-button {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .search-button:hover {
+            background: var(--primary-dark);
+        }
+        /* Suggestions section */
+        
+        .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .suggestion-title {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .suggestion-link {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: var(--background-light);
+            border-radius: 50px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+        
+        .suggestion-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .suggestion-link i {
+            margin-right: 0.5rem;
+        }
+        /* Cart animation */
+        
+        .shopping-cart {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cart-body {
+            position: absolute;
+            width: 80%;
+            height: 50%;
+            bottom: 10%;
+            left: 10%;
+            background: var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .cart-handle {
+            position: absolute;
+            width: 40%;
+            height: 8%;
+            border: 6px solid var(--primary-color);
+            border-bottom: none;
+            border-radius: 15px 15px 0 0;
+            top: -8%;
+            left: 30%;
+        }
+        
+        .cart-wheel {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--background-light);
+            border: 3px solid var(--text-color);
+            border-radius: 50%;
+            bottom: -10px;
+        }
+        
+        .cart-wheel.left {
+            left: 25%;
+            animation: wheelSpin 3s infinite linear;
+        }
+        
+        .cart-wheel.right {
+            right: 25%;
+            animation: wheelSpin 3s infinite linear;
+        }
+        
+        @keyframes wheelSpin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* Items falling from cart */
+        
+        .cart-items {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .item {
+            position: absolute;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            opacity: 0;
+            animation: fallOut 4s infinite;
+        }
+        
+        .item-1 {
+            width: 30px;
+            height: 30px;
+            top: 30%;
+            left: 65%;
+            animation-delay: 0s;
+        }
+        
+        .item-2 {
+            width: 24px;
+            height: 35px;
+            top: 35%;
+            left: 40%;
+            animation-delay: 0.5s;
+            background-color: #f97316;
+        }
+        
+        .item-3 {
+            width: 20px;
+            height: 20px;
+            top: 30%;
+            left: 20%;
+            animation-delay: 1s;
+            background-color: #84cc16;
+        }
+        
+        .item-4 {
+            width: 28px;
+            height: 22px;
+            top: 28%;
+            left: 80%;
+            animation-delay: 1.5s;
+            background-color: #f43f5e;
+        }
+        
+        @keyframes fallOut {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(150px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+        /* Particle effects */
+        
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: float-particle 15s infinite linear;
+            opacity: 0.5;
+        }
+        
+        @keyframes float-particle {
+            0% {
+                transform: translate(-50px, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(calc(100% + 50px), 0) rotate(360deg);
+            }
+        }
+        /* Question mark animation */
+        
+        .question-mark {
+            position: absolute;
+            font-size: 48px;
+            color: var(--text-light);
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 1.5s infinite;
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .error-code::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 6px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 5px;
+        }
+        /* Decorative elements */
+        
+        .decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary-color);
+            top: -150px;
+            left: -150px;
+        }
+        
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--secondary-color);
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .pulse-circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 3px solid rgba(79, 70, 229, 0.3);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.2;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0.8;
+            }
+        }
+        /* Float animation for cart */
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-15px) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            75% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+        /* 404 text glitch effect */
+        
+        @keyframes glitch {
+            0%,
+            100% {
+                transform: translate(0);
+                text-shadow: 0 0 transparent;
+            }
+            20% {
+                transform: translate(-3px, 3px);
+                text-shadow: 2px 2px rgba(255, 0, 0, 0.5);
+            }
+            40% {
+                transform: translate(-3px, -3px);
+                text-shadow: 2px -2px rgba(0, 255, 0, 0.5);
+            }
+            60% {
+                transform: translate(3px, 3px);
+                text-shadow: -2px 2px rgba(0, 0, 255, 0.5);
+            }
+            80% {
+                transform: translate(3px, -3px);
+                text-shadow: -2px -2px rgba(255, 0, 0, 0.5);
+            }
+        }
+        /* Responsive adjustments */
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 8rem;
+            }
+            .error-title {
+                font-size: 1.8rem;
+            }
+            .error-message {
+                font-size: 1rem;
+            }
+            .error-animation {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            .error-title {
+                font-size: 1.5rem;
+            }
+            .error-page {
+                padding: 1rem;
+                min-height: 60vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Header content (keeping as is) -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__user">
+                            <a href="pages/login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="pages/register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search for products..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item compare">
+                            <a href="pages/compare.html" class="action__link">
+                                <i class="fas fa-sync-alt"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item wishlist">
+                            <a href="pages/wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                            <div class="mini-cart">
+                                <div class="mini-cart__empty">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>Your cart is empty</p>
+                                </div>
+                                <!-- Mini cart items will be dynamically added here -->
+                                <div class="mini-cart__footer">
+                                    <div class="mini-cart__total">
+                                        <span>Total:</span>
+                                        <span>$0.00</span>
+                                    </div>
+                                    <div class="mini-cart__buttons">
+                                        <a href="pages/cart.html" class="btn btn-outline">View Cart</a>
+                                        <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-content">
+                    <div class="category-menu">
+                        <div class="category-menu__header">
+                            <i class="fas fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul class="category-menu__list">
+                            <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                            <li><a href="#"><i class="fas fa-couch"></i> Home & Furniture</a></li>
+                            <li><a href="#"><i class="fas fa-heartbeat"></i> Health & Beauty</a></li>
+                            <li><a href="#"><i class="fas fa-baby"></i> Baby & Kids</a></li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> Groceries</a></li>
+                            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> Books & Media</a></li>
+                        </ul>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="index.html">Home</a></li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                                    <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                                    <li><a href="pages/special-offers.html">Special Offers</a></li>
+                                    <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item has-dropdown">
+                                <a href="pages/brands.html">Brands <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                                    <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                                    <li><a href="pages/brands.html">All Brands</a></li>
+                                </ul>
+                            </li>
+                            <li class="main-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li class="main-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                            <li class="main-nav__item"><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__extra">
+                        <a href="pages/track-order.html" class="track-order">
+                            <i class="fas fa-truck"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="container">
+                <div class="header__mobile-content">
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__mobile-action">
+                        <div class="action__item search-toggle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="header__search">
+                            <form action="#" method="get" class="search-form">
+                                <div class="search-category">
+                                    <select name="category" id="search-category-mobile">
+                                        <option value="all">All Categories</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="home">Home & Furniture</option>
+                                        <option value="beauty">Beauty & Health</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Search for products..." name="search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="pages/cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><span>Shop</span>Verse</h1>
+                </a>
+            </div>
+            <div class="mobile-menu__close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu__body">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a href="index.html">Home</a></li>
+                    <li class="mobile-nav__item"><a href="pages/wishlist.html">Wishlist</a></li>
+                    <li class="mobile-nav__item"><a href="pages/compare.html">Compare List</a></li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="pages/shop.html">Shop</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-dropdown">
+                        <a href="pages/brands.html">Brands</a>
+                        <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                        <ul class="mobile-dropdown">
+                            <li><a href="pages/premium-brands.html">Premium Brands</a></li>
+                            <li><a href="pages/trending-brands.html">Trending Brands</a></li>
+                            <li><a href="pages/brands.html">All Brands</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item"><a href="pages/flash-deals.html">Flash Deals</a></li>
+                    <li class="mobile-nav__item"><a href="pages/vendor-dashboard.html">Sell on ShopVerse</a></li>
+                    <li class="mobile-nav__item"><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__user">
+                <a href="pages/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/register.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content - 404 Error Page -->
+    <main>
+        <section class="error-page">
+            <!-- Decorative elements -->
+            <div class="decoration">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="pulse-circle"></div>
+            </div>
+
+            <!-- Error animation - Shopping cart with items falling out -->
+            <div class="error-animation">
+                <div class="cart-animation">
+                    <div class="question-mark">?</div>
+                    <div class="shopping-cart">
+                        <div class="cart-handle"></div>
+                        <div class="cart-body"></div>
+                        <div class="cart-wheel left"></div>
+                        <div class="cart-wheel right"></div>
+                        <div class="cart-items">
+                            <div class="item item-1"></div>
+                            <div class="item item-2"></div>
+                            <div class="item item-3"></div>
+                            <div class="item item-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error message -->
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Oops! Page Not Found</h2>
+            <p class="error-message">We can't seem to find the page you're looking for. The item might have been removed, renamed, or is temporarily unavailable.</p>
+
+            <!-- Search box to help users -->
+            <div class="search-container">
+                <form action="pages/search-results.html" method="get">
+                    <input type="text" class="search-input" placeholder="Search our store..." name="q">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Popular destinations -->
+            <div class="suggestions">
+                <h3 class="suggestion-title">Popular Destinations</h3>
+                <a href="index.html" class="suggestion-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="pages/shop.html" class="suggestion-link">
+                    <i class="fas fa-shopping-bag"></i> Shop
+                </a>
+                <a href="pages/categories.html" class="suggestion-link">
+                    <i class="fas fa-th-large"></i> Categories
+                </a>
+                <a href="pages/best-sellers.html" class="suggestion-link">
+                    <i class="fas fa-fire"></i> Best Sellers
+                </a>
+                <a href="pages/new-arrivals.html" class="suggestion-link">
+                    <i class="fas fa-star"></i> New Arrivals
+                </a>
+                <a href="pages/contact.html" class="suggestion-link">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget about-widget">
+                        <div class="logo">
+                            <h2><span>Shop</span>Verse</h2>
+                        </div>
+                        <p>ShopVerse is a premium e-commerce platform offering a wide range of products from trusted vendors worldwide. Shop with confidence and enjoy the best online shopping experience.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Shop</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+                            <li><a href="pages/best-sellers.html">Best Sellers</a></li>
+                            <li><a href="pages/flash-deals.html">Flash Deals</a></li>
+                            <li><a href="pages/special-offers.html">Special Offers</a></li>
+                            <li><a href="pages/gift-cards.html">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Information</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/about-us.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact Us</a></li>
+                            <li><a href="pages/shipping-policy.html">Shipping Policy</a></li>
+                            <li><a href="pages/return-policy.html">Return & Refund</a></li>
+                            <li><a href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3 class="widget-title">Customer Service</h3>
+                        <ul class="widget-links">
+                            <li><a href="pages/my-account.html">My Account</a></li>
+                            <li><a href="pages/track-order.html">Track Your Order</a></li>
+                            <li><a href="pages/wishlist.html">Wishlist</a></li>
+                            <li><a href="pages/faq.html">FAQs</a></li>
+                            <li><a href="pages/help-center.html">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Commerce Street, New York, NY 10001, USA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1-234-567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@shopverse.com">info@shopverse.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="payment-methods">
+                        <h4>Payment Methods</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-partners">
+                        <h4>Shipping Partners</h4>
+                        <div class="shipping-icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <i class="fas fa-truck"></i>
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 ShopVerse. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="pages/terms-of-use.html">Terms of Use</a>
+                        <a href="pages/privacy-policy.html">Privacy Policy</a>
+                        <a href="pages/sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/darkmode.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        // Script for the 404 page animations and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create animated background particles
+            const particles = document.createElement('div');
+            particles.className = 'particles';
+
+            // Add particles to the page
+            const errorPage = document.querySelector('.error-page');
+            if (errorPage) {
+                errorPage.appendChild(particles);
+
+                // Create 15 particles with different sizes, colors and animations
+                for (let i = 0; i < 15; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+
+                    // Random size between 5px and 15px
+                    const size = Math.floor(Math.random() * 10) + 5;
+                    particle.style.width = size + 'px';
+                    particle.style.height = size + 'px';
+
+                    // Random position
+                    const topPos = Math.floor(Math.random() * 100);
+                    particle.style.top = topPos + '%';
+
+                    // Random animation duration between 10s and 20s
+                    const duration = Math.floor(Math.random() * 10) + 10;
+                    particle.style.animationDuration = duration + 's';
+
+                    // Random animation delay
+                    const delay = Math.floor(Math.random() * 10);
+                    particle.style.animationDelay = delay + 's';
+
+                    // Random color - use branded colors with opacity
+                    const colors = [
+                        'rgba(79, 70, 229, 0.3)', // primary color
+                        'rgba(249, 115, 22, 0.3)', // secondary color
+                        'rgba(16, 185, 129, 0.3)', // emerald
+                        'rgba(220, 38, 38, 0.3)' // red
+                    ];
+                    const colorIndex = Math.floor(Math.random() * colors.length);
+                    particle.style.backgroundColor = colors[colorIndex];
+
+                    particles.appendChild(particle);
+                }
+            }
+
+            // Regular glitch effect for the 404 error code
+            const errorCode = document.querySelector('.error-code');
+            if (errorCode) {
+                setInterval(() => {
+                    // 15% chance to trigger glitch effect
+                    if (Math.random() < 0.15) {
+                        errorCode.style.animation = 'glitch 0.3s forwards';
+                        setTimeout(() => {
+                            errorCode.style.animation = 'bounce 2s ease infinite';
+                        }, 300);
+                    }
+                }, 3000);
+            }
+
+            // Visual feedback when clicking on suggestion links
+            const suggestionLinks = document.querySelectorAll('.suggestion-link');
+            suggestionLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add a brief scaling effect when clicked
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // Focus the search input when the page loads
+            setTimeout(() => {
+                const searchInput = document.querySelector('.search-input');
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
