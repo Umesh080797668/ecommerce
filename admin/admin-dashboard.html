@@ -18,358 +18,7 @@
     <link rel="stylesheet" href="../styles/darkmode.css">
     <link rel="stylesheet" href="../styles/animations.css">
     <link rel="stylesheet" href="../styles/responsive.css">
-    <style>
-        /* Admin Dashboard Specific Styles */
-        
-        .admin-layout {
-            display: flex;
-            min-height: calc(100vh - 80px);
-        }
-        
-        .admin-sidebar {
-            width: 250px;
-            background-color: var(--dark-color);
-            color: var(--white);
-            padding: 1.5rem 0;
-            height: 100%;
-            position: fixed;
-            left: 0;
-            top: 80px;
-            bottom: 0;
-            z-index: 99;
-            overflow-y: auto;
-        }
-        
-        .admin-main {
-            flex: 1;
-            margin-left: 250px;
-            padding: 2rem;
-        }
-        
-        .admin-header {
-            height: 80px;
-            background-color: var(--white);
-            box-shadow: var(--box-shadow);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2rem;
-        }
-        
-        .sidebar-menu {
-            margin-top: 1.5rem;
-        }
-        
-        .sidebar-menu__item {
-            margin-bottom: 0.25rem;
-        }
-        
-        .sidebar-menu__link {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            transition: all var(--transition-fast);
-            position: relative;
-        }
-        
-        .sidebar-menu__link:hover,
-        .sidebar-menu__link.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-        }
-        
-        .sidebar-menu__link.active::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background-color: var(--primary-color);
-        }
-        
-        .admin-header__search {
-            flex: 1;
-            max-width: 400px;
-            margin: 0 2rem;
-        }
-        
-        .admin-header__search .search-form {
-            margin-bottom: 0;
-        }
-        
-        .admin-user {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .admin-user__avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        
-        .admin-user__info {
-            font-size: 0.875rem;
-        }
-        
-        .admin-user__name {
-            font-weight: 600;
-            color: var(--dark-color);
-        }
-        
-        .admin-user__role {
-            font-size: 0.75rem;
-            color: var(--text-light);
-        }
-        
-        .dashboard-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .stat-card {
-            background-color: var(--white);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--box-shadow);
-            padding: 1.5rem;
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .stat-card__icon {
-            width: 60px;
-            height: 60px;
-            border-radius: var(--border-radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-        
-        .stat-card:nth-child(1) .stat-card__icon {
-            background-color: rgba(74, 108, 247, 0.1);
-            color: var(--primary-color);
-        }
-        
-        .stat-card:nth-child(2) .stat-card__icon {
-            background-color: rgba(56, 178, 172, 0.1);
-            color: #38b2ac;
-        }
-        
-        .stat-card:nth-child(3) .stat-card__icon {
-            background-color: rgba(237, 100, 166, 0.1);
-            color: #ed64a6;
-        }
-        
-        .stat-card:nth-child(4) .stat-card__icon {
-            background-color: rgba(246, 173, 85, 0.1);
-            color: #f6ad55;
-        }
-        
-        .stat-card__info {
-            flex: 1;
-        }
-        
-        .stat-card__title {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-bottom: 0.25rem;
-        }
-        
-        .stat-card__value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-color);
-            margin-bottom: 0.25rem;
-        }
-        
-        .stat-card__change {
-            font-size: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-        
-        .stat-card__change.positive {
-            color: #38b2ac;
-        }
-        
-        .stat-card__change.negative {
-            color: #e53e3e;
-        }
-        
-        .dashboard-charts {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .chart-card {
-            background-color: var(--white);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--box-shadow);
-            padding: 1.5rem;
-        }
-        
-        .chart-card__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .chart-card__title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--dark-color);
-            margin: 0;
-        }
-        
-        .chart-card__actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .chart-placeholder {
-            width: 100%;
-            height: 300px;
-            background-color: var(--light-bg);
-            border-radius: var(--border-radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 0.875rem;
-        }
-        
-        .recent-orders {
-            background-color: var(--white);
-            border-radius: var(--border-radius-md);
-            box-shadow: var(--box-shadow);
-            padding: 1.5rem;
-        }
-        
-        .orders-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-        }
-        
-        .orders-table th,
-        .orders-table td {
-            padding: 0.75rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.875rem;
-        }
-        
-        .orders-table th {
-            font-weight: 600;
-            color: var(--dark-color);
-        }
-        
-        .orders-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .order-status {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.25rem 0.5rem;
-            border-radius: var(--border-radius-sm);
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-        
-        .order-status.completed {
-            background-color: rgba(56, 178, 172, 0.1);
-            color: #38b2ac;
-        }
-        
-        .order-status.processing {
-            background-color: rgba(246, 173, 85, 0.1);
-            color: #f6ad55;
-        }
-        
-        .order-status.pending {
-            background-color: rgba(74, 108, 247, 0.1);
-            color: var(--primary-color);
-        }
-        
-        .order-status.cancelled {
-            background-color: rgba(229, 62, 62, 0.1);
-            color: #e53e3e;
-        }
-        
-        .tab-group {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            overflow-x: auto;
-            padding-bottom: 0.5rem;
-        }
-        
-        .tab-button {
-            padding: 0.5rem 1rem;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            font-weight: 500;
-            color: var(--text-color);
-            border-radius: var(--border-radius-md);
-            white-space: nowrap;
-        }
-        
-        .tab-button.active {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-        /* Responsive adjustments */
-        
-        @media screen and (max-width: 991px) {
-            .admin-sidebar {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-                box-shadow: var(--box-shadow);
-            }
-            .admin-sidebar.active {
-                transform: translateX(0);
-            }
-            .admin-main {
-                margin-left: 0;
-            }
-            .dashboard-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .dashboard-charts {
-                grid-template-columns: 1fr;
-            }
-            .admin-toggle {
-                display: block;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-        }
-        
-        @media screen and (max-width: 767px) {
-            .dashboard-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/admin.css">
 </head>
 
 <body>
@@ -651,40 +300,64 @@
     </div>
 
     <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../js/darkmode.js"></script>
+    <script src="../js/admin.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Sidebar toggle for mobile
+            // Sidebar toggle for all devices
             const adminToggle = document.querySelector('.admin-toggle');
             const adminSidebar = document.querySelector('.admin-sidebar');
+            const adminMain = document.querySelector('.admin-main');
 
             if (adminToggle && adminSidebar) {
+                // Check if we're on mobile and set initial state
+                function checkScreenSize() {
+                    if (window.innerWidth <= 991) {
+                        // On mobile: sidebar starts hidden, gets 'active' class to show
+                        adminSidebar.classList.remove('hidden');
+                    } else {
+                        // On desktop: sidebar starts visible, gets 'hidden' class to hide
+                        adminSidebar.classList.remove('active');
+                    }
+                }
+                // Initial check
+                checkScreenSize();
+
+                // Rechecking on window resize
+                window.addEventListener('resize', checkScreenSize);
+
+                // Toggle logic
                 adminToggle.addEventListener('click', function() {
-                    adminSidebar.classList.toggle('active');
+                    if (window.innerWidth <= 991) {
+                        // Mobile behavior
+                        adminSidebar.classList.toggle('active');
+                    } else {
+                        // Desktop behavior
+                        adminSidebar.classList.toggle('hidden');
+                        adminMain.classList.toggle('expanded');
+                    }
                 });
 
-                // Close sidebar when clicking outside
+                // Close sidebar when clicking outside on mobile
                 document.addEventListener('click', function(e) {
                     if (!e.target.closest('.admin-sidebar') &&
-                        !e.target.closest('.admin-toggle') &&
-                        adminSidebar.classList.contains('active')
-                    ) {
-                        adminSidebar.classList.remove('active');
+                        !e.target.closest('.admin-toggle')) {
+
+                        if (window.innerWidth <= 991 && adminSidebar.classList.contains('active')) {
+                            adminSidebar.classList.remove('active');
+                        }
                     }
                 });
             }
 
-            // Tab functionality
+            // Tab functionality (unchanged)
             const tabButtons = document.querySelectorAll('.tab-button');
 
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    tabButtons.forEach(tab => {
-                        tab.classList.remove('active');
-                    });
-
-                    // Add active class to clicked tab
+                    tabButtons.forEach(tab => tab.classList.remove('active'));
                     this.classList.add('active');
                 });
             });
