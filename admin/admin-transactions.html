@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="admin-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search transactions..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="admin-user">
+            <div class="admin-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+
+            <div class="admin-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Admin User">
+            </div>
+
+            <div class="admin-user__info">
+                <div class="admin-user__name">John Admin</div>
+                <div class="admin-user__role">Administrator</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-orders.html" class="sidebar-menu__link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-customers.html" class="sidebar-menu__link">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-vendors.html" class="sidebar-menu__link">
+                            <i class="fas fa-store"></i>
+                            <span>Vendors</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-analytics.html" class="sidebar-menu__link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-discounts.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Discounts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-transactions.html" class="sidebar-menu__link active">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <h1>Transactions</h1>
+            <p class="text-light mb-4">View and manage payment transactions, refunds, and financial reports.</p>
+
+            <!-- Summary Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Total Revenue</div>
+                        <div class="stat-card__value">$24,589</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Transactions</div>
+                        <div class="stat-card__value">1,482</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8.2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Refunds</div>
+                        <div class="stat-card__value">$1,245</div>
+                        <div class="stat-card__change negative">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>3.7% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Avg. Transaction</div>
+                        <div class="stat-card__value">$165</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>4.2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Date Range -->
+            <div class="date-range-selector">
+                <div class="date-range-display">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>May 1, 2025 - May 7, 2025</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="date-range-options">
+                    <button class="btn btn-sm btn-outline active">This Week</button>
+                    <button class="btn btn-sm btn-outline">This Month</button>
+                    <button class="btn btn-sm btn-outline">Last Month</button>
+                    <button class="btn btn-sm btn-outline">Custom Range</button>
+                </div>
+                <div class="date-range-actions">
+                    <button class="btn btn-primary"><i class="fas fa-sync"></i> Update</button>
+                    <button class="btn btn-outline"><i class="fas fa-file-export"></i> Export</button>
+                </div>
+            </div>
+
+            <!-- Transactions Filter -->
+            <div class="filter-container">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="type-filter">Type</label>
+                        <select id="type-filter" class="form-select">
+                            <option value="all">All Types</option>
+                            <option value="payment">Payment</option>
+                            <option value="refund">Refund</option>
+                            <option value="chargeback">Chargeback</option>
+                            <option value="payout">Vendor Payout</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="status-filter">Status</label>
+                        <select id="status-filter" class="form-select">
+                            <option value="all">All Status</option>
+                            <option value="completed">Completed</option>
+                            <option value="pending">Pending</option>
+                            <option value="failed">Failed</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="payment-filter">Payment Method</label>
+                        <select id="payment-filter" class="form-select">
+                            <option value="all">All Methods</option>
+                            <option value="credit">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank">Bank Transfer</option>
+                            <option value="wallet">Digital Wallet</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="amount-filter">Amount</label>
+                        <select id="amount-filter" class="form-select">
+                            <option value="all">All Amounts</option>
+                            <option value="under50">Under $50</option>
+                            <option value="50to100">$50 - $100</option>
+                            <option value="100to500">$100 - $500</option>
+                            <option value="over500">Over $500</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-primary"><i class="fas fa-filter"></i> Apply Filters</button>
+                    <button class="btn btn-outline"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <!-- Transactions Table -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Recent Transactions</h3>
+                    <div class="table-actions">
+                        <div class="search-mini">
+                            <input type="text" placeholder="Search transactions...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-sync"></i> Refresh</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date & Time</th>
+                                <th>Customer</th>
+                                <th>Order ID</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Payment Method</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952463</span></td>
+                                <td>May 07, 2025 04:35 PM</td>
+                                <td>Emma Johnson</td>
+                                <td><a href="#">#ORD-7895</a></td>
+                                <td><span class="badge-type payment">Payment</span></td>
+                                <td class="amount">$289.50</td>
+                                <td><i class="fab fa-cc-visa"></i> Visa</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952462</span></td>
+                                <td>May 07, 2025 02:21 PM</td>
+                                <td>David Chen</td>
+                                <td><a href="#">#ORD-7894</a></td>
+                                <td><span class="badge-type payment">Payment</span></td>
+                                <td class="amount">$129.99</td>
+                                <td><i class="fab fa-paypal"></i> PayPal</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952461</span></td>
+                                <td>May 07, 2025 11:45 AM</td>
+                                <td>Sophie Martinez</td>
+                                <td><a href="#">#ORD-7893</a></td>
+                                <td><span class="badge-type payment">Payment</span></td>
+                                <td class="amount">$349.00</td>
+                                <td><i class="fab fa-cc-mastercard"></i> MasterCard</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952460</span></td>
+                                <td>May 06, 2025 05:32 PM</td>
+                                <td>James Wilson</td>
+                                <td><a href="#">#ORD-7892</a></td>
+                                <td><span class="badge-type payment">Payment</span></td>
+                                <td class="amount">$75.50</td>
+                                <td><i class="fab fa-apple-pay"></i> Apple Pay</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952459</span></td>
+                                <td>May 06, 2025 02:15 PM</td>
+                                <td>Admin</td>
+                                <td><a href="#">#VPO-1023</a></td>
+                                <td><span class="badge-type payout">Vendor Payout</span></td>
+                                <td class="amount">$1,450.00</td>
+                                <td><i class="fas fa-university"></i> Bank Transfer</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952458</span></td>
+                                <td>May 06, 2025 11:22 AM</td>
+                                <td>Lisa Brown</td>
+                                <td><a href="#">#ORD-7891</a></td>
+                                <td><span class="badge-type refund">Refund</span></td>
+                                <td class="amount">$199.99</td>
+                                <td><i class="fab fa-cc-visa"></i> Visa</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952457</span></td>
+                                <td>May 06, 2025 09:47 AM</td>
+                                <td>Michael Taylor</td>
+                                <td><a href="#">#ORD-7890</a></td>
+                                <td><span class="badge-type payment">Payment</span></td>
+                                <td class="amount">$159.99</td>
+                                <td><i class="fab fa-cc-amex"></i> American Express</td>
+                                <td><span class="status-badge failed">Failed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Retry"><i class="fas fa-redo"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-mono">TXN-78952456</span></td>
+                                <td>May 05, 2025 04:12 PM</td>
+                                <td>Olivia Garcia</td>
+                                <td><a href="#">#ORD-7889</a></td>
+                                <td><span class="badge-type payment">Payment</span></td>
+                                <td class="amount">$89.99</td>
+                                <td><i class="fab fa-cc-discover"></i> Discover</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Details"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Receipt"><i class="fas fa-file-invoice"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <span class="pagination-ellipsis">...</span>
+                    <button class="pagination-btn">18</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Payment Methods Summary -->
+            <div class="analytics-grid">
+                <!-- Payment Methods -->
+                <div class="chart-card">
+                    <div class="chart-card__header">
+                        <h3 class="chart-card__title">Payment Methods</h3>
+                    </div>
+                    <div class="chart-placeholder" style="height: 200px;">
+                        <div class="chart-placeholder-text">
+                            <i class="fas fa-chart-pie"></i>
+                            <p>Payment Methods Chart</p>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Transactions</th>
+                                    <th>Amount</th>
+                                    <th>Share</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fab fa-cc-visa"></i> Credit Cards</td>
+                                    <td>587</td>
+                                    <td>$14,578</td>
+                                    <td>59.3%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fab fa-paypal"></i> PayPal</td>
+                                    <td>243</td>
+                                    <td>$5,843</td>
+                                    <td>23.8%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-wallet"></i> Digital Wallets</td>
+                                    <td>156</td>
+                                    <td>$2,854</td>
+                                    <td>11.6%</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-university"></i> Bank Transfer</td>
+                                    <td>65</td>
+                                    <td>$1,314</td>
+                                    <td>5.3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Transaction Status -->
+                <div class="chart-card">
+                    <div class="chart-card__header">
+                        <h3 class="chart-card__title">Transaction Status</h3>
+                    </div>
+                    <div class="chart-placeholder" style="height: 200px;">
+                        <div class="chart-placeholder-text">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Transaction Status Chart</p>
+                        </div>
+                    </div>
+                    <div class="status-summary">
+                        <div class="status-item">
+                            <div class="status-icon completed">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-title">Completed</div>
+                                <div class="status-count">1,352</div>
+                                <div class="status-percentage">91.2%</div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon pending">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-title">Pending</div>
+                                <div class="status-count">87</div>
+                                <div class="status-percentage">5.9%</div>
+                            </div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-icon failed">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-title">Failed</div>
+                                <div class="status-count">43</div>
+                                <div class="status-percentage">2.9%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle
+            const adminToggle = document.querySelector('.admin-toggle');
+            const adminSidebar = document.querySelector('.admin-sidebar');
+            const adminMain = document.querySelector('.admin-main');
+
+            if (adminToggle && adminSidebar) {
+                // Check if we're on mobile and set initial state
+                function checkScreenSize() {
+                    if (window.innerWidth <= 991) {
+                        // On mobile: sidebar starts hidden, gets 'active' class to show
+                        adminSidebar.classList.remove('hidden');
+                    } else {
+                        // On desktop: sidebar starts visible, gets 'hidden' class to hide
+                        adminSidebar.classList.remove('active');
+                    }
+                }
+                // Initial check
+                checkScreenSize();
+
+                // Rechecking on window resize
+                window.addEventListener('resize', checkScreenSize);
+
+                // Toggle logic
+                adminToggle.addEventListener('click', function() {
+                    if (window.innerWidth <= 991) {
+                        // Mobile behavior
+                        adminSidebar.classList.toggle('active');
+                    } else {
+                        // Desktop behavior
+                        adminSidebar.classList.toggle('hidden');
+                        adminMain.classList.toggle('expanded');
+                    }
+                });
+
+                // Close sidebar when clicking outside on mobile
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.admin-sidebar') &&
+                        !e.target.closest('.admin-toggle')) {
+
+                        if (window.innerWidth <= 991 && adminSidebar.classList.contains('active')) {
+                            adminSidebar.classList.remove('active');
+                        }
+                    }
+                });
+            }
+
+            // Date range display toggle
+            const dateRangeDisplay = document.querySelector('.date-range-display');
+            if (dateRangeDisplay) {
+                dateRangeDisplay.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

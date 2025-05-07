@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="admin-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search vendors..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="admin-user">
+            <div class="admin-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+
+            <div class="admin-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Admin User">
+            </div>
+
+            <div class="admin-user__info">
+                <div class="admin-user__name">John Admin</div>
+                <div class="admin-user__role">Administrator</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-orders.html" class="sidebar-menu__link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-customers.html" class="sidebar-menu__link">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-vendors.html" class="sidebar-menu__link active">
+                            <i class="fas fa-store"></i>
+                            <span>Vendors</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-analytics.html" class="sidebar-menu__link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-discounts.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Discounts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-transactions.html" class="sidebar-menu__link">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <h1>Vendor Management</h1>
+            <p class="text-light mb-4">Manage your marketplace vendors and their products.</p>
+
+            <!-- Stats Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Total Vendors</div>
+                        <div class="stat-card__value">42</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>3.5% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Vendor Products</div>
+                        <div class="stat-card__value">1,872</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>7.2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Vendor Revenue</div>
+                        <div class="stat-card__value">$42,589</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>9.3% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Commission Rate</div>
+                        <div class="stat-card__value">12.5%</div>
+                        <div class="stat-card__change neutral">
+                            <i class="fas fa-minus"></i>
+                            <span>No change</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="action-bar">
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Vendor</button>
+                <button class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Selected</button>
+                <button class="btn btn-outline"><i class="fas fa-file-export"></i> Export List</button>
+                <button class="btn btn-outline-danger"><i class="fas fa-ban"></i> Suspend Selected</button>
+            </div>
+
+            <!-- Vendors Filter -->
+            <div class="filter-container">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="status-filter">Status</label>
+                        <select id="status-filter" class="form-select">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="pending">Pending Approval</option>
+                            <option value="suspended">Suspended</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter" class="form-select">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="home">Home & Kitchen</option>
+                            <option value="beauty">Beauty & Personal Care</option>
+                            <option value="books">Books & Media</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="joined-filter">Joined Date</label>
+                        <select id="joined-filter" class="form-select">
+                            <option value="all">All Time</option>
+                            <option value="last30">Last 30 Days</option>
+                            <option value="last90">Last 90 Days</option>
+                            <option value="lastyear">Last Year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-primary"><i class="fas fa-filter"></i> Apply Filters</button>
+                    <button class="btn btn-outline"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <!-- Vendors Grid -->
+            <div class="vendors-grid">
+                <!-- Vendor Card 1 -->
+                <div class="vendor-card">
+                    <div class="vendor-card__header">
+                        <div class="vendor-card__checkbox">
+                            <input type="checkbox" id="vendor-1">
+                            <label for="vendor-1" class="checkbox-label"></label>
+                        </div>
+                        <div class="vendor-status active">Active</div>
+                    </div>
+                    <div class="vendor-card__logo">
+                        <img src="https://via.placeholder.com/150" alt="ElecTech Inc.">
+                    </div>
+                    <div class="vendor-card__info">
+                        <h3>ElecTech Inc.</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                        <div class="vendor-card__stats">
+                            <div class="stat">
+                                <span class="value">156</span>
+                                <span class="label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">4.8</span>
+                                <span class="label"><i class="fas fa-star"></i> Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$12.5k</span>
+                                <span class="label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vendor-card__categories">
+                        <span class="category">Electronics</span>
+                        <span class="category">Gadgets</span>
+                    </div>
+                    <div class="vendor-card__actions">
+                        <button class="btn btn-sm btn-outline">View Profile</button>
+                        <button class="btn btn-sm btn-outline">Products</button>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-envelope"></i> Contact</button>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 2 -->
+                <div class="vendor-card">
+                    <div class="vendor-card__header">
+                        <div class="vendor-card__checkbox">
+                            <input type="checkbox" id="vendor-2">
+                            <label for="vendor-2" class="checkbox-label"></label>
+                        </div>
+                        <div class="vendor-status active">Active</div>
+                    </div>
+                    <div class="vendor-card__logo">
+                        <img src="https://via.placeholder.com/150" alt="Fashionista">
+                    </div>
+                    <div class="vendor-card__info">
+                        <h3>Fashionista</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                        <div class="vendor-card__stats">
+                            <div class="stat">
+                                <span class="value">248</span>
+                                <span class="label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">4.5</span>
+                                <span class="label"><i class="fas fa-star"></i> Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$18.3k</span>
+                                <span class="label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vendor-card__categories">
+                        <span class="category">Clothing</span>
+                        <span class="category">Accessories</span>
+                    </div>
+                    <div class="vendor-card__actions">
+                        <button class="btn btn-sm btn-outline">View Profile</button>
+                        <button class="btn btn-sm btn-outline">Products</button>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-envelope"></i> Contact</button>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 3 -->
+                <div class="vendor-card">
+                    <div class="vendor-card__header">
+                        <div class="vendor-card__checkbox">
+                            <input type="checkbox" id="vendor-3">
+                            <label for="vendor-3" class="checkbox-label"></label>
+                        </div>
+                        <div class="vendor-status pending">Pending</div>
+                    </div>
+                    <div class="vendor-card__logo">
+                        <img src="https://via.placeholder.com/150" alt="Home Essentials">
+                    </div>
+                    <div class="vendor-card__info">
+                        <h3>Home Essentials</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                        <div class="vendor-card__stats">
+                            <div class="stat">
+                                <span class="value">124</span>
+                                <span class="label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">4.2</span>
+                                <span class="label"><i class="fas fa-star"></i> Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$8.7k</span>
+                                <span class="label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vendor-card__categories">
+                        <span class="category">Home</span>
+                        <span class="category">Kitchen</span>
+                    </div>
+                    <div class="vendor-card__actions">
+                        <button class="btn btn-sm btn-outline">View Profile</button>
+                        <button class="btn btn-sm btn-outline">Products</button>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-envelope"></i> Contact</button>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 4 -->
+                <div class="vendor-card">
+                    <div class="vendor-card__header">
+                        <div class="vendor-card__checkbox">
+                            <input type="checkbox" id="vendor-4">
+                            <label for="vendor-4" class="checkbox-label"></label>
+                        </div>
+                        <div class="vendor-status active">Active</div>
+                    </div>
+                    <div class="vendor-card__logo">
+                        <img src="https://via.placeholder.com/150" alt="Book World">
+                    </div>
+                    <div class="vendor-card__info">
+                        <h3>Book World</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Boston, MA</p>
+                        <div class="vendor-card__stats">
+                            <div class="stat">
+                                <span class="value">532</span>
+                                <span class="label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">4.9</span>
+                                <span class="label"><i class="fas fa-star"></i> Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$7.4k</span>
+                                <span class="label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vendor-card__categories">
+                        <span class="category">Books</span>
+                        <span class="category">Media</span>
+                    </div>
+                    <div class="vendor-card__actions">
+                        <button class="btn btn-sm btn-outline">View Profile</button>
+                        <button class="btn btn-sm btn-outline">Products</button>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-envelope"></i> Contact</button>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 5 -->
+                <div class="vendor-card">
+                    <div class="vendor-card__header">
+                        <div class="vendor-card__checkbox">
+                            <input type="checkbox" id="vendor-5">
+                            <label for="vendor-5" class="checkbox-label"></label>
+                        </div>
+                        <div class="vendor-status suspended">Suspended</div>
+                    </div>
+                    <div class="vendor-card__logo">
+                        <img src="https://via.placeholder.com/150" alt="Beauty Bliss">
+                    </div>
+                    <div class="vendor-card__info">
+                        <h3>Beauty Bliss</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                        <div class="vendor-card__stats">
+                            <div class="stat">
+                                <span class="value">78</span>
+                                <span class="label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">3.2</span>
+                                <span class="label"><i class="fas fa-star"></i> Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$2.1k</span>
+                                <span class="label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vendor-card__categories">
+                        <span class="category">Beauty</span>
+                        <span class="category">Personal Care</span>
+                    </div>
+                    <div class="vendor-card__actions">
+                        <button class="btn btn-sm btn-outline">View Profile</button>
+                        <button class="btn btn-sm btn-outline">Products</button>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-envelope"></i> Contact</button>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 6 -->
+                <div class="vendor-card">
+                    <div class="vendor-card__header">
+                        <div class="vendor-card__checkbox">
+                            <input type="checkbox" id="vendor-6">
+                            <label for="vendor-6" class="checkbox-label"></label>
+                        </div>
+                        <div class="vendor-status active">Active</div>
+                    </div>
+                    <div class="vendor-card__logo">
+                        <img src="https://via.placeholder.com/150" alt="Tech Gear">
+                    </div>
+                    <div class="vendor-card__info">
+                        <h3>Tech Gear</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                        <div class="vendor-card__stats">
+                            <div class="stat">
+                                <span class="value">185</span>
+                                <span class="label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">4.7</span>
+                                <span class="label"><i class="fas fa-star"></i> Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">$9.8k</span>
+                                <span class="label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vendor-card__categories">
+                        <span class="category">Electronics</span>
+                        <span class="category">Tech</span>
+                    </div>
+                    <div class="vendor-card__actions">
+                        <button class="btn btn-sm btn-outline">View Profile</button>
+                        <button class="btn btn-sm btn-outline">Products</button>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-envelope"></i> Contact</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-btn">7</button>
+                <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle
+            const adminToggle = document.querySelector('.admin-toggle');
+            const adminSidebar = document.querySelector('.admin-sidebar');
+            const adminMain = document.querySelector('.admin-main');
+
+            if (adminToggle && adminSidebar) {
+                // Check if we're on mobile and set initial state
+                function checkScreenSize() {
+                    if (window.innerWidth <= 991) {
+                        // On mobile: sidebar starts hidden, gets 'active' class to show
+                        adminSidebar.classList.remove('hidden');
+                    } else {
+                        // On desktop: sidebar starts visible, gets 'hidden' class to hide
+                        adminSidebar.classList.remove('active');
+                    }
+                }
+                // Initial check
+                checkScreenSize();
+
+                // Rechecking on window resize
+                window.addEventListener('resize', checkScreenSize);
+
+                // Toggle logic
+                adminToggle.addEventListener('click', function() {
+                    if (window.innerWidth <= 991) {
+                        // Mobile behavior
+                        adminSidebar.classList.toggle('active');
+                    } else {
+                        // Desktop behavior
+                        adminSidebar.classList.toggle('hidden');
+                        adminMain.classList.toggle('expanded');
+                    }
+                });
+
+                // Close sidebar when clicking outside on mobile
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.admin-sidebar') &&
+                        !e.target.closest('.admin-toggle')) {
+
+                        if (window.innerWidth <= 991 && adminSidebar.classList.contains('active')) {
+                            adminSidebar.classList.remove('active');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

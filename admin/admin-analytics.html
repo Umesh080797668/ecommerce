@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="admin-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search analytics..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="admin-user">
+            <div class="admin-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+
+            <div class="admin-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Admin User">
+            </div>
+
+            <div class="admin-user__info">
+                <div class="admin-user__name">John Admin</div>
+                <div class="admin-user__role">Administrator</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-orders.html" class="sidebar-menu__link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-customers.html" class="sidebar-menu__link">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-vendors.html" class="sidebar-menu__link">
+                            <i class="fas fa-store"></i>
+                            <span>Vendors</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-analytics.html" class="sidebar-menu__link active">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-discounts.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Discounts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-transactions.html" class="sidebar-menu__link">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <h1>Analytics Dashboard</h1>
+            <p class="text-light mb-4">Track your store performance with detailed analytics and reports.</p>
+
+            <!-- Date Range -->
+            <div class="date-range-selector">
+                <div class="date-range-display">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>May 1, 2025 - May 7, 2025</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="date-range-options">
+                    <button class="btn btn-sm btn-outline active">This Week</button>
+                    <button class="btn btn-sm btn-outline">This Month</button>
+                    <button class="btn btn-sm btn-outline">Last Month</button>
+                    <button class="btn btn-sm btn-outline">This Quarter</button>
+                    <button class="btn btn-sm btn-outline">This Year</button>
+                    <button class="btn btn-sm btn-outline">Custom Range</button>
+                </div>
+                <div class="date-range-actions">
+                    <button class="btn btn-primary"><i class="fas fa-sync"></i> Update</button>
+                    <button class="btn btn-outline"><i class="fas fa-file-export"></i> Export</button>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Total Orders</div>
+                        <div class="stat-card__value">1,482</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8.2% from previous period</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Revenue</div>
+                        <div class="stat-card__value">$24,589</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% from previous period</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">New Customers</div>
+                        <div class="stat-card__value">85</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>4.7% from previous period</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Conversion Rate</div>
+                        <div class="stat-card__value">3.2%</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>0.5% from previous period</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Chart -->
+            <div class="chart-card full-width">
+                <div class="chart-card__header">
+                    <h3 class="chart-card__title">Sales & Revenue Trends</h3>
+                    <div class="chart-card__actions">
+                        <div class="tab-group">
+                            <button class="tab-button active">Daily</button>
+                            <button class="tab-button">Weekly</button>
+                            <button class="tab-button">Monthly</button>
+                            <button class="tab-button">Yearly</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-placeholder" style="height: 350px;">
+                    <div class="chart-placeholder-text">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Sales & Revenue Trend Chart</p>
+                        <span>This is where a real chart would be displayed in a production environment</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Column Layout for Charts -->
+            <div class="analytics-grid">
+                <!-- Top Products -->
+                <div class="chart-card">
+                    <div class="chart-card__header">
+                        <h3 class="chart-card__title">Top Products</h3>
+                        <button class="btn btn-sm btn-outline">View All</button>
+                    </div>
+                    <div class="chart-placeholder" style="height: 250px;">
+                        <div class="chart-placeholder-text">
+                            <i class="fas fa-chart-pie"></i>
+                            <p>Product Distribution Chart</p>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Sales</th>
+                                    <th>Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Smartphone X</td>
+                                    <td>145</td>
+                                    <td>$86,955</td>
+                                </tr>
+                                <tr>
+                                    <td>Wireless Headphones</td>
+                                    <td>98</td>
+                                    <td>$12,739</td>
+                                </tr>
+                                <tr>
+                                    <td>Smart Watch</td>
+                                    <td>76</td>
+                                    <td>$15,199</td>
+                                </tr>
+                                <tr>
+                                    <td>Laptop Pro</td>
+                                    <td>42</td>
+                                    <td>$63,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Customer Demographics -->
+                <div class="chart-card">
+                    <div class="chart-card__header">
+                        <h3 class="chart-card__title">Customer Demographics</h3>
+                        <button class="btn btn-sm btn-outline">View Report</button>
+                    </div>
+                    <div class="chart-placeholder" style="height: 250px;">
+                        <div class="chart-placeholder-text">
+                            <i class="fas fa-users"></i>
+                            <p>Customer Demographics Chart</p>
+                        </div>
+                    </div>
+                    <div class="analytics-insights">
+                        <div class="insight-item">
+                            <div class="insight-icon"><i class="fas fa-user"></i></div>
+                            <div class="insight-info">
+                                <div class="insight-title">Age Group</div>
+                                <div class="insight-value">25-34 years (42%)</div>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <div class="insight-icon"><i class="fas fa-venus-mars"></i></div>
+                            <div class="insight-info">
+                                <div class="insight-title">Gender</div>
+                                <div class="insight-value">Female (56%), Male (44%)</div>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <div class="insight-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="insight-info">
+                                <div class="insight-title">Top Location</div>
+                                <div class="insight-value">California (23%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analytics-grid">
+                <!-- Traffic Sources -->
+                <div class="chart-card">
+                    <div class="chart-card__header">
+                        <h3 class="chart-card__title">Traffic Sources</h3>
+                    </div>
+                    <div class="chart-placeholder" style="height: 250px;">
+                        <div class="chart-placeholder-text">
+                            <i class="fas fa-random"></i>
+                            <p>Traffic Sources Chart</p>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Source</th>
+                                    <th>Visitors</th>
+                                    <th>Conversion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Direct</td>
+                                    <td>4,325</td>
+                                    <td>3.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>Organic Search</td>
+                                    <td>3,752</td>
+                                    <td>2.9%</td>
+                                </tr>
+                                <tr>
+                                    <td>Social Media</td>
+                                    <td>2,819</td>
+                                    <td>2.3%</td>
+                                </tr>
+                                <tr>
+                                    <td>Referral</td>
+                                    <td>1,473</td>
+                                    <td>4.2%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Sales by Category -->
+                <div class="chart-card">
+                    <div class="chart-card__header">
+                        <h3 class="chart-card__title">Sales by Category</h3>
+                    </div>
+                    <div class="chart-placeholder" style="height: 250px;">
+                        <div class="chart-placeholder-text">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Category Sales Chart</p>
+                        </div>
+                    </div>
+                    <div class="category-stats">
+                        <div class="category-stat-item">
+                            <div class="category-name">Electronics</div>
+                            <div class="category-progress">
+                                <div class="progress-bar" style="width: 65%"></div>
+                            </div>
+                            <div class="category-value">$15,982</div>
+                        </div>
+                        <div class="category-stat-item">
+                            <div class="category-name">Clothing</div>
+                            <div class="category-progress">
+                                <div class="progress-bar" style="width: 42%"></div>
+                            </div>
+                            <div class="category-value">$10,345</div>
+                        </div>
+                        <div class="category-stat-item">
+                            <div class="category-name">Home & Kitchen</div>
+                            <div class="category-progress">
+                                <div class="progress-bar" style="width: 28%"></div>
+                            </div>
+                            <div class="category-value">$6,872</div>
+                        </div>
+                        <div class="category-stat-item">
+                            <div class="category-name">Books & Media</div>
+                            <div class="category-progress">
+                                <div class="progress-bar" style="width: 15%"></div>
+                            </div>
+                            <div class="category-value">$3,685</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="chart-card full-width">
+                <div class="chart-card__header">
+                    <h3 class="chart-card__title">Recent Activity</h3>
+                    <button class="btn btn-sm btn-outline">View All</button>
+                </div>
+                <div class="activity-timeline">
+                    <div class="activity-item">
+                        <div class="activity-icon order"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="activity-content">
+                            <div class="activity-title">New order placed</div>
+                            <div class="activity-desc">Order #7895 for $289.50 by Emma Johnson</div>
+                            <div class="activity-time">2 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon user"><i class="fas fa-user-plus"></i></div>
+                        <div class="activity-content">
+                            <div class="activity-title">New customer registered</div>
+                            <div class="activity-desc">Michael Thompson created an account</div>
+                            <div class="activity-time">15 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon review"><i class="fas fa-star"></i></div>
+                        <div class="activity-content">
+                            <div class="activity-title">New product review</div>
+                            <div class="activity-desc">Smartphone X received a 5-star review</div>
+                            <div class="activity-time">42 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon refund"><i class="fas fa-undo"></i></div>
+                        <div class="activity-content">
+                            <div class="activity-title">Refund processed</div>
+                            <div class="activity-desc">Order #7878 refunded $129.99 to Lisa Brown</div>
+                            <div class="activity-time">1 hour ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon product"><i class="fas fa-box"></i></div>
+                        <div class="activity-content">
+                            <div class="activity-title">Product inventory updated</div>
+                            <div class="activity-desc">Wireless Headphones stock increased by 25 units</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle
+            const adminToggle = document.querySelector('.admin-toggle');
+            const adminSidebar = document.querySelector('.admin-sidebar');
+            const adminMain = document.querySelector('.admin-main');
+
+            if (adminToggle && adminSidebar) {
+                // Check if we're on mobile and set initial state
+                function checkScreenSize() {
+                    if (window.innerWidth <= 991) {
+                        // On mobile: sidebar starts hidden, gets 'active' class to show
+                        adminSidebar.classList.remove('hidden');
+                    } else {
+                        // On desktop: sidebar starts visible, gets 'hidden' class to hide
+                        adminSidebar.classList.remove('active');
+                    }
+                }
+                // Initial check
+                checkScreenSize();
+
+                // Rechecking on window resize
+                window.addEventListener('resize', checkScreenSize);
+
+                // Toggle logic
+                adminToggle.addEventListener('click', function() {
+                    if (window.innerWidth <= 991) {
+                        // Mobile behavior
+                        adminSidebar.classList.toggle('active');
+                    } else {
+                        // Desktop behavior
+                        adminSidebar.classList.toggle('hidden');
+                        adminMain.classList.toggle('expanded');
+                    }
+                });
+
+                // Close sidebar when clicking outside on mobile
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.admin-sidebar') &&
+                        !e.target.closest('.admin-toggle')) {
+
+                        if (window.innerWidth <= 991 && adminSidebar.classList.contains('active')) {
+                            adminSidebar.classList.remove('active');
+                        }
+                    }
+                });
+            }
+
+            // Tab functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    tabButtons.forEach(tab => tab.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Date range display toggle
+            const dateRangeDisplay = document.querySelector('.date-range-display');
+            if (dateRangeDisplay) {
+                dateRangeDisplay.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

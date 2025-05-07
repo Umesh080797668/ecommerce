@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html">
+                <h1><span>Shop</span>Verse</h1>
+            </a>
+        </div>
+
+        <div class="admin-header__search">
+            <form action="#" method="get" class="search-form">
+                <input type="text" placeholder="Search customers..." name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="admin-user">
+            <div class="admin-notifications">
+                <a href="#" class="btn btn-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+
+            <div class="admin-user__avatar">
+                <img src="https://via.placeholder.com/40" alt="Admin User">
+            </div>
+
+            <div class="admin-user__info">
+                <div class="admin-user__name">John Admin</div>
+                <div class="admin-user__role">Administrator</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-dashboard.html" class="sidebar-menu__link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-orders.html" class="sidebar-menu__link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-products.html" class="sidebar-menu__link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-customers.html" class="sidebar-menu__link active">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-vendors.html" class="sidebar-menu__link">
+                            <i class="fas fa-store"></i>
+                            <span>Vendors</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-analytics.html" class="sidebar-menu__link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-discounts.html" class="sidebar-menu__link">
+                            <i class="fas fa-percent"></i>
+                            <span>Discounts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-transactions.html" class="sidebar-menu__link">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="admin-settings.html" class="sidebar-menu__link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="../index.html" class="sidebar-menu__link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <h1>Customer Management</h1>
+            <p class="text-light mb-4">View and manage all your customers in one place.</p>
+
+            <!-- Stats Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Total Customers</div>
+                        <div class="stat-card__value">1,240</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8.2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">New Customers</div>
+                        <div class="stat-card__value">85</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Avg. Orders</div>
+                        <div class="stat-card__value">2.3</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>3.7% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <div class="stat-card__title">Avg. Lifetime Value</div>
+                        <div class="stat-card__value">$235</div>
+                        <div class="stat-card__change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>5.2% from last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="action-bar">
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Customer</button>
+                <button class="btn btn-outline"><i class="fas fa-envelope"></i> Email Selected</button>
+                <button class="btn btn-outline"><i class="fas fa-tag"></i> Add Tags</button>
+                <button class="btn btn-outline"><i class="fas fa-file-export"></i> Export</button>
+                <button class="btn btn-outline-danger"><i class="fas fa-trash"></i> Delete Selected</button>
+            </div>
+
+            <!-- Customers Filter -->
+            <div class="filter-container">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="status-filter">Status</label>
+                        <select id="status-filter" class="form-select">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Registration Date</label>
+                        <select id="date-filter" class="form-select">
+                            <option value="all">All Time</option>
+                            <option value="today">Today</option>
+                            <option value="last7">Last 7 Days</option>
+                            <option value="last30">Last 30 Days</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="spend-filter">Total Spend</label>
+                        <select id="spend-filter" class="form-select">
+                            <option value="all">All</option>
+                            <option value="under50">Under $50</option>
+                            <option value="50to200">$50 - $200</option>
+                            <option value="200to500">$200 - $500</option>
+                            <option value="over500">Over $500</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-primary"><i class="fas fa-filter"></i> Apply Filters</button>
+                    <button class="btn btn-outline"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <!-- Customers Table -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>All Customers</h3>
+                    <div class="table-actions">
+                        <div class="search-mini">
+                            <input type="text" placeholder="Search customers...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <button class="btn btn-sm btn-outline"><i class="fas fa-sync"></i> Refresh</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all">
+                                    <label for="select-all" class="checkbox-label"></label>
+                                </th>
+                                <th>Customer</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Orders</th>
+                                <th>Total Spent</th>
+                                <th>Last Order</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-1">
+                                    <label for="select-1" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>Emma Johnson</span>
+                                    </div>
+                                </td>
+                                <td>emma.j@example.com</td>
+                                <td>+1 (555) 123-4567</td>
+                                <td>8</td>
+                                <td>$1,289.50</td>
+                                <td>May 06, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-2">
+                                    <label for="select-2" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>David Chen</span>
+                                    </div>
+                                </td>
+                                <td>david.c@example.com</td>
+                                <td>+1 (555) 234-5678</td>
+                                <td>3</td>
+                                <td>$459.97</td>
+                                <td>May 05, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-3">
+                                    <label for="select-3" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>Sophie Martinez</span>
+                                    </div>
+                                </td>
+                                <td>sophie.m@example.com</td>
+                                <td>+1 (555) 345-6789</td>
+                                <td>1</td>
+                                <td>$349.00</td>
+                                <td>May 03, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-4">
+                                    <label for="select-4" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>James Wilson</span>
+                                    </div>
+                                </td>
+                                <td>james.w@example.com</td>
+                                <td>+1 (555) 456-7890</td>
+                                <td>5</td>
+                                <td>$675.45</td>
+                                <td>May 01, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-5">
+                                    <label for="select-5" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>Lisa Brown</span>
+                                    </div>
+                                </td>
+                                <td>lisa.b@example.com</td>
+                                <td>+1 (555) 567-8901</td>
+                                <td>2</td>
+                                <td>$258.99</td>
+                                <td>Apr 28, 2025</td>
+                                <td><span class="status-badge inactive">Inactive</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-6">
+                                    <label for="select-6" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>Michael Taylor</span>
+                                    </div>
+                                </td>
+                                <td>michael.t@example.com</td>
+                                <td>+1 (555) 678-9012</td>
+                                <td>7</td>
+                                <td>$1,159.85</td>
+                                <td>Apr 27, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="select-7">
+                                    <label for="select-7" class="checkbox-label"></label>
+                                </td>
+                                <td>
+                                    <div class="customer-info">
+                                        <img src="https://via.placeholder.com/40" alt="Customer" class="customer-avatar">
+                                        <span>Olivia Garcia</span>
+                                    </div>
+                                </td>
+                                <td>olivia.g@example.com</td>
+                                <td>+1 (555) 789-0123</td>
+                                <td>4</td>
+                                <td>$532.75</td>
+                                <td>Apr 25, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-icon" title="View Profile"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="More"><i class="fas fa-ellipsis-v"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <span class="pagination-ellipsis">...</span>
+                    <button class="pagination-btn">12</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar toggle
+            const adminToggle = document.querySelector('.admin-toggle');
+            const adminSidebar = document.querySelector('.admin-sidebar');
+            const adminMain = document.querySelector('.admin-main');
+
+            if (adminToggle && adminSidebar) {
+                // Check if we're on mobile and set initial state
+                function checkScreenSize() {
+                    if (window.innerWidth <= 991) {
+                        // On mobile: sidebar starts hidden, gets 'active' class to show
+                        adminSidebar.classList.remove('hidden');
+                    } else {
+                        // On desktop: sidebar starts visible, gets 'hidden' class to hide
+                        adminSidebar.classList.remove('active');
+                    }
+                }
+                // Initial check
+                checkScreenSize();
+
+                // Rechecking on window resize
+                window.addEventListener('resize', checkScreenSize);
+
+                // Toggle logic
+                adminToggle.addEventListener('click', function() {
+                    if (window.innerWidth <= 991) {
+                        // Mobile behavior
+                        adminSidebar.classList.toggle('active');
+                    } else {
+                        // Desktop behavior
+                        adminSidebar.classList.toggle('hidden');
+                        adminMain.classList.toggle('expanded');
+                    }
+                });
+
+                // Close sidebar when clicking outside on mobile
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.admin-sidebar') &&
+                        !e.target.closest('.admin-toggle')) {
+
+                        if (window.innerWidth <= 991 && adminSidebar.classList.contains('active')) {
+                            adminSidebar.classList.remove('active');
+                        }
+                    }
+                });
+            }
+
+            // Select all functionality
+            const selectAllCheckbox = document.getElementById('select-all');
+            const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+
+            if (selectAllCheckbox) {
+                selectAllCheckbox.addEventListener('change', function() {
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = selectAllCheckbox.checked;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
