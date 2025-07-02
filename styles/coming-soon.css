@@ -5,6 +5,60 @@
  * This file contains styles specific to the Coming Soon page
  */
 
+/* Phase 4 Timeline Enhancements */
+.timeline-point.phase4 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    animation: pulse-phase4 2s infinite;
+}
+
+.timeline-point.future {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 0 20px rgba(240, 147, 251, 0.5);
+    animation: pulse-future 2s infinite;
+}
+
+@keyframes pulse-phase4 {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes pulse-future {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.timeline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.timeline-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    color: white;
+}
+
+.timeline-link.blockchain-link {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin-left: 10px;
+}
+
+.timeline-link.blockchain-link:hover {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    box-shadow: 0 8px 20px rgba(26, 26, 46, 0.3);
+}
+
 
 /* Page Header */
 

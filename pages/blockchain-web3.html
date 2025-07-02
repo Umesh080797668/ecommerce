@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain & Web3 Integration | ShopVerse</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/blockchain-web3.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:info@shopverse.com"><i class="fas fa-envelope"></i> info@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__currency">
+                            <select id="currency-selector">
+                                <option value="usd">$ USD</option>
+                                <option value="eur">€ EUR</option>
+                                <option value="gbp">£ GBP</option>
+                                <option value="btc">₿ BTC</option>
+                                <option value="eth">Ξ ETH</option>
+                                <option value="usdc">$ USDC</option>
+                                <option value="usdt">₮ USDT</option>
+                            </select>
+                        </div>
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="ja">日本語</option>
+                                <option value="zh">中文</option>
+                                <option value="ko">한국어</option>
+                            </select>
+                        </div>
+                        <div class="header__wallet">
+                            <button class="wallet-connect-btn" id="connectWallet">
+                                <i class="fas fa-wallet"></i> Connect Wallet
+                            </button>
+                        </div>
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle">
+            <div class="container">
+                <div class="header__middle-content">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse</h1>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form action="#" method="get" class="search-form">
+                            <div class="search-category">
+                                <select name="category" id="search-category">
+                                    <option value="all">All Categories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="home">Home & Furniture</option>
+                                    <option value="beauty">Beauty & Health</option>
+                                    <option value="nft">NFT Collections</option>
+                                    <option value="defi">DeFi Products</option>
+                                    <option value="crypto">Crypto Accessories</option>
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Search products, NFTs, or collections..." name="search">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__action">
+                        <div class="action__item nft-collection">
+                            <a href="#" class="action__link">
+                                <i class="fas fa-gem"></i>
+                                <span class="count">2</span>
+                            </a>
+                        </div>
+                        <div class="action__item wishlist">
+                            <a href="wishlist.html" class="action__link">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                        <div class="action__item cart">
+                            <a href="cart.html" class="action__link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <h1>Blockchain & Web3 Integration</h1>
+            <nav class="breadcrumb__nav">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="phase4-features.html">Phase 4</a>
+                <span>/</span>
+                <span>Blockchain & Web3</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="web3-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Web3 Enabled</span>
+                    <h1>Blockchain & Web3 Integration</h1>
+                    <p>Experience the future of decentralized commerce with NFT marketplaces, cryptocurrency payments, and Web3 features that put you in control.</p>
+                    <div class="web3-stats">
+                        <div class="stat">
+                            <span class="number" data-target="10">0</span>
+                            <span class="label">Supported Blockchains</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number" data-target="25">0</span>
+                            <span class="label">Crypto Currencies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number" data-target="1000">0</span>
+                            <span class="label">NFT Collections</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="connectWeb3Wallet">
+                            <i class="fab fa-ethereum"></i> Connect Web3 Wallet
+                        </button>
+                        <button class="btn btn-secondary" id="exploreNFT">
+                            <i class="fas fa-gem"></i> Explore NFTs
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="blockchain-visualization">
+                        <div class="blockchain-network">
+                            <div class="blockchain-node" data-chain="ethereum">
+                                <i class="fab fa-ethereum"></i>
+                                <span>Ethereum</span>
+                            </div>
+                            <div class="blockchain-node" data-chain="bitcoin">
+                                <i class="fab fa-bitcoin"></i>
+                                <span>Bitcoin</span>
+                            </div>
+                            <div class="blockchain-node" data-chain="polygon">
+                                <i class="fas fa-hexagon"></i>
+                                <span>Polygon</span>
+                            </div>
+                            <div class="blockchain-node" data-chain="solana">
+                                <i class="fas fa-sun"></i>
+                                <span>Solana</span>
+                            </div>
+                            <div class="connection-line"></div>
+                            <div class="connection-line"></div>
+                            <div class="connection-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web3 Features Section -->
+    <section class="web3-features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Web3 & Blockchain Features</h2>
+                <p>Revolutionary blockchain technology integration for the future of e-commerce</p>
+            </div>
+            
+            <div class="web3-categories">
+                <!-- NFT Content System -->
+                <div class="web3-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>NFT Content System</h3>
+                        <span class="status-badge active">Live</span>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="nft-minting">
+                            <div class="feature-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h4>Mint Exclusive NFTs</h4>
+                            <p>Create and mint exclusive article NFTs with blockchain verification and ownership proof</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="nft-minting">
+                                    <i class="fas fa-hammer"></i> Mint NFT
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="nft-gated">
+                            <div class="feature-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h4>NFT-Gated Content</h4>
+                            <p>Access premium content through NFT ownership verification and smart contracts</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="nft-gated">
+                                    <i class="fas fa-unlock"></i> Access Content
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="royalties">
+                            <div class="feature-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h4>Smart Contract Royalties</h4>
+                            <p>Automatic royalty distribution to authors through programmable smart contracts</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="royalties">
+                                    <i class="fas fa-chart-line"></i> View Royalties
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="collectibles">
+                            <div class="feature-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4>Digital Collectibles</h4>
+                            <p>Collect limited edition NFTs and digital memorabilia from your favorite brands</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="collectibles">
+                                    <i class="fas fa-eye"></i> View Collection
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cryptocurrency Payments -->
+                <div class="web3-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fab fa-bitcoin"></i>
+                        </div>
+                        <h3>Cryptocurrency Payments</h3>
+                        <span class="status-badge active">Live</span>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="crypto-payments">
+                            <div class="feature-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <h4>Multi-Crypto Payments</h4>
+                            <p>Accept Bitcoin, Ethereum, and stablecoins with instant conversion and secure processing</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="crypto-payments">
+                                    <i class="fab fa-bitcoin"></i> Pay with Crypto
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="defi-subscriptions">
+                            <div class="feature-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h4>DeFi Subscriptions</h4>
+                            <p>Decentralized recurring payments with programmable subscription smart contracts</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="defi-subscriptions">
+                                    <i class="fas fa-calendar"></i> Setup DeFi Sub
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="crypto-tipping">
+                            <div class="feature-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h4>Crypto Tipping</h4>
+                            <p>Support authors and creators with instant cryptocurrency tips and donations</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="crypto-tipping">
+                                    <i class="fas fa-gift"></i> Send Tip
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="yield-farming">
+                            <div class="feature-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>DeFi Yield Farming</h4>
+                            <p>Earn yields on platform tokens through decentralized finance protocols</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="yield-farming">
+                                    <i class="fas fa-chart-area"></i> View Yields
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decentralized Features -->
+                <div class="web3-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Decentralized Features</h3>
+                        <span class="status-badge beta">Beta</span>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card" data-feature="ipfs-storage">
+                            <div class="feature-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>IPFS Content Storage</h4>
+                            <p>Permanent, decentralized content storage using InterPlanetary File System</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="ipfs-storage">
+                                    <i class="fas fa-cloud-upload-alt"></i> Upload to IPFS
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="did-verification">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Decentralized Identity</h4>
+                            <p>Self-sovereign identity verification without central authorities</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="did-verification">
+                                    <i class="fas fa-id-card"></i> Verify Identity
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="governance-tokens">
+                            <div class="feature-icon">
+                                <i class="fas fa-vote-yea"></i>
+                            </div>
+                            <h4>Governance Tokens</h4>
+                            <p>Community-driven platform decisions through blockchain-based voting</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="governance">
+                                    <i class="fas fa-gavel"></i> Vote on Proposals
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-feature="wallet-integration">
+                            <div class="feature-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <h4>Multi-Wallet Support</h4>
+                            <p>Connect MetaMask, WalletConnect, and other popular Web3 wallets</p>
+                            <div class="feature-demo">
+                                <button class="demo-btn" data-demo="wallet-integration">
+                                    <i class="fas fa-plug"></i> Connect Wallet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Blockchain Data -->
+    <section class="blockchain-data-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live Blockchain Data</h2>
+                <p>Real-time cryptocurrency prices and blockchain metrics</p>
+            </div>
+            
+            <div class="crypto-dashboard">
+                <div class="crypto-card" data-crypto="btc">
+                    <div class="crypto-icon">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div class="crypto-info">
+                        <h3>Bitcoin</h3>
+                        <div class="crypto-price" id="btc-price">$43,250.00</div>
+                        <div class="crypto-change positive" id="btc-change">+2.5%</div>
+                    </div>
+                </div>
+                
+                <div class="crypto-card" data-crypto="eth">
+                    <div class="crypto-icon">
+                        <i class="fab fa-ethereum"></i>
+                    </div>
+                    <div class="crypto-info">
+                        <h3>Ethereum</h3>
+                        <div class="crypto-price" id="eth-price">$2,650.00</div>
+                        <div class="crypto-change positive" id="eth-change">+1.8%</div>
+                    </div>
+                </div>
+                
+                <div class="crypto-card" data-crypto="usdc">
+                    <div class="crypto-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="crypto-info">
+                        <h3>USDC</h3>
+                        <div class="crypto-price" id="usdc-price">$1.00</div>
+                        <div class="crypto-change neutral" id="usdc-change">0.0%</div>
+                    </div>
+                </div>
+                
+                <div class="crypto-card" data-crypto="matic">
+                    <div class="crypto-icon">
+                        <i class="fas fa-hexagon"></i>
+                    </div>
+                    <div class="crypto-info">
+                        <h3>Polygon</h3>
+                        <div class="crypto-price" id="matic-price">$0.85</div>
+                        <div class="crypto-change negative" id="matic-change">-0.3%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallet Connection Modal -->
+    <div class="wallet-modal" id="walletModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Connect Your Wallet</h3>
+                <button class="modal-close" id="walletModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="wallet-options">
+                    <div class="wallet-option" data-wallet="metamask">
+                        <div class="wallet-icon">
+                            <i class="fas fa-fox"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <h4>MetaMask</h4>
+                            <p>Most popular Ethereum wallet</p>
+                        </div>
+                        <div class="wallet-status">
+                            <span class="status-indicator"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="wallet-option" data-wallet="walletconnect">
+                        <div class="wallet-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <h4>WalletConnect</h4>
+                            <p>Connect mobile wallets via QR</p>
+                        </div>
+                        <div class="wallet-status">
+                            <span class="status-indicator"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="wallet-option" data-wallet="coinbase">
+                        <div class="wallet-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="wallet-info">
+                            <h4>Coinbase Wallet</h4>
+                            <p>Secure and user-friendly</p>
+                        </div>
+                        <div class="wallet-status">
+                            <span class="status-indicator"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wallet-security">
+                    <div class="security-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>Your wallet connection is secure and encrypted. We never store your private keys.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h2 class="footer__logo">
+                        <span>Shop</span>Verse
+                    </h2>
+                    <p>The future of decentralized e-commerce powered by blockchain technology and Web3 innovation.</p>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Blockchain</h3>
+                    <ul>
+                        <li><a href="#ethereum">Ethereum Network</a></li>
+                        <li><a href="#polygon">Polygon/Matic</a></li>
+                        <li><a href="#bitcoin">Bitcoin Support</a></li>
+                        <li><a href="#solana">Solana Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>NFT Marketplace</h3>
+                    <ul>
+                        <li><a href="#collections">Featured Collections</a></li>
+                        <li><a href="#create">Create NFTs</a></li>
+                        <li><a href="#trading">NFT Trading</a></li>
+                        <li><a href="#analytics">Market Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>DeFi Features</h3>
+                    <ul>
+                        <li><a href="#staking">Token Staking</a></li>
+                        <li><a href="#yield">Yield Farming</a></li>
+                        <li><a href="#governance">DAO Governance</a></li>
+                        <li><a href="#liquidity">Liquidity Mining</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 ShopVerse. All Rights Reserved. | Powered by Blockchain Technology</p>
+                <div class="footer__links">
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="#whitepaper">Whitepaper</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/phase4-blockchain.js"></script>
+    <script src="../js/phase4-features.js"></script>
+    
+    <!-- Web3 Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</body>
+
+</html>

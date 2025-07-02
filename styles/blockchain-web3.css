@@ -1,0 +1,683 @@
+/* Blockchain & Web3 Integration Styles */
+
+/* Web3 Hero Section */
+.web3-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.web3-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 48, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.2) 0%, transparent 50%);
+    animation: web3Background 20s ease-in-out infinite;
+}
+
+@keyframes web3Background {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.web3-hero .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.web3-hero .hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.web3-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.web3-hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.web3-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.web3-stats .stat {
+    text-align: center;
+    color: white;
+}
+
+.web3-stats .stat .number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.web3-stats .stat .label {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* Blockchain Visualization */
+.blockchain-visualization {
+    position: relative;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blockchain-network {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.blockchain-node {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.blockchain-node:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.blockchain-node[data-chain="ethereum"] {
+    top: 20%;
+    left: 20%;
+    border-color: #627eea;
+}
+
+.blockchain-node[data-chain="bitcoin"] {
+    top: 20%;
+    right: 20%;
+    border-color: #f2a900;
+}
+
+.blockchain-node[data-chain="polygon"] {
+    bottom: 20%;
+    left: 20%;
+    border-color: #8247e5;
+}
+
+.blockchain-node[data-chain="solana"] {
+    bottom: 20%;
+    right: 20%;
+    border-color: #9945ff;
+}
+
+.blockchain-node i {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.blockchain-node span {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.connection-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: dataFlow 3s infinite;
+}
+
+.connection-line:nth-child(5) {
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    transform: rotate(0deg);
+    animation-delay: 0s;
+}
+
+.connection-line:nth-child(6) {
+    top: 50%;
+    left: 15%;
+    width: 25%;
+    transform: rotate(90deg);
+    animation-delay: 1s;
+}
+
+.connection-line:nth-child(7) {
+    top: 50%;
+    right: 15%;
+    width: 25%;
+    transform: rotate(90deg);
+    animation-delay: 2s;
+}
+
+@keyframes dataFlow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Wallet Connection Button */
+.wallet-connect-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wallet-connect-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.wallet-connect-btn.connected {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+/* Web3 Categories */
+.web3-features-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.web3-category {
+    margin-bottom: 80px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.web3-category:hover {
+    transform: translateY(-5px);
+}
+
+.web3-category .category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.web3-category .category-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.web3-category .category-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Crypto Dashboard */
+.blockchain-data-section {
+    padding: 80px 0;
+    background: #1a1a2e;
+    color: white;
+}
+
+.crypto-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.crypto-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.crypto-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.crypto-card .crypto-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.crypto-card .crypto-icon i {
+    color: #f2a900;
+}
+
+.crypto-card[data-crypto="eth"] .crypto-icon i {
+    color: #627eea;
+}
+
+.crypto-card[data-crypto="usdc"] .crypto-icon i {
+    color: #2775ca;
+}
+
+.crypto-card[data-crypto="matic"] .crypto-icon i {
+    color: #8247e5;
+}
+
+.crypto-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.crypto-price {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.crypto-change {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.crypto-change.positive {
+    color: #2ecc71;
+}
+
+.crypto-change.negative {
+    color: #e74c3c;
+}
+
+.crypto-change.neutral {
+    color: #95a5a6;
+}
+
+/* Wallet Modal */
+.wallet-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(10px);
+}
+
+.wallet-modal.active {
+    display: flex;
+}
+
+.wallet-modal .modal-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease;
+}
+
+.wallet-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wallet-option {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ecf0f1;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wallet-option:hover {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.wallet-option .wallet-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.wallet-option .wallet-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.wallet-option .wallet-info {
+    flex: 1;
+}
+
+.wallet-option .wallet-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.wallet-option .wallet-info p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.wallet-status .status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #95a5a6;
+    display: block;
+}
+
+.wallet-option.available .status-indicator {
+    background: #2ecc71;
+}
+
+.wallet-option.unavailable .status-indicator {
+    background: #e74c3c;
+}
+
+.wallet-security {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.security-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(46, 204, 113, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #2ecc71;
+}
+
+.security-notice i {
+    color: #2ecc71;
+    font-size: 20px;
+}
+
+.security-notice p {
+    margin: 0;
+    color: #27ae60;
+    font-size: 14px;
+}
+
+/* NFT Collection Action */
+.action__item.nft-collection .action__link {
+    position: relative;
+}
+
+.action__item.nft-collection .action__link i {
+    color: #f093fb;
+}
+
+.action__item.nft-collection .count {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Enhanced Search for Crypto/NFT */
+#search-category option[value="nft"],
+#search-category option[value="defi"],
+#search-category option[value="crypto"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .web3-hero .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .web3-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .web3-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .web3-stats .stat .number {
+        font-size: 2rem;
+    }
+    
+    .crypto-dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .blockchain-network {
+        padding: 20px;
+    }
+    
+    .blockchain-node {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .blockchain-node i {
+        font-size: 18px;
+    }
+    
+    .blockchain-node span {
+        font-size: 8px;
+    }
+    
+    .web3-category {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .wallet-modal .modal-content {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .web3-hero {
+        padding: 60px 0;
+    }
+    
+    .web3-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .web3-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .crypto-dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .wallet-option {
+        padding: 15px;
+    }
+    
+    .wallet-option .wallet-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .wallet-option .wallet-icon i {
+        font-size: 20px;
+    }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .web3-features-section {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] .web3-category {
+    background: #2c2c2c;
+    border: 1px solid #404040;
+}
+
+[data-theme="dark"] .web3-category .category-header h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .feature-card {
+    background: #333333;
+    border-color: #404040;
+}
+
+[data-theme="dark"] .feature-card h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .feature-card p {
+    color: #bbbbbb;
+}
+
+[data-theme="dark"] .wallet-modal .modal-content {
+    background: #2c2c2c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .wallet-option {
+    border-color: #404040;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .wallet-option:hover {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* Animation Enhancements */
+.crypto-card[data-crypto]:hover .crypto-icon {
+    animation: cryptoBounce 0.6s ease;
+}
+
+@keyframes cryptoBounce {
+    0%, 20%, 60%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    80% { transform: translateY(-5px); }
+}
+
+/* Loading States for Blockchain Data */
+.crypto-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+}
+
+.crypto-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Success States for Transactions */
+.transaction-success {
+    text-align: center;
+    padding: 40px;
+    color: #2ecc71;
+}
+
+.transaction-success i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.transaction-success h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Error States for Web3 */
+.web3-error {
+    text-align: center;
+    padding: 40px;
+    color: #e74c3c;
+}
+
+.web3-error i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.web3-error h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
