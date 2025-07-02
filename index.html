@@ -18,6 +18,122 @@
     <link rel="stylesheet" href="styles/darkmode.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Enterprise Styles -->
+    <style>
+        .premium-content.locked {
+            position: relative;
+            filter: blur(3px);
+            pointer-events: none;
+        }
+        
+        .premium-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .premium-overlay-content i {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+        
+        .floating-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+        
+        .floating-notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-success {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+        }
+        
+        .notification-badge {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+        }
+        
+        .recommendations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .recommendation-card {
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #667eea, #764ba2) border-box;
+        }
+        
+        .recommendation-source {
+            color: #667eea;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enterprise-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .enterprise-banner h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .enterprise-banner p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .enterprise-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .enterprise-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        
+        .enterprise-nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -316,6 +432,39 @@
                 <div class="hero-dots">
                     <span class="hero-dot active" data-index="0"></span>
                     <span class="hero-dot" data-index="1"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Banner -->
+    <div class="enterprise-banner">
+        <div class="container">
+            <h3><i class="fas fa-rocket"></i> Enterprise Features Now Live!</h3>
+            <p>Experience AI-powered recommendations, advanced analytics, and premium community features</p>
+            <div class="enterprise-nav">
+                <a href="admin/enterprise-dashboard.html"><i class="fas fa-tachometer-alt"></i> Enterprise Dashboard</a>
+                <a href="#" data-subscribe-plan="pro"><i class="fas fa-crown"></i> Upgrade to Premium</a>
+                <a href="#recommendations"><i class="fas fa-magic"></i> View AI Recommendations</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Recommendations Section -->
+    <section class="recommendations-section" id="recommendations" style="padding: 4rem 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">
+                    <i class="fas fa-magic" style="color: #667eea;"></i>
+                    AI-Powered Recommendations
+                </h2>
+                <p class="section-subtitle">Personalized product suggestions just for you</p>
+            </div>
+            <div class="recommendations-container">
+                <!-- Recommendations will be loaded here by AI engine -->
+                <div class="recommendation-placeholder" style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: #666;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                    <p>Loading personalized recommendations...</p>
                 </div>
             </div>
         </div>
@@ -1166,12 +1315,22 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Enterprise Configuration -->
+    <script src="js/enterprise-config.js"></script>
+    
+    <!-- Core Scripts -->
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/darkmode.js"></script>
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/3d-effects.js"></script>
+    
+    <!-- Enterprise Features -->
+    <script src="js/enterprise-analytics.js"></script>
+    <script src="js/subscription-manager.js"></script>
+    <script src="js/ai-personalization.js"></script>
+    <script src="js/community-platform.js"></script>
 </body>
 
 </html>

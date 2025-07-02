@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Dashboard | ShopVerse</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    
+    <!-- Enterprise Dashboard CSS -->
+    <style>
+        .enterprise-dashboard {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .enterprise-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+        }
+
+        .enterprise-header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .enterprise-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .enterprise-stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enterprise-stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .stat-trend {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .trend-positive {
+            color: #4ecdc4;
+        }
+
+        .trend-negative {
+            color: #ff6b6b;
+        }
+
+        .enterprise-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .enterprise-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-status {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .status-active {
+            color: #4ecdc4;
+        }
+
+        .status-beta {
+            color: #ffd93d;
+        }
+
+        .status-coming-soon {
+            color: #ff6b6b;
+        }
+
+        .analytics-chart {
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .ai-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ai-metric {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .ai-metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4ecdc4;
+        }
+
+        .ai-metric-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .enterprise-sections {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ai-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="enterprise-dashboard">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Enterprise Header -->
+    <header class="enterprise-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1><i class="fas fa-rocket"></i> Enterprise Dashboard</h1>
+                <div class="header-actions">
+                    <a href="../admin/admin-dashboard.html" class="btn btn-outline-light">
+                        <i class="fas fa-cog"></i> Admin Panel
+                    </a>
+                    <a href="../index.html" class="btn btn-outline-light">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Enterprise Stats -->
+        <div class="enterprise-stats">
+            <div class="enterprise-stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-value" id="total-users">125,847</div>
+                <div class="stat-label">Total Active Users</div>
+                <div class="stat-trend trend-positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>15.3% from last month</span>
+                </div>
+            </div>
+
+            <div class="enterprise-stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="stat-value" id="premium-subscribers">8,934</div>
+                <div class="stat-label">Premium Subscribers</div>
+                <div class="stat-trend trend-positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>28.7% from last month</span>
+                </div>
+            </div>
+
+            <div class="enterprise-stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-value" id="monthly-revenue">$847,293</div>
+                <div class="stat-label">Monthly Recurring Revenue</div>
+                <div class="stat-trend trend-positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>22.1% from last month</span>
+                </div>
+            </div>
+
+            <div class="enterprise-stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="stat-value" id="ai-recommendations">2.4M</div>
+                <div class="stat-label">AI Recommendations Served</div>
+                <div class="stat-trend trend-positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>45.8% from last month</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enterprise Sections -->
+        <div class="enterprise-sections">
+            <!-- Advanced Analytics Section -->
+            <div class="enterprise-section">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    Advanced Analytics & BI
+                </h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-funnel-dollar"></i>
+                        </div>
+                        <div class="feature-name">Funnel Analysis</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="feature-name">Cohort Analysis</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="feature-name">Heatmaps</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-crystal-ball"></i>
+                        </div>
+                        <div class="feature-name">Predictive Analytics</div>
+                        <div class="feature-status status-beta">Beta</div>
+                    </div>
+                </div>
+
+                <div class="analytics-chart">
+                    <span>Real-time Analytics Chart</span>
+                </div>
+            </div>
+
+            <!-- AI & Machine Learning Section -->
+            <div class="enterprise-section">
+                <h2 class="section-title">
+                    <i class="fas fa-robot"></i>
+                    AI & Machine Learning
+                </h2>
+                
+                <div class="ai-metrics">
+                    <div class="ai-metric">
+                        <div class="ai-metric-value">94.7%</div>
+                        <div class="ai-metric-label">Recommendation Accuracy</div>
+                    </div>
+                    <div class="ai-metric">
+                        <div class="ai-metric-value">87.3%</div>
+                        <div class="ai-metric-label">Personalization Score</div>
+                    </div>
+                    <div class="ai-metric">
+                        <div class="ai-metric-value">92.1%</div>
+                        <div class="ai-metric-label">Sentiment Accuracy</div>
+                    </div>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="feature-name">Personalization Engine</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="feature-name">Smart Recommendations</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription & Monetization Section -->
+            <div class="enterprise-section">
+                <h2 class="section-title">
+                    <i class="fas fa-credit-card"></i>
+                    Subscription & Monetization
+                </h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="feature-name">Multi-tier Subscriptions</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paypal"></i>
+                        </div>
+                        <div class="feature-name">Stripe Integration</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="feature-name">Promo Codes</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <div class="feature-name">Ad Management</div>
+                        <div class="feature-status status-beta">Beta</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community & Social Section -->
+            <div class="enterprise-section">
+                <h2 class="section-title">
+                    <i class="fas fa-comments"></i>
+                    Community & Social
+                </h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments-dollar"></i>
+                        </div>
+                        <div class="feature-name">Discussion Forums</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="feature-name">Gamification</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div class="feature-name">Real-time Messaging</div>
+                        <div class="feature-status status-active">Active</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="feature-name">Event Management</div>
+                        <div class="feature-status status-beta">Beta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="enterprise-section" style="grid-column: 1 / -1;">
+            <h2 class="section-title">
+                <i class="fas fa-tachometer-alt"></i>
+                Performance Metrics
+            </h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <div class="feature-name">Page Load Speed</div>
+                    <div class="feature-status status-active">1.8s avg</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="feature-name">API Response Time</div>
+                    <div class="feature-status status-active">145ms avg</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-name">Uptime</div>
+                    <div class="feature-status status-active">99.97%</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-name">Mobile Performance</div>
+                    <div class="feature-status status-active">92/100</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/enterprise-config.js"></script>
+    <script src="../js/enterprise-analytics.js"></script>
+    <script src="../js/subscription-manager.js"></script>
+    <script src="../js/ai-personalization.js"></script>
+    <script src="../js/community-platform.js"></script>
+    <script src="../js/darkmode.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize enterprise dashboard
+            initEnterpriseDashboard();
+            
+            // Update stats in real-time
+            updateDashboardStats();
+            
+            // Setup periodic updates
+            setInterval(updateDashboardStats, 30000); // Update every 30 seconds
+        });
+
+        function initEnterpriseDashboard() {
+            console.log('🚀 Enterprise Dashboard initialized');
+            
+            // Track dashboard view
+            if (window.enterpriseAnalytics) {
+                window.enterpriseAnalytics.trackEvent('enterprise_dashboard_viewed', {
+                    timestamp: Date.now(),
+                    features_active: getActiveFeatureCount()
+                });
+            }
+        }
+
+        function updateDashboardStats() {
+            // Simulate real-time stat updates
+            const stats = {
+                totalUsers: Math.floor(125000 + Math.random() * 2000),
+                premiumSubscribers: Math.floor(8900 + Math.random() * 100),
+                monthlyRevenue: Math.floor(840000 + Math.random() * 20000),
+                aiRecommendations: Math.floor(2400000 + Math.random() * 10000)
+            };
+
+            // Update DOM elements with animation
+            animateCounter('total-users', stats.totalUsers);
+            animateCounter('premium-subscribers', stats.premiumSubscribers);
+            animateCounter('monthly-revenue', stats.monthlyRevenue, '$', true);
+            animateCounter('ai-recommendations', stats.aiRecommendations, '', false, 'M');
+        }
+
+        function animateCounter(elementId, targetValue, prefix = '', currency = false, suffix = '') {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            const currentValue = parseInt(element.textContent.replace(/[^\d]/g, ''));
+            const increment = Math.ceil((targetValue - currentValue) / 50);
+            
+            if (increment === 0) return;
+
+            const timer = setInterval(() => {
+                const current = parseInt(element.textContent.replace(/[^\d]/g, ''));
+                const newValue = current + increment;
+                
+                if ((increment > 0 && newValue >= targetValue) || 
+                    (increment < 0 && newValue <= targetValue)) {
+                    clearInterval(timer);
+                    element.textContent = formatNumber(targetValue, prefix, currency, suffix);
+                } else {
+                    element.textContent = formatNumber(newValue, prefix, currency, suffix);
+                }
+            }, 20);
+        }
+
+        function formatNumber(num, prefix = '', currency = false, suffix = '') {
+            let formatted = num.toLocaleString();
+            
+            if (currency) {
+                formatted = prefix + formatted;
+            } else if (suffix === 'M' && num >= 1000000) {
+                formatted = (num / 1000000).toFixed(1) + 'M';
+            } else if (suffix === 'K' && num >= 1000) {
+                formatted = (num / 1000).toFixed(1) + 'K';
+            }
+            
+            return formatted;
+        }
+
+        function getActiveFeatureCount() {
+            return document.querySelectorAll('.status-active').length;
+        }
+
+        // Feature card hover effects
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+
+</html>

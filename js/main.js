@@ -38,7 +38,41 @@ const shopVerse = {
         liveChatEnabled: true,
         recommendationsEnabled: true,
         guestCheckoutEnabled: true,
-        analyticsEnabled: true
+        analyticsEnabled: true,
+        subscriptionsEnabled: true,
+        aiPersonalizationEnabled: true,
+        communityForumsEnabled: true,
+        gamificationEnabled: true,
+        realTimeMessagingEnabled: true,
+        advancedAnalyticsEnabled: true,
+        enterpriseIntegrationsEnabled: true
+    },
+
+    // Enterprise features
+    enterprise: {
+        subscription: {
+            currentPlan: null,
+            features: [],
+            isActive: false
+        },
+        analytics: {
+            cohortAnalysis: true,
+            funnelTracking: true,
+            predictiveAnalytics: true,
+            realTimeTracking: true
+        },
+        ai: {
+            personalizationEngine: true,
+            recommendationSystem: true,
+            sentimentAnalysis: true,
+            contentOptimization: true
+        },
+        community: {
+            forums: true,
+            gamification: true,
+            messaging: true,
+            events: true
+        }
     }
 };
 
@@ -58,6 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize custom components
     init3DBackground();
+    
+    // Initialize enterprise features
+    initEnterpriseFeatures();
+    
+    // Setup analytics tracking
+    setupAnalytics();
+    
+    // Initialize AI recommendations
+    initAIRecommendations();
+    
+    // Setup subscription features
+    initSubscriptionFeatures();
 });
 
 /**
@@ -1019,33 +1065,271 @@ function logoutUser() {
 }
 
 /**
- * Setup analytics tracking
+ * Initialize enterprise features
  */
-function setupAnalytics() {
-    // Only if enabled in features
+function initEnterpriseFeatures() {
+    // Check if enterprise features are enabled
     if (!shopVerse.features.analyticsEnabled) return;
     
-    // Track page view
-    trackEvent('page_view', {
-        page_title: document.title,
-        page_path: window.location.pathname,
-        page_url: window.location.href
-    });
+    console.log('🚀 Initializing Enterprise Features...');
     
-    // Track clicks on buttons
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('button, a');
-        if (target) {
-            const trackingId = target.getAttribute('data-track');
-            if (trackingId) {
-                trackEvent('click', {
-                    element_id: trackingId,
-                    element_text: target.textContent.trim(),
-                    element_type: target.tagName.toLowerCase()
+    // Initialize subscription management
+    if (shopVerse.features.subscriptionsEnabled && window.subscriptionManager) {
+        window.subscriptionManager.updateFeatureAccess();
+    }
+    
+    // Initialize AI personalization
+    if (shopVerse.features.aiPersonalizationEnabled && window.aiPersonalization) {
+        // Track page view for personalization
+        window.aiPersonalization.trackPageView(
+            getProductId(),
+            getCurrentCategory()
+        );
+    }
+    
+    // Initialize community features
+    if (shopVerse.features.communityForumsEnabled && window.communityPlatform) {
+        // Setup community event listeners
+        setupCommunityFeatures();
+    }
+    
+    // Setup enterprise analytics
+    if (shopVerse.features.advancedAnalyticsEnabled) {
+        setupAdvancedAnalytics();
+    }
+}
+
+/**
+ * Initialize AI recommendations
+ */
+async function initAIRecommendations() {
+    if (!shopVerse.features.recommendationsEnabled) return;
+    
+    try {
+        // Get personalized recommendations
+        if (window.aiPersonalization && window.aiPersonalization.isInitialized) {
+            const recommendations = await window.aiPersonalization.getRecommendations({
+                count: 8,
+                excludeViewed: true
+            });
+            
+            displayRecommendations(recommendations);
+        }
+    } catch (error) {
+        console.error('Error loading AI recommendations:', error);
+    }
+}
+
+/**
+ * Initialize subscription features
+ */
+function initSubscriptionFeatures() {
+    if (!shopVerse.features.subscriptionsEnabled) return;
+    
+    // Check subscription status
+    if (window.subscriptionManager) {
+        const hasSubscription = window.subscriptionManager.hasActiveSubscription();
+        
+        // Update UI based on subscription status
+        updateSubscriptionUI(hasSubscription);
+        
+        // Setup premium content access
+        setupPremiumContent(hasSubscription);
+    }
+}
+
+/**
+ * Setup community features
+ */
+function setupCommunityFeatures() {
+    // Add community navigation if not present
+    const nav = document.querySelector('.nav');
+    if (nav && !document.querySelector('.community-nav')) {
+        const communityNav = document.createElement('li');
+        communityNav.className = 'nav__item community-nav';
+        communityNav.innerHTML = `
+            <a href="#" class="nav__link">
+                <i class="fas fa-users"></i> Community
+            </a>
+        `;
+        nav.appendChild(communityNav);
+    }
+    
+    // Setup gamification notifications
+    if (shopVerse.features.gamificationEnabled) {
+        setupGamificationNotifications();
+    }
+}
+
+/**
+ * Setup advanced analytics
+ */
+function setupAdvancedAnalytics() {
+    // Track enhanced e-commerce events
+    if (window.enterpriseAnalytics) {
+        // Track product interactions
+        document.addEventListener('click', (event) => {
+            if (event.target.closest('.product-card')) {
+                const productCard = event.target.closest('.product-card');
+                const productId = productCard.getAttribute('data-product-id');
+                
+                window.enterpriseAnalytics.trackEcommerce('product_view', {
+                    product_id: productId,
+                    product_name: productCard.querySelector('.product-title')?.textContent,
+                    category: getCurrentCategory()
                 });
             }
+            
+            if (event.target.matches('.add-to-cart-btn')) {
+                const productId = event.target.getAttribute('data-product-id');
+                const price = event.target.getAttribute('data-price');
+                
+                window.enterpriseAnalytics.trackEcommerce('add_to_cart', {
+                    product_id: productId,
+                    price: parseFloat(price),
+                    currency: shopVerse.config.currency
+                });
+                
+                // Update AI personalization
+                if (window.aiPersonalization) {
+                    window.aiPersonalization.trackAddToCart(productId, price, getCurrentCategory());
+                }
+            }
+        });
+    }
+}
+
+/**
+ * Display AI recommendations
+ */
+function displayRecommendations(recommendations) {
+    const recommendationsContainer = document.querySelector('.recommendations-container');
+    if (!recommendationsContainer || !recommendations.length) return;
+    
+    const recommendationsHTML = recommendations.map(product => `
+        <div class="product-card recommendation-card" data-product-id="${product.id}">
+            <div class="product-card__image">
+                <img src="${product.image_url}" alt="${product.name}" loading="lazy">
+                <div class="product-card__overlay">
+                    <button class="btn btn-primary add-to-cart-btn" 
+                            data-product-id="${product.id}" 
+                            data-price="${product.price}">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-title">${product.name}</h3>
+                <div class="product-price">$${product.price}</div>
+                <div class="recommendation-source">
+                    <i class="fas fa-magic"></i> AI Recommended
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    recommendationsContainer.innerHTML = recommendationsHTML;
+}
+
+/**
+ * Update subscription UI
+ */
+function updateSubscriptionUI(hasSubscription) {
+    // Update premium badges
+    const premiumBadges = document.querySelectorAll('.premium-badge');
+    premiumBadges.forEach(badge => {
+        badge.style.display = hasSubscription ? 'none' : 'inline-block';
+    });
+    
+    // Update subscription CTA
+    const subscriptionCTAs = document.querySelectorAll('.subscription-cta');
+    subscriptionCTAs.forEach(cta => {
+        if (hasSubscription) {
+            cta.textContent = 'Manage Subscription';
+            cta.setAttribute('href', '/account/subscription');
+        } else {
+            cta.textContent = 'Upgrade to Premium';
         }
     });
+}
+
+/**
+ * Setup premium content access
+ */
+function setupPremiumContent(hasSubscription) {
+    const premiumContent = document.querySelectorAll('.premium-content');
+    
+    premiumContent.forEach(content => {
+        if (!hasSubscription) {
+            content.classList.add('locked');
+            
+            // Add premium overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'premium-overlay';
+            overlay.innerHTML = `
+                <div class="premium-overlay-content">
+                    <i class="fas fa-crown"></i>
+                    <h3>Premium Content</h3>
+                    <p>Upgrade to access exclusive features</p>
+                    <button class="btn btn-primary" data-subscribe-plan="pro">
+                        Upgrade Now
+                    </button>
+                </div>
+            `;
+            content.appendChild(overlay);
+        }
+    });
+}
+
+/**
+ * Setup gamification notifications
+ */
+function setupGamificationNotifications() {
+    // Listen for gamification events
+    document.addEventListener('pointsAwarded', (event) => {
+        showFloatingNotification(`+${event.detail.points} points!`, 'success');
+    });
+    
+    document.addEventListener('badgeEarned', (event) => {
+        showFloatingNotification(`New badge: ${event.detail.name}!`, 'badge');
+    });
+}
+
+/**
+ * Show floating notification
+ */
+function showFloatingNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `floating-notification notification-${type}`;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Remove after delay
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
+
+/**
+ * Helper functions
+ */
+function getProductId() {
+    const productMeta = document.querySelector('meta[name="product-id"]');
+    return productMeta ? productMeta.getAttribute('content') : null;
+}
+
+function getCurrentCategory() {
+    const categoryMeta = document.querySelector('meta[name="category"]');
+    return categoryMeta ? categoryMeta.getAttribute('content') : 'general';
 }
 
 /**

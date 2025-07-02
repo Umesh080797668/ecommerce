@@ -1,0 +1,29 @@
+mobile/
+├── react-native/
+│   ├── package.json
+│   ├── App.js
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   ├── screens/
+│   │   │   └── navigation/
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── analytics.js
+│   │   │   ├── auth.js
+│   │   │   └── notifications.js
+│   │   ├── store/
+│   │   │   ├── index.js
+│   │   │   ├── slices/
+│   │   │   └── middleware/
+│   │   └── utils/
+│   ├── android/
+│   └── ios/
+├── shared/
+│   ├── api/
+│   ├── models/
+│   └── utils/
+└── docs/
+    ├── setup.md
+    ├── features.md
+    └── deployment.md
