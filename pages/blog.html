@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | ShopVerse - AI-Powered Insights</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/darkmode.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+        <h2 class="loading-text">ShopVerse Blog</h2>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-content">
+                    <div class="header__contact">
+                        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1-234-567-890</a>
+                        <a href="mailto:blog@shopverse.com"><i class="fas fa-envelope"></i> blog@shopverse.com</a>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__language">
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                        </div>
+                        <div class="header__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__main">
+            <div class="container">
+                <div class="header__content">
+                    <div class="header__logo">
+                        <a href="../index.html">
+                            <h1><span>Shop</span>Verse <span class="logo-subtitle">Blog</span></h1>
+                        </a>
+                    </div>
+
+                    <!-- AI-Powered Search -->
+                    <div class="header__search">
+                        <div class="search-container">
+                            <input type="text" id="ai-search" placeholder="Search articles with AI..." class="search-input">
+                            <button type="button" class="search-btn" id="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button type="button" class="voice-search-btn" id="voice-search-btn" title="Voice Search">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <div class="search-suggestions" id="search-suggestions"></div>
+                        </div>
+                    </div>
+
+                    <div class="header__actions">
+                        <div class="header__user">
+                            <a href="login.html"><i class="fas fa-user"></i> Login</a>
+                            <span class="divider">|</span>
+                            <a href="register.html">Register</a>
+                        </div>
+                        <div class="header__newsletter">
+                            <button class="btn btn-primary" id="newsletter-btn">
+                                <i class="fas fa-envelope"></i> Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Navigation -->
+        <nav class="blog-nav">
+            <div class="container">
+                <ul class="blog-nav__menu">
+                    <li class="blog-nav__item active">
+                        <a href="blog.html" class="blog-nav__link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="blog-nav__item">
+                        <a href="#" class="blog-nav__link" data-category="technology">
+                            <i class="fas fa-microchip"></i> Technology
+                        </a>
+                    </li>
+                    <li class="blog-nav__item">
+                        <a href="#" class="blog-nav__link" data-category="lifestyle">
+                            <i class="fas fa-leaf"></i> Lifestyle
+                        </a>
+                    </li>
+                    <li class="blog-nav__item">
+                        <a href="#" class="blog-nav__link" data-category="business">
+                            <i class="fas fa-briefcase"></i> Business
+                        </a>
+                    </li>
+                    <li class="blog-nav__item">
+                        <a href="#" class="blog-nav__link" data-category="design">
+                            <i class="fas fa-palette"></i> Design
+                        </a>
+                    </li>
+                    <li class="blog-nav__item">
+                        <a href="#" class="blog-nav__link" data-category="programming">
+                            <i class="fas fa-code"></i> Programming
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 3D Hero Section -->
+    <section class="hero-section blog-hero">
+        <div class="hero-3d-scene" id="hero-3d-scene"></div>
+        <div class="hero-particles" id="hero-particles"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i class="fas fa-robot"></i> AI-Powered Insights
+                    </span>
+                    <h1 class="hero-title">
+                        Discover the Future of
+                        <span class="gradient-text">Knowledge</span>
+                    </h1>
+                    <p class="hero-description">
+                        Explore cutting-edge articles powered by artificial intelligence, 
+                        curated for curious minds and forward-thinking professionals.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="1250">0</span>
+                            <span class="stat-label">Articles</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="50000">0</span>
+                            <span class="stat-label">Readers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="95">0</span>
+                            <span class="stat-label">% AI Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card" data-depth="0.2">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Analysis</span>
+                    </div>
+                    <div class="floating-card" data-depth="0.4">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Trending Topics</span>
+                    </div>
+                    <div class="floating-card" data-depth="0.6">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured-posts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Articles</h2>
+                <p class="section-subtitle">Handpicked stories powered by AI analysis</p>
+            </div>
+
+            <div class="featured-posts-grid">
+                <!-- Featured Post 1 -->
+                <article class="featured-post main-feature">
+                    <div class="post-image">
+                        <img src="../assets/images/blog/featured-1.jpg" alt="AI Revolution" loading="lazy">
+                        <div class="post-overlay">
+                            <div class="post-category">Technology</div>
+                            <div class="post-reading-time">
+                                <i class="fas fa-clock"></i> 8 min read
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-author">
+                                <img src="../assets/images/avatars/author-1.jpg" alt="John Doe">
+                                John Doe
+                            </span>
+                            <span class="post-date">Dec 28, 2024</span>
+                            <div class="post-ai-badge">
+                                <i class="fas fa-robot"></i> AI Enhanced
+                            </div>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="blog-post.html">The AI Revolution: How Machine Learning is Transforming Industries</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            Discover how artificial intelligence is reshaping the business landscape and what it means for the future of work...
+                        </p>
+                        <div class="post-actions">
+                            <button class="action-btn bookmark-btn" data-post-id="1">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                            <button class="action-btn like-btn" data-post-id="1">
+                                <i class="far fa-heart"></i> <span>124</span>
+                            </button>
+                            <button class="action-btn share-btn" data-post-id="1">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Post 2 -->
+                <article class="featured-post side-feature">
+                    <div class="post-image">
+                        <img src="../assets/images/blog/featured-2.jpg" alt="Future of Web Development" loading="lazy">
+                        <div class="post-overlay">
+                            <div class="post-category">Programming</div>
+                            <div class="post-reading-time">
+                                <i class="fas fa-clock"></i> 5 min read
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-author">
+                                <img src="../assets/images/avatars/author-2.jpg" alt="Jane Smith">
+                                Jane Smith
+                            </span>
+                            <span class="post-date">Dec 27, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="blog-post.html">Future of Web Development: Trends to Watch in 2025</a>
+                        </h3>
+                        <div class="post-actions">
+                            <button class="action-btn like-btn" data-post-id="2">
+                                <i class="far fa-heart"></i> <span>89</span>
+                            </button>
+                            <button class="action-btn bookmark-btn" data-post-id="2">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Post 3 -->
+                <article class="featured-post side-feature">
+                    <div class="post-image">
+                        <img src="../assets/images/blog/featured-3.jpg" alt="Design Thinking" loading="lazy">
+                        <div class="post-overlay">
+                            <div class="post-category">Design</div>
+                            <div class="post-reading-time">
+                                <i class="fas fa-clock"></i> 6 min read
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-author">
+                                <img src="../assets/images/avatars/author-3.jpg" alt="Mike Johnson">
+                                Mike Johnson
+                            </span>
+                            <span class="post-date">Dec 26, 2024</span>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="blog-post.html">Design Thinking: Creating User-Centered Experiences</a>
+                        </h3>
+                        <div class="post-actions">
+                            <button class="action-btn like-btn" data-post-id="3">
+                                <i class="far fa-heart"></i> <span>156</span>
+                            </button>
+                            <button class="action-btn bookmark-btn" data-post-id="3">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="sort-filter">Sort by:</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="latest">Latest</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                        <option value="ai-recommended">AI Recommended</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="technology">Technology</option>
+                        <option value="lifestyle">Lifestyle</option>
+                        <option value="business">Business</option>
+                        <option value="design">Design</option>
+                        <option value="programming">Programming</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="reading-time-filter">Reading Time:</label>
+                    <select id="reading-time-filter" class="filter-select">
+                        <option value="all">Any Length</option>
+                        <option value="quick">Quick Read (< 5 min)</option>
+                        <option value="medium">Medium (5-10 min)</option>
+                        <option value="long">Long Read (> 10 min)</option>
+                    </select>
+                </div>
+
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="blog-posts-grid" id="blog-posts-grid">
+                <!-- Blog posts will be dynamically loaded here -->
+                <div class="loading-skeleton">
+                    <div class="skeleton-card">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-text"></div>
+                        </div>
+                    </div>
+                    <!-- More skeleton cards -->
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-outline load-more-btn" id="load-more-btn">
+                    <i class="fas fa-plus"></i> Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <div class="newsletter-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3>Stay Updated with AI Insights</h3>
+                    <p>Get the latest articles and AI-powered recommendations delivered to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reusing existing footer structure) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopVerse Blog</h3>
+                    <p>AI-powered insights for the modern world. Discover, learn, and grow with our curated content.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" data-category="technology">Technology</a></li>
+                        <li><a href="#" data-category="lifestyle">Lifestyle</a></li>
+                        <li><a href="#" data-category="business">Business</a></li>
+                        <li><a href="#" data-category="design">Design</a></li>
+                        <li><a href="#" data-category="programming">Programming</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../pages/about-us.html">About Us</a></li>
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                        <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../pages/terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for weekly AI insights</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopVerse Blog. All rights reserved. Powered by AI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/3d-effects.js"></script>
+    <script src="../js/blog.js"></script>
+    <script src="../js/ai-search.js"></script>
+</body>
+
+</html>
