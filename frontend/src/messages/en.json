@@ -1,0 +1,58 @@
+{
+  "HomePage": {
+    "title": "AI-Powered Blog Platform",
+    "subtitle": "Experience the future of blogging",
+    "description": "Modern AI-powered multilingual blog platform with cutting-edge animations, 3D effects, and comprehensive features.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Built with modern technologies and best practices",
+      "nextjs": {
+        "title": "Next.js 14",
+        "description": "Built with the latest Next.js App Router for optimal performance and SEO"
+      },
+      "animations": {
+        "title": "3D Animations",
+        "description": "Stunning Three.js animations and GSAP transitions for immersive experiences"
+      },
+      "multilingual": {
+        "title": "Multilingual",
+        "description": "Full support for English, Sinhala, and Tamil with automatic detection"
+      },
+      "ai": {
+        "title": "AI-Powered",
+        "description": "Integrated AI features for content generation and intelligent recommendations"
+      },
+      "realtime": {
+        "title": "Real-time",
+        "description": "Live comments, notifications, and collaborative features with Socket.io"
+      },
+      "responsive": {
+        "title": "Responsive",
+        "description": "Perfect experience across all devices with mobile-first design"
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "viewMore": "View More",
+    "readMore": "Read More"
+  }
+}
