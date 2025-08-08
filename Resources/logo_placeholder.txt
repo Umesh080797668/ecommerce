@@ -1,0 +1,18 @@
+# Skills International School - Logo
+
+This is a placeholder for the school logo image.
+
+To add the actual logo:
+1. Place the logo image file (e.g., logo.png) in this directory
+2. Update the PictureBox controls in the forms to load the image:
+   ```csharp
+   pictureBoxLogo.Image = Image.FromFile("Resources/logo.png");
+   ```
+
+Recommended specifications:
+- Format: PNG or JPG
+- Size: 100x80 pixels (as specified in requirements)
+- Background: Transparent (for PNG) or school colors
+- High quality/resolution for clear display
+
+The logo should represent Skills International School and maintain professional appearance across all forms in the application.
